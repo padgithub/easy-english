@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZoomOutViewPlayVideo" customModule="EasyEnglish" customModuleProvider="target">
+            <connections>
+                <outlet property="viewPlayer" destination="be3-H1-b06" id="WIW-16-4Ew"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1f-ps-WUD" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="485" height="92"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be3-H1-b06">
+                            <rect key="frame" x="5" y="5" width="194" height="82"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video 123 Ahihi Doocter Marry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-K2-l5k">
+                            <rect key="frame" x="204" y="10" width="227.5" height="72"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="908" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otf-Nn-jic">
+                            <rect key="frame" x="5" y="5" width="426.5" height="82"/>
+                            <connections>
+                                <action selector="actionReturnView:" destination="-1" eventType="touchUpInside" id="D0i-K1-9aO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="909" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p08-aB-7jp">
+                            <rect key="frame" x="436.5" y="0.0" width="48.5" height="92"/>
+                            <state key="normal" image="ic_delete"/>
+                            <connections>
+                                <action selector="actionRemoveView:" destination="-1" eventType="touchUpInside" id="Ybv-2N-ZWP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="t6O-K2-l5k" firstAttribute="leading" secondItem="be3-H1-b06" secondAttribute="trailing" constant="5" id="4Jv-IU-wME"/>
+                        <constraint firstItem="be3-H1-b06" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" constant="5" id="85O-6s-39l"/>
+                        <constraint firstItem="p08-aB-7jp" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" id="8Kq-Gc-CFJ"/>
+                        <constraint firstItem="p08-aB-7jp" firstAttribute="leading" secondItem="t6O-K2-l5k" secondAttribute="trailing" constant="5" id="8zk-Vb-qaf"/>
+                        <constraint firstItem="otf-Nn-jic" firstAttribute="leading" secondItem="be3-H1-b06" secondAttribute="leading" id="GFn-bi-ZcD"/>
+                        <constraint firstAttribute="bottom" secondItem="t6O-K2-l5k" secondAttribute="bottom" constant="10" id="H5J-9f-HYS"/>
+                        <constraint firstItem="t6O-K2-l5k" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" constant="10" id="RS3-uS-H5u"/>
+                        <constraint firstAttribute="trailing" secondItem="p08-aB-7jp" secondAttribute="trailing" id="X0W-tG-Dp5"/>
+                        <constraint firstAttribute="bottom" secondItem="be3-H1-b06" secondAttribute="bottom" constant="5" id="Yov-uK-mqw"/>
+                        <constraint firstItem="be3-H1-b06" firstAttribute="leading" secondItem="b1f-ps-WUD" secondAttribute="leading" constant="5" id="ZrQ-HL-ADg"/>
+                        <constraint firstItem="p08-aB-7jp" firstAttribute="width" secondItem="be3-H1-b06" secondAttribute="width" multiplier="1/4" id="aD0-Cy-hH1"/>
+                        <constraint firstItem="otf-Nn-jic" firstAttribute="bottom" secondItem="be3-H1-b06" secondAttribute="bottom" id="g5W-ld-gqu"/>
+                        <constraint firstItem="otf-Nn-jic" firstAttribute="trailing" secondItem="t6O-K2-l5k" secondAttribute="trailing" id="gFH-dP-0Eo"/>
+                        <constraint firstItem="otf-Nn-jic" firstAttribute="top" secondItem="be3-H1-b06" secondAttribute="top" id="m8k-L2-3D4"/>
+                        <constraint firstAttribute="bottom" secondItem="p08-aB-7jp" secondAttribute="bottom" id="nw3-uS-98q"/>
+                        <constraint firstItem="be3-H1-b06" firstAttribute="width" secondItem="b1f-ps-WUD" secondAttribute="width" multiplier="1/2.5" id="qhk-dD-1vK"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b1f-ps-WUD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6T1-et-oRq"/>
+                <constraint firstAttribute="trailing" secondItem="b1f-ps-WUD" secondAttribute="trailing" id="V45-qy-GrL"/>
+                <constraint firstItem="b1f-ps-WUD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Vwg-FK-1Ka"/>
+                <constraint firstAttribute="bottom" secondItem="b1f-ps-WUD" secondAttribute="bottom" id="kD5-2k-5O3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="8.8000000000000007" y="163.71814092953525"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_delete" width="8.5" height="8.5"/>
+    </resources>
+</document>
