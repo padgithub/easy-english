@@ -176,7 +176,7 @@
                                                 <action selector="actionToolBar:" destination="-1" eventType="touchUpInside" id="keT-Z0-iQ3"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" tag="608" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rv-93-Tzd">
+                                        <button opaque="NO" tag="609" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rv-93-Tzd">
                                             <rect key="frame" x="325.5" y="0.0" width="28.5" height="28.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="6Rv-93-Tzd" secondAttribute="height" multiplier="1:1" id="Wat-pb-TuD"/>
@@ -199,7 +199,7 @@
                                                         <action selector="actionToolBar:" destination="-1" eventType="touchUpInside" id="m30-xQ-3Ok"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="610" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN5-3e-Bed">
+                                                <button opaque="NO" tag="608" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN5-3e-Bed">
                                                     <rect key="frame" x="113" y="0.0" width="29" height="28.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="HN5-3e-Bed" secondAttribute="height" multiplier="1:1" id="07T-SA-UNX"/>
@@ -248,13 +248,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aav-dY-2oX">
-                                    <rect key="frame" x="10" y="145.5" width="23" height="11"/>
+                                    <rect key="frame" x="10" y="143.5" width="23" height="11"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4K-8A-yEP">
-                                    <rect key="frame" x="342" y="145.5" width="23" height="11"/>
+                                    <rect key="frame" x="342" y="143.5" width="23" height="11"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -272,7 +272,7 @@
                                     </connections>
                                 </button>
                                 <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="1NM-ZB-C0u">
-                                    <rect key="frame" x="-2" y="146.5" width="379" height="31"/>
+                                    <rect key="frame" x="-2" y="144.5" width="379" height="31"/>
                                     <color key="minimumTrackTintColor" red="1" green="0.47450980392156861" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="maximumTrackTintColor" red="0.97638529539999996" green="0.97652524709999999" blue="0.97635465860000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -302,7 +302,7 @@
                                 <constraint firstItem="df1-5q-3bs" firstAttribute="height" secondItem="uLY-xf-BRU" secondAttribute="height" multiplier="31.82/225" id="eTV-d8-fsF"/>
                                 <constraint firstItem="PkJ-H2-Lsx" firstAttribute="top" secondItem="WBx-yR-Pzu" secondAttribute="bottom" id="fla-WT-GaR"/>
                                 <constraint firstItem="WBx-yR-Pzu" firstAttribute="top" secondItem="uLY-xf-BRU" secondAttribute="top" id="g3o-rP-ZCE"/>
-                                <constraint firstItem="df1-5q-3bs" firstAttribute="top" secondItem="1NM-ZB-C0u" secondAttribute="bottom" constant="-7" id="hw2-YJ-M4t"/>
+                                <constraint firstItem="df1-5q-3bs" firstAttribute="top" secondItem="1NM-ZB-C0u" secondAttribute="bottom" constant="-5" id="hw2-YJ-M4t"/>
                                 <constraint firstAttribute="trailing" secondItem="guU-So-Yz5" secondAttribute="trailing" id="iCi-7D-Td8"/>
                                 <constraint firstItem="1NM-ZB-C0u" firstAttribute="leading" secondItem="uLY-xf-BRU" secondAttribute="leading" id="lYc-tA-b4z"/>
                                 <constraint firstItem="WBx-yR-Pzu" firstAttribute="leading" secondItem="uLY-xf-BRU" secondAttribute="leading" id="msT-6T-2PH"/>

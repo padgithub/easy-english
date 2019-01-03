@@ -109,6 +109,7 @@ class PlayVC: BaseVC {
             break
         case 607: // pause sit top
             print(sender.tag)
+            isPlay = true
             break
         case 608: // next
             print(sender.tag)
