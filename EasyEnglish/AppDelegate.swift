@@ -15,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var tabVC: UITabBarController?
     var isShowZoomOutView = true
     var isPlay = false
+    var deviceOrientation = UIInterfaceOrientationMask.portrait
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         initMainVC()
-                return true
+        return true
     }
     
     func initMainVC()  {
@@ -79,5 +80,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         print("applicationWillTerminate")
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+//        if viewControllerOrientation == 1 {
+//            return .landscapeLeft
+//        } else if viewControllerOrientation == 2 {
+//            return .landscapeRight
+//        }else{
+//            return .portrait
+//        }
+        return deviceOrientation
     }
 }

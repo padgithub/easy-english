@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YouTubePlayer
 
 class PlayVC: BaseVC {
 
@@ -30,6 +31,8 @@ class PlayVC: BaseVC {
     
     var viewModel = ListModelView()
     var viewPlayss = VideoServiceView.shared.viewPlayer
+    var current: Int = 0
+    var duration: Int = 0
     
     var isAutoPlay = false {
         didSet{
@@ -74,15 +77,11 @@ class PlayVC: BaseVC {
 
     @IBAction func actionCollapsMoreInfo(_ sender: Any) {
         isMoreInfoVideo = !isMoreInfoVideo
-        self.navigationController?.popViewController(animated: true)
-        showZoomOutView()
         
     }
     
     @IBAction func actionAutoPlay(_ sender: Any) {
         isAutoPlay = !isAutoPlay
-        TAppDelegate.isPlay = true
-        VideoServiceView.shared.loadVideo()
     }
     
     @IBAction func actionToolBar(_ sender: UIButton) {
@@ -90,7 +89,7 @@ class PlayVC: BaseVC {
         switch sender.tag {
         case 601: // hien toolbar
             viewToolBarPlayer.isHidden = false
-            print(sender.tag)
+            print(sender.tag,sender.allControlEvents.rawValue)
             break
         case 602: //add playlist
             print(sender.tag)
@@ -109,29 +108,67 @@ class PlayVC: BaseVC {
             break
         case 607: // pause sit top
             print(sender.tag)
-            isPlay = true
+            isPlay = !isPlay
+            TAppDelegate.isPlay = !TAppDelegate.isPlay
+            if isPlay {
+                viewPlayss.pause()
+            }else{
+                viewPlayss.play()
+            }
             break
         case 608: // next
             print(sender.tag)
             break
         case 609: //mo rong man hinh
             print(sender.tag)
-            break
-        case 610: //tua luu
-            print(sender.tag)
-            break
-        case 611: // tua toi
-            print(sender.tag)
+            if TAppDelegate.deviceOrientation == .portrait {
+                TAppDelegate.deviceOrientation = .landscapeLeft
+                let value = UIInterfaceOrientation.landscapeLeft.rawValue
+                UIDevice.current.setValue(value, forKey: "orientation")
+            }else{
+                TAppDelegate.deviceOrientation = .portrait
+                let value = UIInterfaceOrientation.portrait.rawValue
+                UIDevice.current.setValue(value, forKey: "orientation")
+            }
             break
         default:
             print(sender.tag)
         }
     }
     
+    @IBAction func actionToolBarDragExit(_ sender: UIButton) {
+        self.back()
+    }
+    
+    @IBAction func actionToolBarDragRepeat(_ sender: UIButton) {
+        switch sender.tag {
+        case 610: //tua luu
+            print(sender.tag)
+            self.current = self.current - 10
+            viewPlayss.seekTo(Float(self.current), seekAhead: true)
+            break
+        case 611: // tua toi
+            print(sender.tag)
+            self.current = self.current + 10
+            viewPlayss.seekTo(Float(self.current), seekAhead: true)
+            break
+        default:
+            break
+        }
+    }
+    
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        let currentValue = Int(sender.value)
+        viewPlayss.seekTo(Float(currentValue), seekAhead: true)
+    }
+    
 }
 
 extension PlayVC {
     func initUI() {
+        
+        ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT*255/812
+        
         tableView.register(VideoPlayCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
@@ -143,11 +180,26 @@ extension PlayVC {
         frameViewPlay(viewPlayer)
         if TAppDelegate.isPlay {
             VideoServiceView.shared.viewPlayer.play()
+        }else{
+            VideoServiceView.shared.loadVideo()
         }
+        TAppDelegate.isPlay = true
         Timer.every(7) {
             if !self.viewToolBarPlayer.isHidden {
                 self.viewToolBarPlayer.isHidden = true
             }
+        }
+        
+        VideoServiceView.shared.handleDuration = { (str) in
+            self.duration = Int(str) ?? 0
+            self.lbTimeEnd.text = self.timeStringFrom(self.duration)
+            self.silder.maximumValue = Float(str) ?? 0
+        }
+        
+        VideoServiceView.shared.handleCurentime = { (current,duration) in
+            self.current = Int(Float(current) ?? 0)
+            self.lbTimeStart.text = self.timeStringFrom(self.current ,Int(duration) ?? 0)
+            self.silder.value = Float(current) ?? 0
         }
     }
     
@@ -157,5 +209,26 @@ extension PlayVC {
         viewPlayss.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         viewPlayss.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     }
+    
+    func timeStringFrom(_ second: Int,_ duration: Int = 1) -> String {
+        if second == 0 {
+            return "00:00"
+        }else{
+            if duration >= 3600 || second >= 3600 {
+                let (h,m,s) = Int().secondsToHoursMinutesSeconds(seconds: second)
+                return "\(h):\(m):\(s)"
+            }else{
+                let (m,s) = Int().secondsToMinutesSeconds(seconds: second)
+                return "\(m):\(s)"
+            }
+        }
+    }
+    
+    func back(){
+        self.clickBack()
+        showZoomOutView()
+    }
 }
+
+
 

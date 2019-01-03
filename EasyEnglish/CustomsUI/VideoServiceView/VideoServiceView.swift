@@ -13,20 +13,28 @@ class VideoServiceView: NSObject {
     static let shared = VideoServiceView()
     
     var viewPlayer = YouTubePlayerView()
+    var handleDuration: ((String) -> Void)?
+    var handleCurentime: ((String,String) -> Void)?
     
     override init() {
         super.init()
         viewPlayer.delegate = self
-        viewPlayer.playerVars = ["playsinline": "1" as AnyObject]
+        viewPlayer.playerVars = ["playsinline": "1",
+                                 "controls": "0"
+                                    as AnyObject] as YouTubePlayerView.YouTubePlayerParameters
     }
     
     func loadVideo(){
-        viewPlayer.loadVideoURL(URL(string: "https://www.youtube.com/watch?v=ehKc-5alWek")!)
+        viewPlayer.loadVideoURL(URL(string: "https://www.youtube.com/watch?v=BwbEORXSLUE")!)
     }
 }
 
 extension VideoServiceView: YouTubePlayerDelegate {
     func playerReady(_ videoPlayer: YouTubePlayerView) {
         videoPlayer.play()
+        handleDuration?(videoPlayer.getDuration() ?? "")
+        Timer.every(1) {
+            self.handleCurentime?(videoPlayer.getCurrentTime() ?? "",videoPlayer.getDuration() ?? "")
+        }
     }
 }
