@@ -67,7 +67,7 @@
                                 <rect key="frame" x="166.5" y="0.0" width="192.5" height="97.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play over Chords only using the pentatonic scale!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-8i-jPZ">
-                                        <rect key="frame" x="5" y="5" width="162.5" height="43"/>
+                                        <rect key="frame" x="5" y="5" width="162.5" height="49"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -130,6 +130,7 @@
                                     <constraint firstItem="afn-KC-Ztr" firstAttribute="leading" secondItem="aFu-C3-IgL" secondAttribute="leading" id="jzi-SV-MUY"/>
                                     <constraint firstItem="PIc-8i-jPZ" firstAttribute="leading" secondItem="S2j-Ea-EOw" secondAttribute="leading" constant="5" id="lAn-CK-AvP"/>
                                     <constraint firstItem="H4X-xl-ZSf" firstAttribute="leading" secondItem="PIc-8i-jPZ" secondAttribute="trailing" constant="5" id="rde-ph-6Ux"/>
+                                    <constraint firstItem="PIc-8i-jPZ" firstAttribute="height" secondItem="S2j-Ea-EOw" secondAttribute="height" multiplier="1/2" id="zHo-y5-b77"/>
                                 </constraints>
                             </view>
                         </subviews>

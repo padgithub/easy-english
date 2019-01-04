@@ -105,6 +105,7 @@ class PlayVC: BaseVC {
             break
         case 606: //back
             print(sender.tag)
+            viewPlayss.mute()
             break
         case 607: // pause sit top
             print(sender.tag)
@@ -118,6 +119,7 @@ class PlayVC: BaseVC {
             break
         case 608: // next
             print(sender.tag)
+            viewPlayss.unMute()
             break
         case 609: //mo rong man hinh
             print(sender.tag)

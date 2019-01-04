@@ -7,6 +7,11 @@ target 'EasyEnglish' do
 
   # Pods for EasyEnglish
   pod 'YouTubePlayer'
+  pod 'ViewAnimator'
+  pod 'Instructions'
+  pod 'DGElasticPullToRefresh'
+
+
   target 'EasyEnglishTests' do
     inherit! :search_paths
     # Pods for testing

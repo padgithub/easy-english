@@ -204,12 +204,12 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="df1-5q-3bs">
                                     <rect key="frame" x="10.5" y="186.5" width="354" height="31.5"/>
                                     <subviews>
-                                        <button hidden="YES" opaque="NO" tag="605" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9X-tN-SXT">
+                                        <button opaque="NO" tag="605" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9X-tN-SXT">
                                             <rect key="frame" x="0.0" y="0.0" width="31.5" height="31.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="j9X-tN-SXT" secondAttribute="height" multiplier="1:1" id="Cp9-2c-oVQ"/>
                                             </constraints>
-                                            <state key="normal" image="ic_zoom_video"/>
+                                            <state key="normal" image="ic_hd"/>
                                             <connections>
                                                 <action selector="actionToolBar:" destination="-1" eventType="touchUpInside" id="keT-Z0-iQ3"/>
                                             </connections>
@@ -549,12 +549,17 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuC-c2-PZq" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="57.5" width="375" height="43.5"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5E-GF-9WD" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5E-GF-9WD" customClass="CustomView" customModule="EasyEnglish" customModuleProvider="target">
                                             <rect key="frame" x="10" y="5" width="34" height="33.5"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="F5E-GF-9WD" secondAttribute="height" multiplier="1:1" id="sJ9-Vb-ghv"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-3n-0Ps">
                                             <rect key="frame" x="49" y="8" width="186" height="12"/>
@@ -718,6 +723,7 @@
         <image name="ic_dislike_bar" width="19" height="19.5"/>
         <image name="ic_download_bar" width="21.5" height="22"/>
         <image name="ic_full_screen" width="18.5" height="18.5"/>
+        <image name="ic_hd" width="16" height="16"/>
         <image name="ic_like_bar" width="19" height="19.5"/>
         <image name="ic_list" width="4" height="15.5"/>
         <image name="ic_order" width="14.5" height="14.5"/>
@@ -726,6 +732,5 @@
         <image name="ic_play_pause" width="30.5" height="30.5"/>
         <image name="ic_share" width="14.5" height="15.5"/>
         <image name="ic_share_bar" width="18.5" height="20"/>
-        <image name="ic_zoom_video" width="15" height="15.5"/>
     </resources>
 </document>

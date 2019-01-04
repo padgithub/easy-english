@@ -8,16 +8,13 @@
 
 import UIKit
 
-let kBarHeight = (DeviceType.IS_IPHONE_X) ? 104 : 70
+let kBarHeight = (DeviceType.IS_IPHONE_X) ? 84 : 50
 
 class BaseVC: UIViewController {
     
     var zoomOutView = ZoomOutViewPlayVideo()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

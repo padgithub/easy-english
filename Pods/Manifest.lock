@@ -1,16 +1,28 @@
 PODS:
+  - DGElasticPullToRefresh (1.1)
+  - Instructions (1.2.0)
+  - ViewAnimator (2.2.0)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
+  - DGElasticPullToRefresh
+  - Instructions
+  - ViewAnimator
   - YouTubePlayer
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - DGElasticPullToRefresh
+    - Instructions
+    - ViewAnimator
     - YouTubePlayer
 
 SPEC CHECKSUMS:
+  DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
+  Instructions: 763c2452bd78e05d8f969a21c1cbc3c07deef33a
+  ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 2f86bd544fe5ce33e8d5d7555334abdb3836ffc3
+PODFILE CHECKSUM: 56a4a87b2e6d4a74e3ff4e43eb3b7d543167e5be
 
 COCOAPODS: 1.6.0.beta.2
