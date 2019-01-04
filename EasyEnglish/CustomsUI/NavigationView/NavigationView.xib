@@ -41,7 +41,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-9h-clC">
                             <rect key="frame" x="5" y="0.0" width="50" height="50"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_icon" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-mO-IQd" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-mO-IQd" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
                                     <rect key="frame" x="7" y="7" width="36" height="36"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
@@ -71,9 +71,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boz-sG-ziG">
                             <rect key="frame" x="359" y="0.0" width="50" height="50"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navi_search" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navi_search" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfM-QA-6Yh">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -83,8 +82,12 @@
                             <constraints>
                                 <constraint firstItem="UfM-QA-6Yh" firstAttribute="leading" secondItem="boz-sG-ziG" secondAttribute="leading" id="1e2-da-HDo"/>
                                 <constraint firstAttribute="width" secondItem="boz-sG-ziG" secondAttribute="height" multiplier="1:1" id="4VM-Ms-FcE"/>
+                                <constraint firstAttribute="trailing" secondItem="S6j-MQ-pAM" secondAttribute="trailing" id="4rw-ON-EIn"/>
                                 <constraint firstItem="UfM-QA-6Yh" firstAttribute="top" secondItem="boz-sG-ziG" secondAttribute="top" id="9eN-Od-bH2"/>
+                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="top" secondItem="boz-sG-ziG" secondAttribute="top" id="Npe-6z-4vl"/>
+                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="leading" secondItem="boz-sG-ziG" secondAttribute="leading" id="Nzn-zI-4dE"/>
                                 <constraint firstAttribute="bottom" secondItem="UfM-QA-6Yh" secondAttribute="bottom" id="eH4-wn-UlO"/>
+                                <constraint firstAttribute="bottom" secondItem="S6j-MQ-pAM" secondAttribute="bottom" id="vo4-To-CGW"/>
                                 <constraint firstAttribute="trailing" secondItem="UfM-QA-6Yh" secondAttribute="trailing" id="wEy-At-mZT"/>
                             </constraints>
                         </view>
@@ -131,7 +134,6 @@
     </objects>
     <resources>
         <image name="bg" width="377" height="144"/>
-        <image name="nav_icon" width="50" height="50"/>
         <image name="navi_search" width="14.666666984558105" height="14.666666984558105"/>
     </resources>
 </document>

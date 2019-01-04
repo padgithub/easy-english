@@ -18,12 +18,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-a6-Dz5" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-a6-Dz5" customClass="CustomView" customModule="EasyEnglish" customModuleProvider="target">
                         <rect key="frame" x="8" y="6" width="359" height="97.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hid-ET-Ovy">
                                 <rect key="frame" x="0.0" y="0.0" width="166.5" height="97.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-8q-I5Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="97.5"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="BtO-8q-I5Y" secondAttribute="bottom" id="7Rc-HF-D60"/>
+                                    <constraint firstItem="BtO-8q-I5Y" firstAttribute="leading" secondItem="Hid-ET-Ovy" secondAttribute="leading" id="9Jb-5P-K6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="BtO-8q-I5Y" secondAttribute="trailing" id="R8z-G7-CIh"/>
+                                    <constraint firstItem="BtO-8q-I5Y" firstAttribute="top" secondItem="Hid-ET-Ovy" secondAttribute="top" id="VeA-3V-dVO"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-0B-hm3" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
                                 <rect key="frame" x="10" y="5" width="30.5" height="14"/>
@@ -80,6 +91,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-JP-cLz">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
                                                 <state key="normal" image="ic_list_play"/>
+                                                <connections>
+                                                    <action selector="actionMoreOption:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GTP-va-yqo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -136,9 +150,8 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="10"/>
+                                <real key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
@@ -149,6 +162,13 @@
                     <constraint firstItem="FE2-a6-Dz5" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="359.48/375" id="rZ2-Nj-jt7"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="img" destination="BtO-8q-I5Y" id="aRR-V8-RpJ"/>
+                <outlet property="lbDuration" destination="ZcD-SJ-oar" id="orV-6h-sni"/>
+                <outlet property="lbSub" destination="afn-KC-Ztr" id="Rmx-7V-myR"/>
+                <outlet property="lbTitleVideo" destination="PIc-8i-jPZ" id="1uy-Ej-PFM"/>
+                <outlet property="lbViewer" destination="aFu-C3-IgL" id="w1L-tJ-7Oo"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="147.97601199400302"/>
         </tableViewCell>
     </objects>

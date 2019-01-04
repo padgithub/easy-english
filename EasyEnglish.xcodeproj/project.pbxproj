@@ -30,14 +30,10 @@
 		01B3DD2221D631150051221E /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC8021D631140051221E /* ButtonView.swift */; };
 		01B3DD2321D631150051221E /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8221D631140051221E /* NavigationView.xib */; };
 		01B3DD2421D631150051221E /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC8321D631140051221E /* NavigationView.swift */; };
-		01B3DD2521D631150051221E /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC8521D631140051221E /* TabbarView.swift */; };
-		01B3DD2621D631150051221E /* TabbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8621D631140051221E /* TabbarView.xib */; };
 		01B3DD2721D631150051221E /* DropBoxUITB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8821D631140051221E /* DropBoxUITB.xib */; };
 		01B3DD2821D631150051221E /* DropBoxUITB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC8921D631140051221E /* DropBoxUITB.swift */; };
 		01B3DD2921D631150051221E /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC8B21D631140051221E /* TextFieldView.swift */; };
 		01B3DD2A21D631150051221E /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8C21D631140051221E /* TextFieldView.xib */; };
-		01B3DD2B21D631150051221E /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8E21D631140051221E /* BackgroundView.xib */; };
-		01B3DD2C21D631150051221E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC8F21D631140051221E /* BackgroundView.swift */; };
 		01B3DD2D21D631150051221E /* KHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9121D631140051221E /* KHTextField.swift */; };
 		01B3DD2E21D631150051221E /* KHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9221D631140051221E /* KHButton.swift */; };
 		01B3DD2F21D631150051221E /* KHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9321D631140051221E /* KHView.swift */; };
@@ -126,14 +122,10 @@
 		01B3DC8021D631140051221E /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		01B3DC8221D631140051221E /* NavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
 		01B3DC8321D631140051221E /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
-		01B3DC8521D631140051221E /* TabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
-		01B3DC8621D631140051221E /* TabbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabbarView.xib; sourceTree = "<group>"; };
 		01B3DC8821D631140051221E /* DropBoxUITB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropBoxUITB.xib; sourceTree = "<group>"; };
 		01B3DC8921D631140051221E /* DropBoxUITB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBoxUITB.swift; sourceTree = "<group>"; };
 		01B3DC8B21D631140051221E /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		01B3DC8C21D631140051221E /* TextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
-		01B3DC8E21D631140051221E /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
-		01B3DC8F21D631140051221E /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		01B3DC9121D631140051221E /* KHTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHTextField.swift; sourceTree = "<group>"; };
 		01B3DC9221D631140051221E /* KHButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHButton.swift; sourceTree = "<group>"; };
 		01B3DC9321D631140051221E /* KHView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHView.swift; sourceTree = "<group>"; };
@@ -327,10 +319,8 @@
 				01B3DC7B21D631140051221E /* MagicView */,
 				01B3DC7E21D631140051221E /* ButtonView */,
 				01B3DC8121D631140051221E /* NavigationView */,
-				01B3DC8421D631140051221E /* TabbarView */,
 				01B3DC8721D631140051221E /* DropBoxUITB */,
 				01B3DC8A21D631140051221E /* TextFieldView */,
-				01B3DC8D21D631140051221E /* BackgroundView */,
 				01B3DC9021D631140051221E /* CustomControl */,
 				01B3DC9721D631140051221E /* JoinView */,
 			);
@@ -364,15 +354,6 @@
 			path = NavigationView;
 			sourceTree = "<group>";
 		};
-		01B3DC8421D631140051221E /* TabbarView */ = {
-			isa = PBXGroup;
-			children = (
-				01B3DC8521D631140051221E /* TabbarView.swift */,
-				01B3DC8621D631140051221E /* TabbarView.xib */,
-			);
-			path = TabbarView;
-			sourceTree = "<group>";
-		};
 		01B3DC8721D631140051221E /* DropBoxUITB */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,15 +370,6 @@
 				01B3DC8C21D631140051221E /* TextFieldView.xib */,
 			);
 			path = TextFieldView;
-			sourceTree = "<group>";
-		};
-		01B3DC8D21D631140051221E /* BackgroundView */ = {
-			isa = PBXGroup;
-			children = (
-				01B3DC8E21D631140051221E /* BackgroundView.xib */,
-				01B3DC8F21D631140051221E /* BackgroundView.swift */,
-			);
-			path = BackgroundView;
 			sourceTree = "<group>";
 		};
 		01B3DC9021D631140051221E /* CustomControl */ = {
@@ -717,7 +689,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B3DD2B21D631150051221E /* BackgroundView.xib in Resources */,
 				01B3DD8221D8D4E30051221E /* VideoHomeCell.xib in Resources */,
 				01B3DD2A21D631150051221E /* TextFieldView.xib in Resources */,
 				01B3DB4721D62FE70051221E /* LaunchScreen.storyboard in Resources */,
@@ -726,7 +697,6 @@
 				01B3DD2321D631150051221E /* NavigationView.xib in Resources */,
 				01B3DD2021D631150051221E /* MagicView.xib in Resources */,
 				01B3DD3321D631150051221E /* JoinView.xib in Resources */,
-				01B3DD2621D631150051221E /* TabbarView.xib in Resources */,
 				01B3DD7D21D76BEF0051221E /* MainVC.xib in Resources */,
 				01B3DD2121D631150051221E /* ButtonView.xib in Resources */,
 				01B3DB4221D62FE20051221E /* Main.storyboard in Resources */,
@@ -883,7 +853,6 @@
 				012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */,
 				01B3DB3D21D62FE20051221E /* AppDelegate.swift in Sources */,
 				01B3DD6F21D631150051221E /* MTBBarcodeScanner.m in Sources */,
-				01B3DD2C21D631150051221E /* BackgroundView.swift in Sources */,
 				01B3DD5121D631150051221E /* ActionSheetCustomPicker.m in Sources */,
 				01B3DD1F21D631150051221E /* MagicView.swift in Sources */,
 				01B3DD2D21D631150051221E /* KHTextField.swift in Sources */,
@@ -896,7 +865,6 @@
 				01B3DD3221D631150051221E /* KHLabel.swift in Sources */,
 				01B3DD1C21D631150051221E /* Define.swift in Sources */,
 				01B3DD8121D8D4E30051221E /* VideoHomeCell.swift in Sources */,
-				01B3DD2521D631150051221E /* TabbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,59 +11,85 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZoomOutViewPlayVideo" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
+                <outlet property="ctrHeight" destination="pXd-on-GUT" id="Dvf-wC-CZT"/>
+                <outlet property="imgPlay" destination="wQb-c5-A6y" id="07p-Pb-2GA"/>
                 <outlet property="viewPlayer" destination="be3-H1-b06" id="WIW-16-4Ew"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="485" height="92"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1f-ps-WUD" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="485" height="92"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be3-H1-b06">
-                            <rect key="frame" x="5" y="5" width="194" height="82"/>
+                            <rect key="frame" x="0.0" y="0.0" width="178.5" height="83"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video 123 Ahihi Doocter Marry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-K2-l5k">
-                            <rect key="frame" x="204" y="10" width="227.5" height="72"/>
+                            <rect key="frame" x="183.5" y="10" width="97" height="63"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" tag="908" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otf-Nn-jic">
-                            <rect key="frame" x="5" y="5" width="426.5" height="82"/>
+                            <rect key="frame" x="0.0" y="0.0" width="280.5" height="83"/>
                             <connections>
                                 <action selector="actionReturnView:" destination="-1" eventType="touchUpInside" id="D0i-K1-9aO"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="8gK-fn-Ega">
+                            <rect key="frame" x="346" y="34.5" width="13.5" height="14"/>
+                        </imageView>
                         <button opaque="NO" tag="909" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p08-aB-7jp">
-                            <rect key="frame" x="436.5" y="0.0" width="48.5" height="92"/>
-                            <state key="normal" image="ic_delete"/>
+                            <rect key="frame" x="330.5" y="0.0" width="44.5" height="83"/>
                             <connections>
                                 <action selector="actionRemoveView:" destination="-1" eventType="touchUpInside" id="Ybv-2N-ZWP"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play-button" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-c5-A6y">
+                            <rect key="frame" x="301" y="34.5" width="14" height="14"/>
+                        </imageView>
+                        <button opaque="NO" tag="909" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB5-oJ-Uih">
+                            <rect key="frame" x="285.5" y="0.0" width="45" height="83"/>
+                            <connections>
+                                <action selector="actionPlayPause:" destination="-1" eventType="touchUpInside" id="T6n-yn-h17"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="t6O-K2-l5k" firstAttribute="leading" secondItem="be3-H1-b06" secondAttribute="trailing" constant="5" id="4Jv-IU-wME"/>
-                        <constraint firstItem="be3-H1-b06" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" constant="5" id="85O-6s-39l"/>
+                        <constraint firstItem="wQb-c5-A6y" firstAttribute="height" secondItem="QB5-oJ-Uih" secondAttribute="height" multiplier="1/6" id="5Ip-fW-gSP"/>
+                        <constraint firstAttribute="bottom" secondItem="QB5-oJ-Uih" secondAttribute="bottom" id="7uX-gn-lrv"/>
+                        <constraint firstItem="be3-H1-b06" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" id="85O-6s-39l"/>
                         <constraint firstItem="p08-aB-7jp" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" id="8Kq-Gc-CFJ"/>
-                        <constraint firstItem="p08-aB-7jp" firstAttribute="leading" secondItem="t6O-K2-l5k" secondAttribute="trailing" constant="5" id="8zk-Vb-qaf"/>
+                        <constraint firstItem="wQb-c5-A6y" firstAttribute="centerY" secondItem="QB5-oJ-Uih" secondAttribute="centerY" id="8bl-eF-hyX"/>
+                        <constraint firstItem="8gK-fn-Ega" firstAttribute="height" secondItem="wQb-c5-A6y" secondAttribute="height" id="BbV-is-g9Z"/>
                         <constraint firstItem="otf-Nn-jic" firstAttribute="leading" secondItem="be3-H1-b06" secondAttribute="leading" id="GFn-bi-ZcD"/>
                         <constraint firstAttribute="bottom" secondItem="t6O-K2-l5k" secondAttribute="bottom" constant="10" id="H5J-9f-HYS"/>
+                        <constraint firstItem="wQb-c5-A6y" firstAttribute="width" secondItem="QB5-oJ-Uih" secondAttribute="height" multiplier="1:6" id="J6e-Kq-SQK"/>
+                        <constraint firstItem="QB5-oJ-Uih" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" id="RIU-IY-cX8"/>
                         <constraint firstItem="t6O-K2-l5k" firstAttribute="top" secondItem="b1f-ps-WUD" secondAttribute="top" constant="10" id="RS3-uS-H5u"/>
                         <constraint firstAttribute="trailing" secondItem="p08-aB-7jp" secondAttribute="trailing" id="X0W-tG-Dp5"/>
-                        <constraint firstAttribute="bottom" secondItem="be3-H1-b06" secondAttribute="bottom" constant="5" id="Yov-uK-mqw"/>
-                        <constraint firstItem="be3-H1-b06" firstAttribute="leading" secondItem="b1f-ps-WUD" secondAttribute="leading" constant="5" id="ZrQ-HL-ADg"/>
+                        <constraint firstItem="8gK-fn-Ega" firstAttribute="centerY" secondItem="p08-aB-7jp" secondAttribute="centerY" id="X6G-M4-kIk"/>
+                        <constraint firstAttribute="bottom" secondItem="be3-H1-b06" secondAttribute="bottom" id="Yov-uK-mqw"/>
+                        <constraint firstItem="otf-Nn-jic" firstAttribute="trailing" secondItem="t6O-K2-l5k" secondAttribute="trailing" id="Z30-cJ-nNd"/>
+                        <constraint firstItem="QB5-oJ-Uih" firstAttribute="width" secondItem="p08-aB-7jp" secondAttribute="width" id="ZCm-LC-ur5"/>
+                        <constraint firstItem="be3-H1-b06" firstAttribute="leading" secondItem="b1f-ps-WUD" secondAttribute="leading" id="ZrQ-HL-ADg"/>
                         <constraint firstItem="p08-aB-7jp" firstAttribute="width" secondItem="be3-H1-b06" secondAttribute="width" multiplier="1/4" id="aD0-Cy-hH1"/>
                         <constraint firstItem="otf-Nn-jic" firstAttribute="bottom" secondItem="be3-H1-b06" secondAttribute="bottom" id="g5W-ld-gqu"/>
-                        <constraint firstItem="otf-Nn-jic" firstAttribute="trailing" secondItem="t6O-K2-l5k" secondAttribute="trailing" id="gFH-dP-0Eo"/>
+                        <constraint firstItem="wQb-c5-A6y" firstAttribute="centerX" secondItem="QB5-oJ-Uih" secondAttribute="centerX" id="kBz-Hs-MOc"/>
                         <constraint firstItem="otf-Nn-jic" firstAttribute="top" secondItem="be3-H1-b06" secondAttribute="top" id="m8k-L2-3D4"/>
                         <constraint firstAttribute="bottom" secondItem="p08-aB-7jp" secondAttribute="bottom" id="nw3-uS-98q"/>
-                        <constraint firstItem="be3-H1-b06" firstAttribute="width" secondItem="b1f-ps-WUD" secondAttribute="width" multiplier="1/2.5" id="qhk-dD-1vK"/>
+                        <constraint firstItem="p08-aB-7jp" firstAttribute="leading" secondItem="QB5-oJ-Uih" secondAttribute="trailing" id="oIQ-eG-ZUk"/>
+                        <constraint firstAttribute="height" constant="83" id="pXd-on-GUT"/>
+                        <constraint firstItem="8gK-fn-Ega" firstAttribute="centerX" secondItem="p08-aB-7jp" secondAttribute="centerX" id="qOz-ca-CXT"/>
+                        <constraint firstItem="be3-H1-b06" firstAttribute="width" secondItem="b1f-ps-WUD" secondAttribute="width" multiplier="1/2.1" id="qhk-dD-1vK"/>
+                        <constraint firstItem="8gK-fn-Ega" firstAttribute="width" secondItem="wQb-c5-A6y" secondAttribute="width" id="t9c-Gl-cWa"/>
+                        <constraint firstItem="QB5-oJ-Uih" firstAttribute="leading" secondItem="t6O-K2-l5k" secondAttribute="trailing" constant="5" id="xsF-aT-bTA"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
@@ -81,10 +107,11 @@
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="8.8000000000000007" y="163.71814092953525"/>
+            <point key="canvasLocation" x="8.8000000000000007" y="238.83058470764618"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_delete" width="8.5" height="8.5"/>
+        <image name="cancel" width="48" height="48"/>
+        <image name="play-button" width="48" height="48"/>
     </resources>
 </document>

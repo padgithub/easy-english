@@ -25,7 +25,7 @@ class VideoServiceView: NSObject {
     }
     
     func loadVideo(){
-        viewPlayer.loadVideoURL(URL(string: "https://www.youtube.com/watch?v=BwbEORXSLUE")!)
+        viewPlayer.loadVideoURL(URL(string: "https://www.youtube.com/watch?v=o6tA8CBRQ5o")!)
     }
 }
 

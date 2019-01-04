@@ -10,12 +10,21 @@ import UIKit
 
 class ZoomOutViewPlayVideo: UIView {
     
+    @IBOutlet weak var ctrHeight: NSLayoutConstraint!
+    @IBOutlet weak var imgPlay: UIImageView!
     @IBOutlet weak var viewPlayer: UIView!
+    
+    var isPlay: Bool = true {
+        didSet{
+            imgPlay.image = isPlay ? UIImage(named: "pause-button") : UIImage(named: "play-button")
+        }
+    }
     
     var viewPlayss = VideoServiceView.shared.viewPlayer
     
     var handleReturnView:(() -> Void)?
     var handleRemoveView:(() -> Void)?
+    var handlePlayPause:(() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +40,7 @@ class ZoomOutViewPlayVideo: UIView {
         let view = Bundle.main.loadNibNamed(xibFileName, owner: self, options: nil)?[0] as! UIView
         view.frame = self.bounds
         self.addSubview(view)
-        
+        ctrHeight.constant = 85*heightRatio
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,6 +52,9 @@ class ZoomOutViewPlayVideo: UIView {
     
     @IBAction func actionRemoveView(_ sender: Any) {
         handleRemoveView?()
+    }
+    @IBAction func actionPlayPause(_ sender: Any) {
+        isPlay = !isPlay
     }
 }
 
