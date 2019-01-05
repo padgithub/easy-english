@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InboxVC: UIViewController {
+class InboxVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

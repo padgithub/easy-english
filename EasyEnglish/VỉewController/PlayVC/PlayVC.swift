@@ -232,6 +232,7 @@ extension PlayVC {
     
     func back(){
         self.clickBack()
+        TAppDelegate.isNew = false
         showZoomOutView()
     }
 }

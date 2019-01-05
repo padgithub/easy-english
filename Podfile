@@ -10,7 +10,7 @@ target 'EasyEnglish' do
   pod 'ViewAnimator'
   pod 'Instructions'
   pod 'DGElasticPullToRefresh'
-
+  pod 'Kingfisher'
 
   target 'EasyEnglishTests' do
     inherit! :search_paths

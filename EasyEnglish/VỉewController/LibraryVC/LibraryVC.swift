@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LibraryVC: UIViewController {
+class LibraryVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,12 +1,14 @@
 PODS:
   - DGElasticPullToRefresh (1.1)
   - Instructions (1.2.0)
+  - Kingfisher (4.10.1)
   - ViewAnimator (2.2.0)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - DGElasticPullToRefresh
   - Instructions
+  - Kingfisher
   - ViewAnimator
   - YouTubePlayer
 
@@ -14,15 +16,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DGElasticPullToRefresh
     - Instructions
+    - Kingfisher
     - ViewAnimator
     - YouTubePlayer
 
 SPEC CHECKSUMS:
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   Instructions: 763c2452bd78e05d8f969a21c1cbc3c07deef33a
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 56a4a87b2e6d4a74e3ff4e43eb3b7d543167e5be
+PODFILE CHECKSUM: 709738831b150877390f8df1cd9381f4e6eb6842
 
 COCOAPODS: 1.6.0.beta.2

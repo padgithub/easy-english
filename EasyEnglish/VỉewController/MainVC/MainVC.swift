@@ -41,6 +41,7 @@ extension MainVC {
                 
             }else{
                 let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+                TAppDelegate.isNew = true
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }
