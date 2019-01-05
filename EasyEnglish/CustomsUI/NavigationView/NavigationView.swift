@@ -9,6 +9,10 @@
 import UIKit
 
 class NavigationView: UIView {
+    
+    @IBOutlet weak var viewLeft: UIView!
+    @IBOutlet weak var imgRight: KHImageView!
+    @IBOutlet weak var imgLeft: KHImageView!
     @IBOutlet weak var ctrHeightStatusBar: NSLayoutConstraint!
     @IBOutlet weak var lbTitleNav: KHLabel!
     
@@ -17,6 +21,21 @@ class NavigationView: UIView {
             lbTitleNav.text = title.localized 
         }
     }
+    
+    @IBInspectable open var hasViewLeft: Bool = true {
+        didSet {
+            viewLeft.isHidden = !hasViewLeft
+        }
+    }
+    
+    @IBInspectable open var hasBack: Bool = true {
+        didSet {
+            
+        }
+    }
+    
+    var handleLeft: (() -> Void)?
+    var handleRight: (() -> Void)?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -49,5 +68,12 @@ class NavigationView: UIView {
             }
         }
         ctrHeightStatusBar.constant = UIApplication.shared.statusBarFrame.height
+    }
+    
+    @IBAction func actionLeft(_ sender: Any) {
+        handleLeft?()
+    }
+    @IBAction func actionRight(_ sender: Any) {
+        handleRight?()
     }
 }

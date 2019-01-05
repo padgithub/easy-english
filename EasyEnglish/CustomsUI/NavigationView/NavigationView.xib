@@ -17,7 +17,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="ctrHeightStatusBar" destination="jRs-gf-Tp3" id="isW-Qf-Rso"/>
+                <outlet property="imgLeft" destination="RKS-mO-IQd" id="t4S-3a-3Du"/>
+                <outlet property="imgRight" destination="S6j-MQ-pAM" id="U56-b8-Zay"/>
                 <outlet property="lbTitleNav" destination="RfF-R1-mTh" id="ERx-9F-jgg"/>
+                <outlet property="viewLeft" destination="cbZ-9h-clC" id="aZC-qf-bcp"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -41,9 +44,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-9h-clC">
                             <rect key="frame" x="5" y="0.0" width="50" height="50"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-mO-IQd" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-left" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-mO-IQd" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
                                     <rect key="frame" x="7" y="7" width="36" height="36"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -53,6 +56,9 @@
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMs-l1-szH">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <connections>
+                                        <action selector="actionLeft:" destination="-1" eventType="touchUpInside" id="ity-BS-42O"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,11 +77,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boz-sG-ziG">
                             <rect key="frame" x="359" y="0.0" width="50" height="50"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navi_search" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navi_search" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfM-QA-6Yh">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <connections>
+                                        <action selector="actionRight:" destination="-1" eventType="touchUpInside" id="EX7-L4-oRl"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,6 +143,7 @@
     </objects>
     <resources>
         <image name="bg" width="377" height="144"/>
+        <image name="icon-arrow-left" width="17" height="17"/>
         <image name="navi_search" width="14.666666984558105" height="14.666666984558105"/>
     </resources>
 </document>

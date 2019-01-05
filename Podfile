@@ -11,7 +11,12 @@ target 'EasyEnglish' do
   pod 'Instructions'
   pod 'DGElasticPullToRefresh'
   pod 'Kingfisher'
-
+  pod 'SwiftEntryKit'
+  pod 'SwiftyJSON'
+  pod 'GRDBCipher'
+  pod 'KRProgressHUD'
+  pod 'Alamofire'
+  
   target 'EasyEnglishTests' do
     inherit! :search_paths
     # Pods for testing

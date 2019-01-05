@@ -583,9 +583,6 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="mzt-wi-o6U"/>
                                             </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
