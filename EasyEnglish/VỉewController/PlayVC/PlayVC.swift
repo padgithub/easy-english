@@ -174,15 +174,15 @@ extension PlayVC {
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
         viewModel.isPlaylist = true
-        
-        viewYoutubePlayer.removeFromSuperview()
         viewYoutubePlayer.translatesAutoresizingMaskIntoConstraints = false
         viewPlayer.addSubview(viewYoutubePlayer)
         frameViewPlay(viewPlayer)
         
         if TAppDelegate.isPlay {
             viewYoutubePlayer.play()
-        }else{
+        }
+        
+        if TAppDelegate.isNew {
             youtubeShare.loadVideo()
         }
         

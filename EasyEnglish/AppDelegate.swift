@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var tabVC: UITabBarController?
     var isShowZoomOutView = true
     var isPlay = false
+    var isNew = false
     var deviceOrientation = UIInterfaceOrientationMask.portrait
     var handleReturnForeground: (() -> Void)?
     
@@ -112,13 +113,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-//        if viewControllerOrientation == 1 {
-//            return .landscapeLeft
-//        } else if viewControllerOrientation == 2 {
-//            return .landscapeRight
-//        }else{
-//            return .portrait
-//        }
         return deviceOrientation
     }
 }

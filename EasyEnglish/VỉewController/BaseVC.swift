@@ -28,12 +28,12 @@ class BaseVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.initZoomOutView()
-        
         zoomOutView.isPlay = TAppDelegate.isPlay
-        
-        if TAppDelegate.isPlay && !TAppDelegate.isShowZoomOutView {
+        if !TAppDelegate.isShowZoomOutView {
             zoomOutView.addSubViewVideo()
-            VideoServiceView.shared.viewPlayer.play()
+            if TAppDelegate.isPlay {
+                viewYoutubePlayer.play()
+            }
         }
     }
     
