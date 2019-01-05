@@ -20,8 +20,6 @@ class ZoomOutViewPlayVideo: UIView {
         }
     }
     
-    var viewPlayss = VideoServiceView.shared.viewPlayer
-    
     var handleReturnView:(() -> Void)?
     var handleRemoveView:(() -> Void)?
     var handlePlayPause:(() -> Void)?
@@ -51,26 +49,33 @@ class ZoomOutViewPlayVideo: UIView {
     }
     
     @IBAction func actionRemoveView(_ sender: Any) {
+        viewYoutubePlayer.stop()
         handleRemoveView?()
     }
+    
     @IBAction func actionPlayPause(_ sender: Any) {
         isPlay = !isPlay
+        TAppDelegate.isPlay = !TAppDelegate.isPlay
+        if !isPlay {
+            viewYoutubePlayer.pause()
+        }else{
+            viewYoutubePlayer.play()
+        }
     }
 }
 
 extension ZoomOutViewPlayVideo {
     
     func addSubViewVideo() {
-        viewPlayss.removeFromSuperview()
-        viewPlayss.translatesAutoresizingMaskIntoConstraints = false
-        viewPlayer.addSubview(viewPlayss)
+        viewYoutubePlayer.translatesAutoresizingMaskIntoConstraints = false
+        viewPlayer.addSubview(viewYoutubePlayer)
         frameViewPlay(viewPlayer)
     }
     
     func frameViewPlay(_ view : UIView) {
-        viewPlayss.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        viewPlayss.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        viewPlayss.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        viewPlayss.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        viewYoutubePlayer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        viewYoutubePlayer.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        viewYoutubePlayer.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        viewYoutubePlayer.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     }
 }

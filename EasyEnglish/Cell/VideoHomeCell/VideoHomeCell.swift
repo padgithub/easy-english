@@ -21,6 +21,7 @@ class VideoHomeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imageVideo.downloaded(from: "https://drive.google.com/uc?export=download&id=0Bz51iC-_OPfGME90OVcwWmJqMzA")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

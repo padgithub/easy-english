@@ -609,3 +609,67 @@ extension UITableView: UITableViewDelegate {
         self.superview?.bringSubviewToFront(self)
     }
 }
+
+let imageCache = NSCache<NSString, UIImage>()
+
+class CustomImageView: UIImageView {
+    var urlImageString: String?
+    
+    func loadImageUsingCache(withUrl urlPath : String, frame: CGRect) {
+        urlImageString = urlPath
+        let urlString = URL(string: urlPath)
+        if urlString == nil {return}
+        self.image = nil
+        
+        // check cached image
+        if let cachedImage = imageCache.object(forKey: urlPath as NSString)  {
+            self.image = cachedImage
+            return
+        }
+        
+        let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView.init(style: .gray)
+        addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        activityIndicator.center = center
+        activityIndicator.frame = CGRect(x: frame.width/2 - 50/2, y: frame.height/2 - 50/2, width: 50, height: 50)
+        activityIndicator.style = .gray
+        // if not, download image from url
+        
+        URLSession.shared.dataTask(with: urlString!, completionHandler: { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            DispatchQueue.main.async {
+                if let imageToCache = UIImage(data: data!) {
+                    if self.urlImageString == urlPath {
+                        self.image = imageToCache
+                        activityIndicator.stopAnimating()
+                    }
+                    imageCache.setObject(imageToCache, forKey: urlPath as NSString)
+                }
+            }
+        }).resume()
+    }
+}
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
+}

@@ -30,7 +30,6 @@ class PlayVC: BaseVC {
     @IBOutlet weak var viewMoreInfoVideo: UIView!
     
     var viewModel = ListModelView()
-    var viewPlayss = VideoServiceView.shared.viewPlayer
     var current: Int = 0
     var duration: Int = 0
     
@@ -105,21 +104,21 @@ class PlayVC: BaseVC {
             break
         case 606: //back
             print(sender.tag)
-            viewPlayss.mute()
+            viewYoutubePlayer.mute()
             break
         case 607: // pause sit top
             print(sender.tag)
             isPlay = !isPlay
             TAppDelegate.isPlay = !TAppDelegate.isPlay
             if isPlay {
-                viewPlayss.pause()
+                viewYoutubePlayer.pause()
             }else{
-                viewPlayss.play()
+                viewYoutubePlayer.play()
             }
             break
         case 608: // next
             print(sender.tag)
-            viewPlayss.unMute()
+            viewYoutubePlayer.unMute()
             break
         case 609: //mo rong man hinh
             print(sender.tag)
@@ -147,12 +146,12 @@ class PlayVC: BaseVC {
         case 610: //tua luu
             print(sender.tag)
             self.current = self.current - 10
-            viewPlayss.seekTo(Float(self.current), seekAhead: true)
+            viewYoutubePlayer.seekTo(Float(self.current), seekAhead: true)
             break
         case 611: // tua toi
             print(sender.tag)
             self.current = self.current + 10
-            viewPlayss.seekTo(Float(self.current), seekAhead: true)
+            viewYoutubePlayer.seekTo(Float(self.current), seekAhead: true)
             break
         default:
             break
@@ -161,7 +160,7 @@ class PlayVC: BaseVC {
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
-        viewPlayss.seekTo(Float(currentValue), seekAhead: true)
+        viewYoutubePlayer.seekTo(Float(currentValue), seekAhead: true)
     }
     
 }
@@ -176,40 +175,45 @@ extension PlayVC {
         tableView.dataSource = viewModel
         viewModel.isPlaylist = true
         
-        viewPlayss.removeFromSuperview()
-        viewPlayss.translatesAutoresizingMaskIntoConstraints = false
-        viewPlayer.addSubview(viewPlayss)
+        viewYoutubePlayer.removeFromSuperview()
+        viewYoutubePlayer.translatesAutoresizingMaskIntoConstraints = false
+        viewPlayer.addSubview(viewYoutubePlayer)
         frameViewPlay(viewPlayer)
+        
         if TAppDelegate.isPlay {
-            VideoServiceView.shared.viewPlayer.play()
+            viewYoutubePlayer.play()
         }else{
-            VideoServiceView.shared.loadVideo()
+            youtubeShare.loadVideo()
         }
-        TAppDelegate.isPlay = true
+        
         Timer.every(7) {
             if !self.viewToolBarPlayer.isHidden {
                 self.viewToolBarPlayer.isHidden = true
             }
         }
         
-        VideoServiceView.shared.handleDuration = { (str) in
+        youtubeShare.handleDuration = { (str) in
             self.duration = Int(str) ?? 0
             self.lbTimeEnd.text = self.timeStringFrom(self.duration)
             self.silder.maximumValue = Float(str) ?? 0
         }
         
-        VideoServiceView.shared.handleCurentime = { (current,duration) in
+        youtubeShare.handleCurentime = { (current,duration) in
             self.current = Int(Float(current) ?? 0)
             self.lbTimeStart.text = self.timeStringFrom(self.current ,Int(duration) ?? 0)
             self.silder.value = Float(current) ?? 0
         }
+        
+        TAppDelegate.handleReturnForeground = {
+            self.isPlay = !TAppDelegate.isPlay
+        }
     }
     
     func frameViewPlay(_ view : UIView) {
-        viewPlayss.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        viewPlayss.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        viewPlayss.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        viewPlayss.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        viewYoutubePlayer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        viewYoutubePlayer.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        viewYoutubePlayer.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        viewYoutubePlayer.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     }
     
     func timeStringFrom(_ second: Int,_ duration: Int = 1) -> String {

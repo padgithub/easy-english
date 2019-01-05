@@ -16,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isShowZoomOutView = true
     var isPlay = false
     var deviceOrientation = UIInterfaceOrientationMask.portrait
+    var handleReturnForeground: (() -> Void)?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        youtubeShare.turnAudio()
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 12) as Any, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         UITabBar.appearance().unselectedItemTintColor = UIColor("9D271B", alpha: 1.0)
         UITabBar.appearance().tintColor = UIColor.white
@@ -87,10 +88,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
+        youtubeShare.handlePlayWhenPause = {
+            Timer.every(0.001) {
+                if self.isPlay {
+                    viewYoutubePlayer.play()
+                }
+            }
+        }
         print("applicationDidEnterBackground")
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
+        handleReturnForeground?()
         print("applicationWillEnterForeground")
     }
     

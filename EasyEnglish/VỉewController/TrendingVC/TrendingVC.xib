@@ -5,12 +5,13 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendingVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
+                <outlet property="btPlay" destination="qE8-X9-Eky" id="qbq-a4-7yC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,11 +27,18 @@
                         <constraint firstAttribute="height" constant="50" id="pj1-vt-igQ"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-X9-Eky">
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="qE8-X9-Eky" secondAttribute="bottom" id="2xq-We-sDa"/>
                 <constraint firstItem="qjf-A7-nv6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DZL-jf-l0a"/>
                 <constraint firstAttribute="trailing" secondItem="qjf-A7-nv6" secondAttribute="trailing" id="KGC-gJ-dOL"/>
+                <constraint firstItem="qE8-X9-Eky" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cwD-ZI-qxi"/>
+                <constraint firstAttribute="trailing" secondItem="qE8-X9-Eky" secondAttribute="trailing" id="na4-oV-gn2"/>
+                <constraint firstItem="qE8-X9-Eky" firstAttribute="top" secondItem="qjf-A7-nv6" secondAttribute="bottom" id="r9a-Z1-62t"/>
                 <constraint firstItem="qjf-A7-nv6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ucP-Op-kFo"/>
             </constraints>
         </view>
