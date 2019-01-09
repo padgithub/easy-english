@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="EasyEnglish" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,19 +19,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKE-K4-GTS" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DS-Wd-5hq" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Oge-xT-MQj"/>
+                        <constraint firstAttribute="height" constant="50" id="hW3-HI-NyB"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="iKE-K4-GTS" secondAttribute="trailing" id="3OV-Vg-d59"/>
-                <constraint firstItem="iKE-K4-GTS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Npi-KY-2A6"/>
-                <constraint firstItem="iKE-K4-GTS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="u0a-x0-a1a"/>
+                <constraint firstItem="4DS-Wd-5hq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QJK-H3-pox"/>
+                <constraint firstItem="4DS-Wd-5hq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QRg-2N-IQu"/>
+                <constraint firstAttribute="trailing" secondItem="4DS-Wd-5hq" secondAttribute="trailing" id="fcC-9K-cQV"/>
             </constraints>
         </view>
     </objects>

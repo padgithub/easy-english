@@ -35,15 +35,15 @@ class VideoManager: NSObject {
         return documentsPath.appendingPathComponent("sqlite.db")
     }
     
-    func fetchVideoListDB() -> [ItemsModel] {
-        var videoItem : [ItemsModel] = []
+    func fetchVideoListDB() -> [ItemsVideo] {
+        var videoItem : [ItemsVideo] = []
         do {
             try dbQueue.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM videofevorited")
+                let query = String.init(format: "SELECT * FROM videos")
                 //                let query = String.init(format: "SELECT * FROM playlists")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
-                    let story = ItemsModel(dataDB: row)
+                    let story = ItemsVideo(dataDB: row)
                     videoItem.append(story)
                 }
             }
@@ -53,13 +53,13 @@ class VideoManager: NSObject {
     }
     
     func checkFavorited(videoId: String) -> Bool{
-        var videoItem : [ItemsModel] = []
+        var videoItem : [ItemsVideo] = []
         do {
             try dbQueue.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM videofevorited where video_id = '\(videoId)'")
+                let query = String.init(format: "SELECT * FROM videos where video_id = '\(videoId)' AND farvorites = 1")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
-                    let story = ItemsModel(dataDB: row)
+                    let story = ItemsVideo(dataDB: row)
                     videoItem.append(story)
                 }
             }
@@ -72,23 +72,23 @@ class VideoManager: NSObject {
         }
     }
     
-    func addfavorited(videoItem: ItemsModel) {
+    func addVideo(videoItem: ItemsVideo) {
         do {
             try dbQueue.inDatabase { db in
                 try db.execute(
-                    "insert into videofevorited (video_id,title,url) values (?,?,?)",
-                    arguments: [videoItem.videoId,videoItem.title,videoItem.url])
+                    "insert into videos (video_id,title,url) values (?,?,?)",
+                    arguments: [videoItem.videoId,videoItem.title,videoItem.urlImage])
                 let playerId = db.lastInsertedRowID
                 print("added:\(playerId)")
             }
         } catch _ {
         }
     }
-    func removefavorited(videoId: String) {
+    func removeVideo(videoId: String) {
         do {
             try dbQueue.inDatabase { db in
                 try db.execute(
-                    "delete from videofevorited where video_id = :i",
+                    "delete from videos where video_id = :i",
                     arguments: ["i":videoId])
                 let playerId = db.lastInsertedRowID
                 print("remove:\(playerId)")
@@ -97,16 +97,18 @@ class VideoManager: NSObject {
         }
     }
     
-    typealias SuccessHandler = (JSON) -> Void
-    typealias FailureHandler = (Error) -> Void
+    func fethVideoListAPI(playlistId: String, isShowLoad : Bool, success: @escaping (JSON) -> Void) {
+        let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(playlistId)&key=\(apiFinalShared.keyYoutube)&maxResults=50"
+        apiRequestShared.webServiceCall(url, params: nil, isShowLoader: true, method: .get, isHasHeader: false) { (respone) in
+            success(respone.responeJson)
+        }
+    }
     
-//    func list_videoplaylist(playlistId: String, isShowLoad : Bool, success : @escaping SuccessHandler,  failure :@escaping FailureHandler) {
-//        let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(playlistId)&key=AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY&maxResults=40"
-//        WebService.shareInstance.webServiceCall(url, params: nil, isShowLoader: isShowLoad, method: .get, isHasHeader: false, success: { (respone) in
-//            success(respone)
-//        }) { (error) in
-//            failure(error)
-//        }
-//    }
+    func getInfoVideo(videoId: String, isShowLoading: Bool = true, success: @escaping (Videos) -> Void) {
+        let url = "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=\(videoId.encode())&key=\(apiFinalShared.keyYoutube)"
+        apiRequestShared.webServiceCall(url, params: nil, isShowLoader: true, method: .get, isHasHeader: false) { (respone) in
+            success(parseShared.parseListVideos(respone.responeJson))
+        }
+    }
     
 }

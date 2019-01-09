@@ -11,6 +11,10 @@ import GRDBCipher
 import SwiftyJSON
 
 class PlaylistManager: NSObject {
+    
+    typealias SuccessHandler = (JSON) -> Void
+    typealias FailureHandler = (Error) -> Void
+    
     static let shareInstance = PlaylistManager()
     var dbQueue: DatabaseQueue!
     
@@ -103,16 +107,11 @@ class PlaylistManager: NSObject {
         }
     }
     
-    typealias SuccessHandler = (JSON) -> Void
-    typealias FailureHandler = (Error) -> Void
-    
-//    func getInfo(playlistId: String, isShowLoad : Bool, success : @escaping SuccessHandler,  failure :@escaping FailureHandler) {
-//        let url = "https://www.googleapis.com/youtube/v3/playlistItems?fields=pageInfo(totalResults)&part=snippet&playlistId=\(playlistId)&key=AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY"
-////        let url = "https://www.googleapis.com/youtube/v3/playlists?&part=snippet&id=\(playlistId)&key=AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY"
-//        WebService.shareInstance.webServiceCall(url, params: nil, isShowLoader: isShowLoad, method: .get, isHasHeader: false, success: { (respone) in
-//            success(respone)
-//        }) { (error) in
-//            failure(error)
-//        }
-//    }
+    func getInfo(playlistId: String, isShowLoad : Bool, success : @escaping SuccessHandler,  failure :@escaping FailureHandler) {
+        let url = "https://www.googleapis.com/youtube/v3/playlistItems?fields=pageInfo(totalResults)&part=snippet&playlistId=\(playlistId)&key=AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY"
+//        let url = "https://www.googleapis.com/youtube/v3/playlists?&part=snippet&id=\(playlistId)&key=AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY"
+        apiRequestShared.webServiceCall(url, params: nil, isShowLoader: isShowLoad, method: .get, isHasHeader: false, success: { (respone) in
+            success(respone.responeJson)
+        })
+    }
 }

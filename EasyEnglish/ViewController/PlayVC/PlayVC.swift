@@ -61,6 +61,8 @@ class PlayVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        initData()
+        setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -69,7 +71,7 @@ class PlayVC: BaseVC {
             ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT
         } else {
             print("Portrait")
-            ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT*255/812
+            ctrHeightViewVideo.constant = 230*heightRatio
         }
     }
     
@@ -123,13 +125,15 @@ class PlayVC: BaseVC {
         case 609: //mo rong man hinh
             print(sender.tag)
             if TAppDelegate.deviceOrientation == .portrait {
-                TAppDelegate.deviceOrientation = .landscapeLeft
-                let value = UIInterfaceOrientation.landscapeLeft.rawValue
+                TAppDelegate.deviceOrientation = .landscapeRight
+                let value = UIInterfaceOrientation.landscapeRight.rawValue
                 UIDevice.current.setValue(value, forKey: "orientation")
+                self.frameViewPlay(self.viewPlayer)
             }else{
                 TAppDelegate.deviceOrientation = .portrait
                 let value = UIInterfaceOrientation.portrait.rawValue
                 UIDevice.current.setValue(value, forKey: "orientation")
+                self.frameViewPlay(self.viewPlayer)
             }
             break
         default:
@@ -168,7 +172,7 @@ class PlayVC: BaseVC {
 extension PlayVC {
     func initUI() {
         
-        ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT*255/812
+        ctrHeightViewVideo.constant = 230*heightRatio
         
         tableView.register(VideoPlayCell.self)
         tableView.delegate = viewModel
@@ -183,12 +187,17 @@ extension PlayVC {
         }
         
         if TAppDelegate.isNew {
-            youtubeShare.loadVideo()
+            viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
         }
         
         Timer.every(7) {
             if !self.viewToolBarPlayer.isHidden {
-                self.viewToolBarPlayer.isHidden = true
+                if TAppDelegate.isPlay {
+                    self.viewToolBarPlayer.isHidden = true
+                }else{
+                    self.viewToolBarPlayer.isHidden = false
+                }
+                
             }
         }
         
@@ -207,6 +216,17 @@ extension PlayVC {
         TAppDelegate.handleReturnForeground = {
             self.isPlay = !TAppDelegate.isPlay
         }
+    }
+    
+    func initData() {
+        viewModel.arrData = TAppDelegate.arrVideoPlaying
+        tableView.reloadData()
+        self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
+    }
+    
+    func setDetailVideo(video: Items) {
+        lbTitleVideo.text = video.snippet.title
+        lbViewer.text = video.statistics.viewCount
     }
     
     func frameViewPlay(_ view : UIView) {

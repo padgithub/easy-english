@@ -78,7 +78,7 @@ extension String {
     }
     
     var text: String {
-        return (self.count > 0) ? self : "Không có".localized
+        return (self.count > 0) ? self : "N/A".localized
     }
     
     var isAlphabet: Bool {
@@ -671,5 +671,53 @@ extension UIImageView {
     func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
+    }
+}
+
+extension String {
+    /// Converts an ISO 8601 formatted `String` into `NSDateComponents`.
+    ///
+    /// - Note: Does not accept fractional input (e.g.: P3.5Y), must be integers (e.g.: P3Y6M).
+    /// - SeeAlso: https://en.wikipedia.org/wiki/ISO_8601#Durations
+    /// - Returns: If valid ISO 8601, an `NSDateComponents` representation, otherwise `nil`.
+    func ISO8601DateComponents() -> NSDateComponents? {
+        // Regex adapted from Moment.js https://github.com/moment/moment/blame/develop/src/lib/duration/create.js#L16
+        let pattern = "^P(?:(\\d*)Y)?(?:(\\d*)M)?(?:(\\d*)W)?(?:(\\d*)D)?(?:T(?:(\\d*)H)?(?:(\\d*)M)?(?:(\\d*)S)?)?$"
+        let nsstringRepresentation = self as NSString
+        let regex = try! NSRegularExpression(pattern: pattern, options: [.anchorsMatchLines])
+        
+        guard let match = regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: nsstringRepresentation.length)) else { return nil }
+        
+        let dateComponents = NSDateComponents()
+        
+        if match.range(at: 1).location != NSNotFound, let years = Int(nsstringRepresentation.substring(with: match.range(at: 1)) as String) {
+            dateComponents.year = years
+        }
+        
+        if match.range(at: 2).location != NSNotFound, let month = Int(nsstringRepresentation.substring(with: match.range(at: 2)) as String) {
+            dateComponents.month = month
+        }
+        
+        if match.range(at: 3).location != NSNotFound, let week = Int(nsstringRepresentation.substring(with: match.range(at:3)) as String) {
+            dateComponents.weekOfYear = week
+        }
+        
+        if match.range(at: 4).location != NSNotFound, let day = Int(nsstringRepresentation.substring(with: match.range(at:4)) as String) {
+            dateComponents.day = day
+        }
+        
+        if match.range(at: 5).location != NSNotFound, let hour = Int(nsstringRepresentation.substring(with: match.range(at:5)) as String) {
+            dateComponents.hour = hour
+        }
+        
+        if match.range(at: 6).location != NSNotFound, let minute = Int(nsstringRepresentation.substring(with: match.range(at:6)) as String) {
+            dateComponents.minute = minute
+        }
+        
+        if match.range(at: 7).location != NSNotFound, let second = Int(nsstringRepresentation.substring(with: match.range(at:7)) as String) {
+            dateComponents.second = second
+        }
+        
+        return dateComponents
     }
 }

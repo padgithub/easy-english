@@ -1,5 +1,5 @@
 //
-//  ItemsModel.swift
+//  ItemsVideo.swift
 //  VuiHocTiengHan
 //
 //  Created by Mac on 9/4/18.
@@ -10,13 +10,15 @@ import UIKit
 import SwiftyJSON
 import GRDBCipher
 
-class ItemsModel : NSObject {
+class ItemsVideo : NSObject {
     var id = 0
     var title: String = ""
     var videoId: String = ""
-    var url : String = ""
+    var urlImage : String = ""
     var width : Int = 0
     var height : Int = 0
+    var duration = ""
+    var desc = ""
     var playlistId : String = ""
     var isSelected : Bool = false
     override init() {
@@ -25,7 +27,7 @@ class ItemsModel : NSObject {
     
     init(data: JSON) {
         self.title = data["snippet"]["title"].stringValue
-        self.url = data["snippet"]["thumbnails"]["medium"]["url"].stringValue
+        self.urlImage = data["snippet"]["thumbnails"]["medium"]["url"].stringValue
         self.width = data["snippet"]["thumbnails"]["medium"]["width"].intValue
         self.height = data["snippet"]["thumbnails"]["medium"]["height"].intValue
         self.videoId = data["snippet"]["resourceId"]["videoId"].stringValue
@@ -36,7 +38,7 @@ class ItemsModel : NSObject {
         id = dataDB["id"]
         videoId = dataDB["video_id"]
         title = dataDB["title"]
-        url = dataDB["url"]
+        urlImage = dataDB["url"]
     }
 }
 

@@ -23,7 +23,23 @@ class VideoPlayCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let url = "https://drive.google.com/uc?export=download&id=0BxJTJZ8mMxzpWWtfWUJjeFk4ME0"
+        
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+    }
+    
+    @IBAction func actionMoreOption(_ sender: Any) {
+        handleMoreOption?()
+    }
+    
+}
+
+extension VideoPlayCell {
+    func configCell(video : Items) {
+        let url = video.snippet.thumbnails.medium.url
         urlString = url
         if url.count > 0 {
             self.img.kf.setImage(with: URL(string: url), placeholder: #imageLiteral(resourceName: "ic_delete"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
@@ -34,15 +50,27 @@ class VideoPlayCell: UITableViewCell {
                 }
             })
         }
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        
+        lbTitleVideo.text = video.snippet.title
+        lbViewer.text = video.statistics.viewCount
         
     }
     
-    @IBAction func actionMoreOption(_ sender: Any) {
-        handleMoreOption?()
+    func configCell(playlist : Playlist) {
+        if let url = playlist.thumbnail {
+            urlString = url
+            if url.count > 0 {
+                self.img.kf.setImage(with: URL(string: url), placeholder: #imageLiteral(resourceName: "ic_delete"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
+                    
+                }, completionHandler: { (image, error, cacheType, imageURL) in
+                    if image != nil && self.urlString == imageURL?.absoluteString{
+                        self.img.image = image
+                    }
+                })
+            }
+        }
+        
+        lbTitleVideo.text = playlist.title
     }
     
 }

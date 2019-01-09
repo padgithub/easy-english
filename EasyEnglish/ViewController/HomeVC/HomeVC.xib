@@ -9,8 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListPlaylistVC" customModule="EasyEnglish" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
+                <outlet property="navi" destination="ntW-4m-ci9" id="4ui-NG-IJM"/>
+                <outlet property="tableView" destination="fCu-KO-adc" id="uH9-rd-yg4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,27 +21,27 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvC-Qu-6UR">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntW-4m-ci9" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="MuQ-jL-25W"/>
+                        <constraint firstAttribute="height" constant="50" id="yA1-eP-imG"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="upo-9d-N3n">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fCu-KO-adc">
                     <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="PvC-Qu-6UR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7JW-OE-wSt"/>
-                <constraint firstItem="upo-9d-N3n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7mD-pu-Lva"/>
-                <constraint firstAttribute="trailing" secondItem="upo-9d-N3n" secondAttribute="trailing" id="Glv-kN-krJ"/>
-                <constraint firstItem="upo-9d-N3n" firstAttribute="top" secondItem="PvC-Qu-6UR" secondAttribute="bottom" id="O78-Vy-Alm"/>
-                <constraint firstItem="PvC-Qu-6UR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cvc-sl-hAc"/>
-                <constraint firstAttribute="trailing" secondItem="PvC-Qu-6UR" secondAttribute="trailing" id="o17-4v-Vtq"/>
-                <constraint firstAttribute="bottom" secondItem="upo-9d-N3n" secondAttribute="bottom" id="qIu-AM-MDx"/>
+                <constraint firstAttribute="bottom" secondItem="fCu-KO-adc" secondAttribute="bottom" id="10H-4d-6n1"/>
+                <constraint firstItem="ntW-4m-ci9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mte-w8-qz5"/>
+                <constraint firstItem="ntW-4m-ci9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TrI-m9-duw"/>
+                <constraint firstItem="fCu-KO-adc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WO9-Bs-v7u"/>
+                <constraint firstAttribute="trailing" secondItem="fCu-KO-adc" secondAttribute="trailing" id="pBA-Z3-Si6"/>
+                <constraint firstAttribute="trailing" secondItem="ntW-4m-ci9" secondAttribute="trailing" id="v42-Np-lyF"/>
+                <constraint firstItem="fCu-KO-adc" firstAttribute="top" secondItem="ntW-4m-ci9" secondAttribute="bottom" id="x08-X2-w0o"/>
             </constraints>
         </view>
     </objects>

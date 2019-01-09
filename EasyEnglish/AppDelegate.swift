@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isNew = false
     var deviceOrientation = UIInterfaceOrientationMask.portrait
     var handleReturnForeground: (() -> Void)?
+    var idVideoPlaying = ""
+    var arrVideoPlaying = [Items]()
+    var indexPlaying = 0
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         youtubeShare.turnAudio()
@@ -121,7 +124,7 @@ extension AppDelegate {
         tabVC.tabBar.contentMode = .scaleToFill
         tabVC.tabBar.isTranslucent = false
         //
-        let tabP = MainVC(nibName:"MainVC",bundle: nil)
+        let tabP = HomeVC(nibName:"HomeVC",bundle: nil)
         tabP.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_bb_home")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_home")!.withRenderingMode(.alwaysOriginal))
         let navP = UINavigationController(rootViewController: tabP)
         navP.isNavigationBarHidden = true
@@ -136,7 +139,7 @@ extension AppDelegate {
         let navF = UINavigationController(rootViewController: tabF)
         navF.isNavigationBarHidden = true
         
-        let tabM = InboxVC(nibName:"InboxVC",bundle: nil)
+        let tabM = TrendingVC(nibName:"TrendingVC",bundle: nil)
         tabM.tabBarItem = UITabBarItem(title: "Inbox", image: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal))
         let navM = UINavigationController(rootViewController: tabM)
         navM.isNavigationBarHidden = true

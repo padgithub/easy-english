@@ -10,6 +10,7 @@ import UIKit
 
 class ZoomOutViewPlayVideo: UIView {
     
+    @IBOutlet weak var lbTitleVideo: UILabel!
     @IBOutlet weak var ctrHeight: NSLayoutConstraint!
     @IBOutlet weak var imgPlay: UIImageView!
     @IBOutlet weak var viewPlayer: UIView!

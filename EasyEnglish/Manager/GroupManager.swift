@@ -45,6 +45,7 @@ class GroupManager: NSObject {
                 }
             }
         } catch _ {
+            
         }
         return listGroup
     }

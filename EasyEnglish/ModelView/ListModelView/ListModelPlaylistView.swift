@@ -1,5 +1,5 @@
 //
-//  ListModelView.swift
+//  ListModelPlaylistView.swfit
 //  EasyEnglish
 //
 //  Created by Anh Dũng on 12/30/18.
@@ -8,40 +8,34 @@
 
 import UIKit
 
-class ListModelView: NSObject {
-    var arrData: [Items]
+class ListModelPlaylistView: NSObject {
+    var arrData: [Playlist]
     var handleSelectRow: ((Int) -> Void)?
-    var isPlaylist = false
     
     override init() {
         arrData = []
     }
     
-    init(_ arrData : [Items]) {
+    init(_ arrData : [Playlist]) {
         self.arrData = arrData
     }
 }
 
-extension ListModelView: UITableViewDataSource {
+extension ListModelPlaylistView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isPlaylist {
-            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as VideoPlayCell
-            cell.configCell(video: arrData[indexPath.row])
-            return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as VideoHomeCell
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as VideoPlayCell
+        cell.configCell(playlist: arrData[indexPath.row])
+        return cell
     }
 }
 
-extension ListModelView: UITableViewDelegate {
+extension ListModelPlaylistView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return isPlaylist ? 115*heightRatio : 300*heightRatio //125
+        return 115*heightRatio
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

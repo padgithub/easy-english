@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryVC" customModule="EasyEnglish" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,19 +19,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DS-Wd-5hq" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgZ-qu-9FC" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="hW3-HI-NyB"/>
+                        <constraint firstAttribute="height" constant="50" id="ncQ-Rg-FXk"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="4DS-Wd-5hq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QJK-H3-pox"/>
-                <constraint firstItem="4DS-Wd-5hq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QRg-2N-IQu"/>
-                <constraint firstAttribute="trailing" secondItem="4DS-Wd-5hq" secondAttribute="trailing" id="fcC-9K-cQV"/>
+                <constraint firstItem="BgZ-qu-9FC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A0w-Ck-T1G"/>
+                <constraint firstItem="BgZ-qu-9FC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GvD-ve-F48"/>
+                <constraint firstAttribute="trailing" secondItem="BgZ-qu-9FC" secondAttribute="trailing" id="dLa-Mh-Pe7"/>
             </constraints>
         </view>
     </objects>

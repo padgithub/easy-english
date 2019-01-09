@@ -13,13 +13,14 @@ class TrendingVC: BaseVC {
 
     
     @IBOutlet weak var btPlay: UIButton!
+    
     let playerViewController = AVPlayerViewController()
     var player: AVPlayer?
     let playerLayer = AVPlayerLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadVideo(url: "https://drive.google.com/uc?export=download&id=0BzEjdSstVvybck9pSWtJQjVIeXM")
+        loadVideo(url: "https://photos.google.com/u/4/search/_tra_/photo/AF1QipMcX-ZhlJz-Hz9qivsXrURiL-iC4sl-LJ-7MpY7")
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))
         tapGesture.numberOfTapsRequired = 1
@@ -29,18 +30,9 @@ class TrendingVC: BaseVC {
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     private func loadVideo(url: String) {
         playerViewController.player = player
+    
         let u = URL.init(string: url)
         if u != nil {
             self.player = AVPlayer(url: u!)

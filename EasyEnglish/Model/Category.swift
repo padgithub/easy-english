@@ -21,9 +21,9 @@ class Category: NSObject {
         name       = data["name"] as! String
         group_id   = data["group_id"]
         icon       = data["icon"] as! String
-        
     }
     
     override init() {
     }
+    
 }

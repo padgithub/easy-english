@@ -13,7 +13,7 @@ class Group: NSObject {
     var id = 0
     var name = ""
     var categories: [Category] = []
-    var collapsed: Bool = true
+    var collapsed: Bool = false
     
     init(data: Row) {
         id          = data["id"]

@@ -12,6 +12,31 @@ let isIPad = DeviceType.IS_IPAD
 let heightRatio = (isIPad) ? 1.3 : ScreenSize.SCREEN_HEIGHT/736
 let widthRatio = (isIPad) ? 1.4 : ScreenSize.SCREEN_WIDTH/414
 
+class API {
+    static let v1 = "/v1"
+    static let act = "?act="
+    static let feed = "feed"
+     static let fullinfo = "fullinfo&id="
+}
+
+enum ErrorCode: String {
+    case NoCode
+}
+
+enum NetworkConnection {
+    case available
+    case notAvailable
+}
+
+enum SaveKey: String {
+    case deviceToken = "deviceToken"
+    case tokenType = "tokenType"
+    case accessToken = "accessToken"
+    case email = "email"
+    case pass = "pass"
+    case isLogin = "isLogin"
+}
+
 enum TypeMyRife {
     case MyProgram
     case MyFrequencies
