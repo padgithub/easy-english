@@ -2,7 +2,7 @@
 //  CategoryManager.swift
 //  VuiHocTiengHan
 //
-//  Created by Phu Phan on 9/3/18.
+//  Created by Anh Dũng on 9/3/18.
 //  Copyright © 2018 Phu Phan. All rights reserved.
 //
 

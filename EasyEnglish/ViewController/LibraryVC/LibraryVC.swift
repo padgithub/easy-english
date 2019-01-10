@@ -10,21 +10,44 @@ import UIKit
 
 class LibraryVC: BaseVC {
 
+    @IBOutlet weak var viewToolReight: UIView!
+    @IBOutlet weak var viewToolLeft: UIView!
+    @IBOutlet weak var toolBar: ToolBarView!
+    @IBOutlet weak var navi: NavigationView!
+    
+    var swicthView = false {
+        didSet {
+            if swicthView {
+                viewToolLeft.isHidden = true
+                viewToolReight.isHidden = false
+            }else{
+                viewToolLeft.isHidden = false
+                viewToolReight.isHidden = true
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initUI()
+        initData()
     }
+    
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension LibraryVC {
+    func initUI() {
+        navi.title = ""
+        toolBar.handleActionG2Left = {
+            self.swicthView = false
+        }
+        
+        toolBar.handleActionG2Right = {
+            self.swicthView = true
+        }
     }
-    */
-
+    
+    func initData() {
+        
+    }
 }

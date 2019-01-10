@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import GRDBCipher
 
 class Video: NSObject {
     
@@ -22,6 +23,7 @@ class Video: NSObject {
         self.totalResults = data["totalResults"].intValue
         self.itemVideo = data["items"].arrayObject as! [ItemsVideo]
     }
+    
 }
 
 class Videos: NSObject {
@@ -46,6 +48,14 @@ class Videos: NSObject {
 }
 
 class Items: NSObject {
+    //DB
+    var idDB = 0
+    var playlistId = ""
+    var notes = ""
+    var farvorites = 0
+    var timeUpdate = Date().secondsSince1970
+    var subTitle = ""
+    //
     var kind = ""
     var etag = ""
     var id = ""
@@ -64,6 +74,22 @@ class Items: NSObject {
         self.snippet = Snippet(data["snippet"])
         self.contentDetails = ContentDetails(data["contentDetails"])
         self.statistics = Statistics(data["statistics"])
+    }
+    
+    init(dataDB : Row){
+        idDB = dataDB["id"]
+        id = dataDB["video_id"]
+        snippet.title = dataDB["title"]
+        snippet.thumbnails.medium.url = dataDB["url"]
+        playlistId = dataDB["playlistId"]
+        notes = dataDB["notes"]
+        farvorites = dataDB["farvorites"]
+        timeUpdate = dataDB["timeUpdate"]
+        subTitle = dataDB["subTitle"]
+        contentDetails.duration = dataDB["duration"]
+        statistics.viewCount = dataDB["viewer"]
+        statistics.likeCount = dataDB["liker"]
+        statistics.dislikeCount = dataDB["disliker"]
     }
 }
 

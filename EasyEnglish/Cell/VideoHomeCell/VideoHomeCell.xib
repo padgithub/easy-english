@@ -49,14 +49,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play guitar for beginners: playing exercise 1 for beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i05-qi-eiB">
-                                        <rect key="frame" x="66.5" y="15" width="266.5" height="31"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                        <rect key="frame" x="66.5" y="15" width="266.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ Vựng / Học Tựng với Alamty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-Nl-BPZ">
-                                        <rect key="frame" x="66.5" y="51" width="266.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        <rect key="frame" x="66.5" y="53.5" width="266.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -75,6 +75,7 @@
                                     <constraint firstItem="049-Yh-DM3" firstAttribute="top" secondItem="pRM-Nk-jBl" secondAttribute="top" constant="10" id="kT9-FQ-oDh"/>
                                     <constraint firstItem="i05-qi-eiB" firstAttribute="leading" secondItem="049-Yh-DM3" secondAttribute="trailing" constant="10" id="mD9-x8-8yw"/>
                                     <constraint firstItem="i05-qi-eiB" firstAttribute="top" secondItem="049-Yh-DM3" secondAttribute="top" constant="5" id="nCN-jZ-Oa9"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xHv-Nl-BPZ" secondAttribute="bottom" constant="10" id="pkC-o2-jHo"/>
                                 </constraints>
                             </view>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9Z-A4-SRD">
@@ -116,7 +117,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="fvg-wd-BAh" firstAttribute="centerX" secondItem="DCt-b1-tU7" secondAttribute="centerX" id="et1-QE-nhK"/>
                                                     <constraint firstItem="fvg-wd-BAh" firstAttribute="centerY" secondItem="DCt-b1-tU7" secondAttribute="centerY" id="f98-jC-6Eg"/>

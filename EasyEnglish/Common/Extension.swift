@@ -591,6 +591,14 @@ extension UITableView: UITableViewDelegate {
         }
     }
     
+    @IBInspectable var circle: Bool = false {
+        didSet {
+            if circle {
+                cornerRadius = self.bounds.height/2
+            }
+        }
+    }
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         

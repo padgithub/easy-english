@@ -28,10 +28,10 @@ class ListPlaylistVC: BaseVC {
 extension ListPlaylistVC {
     func initUI() {
         navi.title = categories.name
+        
         navi.handleLeft = {
             self.clickBack()
         }
-        
         tableView.register(VideoPlayCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
@@ -40,6 +40,8 @@ extension ListPlaylistVC {
             vc.playlist = self.arrData[index]
             vc.categories = self.categories
             self.navigationController?.pushViewController(vc, animated: true)
+            TAppDelegate.titleCatagory = self.categories.name
+            self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
     }
     

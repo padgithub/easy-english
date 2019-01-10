@@ -28,8 +28,12 @@ class VideoPlayCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
+        if selected { // (isSelectedCell && iss) ||
+            self.lbTitleVideo.textColor = UIColor("FB3325", alpha: 1.0)
+        }else{
+            self.lbTitleVideo.textColor = UIColor.black
+        }
         super.setSelected(selected, animated: animated)
-        
     }
     
     @IBAction func actionMoreOption(_ sender: Any) {
@@ -52,7 +56,7 @@ extension VideoPlayCell {
             })
         }
         lbDuration.text = video.contentDetails.duration.ISO8601DateComponents()
-        
+        lbSub.text = TAppDelegate.titleCatagory
         lbTitleVideo.text = video.snippet.title
         lbViewer.text = "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
         
@@ -70,9 +74,9 @@ extension VideoPlayCell {
                     }
                 })
             }
-            lbSub.text = ""
-            lbViewer.text  = ""
         }
+        lbSub.text = ""
+        lbViewer.text  = "Có \(playlist.totalVideo ?? 0) videos"
         viewDuration.isHidden = true
         lbTitleVideo.text = playlist.title
     }

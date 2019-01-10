@@ -58,6 +58,10 @@
 		0138FC9E21E30474001B6BAF /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC9C21E30474001B6BAF /* InboxVC.swift */; };
 		0138FC9F21E30474001B6BAF /* InboxVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC9D21E30474001B6BAF /* InboxVC.xib */; };
 		0138FCA121E30863001B6BAF /* ListModelPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FCA021E30863001B6BAF /* ListModelPlaylistView.swift */; };
+		01AD43CE21E72F96000156D2 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43CC21E72F95000156D2 /* ToolBarView.swift */; };
+		01AD43CF21E72F96000156D2 /* ToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AD43CD21E72F95000156D2 /* ToolBarView.xib */; };
+		01AD43D121E7376A000156D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01AD43D021E7376A000156D2 /* Localizable.strings */; };
+		01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43D221E73A75000156D2 /* HistoryManager.swift */; };
 		01B3DB3D21D62FE20051221E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DB3C21D62FE20051221E /* AppDelegate.swift */; };
 		01B3DB4221D62FE20051221E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DB4021D62FE20051221E /* Main.storyboard */; };
 		01B3DB4421D62FE70051221E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DB4321D62FE70051221E /* Assets.xcassets */; };
@@ -170,6 +174,10 @@
 		0138FC9C21E30474001B6BAF /* InboxVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxVC.swift; sourceTree = "<group>"; };
 		0138FC9D21E30474001B6BAF /* InboxVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxVC.xib; sourceTree = "<group>"; };
 		0138FCA021E30863001B6BAF /* ListModelPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModelPlaylistView.swift; sourceTree = "<group>"; };
+		01AD43CC21E72F95000156D2 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		01AD43CD21E72F95000156D2 /* ToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolBarView.xib; sourceTree = "<group>"; };
+		01AD43D021E7376A000156D2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		01AD43D221E73A75000156D2 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
 		01B3DB3921D62FE20051221E /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3DB3C21D62FE20051221E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B3DB4121D62FE20051221E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -389,6 +397,7 @@
 				0138FC5F21E10F75001B6BAF /* PlaylistManager.swift */,
 				0138FC6021E10F75001B6BAF /* VideoManager.swift */,
 				0138FC6221E10F75001B6BAF /* GroupManager.swift */,
+				01AD43D221E73A75000156D2 /* HistoryManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -456,6 +465,15 @@
 			path = InboxVC;
 			sourceTree = "<group>";
 		};
+		01AD43CB21E72F95000156D2 /* ToolBarView */ = {
+			isa = PBXGroup;
+			children = (
+				01AD43CC21E72F95000156D2 /* ToolBarView.swift */,
+				01AD43CD21E72F95000156D2 /* ToolBarView.xib */,
+			);
+			path = ToolBarView;
+			sourceTree = "<group>";
+		};
 		01B3DB3021D62FE20051221E = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +514,7 @@
 				01B3DB4521D62FE70051221E /* LaunchScreen.storyboard */,
 				01B3DB4821D62FE70051221E /* Info.plist */,
 				0138FC0D21DF7163001B6BAF /* EasyEnglish-Bridging-Header.h */,
+				01AD43D021E7376A000156D2 /* Localizable.strings */,
 			);
 			path = EasyEnglish;
 			sourceTree = "<group>";
@@ -521,6 +540,7 @@
 		01B3DC7A21D631140051221E /* CustomsUI */ = {
 			isa = PBXGroup;
 			children = (
+				01AD43CB21E72F95000156D2 /* ToolBarView */,
 				0138FC1D21E100F3001B6BAF /* GradientView */,
 				0124129921DDC2010078B60F /* ZoomOutViewPlayVideo */,
 				01B3DC7B21D631140051221E /* MagicView */,
@@ -843,6 +863,7 @@
 				0138FC6E21E11661001B6BAF /* database.db in Resources */,
 				01B3DD2721D631150051221E /* DropBoxUITB.xib in Resources */,
 				01B3DD2321D631150051221E /* NavigationView.xib in Resources */,
+				01AD43D121E7376A000156D2 /* Localizable.strings in Resources */,
 				0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */,
 				01B3DD2021D631150051221E /* MagicView.xib in Resources */,
 				01B3DD3321D631150051221E /* JoinView.xib in Resources */,
@@ -855,6 +876,7 @@
 				01B3DD8821D8D50A0051221E /* VideoPlayCell.xib in Resources */,
 				0138FBE821DF1B32001B6BAF /* FavoritesVC.xib in Resources */,
 				0138FBEC21DF1B61001B6BAF /* HomeVC.xib in Resources */,
+				01AD43CF21E72F96000156D2 /* ToolBarView.xib in Resources */,
 				0138FC9F21E30474001B6BAF /* InboxVC.xib in Resources */,
 				0124129821DDC1F80078B60F /* ZoomOutViewPlayVideo.xib in Resources */,
 				01B3DD9121D917DE0051221E /* PlayVC.xib in Resources */,
@@ -1021,6 +1043,7 @@
 				01B3DD2E21D631150051221E /* KHButton.swift in Sources */,
 				0138FC9421E3008C001B6BAF /* LocalDataHelper.swift in Sources */,
 				0138FC8421E2FFA1001B6BAF /* APIRequest.swift in Sources */,
+				01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */,
 				0138FC9E21E30474001B6BAF /* InboxVC.swift in Sources */,
 				012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */,
 				0138FC1C21E100EF001B6BAF /* GradientView.swift in Sources */,
@@ -1039,6 +1062,7 @@
 				01B3DD9021D917DE0051221E /* PlayVC.swift in Sources */,
 				0138FC9221E3008C001B6BAF /* AlertHelper.swift in Sources */,
 				0138FC5821E10F63001B6BAF /* Video.swift in Sources */,
+				01AD43CE21E72F96000156D2 /* ToolBarView.swift in Sources */,
 				01B3DD8721D8D50A0051221E /* VideoPlayCell.swift in Sources */,
 				01B3DD3521D631150051221E /* BaseVC.swift in Sources */,
 				0138FC3821E10B5A001B6BAF /* CollapsibleTableViewHeader.swift in Sources */,

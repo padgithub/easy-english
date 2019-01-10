@@ -28,6 +28,7 @@ extension ListModelPlaylistView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as VideoPlayCell
+        cell.selectionStyle = .none
         cell.configCell(playlist: arrData[indexPath.row])
         return cell
     }
@@ -39,7 +40,7 @@ extension ListModelPlaylistView: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
+//        tableView.deselectRow(at: indexPath, animated: false)
         handleSelectRow?(indexPath.row)
     }
 }

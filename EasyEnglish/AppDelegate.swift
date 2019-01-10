@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var idVideoPlaying = ""
     var arrVideoPlaying = [Items]()
     var indexPlaying = 0
+    var titleCatagory = ""
+    var titlePlaylist = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         youtubeShare.turnAudio()
@@ -70,9 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func configSQL() {
-//        if UserDefaults.standard.bool(forKey: "MOVE_FILE1.2") != true {
-//            UserDefaults.standard.set(true, forKey: "MOVE_FILE1.2")
-//            UserDefaults.standard.synchronize()
+        if UserDefaults.standard.bool(forKey: "MOVE_FILE1.2") != true {
+            UserDefaults.standard.set(true, forKey: "MOVE_FILE1.2")
+            UserDefaults.standard.synchronize()
         
             let fileManager = FileManager.default
             let destinationSqliteURL = GroupManager.database
@@ -96,7 +98,7 @@ extension AppDelegate {
                     print("Unable to create database \(error.debugDescription)")
                 }
             }
-//        }
+        }
     }
     
     func initMainVC()  {

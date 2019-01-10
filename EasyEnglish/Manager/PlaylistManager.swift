@@ -2,7 +2,7 @@
 //  PlaylistManager.swift
 //  VuiHocTiengHan
 //
-//  Created by Phu Phan on 9/3/18.
+//  Created by Anh Dũng on 9/3/18.
 //  Copyright © 2018 Phu Phan. All rights reserved.
 //
 
@@ -95,6 +95,7 @@ class PlaylistManager: NSObject {
         } catch _ {
         }
     }
+    
     func removefavorited(playlistId: String) {
         do {
             try dbQueue.inDatabase { db in
@@ -107,11 +108,48 @@ class PlaylistManager: NSObject {
         }
     }
     
-    func getInfo(playlistId: String, isShowLoad : Bool, success : @escaping SuccessHandler,  failure :@escaping FailureHandler) {
-        let url = "https://www.googleapis.com/youtube/v3/playlistItems?fields=pageInfo(totalResults)&part=snippet&playlistId=\(playlistId)&key=AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY"
-//        let url = "https://www.googleapis.com/youtube/v3/playlists?&part=snippet&id=\(playlistId)&key=AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY"
-        apiRequestShared.webServiceCall(url, params: nil, isShowLoader: isShowLoad, method: .get, isHasHeader: false, success: { (respone) in
-            success(respone.responeJson)
-        })
+    func isExistingPlaylist(playlist: Playlist) -> Bool{
+        var playlistItem : [Playlist] = []
+        do {
+            try dbQueue.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM playlists where playlist_id = '\(playlist.playlistId)'")
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = Playlist(data: row)
+                    playlistItem.append(story)
+                }
+            }
+        } catch _ {
+        }
+        if playlistItem.count != 0 {
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func insert_update_playlist(obj: Playlist) {
+        if isExistingPlaylist(playlist: obj) {
+            do {
+                try dbQueue.inDatabase { db in
+                    try db.execute(
+                        "UPDATE playlists set name = :i1,thumbnail = :i2, totalvideo = :i3 where playlist_id = :i",
+                        arguments: ["i":obj.playlistId,"i1":obj.title,"i2":obj.thumbnail,"i3":obj.totalVideo])
+                    print("update: \(obj.playlistId)")
+                }
+            } catch _ {
+            }
+        }else{
+            do {
+                try dbQueue.inDatabase { db in
+                    try db.execute(
+                        "insert into playlists (playlist_id,category_id,favorited,name,thumbnail,totalvideo) values (:i1,:i1,:i1,:i1,:i1)",
+                        arguments: [ "i1":obj.playlistId, "i2":obj.categoryId, "i3":obj.categoryId, "i4":obj.thumbnail, "i5":obj.totalVideo])
+                    let playerId = db.lastInsertedRowID
+                    print("added:\(playerId)")
+                }
+            } catch _ {
+            }
+        }
     }
 }

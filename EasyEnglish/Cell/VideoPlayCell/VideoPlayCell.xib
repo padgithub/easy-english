@@ -41,12 +41,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcD-SJ-oar">
                                         <rect key="frame" x="5" y="2" width="20" height="9.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ZcD-SJ-oar" firstAttribute="centerX" secondItem="gzD-0B-hm3" secondAttribute="centerX" id="R9a-SJ-uVE"/>
                                     <constraint firstItem="ZcD-SJ-oar" firstAttribute="centerY" secondItem="gzD-0B-hm3" secondAttribute="centerY" id="kYL-8u-Rgs"/>
@@ -66,14 +67,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2j-Ea-EOw">
                                 <rect key="frame" x="166.5" y="0.0" width="192.5" height="97.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play over Chords only using the pentatonic scale!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-8i-jPZ">
-                                        <rect key="frame" x="5" y="7" width="162.5" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-8i-jPZ">
+                                        <rect key="frame" x="5" y="7" width="162.5" height="14.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700K views" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-C3-IgL">
                                         <rect key="frame" x="5" y="73" width="162.5" height="14.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14.5" id="P4m-Hr-zPb"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -106,6 +110,9 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guitastic United" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afn-KC-Ztr">
                                         <rect key="frame" x="5" y="58.5" width="162.5" height="14.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14.5" id="pIj-FB-4FG"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -122,7 +129,7 @@
                                     <constraint firstAttribute="bottom" secondItem="H4X-xl-ZSf" secondAttribute="bottom" id="Iap-6C-Cx3"/>
                                     <constraint firstItem="aFu-C3-IgL" firstAttribute="trailing" secondItem="PIc-8i-jPZ" secondAttribute="trailing" id="MJv-gh-l8b"/>
                                     <constraint firstItem="afn-KC-Ztr" firstAttribute="trailing" secondItem="aFu-C3-IgL" secondAttribute="trailing" id="Qud-z5-8rR"/>
-                                    <constraint firstItem="afn-KC-Ztr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PIc-8i-jPZ" secondAttribute="bottom" id="YgT-s8-Axm"/>
+                                    <constraint firstItem="afn-KC-Ztr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PIc-8i-jPZ" secondAttribute="bottom" constant="2" id="YgT-s8-Axm"/>
                                     <constraint firstItem="sjX-fz-INu" firstAttribute="leading" secondItem="S2j-Ea-EOw" secondAttribute="leading" id="Ze0-29-per"/>
                                     <constraint firstItem="aFu-C3-IgL" firstAttribute="top" secondItem="afn-KC-Ztr" secondAttribute="bottom" id="ZjZ-IA-FM2"/>
                                     <constraint firstItem="PIc-8i-jPZ" firstAttribute="top" secondItem="sjX-fz-INu" secondAttribute="bottom" id="euL-ol-trG"/>
@@ -130,7 +137,6 @@
                                     <constraint firstItem="afn-KC-Ztr" firstAttribute="leading" secondItem="aFu-C3-IgL" secondAttribute="leading" id="jzi-SV-MUY"/>
                                     <constraint firstItem="PIc-8i-jPZ" firstAttribute="leading" secondItem="S2j-Ea-EOw" secondAttribute="leading" constant="5" id="lAn-CK-AvP"/>
                                     <constraint firstItem="H4X-xl-ZSf" firstAttribute="leading" secondItem="PIc-8i-jPZ" secondAttribute="trailing" constant="5" id="rde-ph-6Ux"/>
-                                    <constraint firstItem="PIc-8i-jPZ" firstAttribute="height" secondItem="S2j-Ea-EOw" secondAttribute="height" multiplier="1/2" id="zHo-y5-b77"/>
                                 </constraints>
                             </view>
                         </subviews>

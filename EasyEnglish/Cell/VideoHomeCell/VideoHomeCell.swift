@@ -23,7 +23,22 @@ class VideoHomeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let url = "https://drive.google.com/uc?export=download&id=0BxJTJZ8mMxzpUFRib0MzajhZbkU"
+        
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    @IBAction func actionMoreOption(_ sender: Any) {
+         handleMoreOption?()
+    }
+    
+}
+
+extension VideoHomeCell {
+    func configCell(obj: Items) {
+        let url = obj.snippet.thumbnails.medium.url
         urlString = url
         if url.count > 0 {
             self.imageVideo.kf.setImage(with: URL(string: url), placeholder: #imageLiteral(resourceName: "ic_delete"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
@@ -34,15 +49,9 @@ class VideoHomeCell: UITableViewCell {
                 }
             })
         }
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-    
-    @IBAction func actionMoreOption(_ sender: Any) {
-         handleMoreOption?()
+        lbSub.text = obj.subTitle
+        lbTitleVideo.text = obj.snippet.title
+        lbDuration.text = obj.contentDetails.duration.ISO8601DateComponents()
     }
     
 }

@@ -11,6 +11,8 @@ import YouTubePlayer
 
 class PlayVC: BaseVC {
 
+    @IBOutlet weak var lbDislike: UILabel!
+    @IBOutlet weak var lbLiker: UILabel!
     @IBOutlet weak var lbViewer: UILabel!
     @IBOutlet weak var lbTitleVideo: UILabel!
     @IBOutlet weak var lbTimeEnd: UILabel!
@@ -190,9 +192,8 @@ class PlayVC: BaseVC {
 
 extension PlayVC {
     func initUI() {
-        
+        textViewNote.delegate = self
         ctrHeightViewVideo.constant = 230*heightRatio
-        
         tableView.register(VideoPlayCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
@@ -237,9 +238,16 @@ extension PlayVC {
         TAppDelegate.handleReturnForeground = {
             self.isPlay = !TAppDelegate.isPlay
         }
+        configToolbarTF()
     }
     
     func initData() {
+        for index in TAppDelegate.arrVideoPlaying.indices {
+            let item = VideoManager.shareInstance.getInfoVideoDB(video: TAppDelegate.arrVideoPlaying[index])
+            
+            TAppDelegate.arrVideoPlaying[index].notes = item.notes
+            TAppDelegate.arrVideoPlaying[index].timeUpdate = item.timeUpdate
+        }
         viewModel.arrData = TAppDelegate.arrVideoPlaying
         tableView.reloadData()
         self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
@@ -248,6 +256,12 @@ extension PlayVC {
     func setDetailVideo(video: Items) {
         lbTitleVideo.text = video.snippet.title
         lbViewer.text = "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
+        textViewNote.text = video.notes
+        lbStatusNote.text = "\(Date.init(seconds: video.timeUpdate).string("dd/mm/yyyy hh:mm a")) | Auto save"
+        lbTitileSub.text = TAppDelegate.titlePlaylist
+        lbSub.text = TAppDelegate.titleCatagory
+        lbDislike.text = "\(Int(video.statistics.dislikeCount) ?? 0 * 4) K"
+        lbLiker.text = "\(Int(video.statistics.likeCount) ?? 0 * 4) K"
     }
     
     func frameViewPlay(_ view : UIView) {
@@ -275,6 +289,42 @@ extension PlayVC {
         self.clickBack()
         TAppDelegate.isNew = false
         showZoomOutView()
+    }
+}
+
+extension PlayVC {
+    func configToolbarTF() {
+        let numberToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        numberToolbar.barStyle = .default
+        numberToolbar.barTintColor = UIColor("AE0000", alpha: 1.0)
+        numberToolbar.backgroundColor = UIColor("AE0000", alpha: 1.0)
+        let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(doneWithNumberPad))
+        cancel.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white], for: .normal)
+        let done = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneWithNumberPad))
+        done.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white], for: .normal)
+        numberToolbar.items = [
+            cancel,
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),done
+        ]
+        numberToolbar.sizeToFit()
+        textViewNote.inputAccessoryView = numberToolbar
+    }
+    
+    @objc func cancelNumberPad() {
+        textViewNote.endEditing(true)
+    }
+    
+    @objc func doneWithNumberPad() {
+        textViewNote.endEditing(true)
+    }
+}
+
+extension PlayVC : UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].notes = textView.text ?? ""
+        TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].timeUpdate = Date().secondsSince1970
+        VideoManager.shareInstance.updateNotesVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
+        self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
     }
 }
 

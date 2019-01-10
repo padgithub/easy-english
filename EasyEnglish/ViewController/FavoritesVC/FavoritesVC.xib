@@ -11,7 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
+                <outlet property="navi" destination="BgZ-qu-9FC" id="56B-Nz-FJE"/>
+                <outlet property="toolBar" destination="3hu-eX-FYn" id="bMR-iK-vV2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewToolLeft" destination="2Fz-Fr-yR5" id="7Ub-1Q-tW7"/>
+                <outlet property="viewToolReight" destination="STo-bi-gxG" id="SYV-r3-PTe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,15 +31,59 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Favorites"/>
                     </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5l-08-s2X">
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hu-eX-FYn" customClass="ToolBarView" customModule="EasyEnglish" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="c39-Qv-Qx7"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleG2Left" value="Playlist Yêu thích"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleG2Right" value="Video Yêu thích"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STo-bi-gxG">
+                            <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                            <color key="backgroundColor" red="0.32156862749999998" green="0.16862745100000001" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-Fr-yR5" userLabel="ViewToolLeft">
+                            <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                            <color key="backgroundColor" red="0.31372549020000001" green="0.70588235290000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3hu-eX-FYn" secondAttribute="trailing" id="2Qg-Ka-dzf"/>
+                        <constraint firstAttribute="trailing" secondItem="STo-bi-gxG" secondAttribute="trailing" id="AWV-2J-0jo"/>
+                        <constraint firstItem="STo-bi-gxG" firstAttribute="top" secondItem="3hu-eX-FYn" secondAttribute="bottom" id="DHg-Yv-bGm"/>
+                        <constraint firstAttribute="bottom" secondItem="STo-bi-gxG" secondAttribute="bottom" id="KWX-Jb-WDF"/>
+                        <constraint firstItem="3hu-eX-FYn" firstAttribute="leading" secondItem="i5l-08-s2X" secondAttribute="leading" id="NYg-i8-E7Y"/>
+                        <constraint firstAttribute="bottom" secondItem="2Fz-Fr-yR5" secondAttribute="bottom" id="OQx-F4-ZCJ"/>
+                        <constraint firstItem="2Fz-Fr-yR5" firstAttribute="leading" secondItem="i5l-08-s2X" secondAttribute="leading" id="RgG-fd-ozA"/>
+                        <constraint firstItem="2Fz-Fr-yR5" firstAttribute="top" secondItem="3hu-eX-FYn" secondAttribute="bottom" id="Rle-54-Yzq"/>
+                        <constraint firstItem="3hu-eX-FYn" firstAttribute="top" secondItem="i5l-08-s2X" secondAttribute="top" id="gIm-MR-Ago"/>
+                        <constraint firstItem="STo-bi-gxG" firstAttribute="leading" secondItem="i5l-08-s2X" secondAttribute="leading" id="iTp-7p-FnW"/>
+                        <constraint firstAttribute="trailing" secondItem="2Fz-Fr-yR5" secondAttribute="trailing" id="zT3-1c-kGf"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="i5l-08-s2X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3fm-jT-l1M"/>
                 <constraint firstItem="BgZ-qu-9FC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A0w-Ck-T1G"/>
                 <constraint firstItem="BgZ-qu-9FC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GvD-ve-F48"/>
+                <constraint firstAttribute="trailing" secondItem="i5l-08-s2X" secondAttribute="trailing" id="cH7-97-Z2q"/>
                 <constraint firstAttribute="trailing" secondItem="BgZ-qu-9FC" secondAttribute="trailing" id="dLa-Mh-Pe7"/>
+                <constraint firstItem="i5l-08-s2X" firstAttribute="top" secondItem="BgZ-qu-9FC" secondAttribute="bottom" id="qVn-ZE-skg"/>
+                <constraint firstAttribute="bottom" secondItem="i5l-08-s2X" secondAttribute="bottom" id="xMa-qd-1Ln"/>
             </constraints>
+            <point key="canvasLocation" x="114.40000000000001" y="53.523238380809602"/>
         </view>
     </objects>
 </document>

@@ -15,11 +15,13 @@ class HomeVC: BaseVC {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel = ListModelView()
+    var arrData = [Items]()
     //    private let animations = [AnimationType.from(direction: .bottom, offset: 30.0)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        initData()
     }
     
     deinit {
@@ -34,22 +36,37 @@ extension HomeVC {
         tableView.dataSource = viewModel
         
         viewModel.handleSelectRow = { (index) in
+            let arrTemp = VideoManager.shareInstance.fetchAllForPlaylistId(playlistId: self.arrData[index].playlistId)
+            let developer = self.arrData[index].subTitle
+            let array = developer.components(separatedBy: " / ")
+            TAppDelegate.titlePlaylist = array[1]
+            TAppDelegate.titleCatagory = array[0]
+            TAppDelegate.idVideoPlaying = self.arrData[index].id
+            TAppDelegate.arrVideoPlaying = arrTemp
+            self.zoomOutView.lbTitleVideo.text = self.arrData[index].snippet.title
             if !TAppDelegate.isShowZoomOutView {
-                
-                
+                viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
             }else{
                 let vc = PlayVC(nibName: "PlayVC", bundle: nil)
                 TAppDelegate.isNew = true
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }
+            
+            for i in arrTemp.indices {
+                if self.arrData[index].id == arrTemp[i].id {
+                    TAppDelegate.indexPlaying = i
+                }
+            }
+            self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
+        
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
         
         loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
         
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
                 self!.refresh()
             })
             }, loadingView: loadingView)
@@ -59,11 +76,22 @@ extension HomeVC {
     }
     
     func refresh() {
+        initData()
         tableView.reloadData()
         //        animate()
         tableView.dg_stopLoading()
     }
     
+    func loadData() {
+        self.arrData.removeAll()
+        self.arrData = VideoManager.shareInstance.fetchVideoListDBRanDom()
+    }
+    
+    func initData() {
+        loadData()
+        viewModel.arrData = self.arrData
+        tableView.reloadData()
+    }
     //    func animate() {
     //        // Combined animations example
     //        let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
@@ -77,3 +105,50 @@ extension HomeVC {
     //                       animations: [fromAnimation, zoomAnimation], delay: 0.5)
     //    }
 }
+
+
+//VideoManager.shareInstance.fethVideoListAPI(playlistId: self.arrData[index].playlistId, isShowLoad: true, success: { (respone) in
+//                var videoIds = ""
+//                let itemsVideo = respone["items"].arrayValue
+//                for i in itemsVideo {
+//                    let videoId = i["snippet"]["resourceId"]["videoId"].stringValue
+//                    videoIds.append(videoId+",")
+//                }
+//                if videoIds.count > 0 {
+//                    videoIds.removeLast()
+//                }
+//                VideoManager.shareInstance.getInfoVideo(videoId: videoIds, success: { (videos) in
+//                    var arrTemp = videos.items
+//                    self.initData()
+//                    let developer = self.arrData[index].subTitle
+//                    let array = developer.components(separatedBy: " / ")
+//
+//                    for i in videos.items {
+//                        i.playlistId = self.arrData[index].playlistId
+//                        i.subTitle = "\(array[0]) / \(array[1])"
+//                        VideoManager.shareInstance.addVideo(videoItem: i)
+//                    }
+//                    //
+//                    TAppDelegate.titlePlaylist = array[1]
+//                    TAppDelegate.titleCatagory = array[0]
+//                    TAppDelegate.idVideoPlaying = arrTemp[index].id
+//                    TAppDelegate.arrVideoPlaying = arrTemp
+//                    self.zoomOutView.lbTitleVideo.text = arrTemp[index].snippet.title
+//
+//                    if !TAppDelegate.isShowZoomOutView {
+//                        if TAppDelegate.indexPlaying != index {
+//                            viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
+//                        }
+//                    }else{
+//                        let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+//                        TAppDelegate.isNew = true
+//                        vc.hidesBottomBarWhenPushed = true
+//                        self.navigationController?.pushViewController(vc, animated: true)
+//                    }
+//                    TAppDelegate.indexPlaying = index
+//                    self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
+//
+//                    //
+//                })
+//            })
+

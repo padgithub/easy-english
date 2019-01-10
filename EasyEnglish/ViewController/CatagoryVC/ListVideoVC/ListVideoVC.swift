@@ -37,20 +37,22 @@ extension ListVideoVC {
         viewModel.isPlaylist = true
         
         viewModel.handleSelectRow = { (index) in
-            
             TAppDelegate.idVideoPlaying = self.arrData[index].id
             TAppDelegate.arrVideoPlaying = self.arrData
-            TAppDelegate.indexPlaying = index
-            
+            TAppDelegate.titlePlaylist = self.playlist.title ?? ""
             self.zoomOutView.lbTitleVideo.text = self.arrData[index].snippet.title
             if !TAppDelegate.isShowZoomOutView {
-                viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
+                if TAppDelegate.indexPlaying != index {
+                    viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
+                }
             }else{
                 let vc = PlayVC(nibName: "PlayVC", bundle: nil)
                 TAppDelegate.isNew = true
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }
+            TAppDelegate.indexPlaying = index
+            self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
     }
     
@@ -60,12 +62,16 @@ extension ListVideoVC {
     }
     
     func loadData() {
-        VideoManager.shareInstance.fethVideoListAPI(playlistId: playlist.playlistId, isShowLoad: true, success: { (respone) in
+        VideoManager.shareInstance.fethVideoListAPI(playlistId: playlist.playlistId, isShowLoad: false, success: { (respone) in
             var videoIds = ""
             let itemsVideo = respone["items"].arrayValue
             if itemsVideo.count > 0 {
                 //Update lai database
-                
+                let item = itemsVideo[0]
+                self.playlist.title = item["snippet"]["title"].stringValue
+                self.playlist.thumbnail = item["snippet"]["thumbnails"]["medium"]["url"].stringValue
+                self.playlist.totalVideo = respone["pageInfo"]["totalResults"].intValue
+                PlaylistManager.shareInstance.insert_update_playlist(obj: self.playlist)
             }
             for i in itemsVideo {
                 let videoId = i["snippet"]["resourceId"]["videoId"].stringValue
@@ -77,6 +83,11 @@ extension ListVideoVC {
             VideoManager.shareInstance.getInfoVideo(videoId: videoIds, success: { (videos) in
                 self.arrData = videos.items
                 self.initData()
+                for i in videos.items {
+                    i.playlistId = self.playlist.playlistId
+                    i.subTitle = "\(self.categories.name) / \(self.playlist.title ?? "")"
+                    VideoManager.shareInstance.addVideo(videoItem: i)
+                }
             })
         })
     }
