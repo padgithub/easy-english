@@ -37,7 +37,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-0B-hm3" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                <rect key="frame" x="10" y="5" width="30.5" height="14"/>
+                                <rect key="frame" x="10" y="7" width="30.5" height="14"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcD-SJ-oar">
                                         <rect key="frame" x="5" y="2" width="20" height="9.5"/>
@@ -67,7 +67,7 @@
                                 <rect key="frame" x="166.5" y="0.0" width="192.5" height="97.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play over Chords only using the pentatonic scale!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-8i-jPZ">
-                                        <rect key="frame" x="5" y="5" width="162.5" height="49"/>
+                                        <rect key="frame" x="5" y="7" width="162.5" height="49"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -79,14 +79,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjX-fz-INu" customClass="MagicView" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="192.5" height="5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="192.5" height="7"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="5" id="RDw-sW-zaK"/>
+                                            <constraint firstAttribute="height" constant="7" id="RDw-sW-zaK"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-xl-ZSf">
-                                        <rect key="frame" x="172.5" y="5" width="20" height="92.5"/>
+                                        <rect key="frame" x="172.5" y="7" width="20" height="90.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-JP-cLz">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -169,6 +169,7 @@
                 <outlet property="lbSub" destination="afn-KC-Ztr" id="Rmx-7V-myR"/>
                 <outlet property="lbTitleVideo" destination="PIc-8i-jPZ" id="1uy-Ej-PFM"/>
                 <outlet property="lbViewer" destination="aFu-C3-IgL" id="w1L-tJ-7Oo"/>
+                <outlet property="viewDuration" destination="gzD-0B-hm3" id="rTB-a5-hgC"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="147.97601199400302"/>
         </tableViewCell>

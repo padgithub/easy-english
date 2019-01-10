@@ -680,13 +680,16 @@ extension String {
     /// - Note: Does not accept fractional input (e.g.: P3.5Y), must be integers (e.g.: P3Y6M).
     /// - SeeAlso: https://en.wikipedia.org/wiki/ISO_8601#Durations
     /// - Returns: If valid ISO 8601, an `NSDateComponents` representation, otherwise `nil`.
-    func ISO8601DateComponents() -> NSDateComponents? {
+    func ISO8601DateComponents() -> String {
         // Regex adapted from Moment.js https://github.com/moment/moment/blame/develop/src/lib/duration/create.js#L16
         let pattern = "^P(?:(\\d*)Y)?(?:(\\d*)M)?(?:(\\d*)W)?(?:(\\d*)D)?(?:T(?:(\\d*)H)?(?:(\\d*)M)?(?:(\\d*)S)?)?$"
         let nsstringRepresentation = self as NSString
         let regex = try! NSRegularExpression(pattern: pattern, options: [.anchorsMatchLines])
         
-        guard let match = regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: nsstringRepresentation.length)) else { return nil }
+        var h = 0
+        var m = 0
+        var s = 0
+        guard let match = regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: nsstringRepresentation.length)) else { return "nil" }
         
         let dateComponents = NSDateComponents()
         
@@ -708,16 +711,32 @@ extension String {
         
         if match.range(at: 5).location != NSNotFound, let hour = Int(nsstringRepresentation.substring(with: match.range(at:5)) as String) {
             dateComponents.hour = hour
+            h = hour
         }
         
         if match.range(at: 6).location != NSNotFound, let minute = Int(nsstringRepresentation.substring(with: match.range(at:6)) as String) {
             dateComponents.minute = minute
+            m = minute
         }
         
         if match.range(at: 7).location != NSNotFound, let second = Int(nsstringRepresentation.substring(with: match.range(at:7)) as String) {
             dateComponents.second = second
+            s = second
         }
         
-        return dateComponents
+        let time = h*3600 + m*60 + s
+        
+        if time == 0 {
+            return "00:00"
+        }else{
+            if time >= 3600 {
+                let (h,m,s) = Int().secondsToHoursMinutesSeconds(seconds: time)
+                return "\(h):\(m):\(s)"
+            }else{
+                let (m,s) = Int().secondsToMinutesSeconds(seconds: time)
+                return "\(m):\(s)"
+            }
+        }
     }
 }
+

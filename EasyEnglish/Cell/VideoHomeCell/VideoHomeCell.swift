@@ -40,6 +40,7 @@ class VideoHomeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+    
     @IBAction func actionMoreOption(_ sender: Any) {
          handleMoreOption?()
     }

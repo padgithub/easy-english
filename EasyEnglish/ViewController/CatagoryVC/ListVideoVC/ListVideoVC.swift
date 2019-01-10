@@ -16,6 +16,7 @@ class ListVideoVC: BaseVC {
     var viewModel = ListModelView()
     var arrData = [Items]()
     var playlist = Playlist()
+    var categories = Category()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class ListVideoVC: BaseVC {
 
 extension ListVideoVC {
     func initUI() {
+        navi.title = playlist.title ?? ""
         navi.handleLeft = {
             self.clickBack()
         }

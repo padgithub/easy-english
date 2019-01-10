@@ -15,7 +15,7 @@ class ListPlaylistVC: BaseVC {
     
     var viewModel = ListModelPlaylistView()
     var arrData = [Playlist]()
-    var catagoryId = 0
+    var categories = Category()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +27,18 @@ class ListPlaylistVC: BaseVC {
 
 extension ListPlaylistVC {
     func initUI() {
+        navi.title = categories.name
         navi.handleLeft = {
             self.clickBack()
         }
+        
         tableView.register(VideoPlayCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
         viewModel.handleSelectRow = { (index) in
             let vc = ListVideoVC(nibName: "ListVideoVC",bundle: nil)
             vc.playlist = self.arrData[index]
+            vc.categories = self.categories
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -45,6 +48,6 @@ extension ListPlaylistVC {
     }
     
     func loadData() {
-        arrData = PlaylistManager.shareInstance.fetchPlayList(category_id: catagoryId)
+        arrData = PlaylistManager.shareInstance.fetchPlayList(category_id: categories.group_id)
     }
 }

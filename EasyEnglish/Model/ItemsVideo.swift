@@ -21,6 +21,7 @@ class ItemsVideo : NSObject {
     var desc = ""
     var playlistId : String = ""
     var isSelected : Bool = false
+    
     override init() {
         super.init()
     }

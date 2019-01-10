@@ -106,7 +106,7 @@ class VideoManager: NSObject {
     
     func getInfoVideo(videoId: String, isShowLoading: Bool = true, success: @escaping (Videos) -> Void) {
         let url = "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=\(videoId.encode())&key=\(apiFinalShared.keyYoutube)"
-        apiRequestShared.webServiceCall(url, params: nil, isShowLoader: true, method: .get, isHasHeader: false) { (respone) in
+        apiRequestShared.webServiceCall(url, params: nil, isShowLoader: isShowLoading, method: .get, isHasHeader: false) { (respone) in
             success(parseShared.parseListVideos(respone.responeJson))
         }
     }

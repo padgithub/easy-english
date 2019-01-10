@@ -11,6 +11,7 @@ import Kingfisher
 
 class VideoPlayCell: UITableViewCell {
 
+    @IBOutlet weak var viewDuration: KHView!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbTitleVideo: UILabel!
     @IBOutlet weak var lbSub: UILabel!
@@ -50,9 +51,10 @@ extension VideoPlayCell {
                 }
             })
         }
+        lbDuration.text = video.contentDetails.duration.ISO8601DateComponents()
         
         lbTitleVideo.text = video.snippet.title
-        lbViewer.text = video.statistics.viewCount
+        lbViewer.text = "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
         
     }
     
@@ -68,8 +70,10 @@ extension VideoPlayCell {
                     }
                 })
             }
+            lbSub.text = ""
+            lbViewer.text  = ""
         }
-        
+        viewDuration.isHidden = true
         lbTitleVideo.text = playlist.title
     }
     

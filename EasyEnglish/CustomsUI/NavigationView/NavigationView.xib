@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MYRIADPRO-SEMIBOLD.OTF">
-            <string>MyriadPro-Semibold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
@@ -74,6 +69,17 @@
                                 <constraint firstAttribute="trailing" secondItem="yMs-l1-szH" secondAttribute="trailing" id="tZ2-Ui-Cjp"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfF-R1-mTh" customClass="MarqueeLabel" customModule="EasyEnglish" customModuleProvider="target">
+                            <rect key="frame" x="55" y="25" width="304" height="0.0"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boz-sG-ziG">
                             <rect key="frame" x="359" y="0.0" width="50" height="50"/>
                             <subviews>
@@ -100,22 +106,17 @@
                                 <constraint firstAttribute="trailing" secondItem="UfM-QA-6Yh" secondAttribute="trailing" id="wEy-At-mZT"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfF-R1-mTh" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                            <rect key="frame" x="207" y="25" width="0.0" height="0.0"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="24"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="RfF-R1-mTh" firstAttribute="centerX" secondItem="o1g-h4-9wz" secondAttribute="centerX" id="0T1-Do-Yky"/>
                         <constraint firstAttribute="trailing" secondItem="boz-sG-ziG" secondAttribute="trailing" constant="5" id="2c8-63-CoE"/>
                         <constraint firstAttribute="bottom" secondItem="cbZ-9h-clC" secondAttribute="bottom" id="3sM-PW-4B4"/>
                         <constraint firstItem="cbZ-9h-clC" firstAttribute="top" secondItem="o1g-h4-9wz" secondAttribute="top" id="5Yh-Ie-80b"/>
+                        <constraint firstItem="boz-sG-ziG" firstAttribute="leading" secondItem="RfF-R1-mTh" secondAttribute="trailing" id="FHa-QZ-y8H"/>
                         <constraint firstItem="boz-sG-ziG" firstAttribute="top" secondItem="o1g-h4-9wz" secondAttribute="top" id="JiH-AA-QIw"/>
                         <constraint firstItem="RfF-R1-mTh" firstAttribute="centerY" secondItem="o1g-h4-9wz" secondAttribute="centerY" id="isz-in-tCW"/>
                         <constraint firstItem="cbZ-9h-clC" firstAttribute="leading" secondItem="o1g-h4-9wz" secondAttribute="leading" constant="5" id="kxo-e6-aU4"/>
+                        <constraint firstItem="RfF-R1-mTh" firstAttribute="leading" secondItem="cbZ-9h-clC" secondAttribute="trailing" id="l0l-HS-8hE"/>
                         <constraint firstAttribute="bottom" secondItem="boz-sG-ziG" secondAttribute="bottom" id="sBK-fU-qHA"/>
                     </constraints>
                 </view>

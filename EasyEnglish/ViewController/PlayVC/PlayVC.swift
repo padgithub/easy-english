@@ -28,6 +28,10 @@ class PlayVC: BaseVC {
     @IBOutlet weak var btAutoPlay: UIButton!
     @IBOutlet weak var ctrHeighViewMoreInfo: NSLayoutConstraint!
     @IBOutlet weak var viewMoreInfoVideo: UIView!
+    @IBOutlet weak var ctrHeightViewNote: NSLayoutConstraint!
+    @IBOutlet weak var lbStatusNote: UILabel!
+    @IBOutlet weak var textViewNote: UITextView!
+    @IBOutlet weak var viewNote: UIView!
     
     var viewModel = ListModelView()
     var current: Int = 0
@@ -58,6 +62,18 @@ class PlayVC: BaseVC {
         }
     }
     
+    var isShowNote = false {
+        didSet{
+            if isShowNote {
+                ctrHeightViewNote.constant = 200*heightRatio
+                viewNote.isHidden = false
+            }else{
+                ctrHeightViewNote.constant = 0
+                viewNote.isHidden = true
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -78,7 +94,10 @@ class PlayVC: BaseVC {
 
     @IBAction func actionCollapsMoreInfo(_ sender: Any) {
         isMoreInfoVideo = !isMoreInfoVideo
-        
+    }
+    
+    @IBAction func actionShowEditNote(_ sender: Any) {
+        isShowNote = !isShowNote
     }
     
     @IBAction func actionAutoPlay(_ sender: Any) {
@@ -209,7 +228,9 @@ extension PlayVC {
         
         youtubeShare.handleCurentime = { (current,duration) in
             self.current = Int(Float(current) ?? 0)
-            self.lbTimeStart.text = self.timeStringFrom(self.current ,Int(duration) ?? 0)
+            self.duration = Int(duration) ?? 0
+            self.lbTimeEnd.text = self.timeStringFrom(self.duration)
+            self.lbTimeStart.text = self.timeStringFrom(self.current ,self.duration)
             self.silder.value = Float(current) ?? 0
         }
         
@@ -226,7 +247,7 @@ extension PlayVC {
     
     func setDetailVideo(video: Items) {
         lbTitleVideo.text = video.snippet.title
-        lbViewer.text = video.statistics.viewCount
+        lbViewer.text = "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
     }
     
     func frameViewPlay(_ view : UIView) {

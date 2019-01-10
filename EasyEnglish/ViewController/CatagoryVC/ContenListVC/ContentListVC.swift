@@ -13,7 +13,6 @@ class ContentListVC: BaseVC {
     @IBOutlet weak var navi: NavigationView!
     @IBOutlet weak var tableView: UITableView!
     
-    var sections = sectionsData
     var listGroup: [Group] = []
     
     override func viewDidLoad() {
@@ -84,7 +83,7 @@ extension ContentListVC: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ListPlaylistVC(nibName: "ListPlaylistVC",bundle: nil)
-        vc.catagoryId = listGroup[indexPath.section].categories[indexPath.row].group_id
+        vc.categories = listGroup[indexPath.section].categories[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
