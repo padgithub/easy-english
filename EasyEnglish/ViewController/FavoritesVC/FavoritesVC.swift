@@ -59,10 +59,12 @@ extension FavoritesVC {
         tableViewLeft.dataSource = viewModelList
         //
         viewModelList.handleSelectRow = { (index) in
+            let catogry = CategoryManager.shareInstance.fethchCategory(self.arrDataList[index].categoryId)
             let vc = ListVideoVC(nibName: "ListVideoVC",bundle: nil)
+            vc.categories = catogry
             vc.playlist = self.arrDataList[index]
             self.navigationController?.pushViewController(vc, animated: true)
-//            TAppDelegate.titleCatagory
+            TAppDelegate.titleCatagory = catogry.name
             self.tableViewLeft.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
         //

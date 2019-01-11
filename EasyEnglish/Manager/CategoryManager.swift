@@ -47,4 +47,24 @@ class CategoryManager: NSObject {
         }
         return listCategory
     }
+
+    func fethchCategory(_ categoryId: Int) -> Category{
+        var items : [Category] = []
+        do {
+            try dbQueue.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM categories where id = %d",categoryId)
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = Category(data: row)
+                    items.append(story)
+                }
+            }
+        } catch _ {
+        }
+        if items.count != 0 {
+            return items[0]
+        }else{
+            return Category()
+        }
+    }
 }

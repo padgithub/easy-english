@@ -71,6 +71,7 @@ extension BaseVC {
     }
     
     func removeZoomOutView() {
+        TAppDelegate.isPlay = false
         TAppDelegate.isShowZoomOutView = true
         zoomOutView.isHidden = true
     }
