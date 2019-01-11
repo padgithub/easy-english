@@ -44,7 +44,7 @@ extension ListModelView: UITableViewDataSource {
 
 extension ListModelView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return isPlaylist ? 115*heightRatio : 300*heightRatio //125
+        return isPlaylist ? 110*heightRatio : 295*heightRatio //125
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -79,6 +79,34 @@ extension BaseVC {
         self.view.endEditing(true)
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func goPlay(arrData: [Items],index: Int) {
+        let arrTemp = VideoManager.shareInstance.fetchAllForPlaylistId(playlistId: arrData[index].playlistId)
+        let developer = arrData[index].subTitle
+        let array = developer.components(separatedBy: " / ")
+        TAppDelegate.titlePlaylist = array[1]
+        TAppDelegate.titleCatagory = array[0]
+        TAppDelegate.idVideoPlaying = arrData[index].id
+        TAppDelegate.arrVideoPlaying = arrTemp
+        
+        self.zoomOutView.lbTitleVideo.text = arrData[index].snippet.title
+        
+        if !TAppDelegate.isShowZoomOutView {
+            viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
+        }else{
+            let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+            TAppDelegate.isNew = true
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        for i in arrTemp.indices {
+            if arrData[index].id == arrTemp[i].id {
+                TAppDelegate.indexPlaying = i
+            }
+        }
+    }
+    
 }
 
 extension UITabBarController {

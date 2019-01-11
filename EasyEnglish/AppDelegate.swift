@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var indexPlaying = 0
     var titleCatagory = ""
     var titlePlaylist = ""
+    var handleReloadDataNotes: (() -> Void)?
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         youtubeShare.turnAudio()

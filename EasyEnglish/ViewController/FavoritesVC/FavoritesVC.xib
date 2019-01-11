@@ -5,13 +5,15 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="navi" destination="BgZ-qu-9FC" id="56B-Nz-FJE"/>
+                <outlet property="tableViewLeft" destination="cF2-dL-BpF" id="M0H-E3-sl1"/>
+                <outlet property="tableViewReight" destination="025-kD-PKp" id="uxI-9R-lbz"/>
                 <outlet property="toolBar" destination="3hu-eX-FYn" id="bMR-iK-vV2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewToolLeft" destination="2Fz-Fr-yR5" id="7Ub-1Q-tW7"/>
@@ -50,11 +52,35 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STo-bi-gxG">
                             <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="025-kD-PKp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
                             <color key="backgroundColor" red="0.32156862749999998" green="0.16862745100000001" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="025-kD-PKp" secondAttribute="bottom" id="FTF-Jv-SNf"/>
+                                <constraint firstAttribute="trailing" secondItem="025-kD-PKp" secondAttribute="trailing" id="PL9-O4-HtF"/>
+                                <constraint firstItem="025-kD-PKp" firstAttribute="leading" secondItem="STo-bi-gxG" secondAttribute="leading" id="T7g-Mo-A6L"/>
+                                <constraint firstItem="025-kD-PKp" firstAttribute="top" secondItem="STo-bi-gxG" secondAttribute="top" id="TDa-mF-bk0"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-Fr-yR5" userLabel="ViewToolLeft">
                             <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-dL-BpF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
                             <color key="backgroundColor" red="0.31372549020000001" green="0.70588235290000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="cF2-dL-BpF" firstAttribute="top" secondItem="2Fz-Fr-yR5" secondAttribute="top" id="61I-yR-Sln"/>
+                                <constraint firstAttribute="bottom" secondItem="cF2-dL-BpF" secondAttribute="bottom" id="edF-Wq-rMw"/>
+                                <constraint firstItem="cF2-dL-BpF" firstAttribute="leading" secondItem="2Fz-Fr-yR5" secondAttribute="leading" id="iNc-tD-hL0"/>
+                                <constraint firstAttribute="trailing" secondItem="cF2-dL-BpF" secondAttribute="trailing" id="lJ9-ci-sVL"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

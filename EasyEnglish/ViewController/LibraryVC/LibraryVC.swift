@@ -14,6 +14,14 @@ class LibraryVC: BaseVC {
     @IBOutlet weak var viewToolLeft: UIView!
     @IBOutlet weak var toolBar: ToolBarView!
     @IBOutlet weak var navi: NavigationView!
+    @IBOutlet weak var tableViewLeft: UITableView!
+    @IBOutlet weak var tableViewRight: UITableView!
+    
+    var viewModelNote = ListNoteModelView()
+    var viewModelHistory = ListNoteModelView()
+    
+    var arrNote = [Items]()
+    var arrHistory = [Items]()
     
     var swicthView = false {
         didSet {
@@ -37,6 +45,9 @@ class LibraryVC: BaseVC {
 
 extension LibraryVC {
     func initUI() {
+        TAppDelegate.handleReloadDataNotes = {
+            self.loadData()
+        }
         navi.title = ""
         toolBar.handleActionG2Left = {
             self.swicthView = false
@@ -45,9 +56,37 @@ extension LibraryVC {
         toolBar.handleActionG2Right = {
             self.swicthView = true
         }
+        
+        tableViewLeft.register(NotesCell.self)
+        tableViewLeft.delegate = viewModelNote
+        tableViewLeft.dataSource = viewModelNote
+        viewModelNote.handleSelectRow = { (index) in
+            self.goPlay(arrData: self.arrNote, index: index)
+        }
+    }
+    
+    func loadData(){
+        if toolBar.indexSelected == 0 {
+            loadDataNote()
+        }else{
+            
+        }
+    }
+    
+    func loadDataNote() {
+        self.arrNote = VideoManager.shareInstance.fetchAllForNote()
+        viewModelNote.arrData = self.arrNote
+        tableViewLeft.reloadData()
+    }
+    
+    func loadDataHistory() {
+        self.arrHistory = VideoManager.shareInstance.fetchAllForNote()
+        viewModelNote.arrData = self.arrNote
+        tableViewLeft.reloadData()
     }
     
     func initData() {
-        
+        loadData()
     }
 }
+

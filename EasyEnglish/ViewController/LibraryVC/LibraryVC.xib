@@ -5,13 +5,15 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="navi" destination="4DS-Wd-5hq" id="rYp-II-sR9"/>
+                <outlet property="tableViewLeft" destination="iqI-xI-cBC" id="ege-6e-QKC"/>
+                <outlet property="tableViewRight" destination="iqI-xI-cBC" id="Iyt-TV-8B4"/>
                 <outlet property="toolBar" destination="0yk-pq-Vh6" id="CvS-IY-dK2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewToolLeft" destination="5hM-Tw-uRD" id="JqX-UJ-7p6"/>
@@ -43,17 +45,41 @@
                                 <constraint firstAttribute="height" constant="50" id="hwh-yM-JSy"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="titleG2Left" value="Video Offline"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="titleG2Right" value="My Note"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleG2Left" value="My Note"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleG2Right" value="History"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyK-FP-vV8">
                             <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O9f-fc-7MW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
                             <color key="backgroundColor" red="0.32156862749999998" green="0.16862745100000001" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="O9f-fc-7MW" firstAttribute="leading" secondItem="jyK-FP-vV8" secondAttribute="leading" id="Rdb-cH-2GM"/>
+                                <constraint firstAttribute="trailing" secondItem="O9f-fc-7MW" secondAttribute="trailing" id="TYD-h9-v8n"/>
+                                <constraint firstItem="O9f-fc-7MW" firstAttribute="top" secondItem="jyK-FP-vV8" secondAttribute="top" id="dWt-kn-XA6"/>
+                                <constraint firstAttribute="bottom" secondItem="O9f-fc-7MW" secondAttribute="bottom" id="zP4-D4-sHP"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hM-Tw-uRD" userLabel="ViewToolLeft">
                             <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iqI-xI-cBC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
                             <color key="backgroundColor" red="0.31372549020000001" green="0.70588235290000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="iqI-xI-cBC" secondAttribute="trailing" id="T8z-Mn-Nac"/>
+                                <constraint firstAttribute="bottom" secondItem="iqI-xI-cBC" secondAttribute="bottom" id="b3h-ZA-DiZ"/>
+                                <constraint firstItem="iqI-xI-cBC" firstAttribute="top" secondItem="5hM-Tw-uRD" secondAttribute="top" id="hkN-4L-w5k"/>
+                                <constraint firstItem="iqI-xI-cBC" firstAttribute="leading" secondItem="5hM-Tw-uRD" secondAttribute="leading" id="maG-B3-L2D"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		011D379E21E4D80E00B47B2D /* TrendingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011D379C21E4D80E00B47B2D /* TrendingVC.xib */; };
 		011D379F21E4D80E00B47B2D /* TrendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D379D21E4D80E00B47B2D /* TrendingVC.swift */; };
+		011F365721E897E500B32E72 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F365521E897E500B32E72 /* NotesCell.swift */; };
+		011F365821E897E500B32E72 /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011F365621E897E500B32E72 /* NotesCell.xib */; };
+		011F365A21E89D7E00B32E72 /* ListNoteModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F365921E89D7E00B32E72 /* ListNoteModelView.swift */; };
 		0124129821DDC1F80078B60F /* ZoomOutViewPlayVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124129721DDC1F80078B60F /* ZoomOutViewPlayVideo.xib */; };
 		0124129B21DDC2210078B60F /* ZoomOutViewPlayVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124129A21DDC2210078B60F /* ZoomOutViewPlayVideo.swift */; };
 		012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012412A121DDFAFE0078B60F /* VideoServiceView.swift */; };
@@ -121,6 +124,9 @@
 /* Begin PBXFileReference section */
 		011D379C21E4D80E00B47B2D /* TrendingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendingVC.xib; sourceTree = "<group>"; };
 		011D379D21E4D80E00B47B2D /* TrendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingVC.swift; sourceTree = "<group>"; };
+		011F365521E897E500B32E72 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		011F365621E897E500B32E72 /* NotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
+		011F365921E89D7E00B32E72 /* ListNoteModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNoteModelView.swift; sourceTree = "<group>"; };
 		0124129721DDC1F80078B60F /* ZoomOutViewPlayVideo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomOutViewPlayVideo.xib; sourceTree = "<group>"; };
 		0124129A21DDC2210078B60F /* ZoomOutViewPlayVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomOutViewPlayVideo.swift; sourceTree = "<group>"; };
 		012412A121DDFAFE0078B60F /* VideoServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoServiceView.swift; sourceTree = "<group>"; };
@@ -265,6 +271,15 @@
 				011D379D21E4D80E00B47B2D /* TrendingVC.swift */,
 			);
 			path = TrendingVC;
+			sourceTree = "<group>";
+		};
+		011F365421E8978E00B32E72 /* NoteCell */ = {
+			isa = PBXGroup;
+			children = (
+				011F365521E897E500B32E72 /* NotesCell.swift */,
+				011F365621E897E500B32E72 /* NotesCell.xib */,
+			);
+			path = NoteCell;
 			sourceTree = "<group>";
 		};
 		0124129921DDC2010078B60F /* ZoomOutViewPlayVideo */ = {
@@ -667,6 +682,7 @@
 		01B3DD7E21D8D4A30051221E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				011F365421E8978E00B32E72 /* NoteCell */,
 				0138FC3121E10B59001B6BAF /* ContenListCell */,
 				01B3DD8421D8D4F40051221E /* VideoPlayCell */,
 				01B3DD8321D8D4E80051221E /* VideoHomeCell */,
@@ -705,6 +721,7 @@
 			children = (
 				01B3DD8B21D8DCA60051221E /* ListModelView.swift */,
 				0138FCA021E30863001B6BAF /* ListModelPlaylistView.swift */,
+				011F365921E89D7E00B32E72 /* ListNoteModelView.swift */,
 			);
 			path = ListModelView;
 			sourceTree = "<group>";
@@ -871,6 +888,7 @@
 				01B3DD2121D631150051221E /* ButtonView.xib in Resources */,
 				0138FBFB21DF1BC0001B6BAF /* LibraryVC.xib in Resources */,
 				0138FC6F21E11661001B6BAF /* history.db in Resources */,
+				011F365821E897E500B32E72 /* NotesCell.xib in Resources */,
 				0138FC7A21E11833001B6BAF /* ListPlaylistVC.xib in Resources */,
 				01B3DB4221D62FE20051221E /* Main.storyboard in Resources */,
 				01B3DD8821D8D50A0051221E /* VideoPlayCell.xib in Resources */,
@@ -1039,6 +1057,7 @@
 				0138FC5B21E10F63001B6BAF /* Playlist.swift in Sources */,
 				0138FC9321E3008C001B6BAF /* InAppPurchase.swift in Sources */,
 				01B3DD2821D631150051221E /* DropBoxUITB.swift in Sources */,
+				011F365A21E89D7E00B32E72 /* ListNoteModelView.swift in Sources */,
 				01B3DD2221D631150051221E /* ButtonView.swift in Sources */,
 				01B3DD2E21D631150051221E /* KHButton.swift in Sources */,
 				0138FC9421E3008C001B6BAF /* LocalDataHelper.swift in Sources */,
@@ -1054,6 +1073,7 @@
 				01B3DD6F21D631150051221E /* MTBBarcodeScanner.m in Sources */,
 				0138FC7521E11819001B6BAF /* ListVideoVC.swift in Sources */,
 				01B3DD1F21D631150051221E /* MagicView.swift in Sources */,
+				011F365721E897E500B32E72 /* NotesCell.swift in Sources */,
 				01B3DD2D21D631150051221E /* KHTextField.swift in Sources */,
 				01B3DD2921D631150051221E /* TextFieldView.swift in Sources */,
 				0138FC6721E10F75001B6BAF /* GroupManager.swift in Sources */,

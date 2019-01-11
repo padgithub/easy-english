@@ -89,7 +89,7 @@ class PlayVC: BaseVC {
             ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT
         } else {
             print("Portrait")
-            ctrHeightViewVideo.constant = 230*heightRatio
+            ctrHeightViewVideo.constant = 225*heightRatio
         }
     }
     
@@ -325,6 +325,7 @@ extension PlayVC : UITextViewDelegate {
         TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].timeUpdate = Date().secondsSince1970
         VideoManager.shareInstance.updateNotesVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
         self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
+        TAppDelegate.handleReloadDataNotes?()
     }
 }
 

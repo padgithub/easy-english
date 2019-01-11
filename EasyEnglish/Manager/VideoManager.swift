@@ -108,11 +108,11 @@ class VideoManager: NSObject {
         }
     }
     
-    func fetchAllFavorited(videoId: String) -> [Items]{
+    func fetchAllFavorited() -> [Items]{
         var videoItem : [Items] = []
         do {
             try dbQueue.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM videos where video_id = '\(videoId)' AND farvorites = 1")
+                let query = String.init(format: "SELECT * FROM videos where farvorites = 1")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let story = Items(dataDB: row)
@@ -129,6 +129,22 @@ class VideoManager: NSObject {
         do {
             try dbQueue.inDatabase { db in
                 let query = String.init(format: "SELECT * FROM videos where playlistId = '\(playlistId)'")
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = Items(dataDB: row)
+                    videoItem.append(story)
+                }
+            }
+        } catch _ {
+        }
+        return videoItem
+    }
+    
+    func fetchAllForNote() -> [Items]{
+        var videoItem : [Items] = []
+        do {
+            try dbQueue.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM videos where notes != ''")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let story = Items(dataDB: row)

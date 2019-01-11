@@ -9,10 +9,19 @@
 import UIKit
 
 class FavoritesVC: BaseVC {
+    @IBOutlet weak var tableViewLeft: UITableView!
+    @IBOutlet weak var tableViewReight: UITableView!
     @IBOutlet weak var viewToolReight: UIView!
     @IBOutlet weak var viewToolLeft: UIView!
     @IBOutlet weak var toolBar: ToolBarView!
     @IBOutlet weak var navi: NavigationView!
+    
+    var viewModelList = ListModelPlaylistView()
+    var viewModelVideo = ListModelView()
+    
+    var arrDataList = [Playlist]()
+    var arrDataVideo = [Items]()
+
     
     var swicthView = false {
         didSet {
@@ -44,9 +53,48 @@ extension FavoritesVC {
         toolBar.handleActionG2Right = {
             self.swicthView = true
         }
+        //
+        tableViewLeft.register(VideoPlayCell.self)
+        tableViewLeft.delegate = viewModelList
+        tableViewLeft.dataSource = viewModelList
+        //
+        viewModelList.handleSelectRow = { (index) in
+            let vc = ListVideoVC(nibName: "ListVideoVC",bundle: nil)
+            vc.playlist = self.arrDataList[index]
+            self.navigationController?.pushViewController(vc, animated: true)
+//            TAppDelegate.titleCatagory
+            self.tableViewLeft.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
+        }
+        //
+        tableViewReight.register(VideoPlayCell.self)
+        tableViewReight.delegate = viewModelVideo
+        tableViewReight.dataSource = viewModelVideo
+        viewModelVideo.handleSelectRow = { (index) in
+            self.goPlay(arrData: self.arrDataVideo, index: index)
+        }
+    }
+    
+    func loadData(){
+        if toolBar.indexSelected == 0 {
+            loadDataPlayList()
+        }else{
+            loadDataVideo()
+        }
+    }
+    
+    func loadDataPlayList() {
+        self.arrDataList = PlaylistManager.shareInstance.fetchPlayListFevorited()
+        viewModelList.arrData = self.arrDataList
+        tableViewLeft.reloadData()
+    }
+    
+    func loadDataVideo() {
+        self.arrDataVideo = VideoManager.shareInstance.fetchAllFavorited()
+        viewModelVideo.arrData = self.arrDataVideo
+        tableViewLeft.reloadData()
     }
     
     func initData() {
-        
+        loadData()
     }
 }
