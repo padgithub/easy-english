@@ -595,6 +595,7 @@ extension UITableView: UITableViewDelegate {
         didSet {
             if circle {
                 cornerRadius = self.bounds.height/2
+                layer.masksToBounds = true
             }
         }
     }
@@ -608,8 +609,8 @@ extension UITableView: UITableViewDelegate {
         shadowLayer.backgroundColor = UIColor.clear
         shadowLayer.layer.shadowColor = UIColor.darkGray.cgColor
         shadowLayer.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: self.cornerRadius).cgPath
-        shadowLayer.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        shadowLayer.layer.shadowOpacity = 0.5
+        shadowLayer.layer.shadowOffset = CGSize(width: 0.8, height: 0.8)
+        shadowLayer.layer.shadowOpacity = 0.4
         shadowLayer.layer.shadowRadius = 1
         shadowLayer.layer.masksToBounds = true
         shadowLayer.clipsToBounds = false
