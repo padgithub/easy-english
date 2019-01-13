@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="navi" destination="4DS-Wd-5hq" id="rYp-II-sR9"/>
                 <outlet property="tableViewLeft" destination="iqI-xI-cBC" id="ege-6e-QKC"/>
-                <outlet property="tableViewRight" destination="iqI-xI-cBC" id="Iyt-TV-8B4"/>
+                <outlet property="tableViewRight" destination="O9f-fc-7MW" id="O2r-JY-yos"/>
                 <outlet property="toolBar" destination="0yk-pq-Vh6" id="CvS-IY-dK2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewToolLeft" destination="5hM-Tw-uRD" id="JqX-UJ-7p6"/>

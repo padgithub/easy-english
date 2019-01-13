@@ -242,6 +242,26 @@ class VideoManager: NSObject {
         }
     }
     
+    func getInfoVideoDB(videoId: String) -> Items{
+        var videoItem : [Items] = []
+        do {
+            try dbQueue.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM videos where video_id = '\(videoId)'")
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = Items(dataDB: row)
+                    videoItem.append(story)
+                }
+            }
+        } catch _ {
+        }
+        if videoItem.count != 0 {
+            return videoItem[0]
+        }else{
+            return Items()
+        }
+    }
+    
     func fethVideoListAPI(playlistId: String, isShowLoad : Bool, success: @escaping (JSON) -> Void) {
         let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(playlistId)&key=\(apiFinalShared.keyYoutube)&maxResults=50"
         apiRequestShared.webServiceCall(url, params: nil, isShowLoader: isShowLoad, method: .get, isHasHeader: false) { (respone) in

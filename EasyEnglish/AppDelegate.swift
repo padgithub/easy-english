@@ -80,6 +80,9 @@ extension AppDelegate {
         
             let fileManager = FileManager.default
             let destinationSqliteURL = GroupManager.database
+            let destinationSqliteURLHistory = HistoryManger.database
+            
+            
             if fileManager.fileExists(atPath: destinationSqliteURL.path) {
                 do {
                     try fileManager.removeItem(atPath: destinationSqliteURL.path)
@@ -88,7 +91,16 @@ extension AppDelegate {
                 }
             }
             
+            if fileManager.fileExists(atPath: destinationSqliteURLHistory.path) {
+                do {
+                    try fileManager.removeItem(atPath: destinationSqliteURLHistory.path)
+                } catch {
+                    print("Could not clear temp folder: \(error)")
+                }
+            }
+            
             let sourceSqliteURL = Bundle.main.path(forResource: "database", ofType: "db")
+            let sourceSqliteURLHistory = Bundle.main.path(forResource: "history", ofType: "db")
             
             if !fileManager.fileExists(atPath: destinationSqliteURL.path) {
                 // var error:NSError? = nil
@@ -96,6 +108,17 @@ extension AppDelegate {
                     try fileManager.copyItem(at: URL.init(fileURLWithPath:sourceSqliteURL!), to: destinationSqliteURL)
                     print("Copied")
                     print(destinationSqliteURL.path)
+                } catch let error as NSError {
+                    print("Unable to create database \(error.debugDescription)")
+                }
+            }
+            
+            if !fileManager.fileExists(atPath: destinationSqliteURLHistory.path) {
+                // var error:NSError? = nil
+                do {
+                    try fileManager.copyItem(at: URL.init(fileURLWithPath:sourceSqliteURLHistory!), to: destinationSqliteURLHistory)
+                    print("Copied")
+                    print(destinationSqliteURLHistory.path)
                 } catch let error as NSError {
                     print("Unable to create database \(error.debugDescription)")
                 }
@@ -143,7 +166,7 @@ extension AppDelegate {
         let navF = UINavigationController(rootViewController: tabF)
         navF.isNavigationBarHidden = true
         
-        let tabM = TrendingVC(nibName:"TrendingVC",bundle: nil)
+        let tabM = InboxVC(nibName:"InboxVC",bundle: nil)
         tabM.tabBarItem = UITabBarItem(title: "Inbox", image: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal))
         let navM = UINavigationController(rootViewController: tabM)
         navM.isNavigationBarHidden = true

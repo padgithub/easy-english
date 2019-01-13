@@ -59,6 +59,7 @@ extension HomeVC {
                 }
             }
             self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
+            self.insertHistory()
         }
         
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()

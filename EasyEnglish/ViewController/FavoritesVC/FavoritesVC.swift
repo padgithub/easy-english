@@ -28,9 +28,11 @@ class FavoritesVC: BaseVC {
             if swicthView {
                 viewToolLeft.isHidden = true
                 viewToolReight.isHidden = false
+                loadData()
             }else{
                 viewToolLeft.isHidden = false
                 viewToolReight.isHidden = true
+                loadData()
             }
         }
     }
@@ -71,6 +73,7 @@ extension FavoritesVC {
         tableViewReight.register(VideoPlayCell.self)
         tableViewReight.delegate = viewModelVideo
         tableViewReight.dataSource = viewModelVideo
+        viewModelVideo.isPlaylist = true
         viewModelVideo.handleSelectRow = { (index) in
             self.goPlay(arrData: self.arrDataVideo, index: index)
         }
@@ -93,7 +96,7 @@ extension FavoritesVC {
     func loadDataVideo() {
         self.arrDataVideo = VideoManager.shareInstance.fetchAllFavorited()
         viewModelVideo.arrData = self.arrDataVideo
-        tableViewLeft.reloadData()
+        tableViewReight.reloadData()
     }
     
     func initData() {

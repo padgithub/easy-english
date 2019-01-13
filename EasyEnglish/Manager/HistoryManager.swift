@@ -11,11 +11,11 @@ import GRDBCipher
 
 class HistoryManger: NSObject {
     static let shared = HistoryManger()
-    var dbQueue: DatabaseQueue!
+    var dbQueues: DatabaseQueue!
     
     override init() {
         do {
-            dbQueue = try DatabaseQueue(path: CategoryManager.database.path, configuration: self.config)
+            dbQueues = try DatabaseQueue(path: HistoryManger.database.path, configuration: self.config)
         } catch _ {
         }
     }
@@ -29,51 +29,76 @@ class HistoryManger: NSObject {
     
     static var database: URL{
         let documentsPath = URL.init(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-        return documentsPath.appendingPathComponent("sqlite.db")
+        return documentsPath.appendingPathComponent("historys.db")
     }
     
-    func fetchHistory(groupId: Int) -> [HistoryObj] {
-        var listHistory:[HistoryObj] = []
+    func fetchAllHistory() -> [Items] {
+        var listVideo:[Items] = []
         do {
-            try dbQueue.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM categories WHERE group_id = %d ORDER BY ord", groupId)
+            try dbQueues.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM historys ORDER BY createDate")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let story = HistoryObj(data: row)
-                    listHistory.append(story)
+                    let video = VideoManager.shareInstance.getInfoVideoDB(videoId: story.video_id)
+                    listVideo.append(video)
                 }
             }
         } catch _ {
         }
-        return listHistory
+        return listVideo
+    }
+    
+    func isExistingVideo(videoId: String) -> Bool{
+        var videoItem : [HistoryObj] = []
+        do {
+            try dbQueues.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM historys where video_id = '\(videoId)'")
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = HistoryObj(data: row)
+                    videoItem.append(story)
+                }
+            }
+        } catch _ {
+        }
+        if videoItem.count != 0 {
+            return true
+        }else{
+            return false
+        }
     }
     
     func insertVideo(_ obj: HistoryObj) {
         do {
-            try dbQueue.inDatabase { db in
+            try dbQueues.inDatabase { db in
                 try db.execute(
-                    "UPDATE playlists set totalvideo = :i1 where playlistid = :i2",
-                    arguments: ["i1":obj.id,"i2":obj.id])
-                print("updated")
+                    "insert into historys (video_id,createDate) values(:i1,:i2)",
+                    arguments: ["i1":obj.video_id,"i2":obj.creatDate])
+                print("insert")
             }
         } catch _ {
         }
     }
     
-    func updateVideo(_ obj: HistoryObj) {
+    func updateHistory(_ obj: HistoryObj) {
         do {
-            try dbQueue.inDatabase { db in
+            try dbQueues.inDatabase { db in
                 try db.execute(
-                    "UPDATE playlists set totalvideo = :i1 where playlistid = :i2",
-                    arguments: ["i1":obj.id,"i2":obj.id])
+                    "UPDATE historys set createDate = :i1 where video_id = :i2",
+                    arguments: ["i1":obj.id,"i2":obj.video_id])
                 print("updated")
             }
         } catch _ {
         }
     }
     
-    func isExistVidoe(_ obj: HistoryObj) {
-    
+    func insertOrUpdate(_ obj: HistoryObj) {
+        if isExistingVideo(videoId: obj.video_id) {
+            updateHistory(obj)
+        }else{
+            insertVideo(obj)
+        }
     }
 }
 
@@ -82,9 +107,13 @@ class HistoryObj: NSObject {
     var video_id = ""
     var creatDate = 0
     
+    override init() {
+        super.init()
+    }
+    
     init(data: Row) {
         id = data["id"]
         video_id = data["video_id"]
-        creatDate = data["creatDate"]
+        creatDate = data["createDate"]
     }
 }

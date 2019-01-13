@@ -18,7 +18,7 @@ class LibraryVC: BaseVC {
     @IBOutlet weak var tableViewRight: UITableView!
     
     var viewModelNote = ListNoteModelView()
-    var viewModelHistory = ListNoteModelView()
+    var viewModelHistory = ListModelView()
     
     var arrNote = [Items]()
     var arrHistory = [Items]()
@@ -51,10 +51,12 @@ extension LibraryVC {
         navi.title = ""
         toolBar.handleActionG2Left = {
             self.swicthView = false
+            self.loadData()
         }
         
         toolBar.handleActionG2Right = {
             self.swicthView = true
+            self.loadData()
         }
         
         tableViewLeft.register(NotesCell.self)
@@ -63,13 +65,21 @@ extension LibraryVC {
         viewModelNote.handleSelectRow = { (index) in
             self.goPlay(arrData: self.arrNote, index: index)
         }
+        
+        tableViewRight.register(VideoPlayCell.self)
+        tableViewRight.delegate = viewModelHistory
+        tableViewRight.dataSource = viewModelHistory
+        viewModelHistory.isPlaylist = true
+        viewModelHistory.handleSelectRow = { (index) in
+            self.goPlay(arrData: self.arrHistory, index: index)
+        }
     }
     
     func loadData(){
         if toolBar.indexSelected == 0 {
             loadDataNote()
         }else{
-            
+            loadDataHistory()
         }
     }
     
@@ -80,9 +90,9 @@ extension LibraryVC {
     }
     
     func loadDataHistory() {
-        self.arrHistory = VideoManager.shareInstance.fetchAllForNote()
-        viewModelNote.arrData = self.arrNote
-        tableViewLeft.reloadData()
+        self.arrHistory = HistoryManger.shared.fetchAllHistory()
+        viewModelHistory.arrData = self.arrHistory
+        tableViewRight.reloadData()
     }
     
     func initData() {

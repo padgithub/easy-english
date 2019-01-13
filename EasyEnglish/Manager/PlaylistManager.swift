@@ -143,7 +143,7 @@ class PlaylistManager: NSObject {
             do {
                 try dbQueue.inDatabase { db in
                     try db.execute(
-                        "insert into playlists (playlist_id,category_id,favorited,name,thumbnail,totalvideo) values (:i1,:i1,:i1,:i1,:i1)",
+                        "insert into playlists (playlist_id,category_id,favorited,name,thumbnail,totalvideo) values (:i1,:i2,:i3,:i4,:i5)",
                         arguments: [ "i1":obj.playlistId, "i2":obj.categoryId, "i3":obj.categoryId, "i4":obj.thumbnail, "i5":obj.totalVideo])
                     let playerId = db.lastInsertedRowID
                     print("added:\(playerId)")

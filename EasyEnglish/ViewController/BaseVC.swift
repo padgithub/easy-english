@@ -37,6 +37,12 @@ class BaseVC: UIViewController {
         }
     }
     
+    func insertHistory() {
+        let obj = HistoryObj()
+        obj.video_id = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id
+        obj.creatDate = Int(Date().secondsSince1970)
+        HistoryManger.shared.insertOrUpdate(obj)
+    }
 }
 
 extension BaseVC {
@@ -106,6 +112,7 @@ extension BaseVC {
                 TAppDelegate.indexPlaying = i
             }
         }
+        insertHistory()
     }
     
 }
