@@ -37,6 +37,7 @@ class VideoPlayCell: UITableViewCell {
     }
     
     @IBAction func actionMoreOption(_ sender: Any) {
+        print("more option")
         handleMoreOption?()
     }
     

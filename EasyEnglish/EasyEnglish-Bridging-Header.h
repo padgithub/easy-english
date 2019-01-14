@@ -10,5 +10,7 @@
 #define EasyEnglish_Bridging_Header_h
 
 #import "SVPullToRefresh.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 #endif /* EasyEnglish_Bridging_Header_h */

@@ -12,13 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
     var tabVC: UITabBarController?
+    
     var isShowZoomOutView = true
     var isPlay = false
     var isNew = false
     var deviceOrientation = UIInterfaceOrientationMask.portrait
     var handleReturnForeground: (() -> Void)?
     var idVideoPlaying = ""
+    var isAutoPlay = false
     var arrVideoPlaying = [Items]()
     var indexPlaying = 0
     var titleCatagory = ""
@@ -27,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         youtubeShare.turnAudio()
         configSQL()
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 12) as Any, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
@@ -34,10 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.white
         
         initMainVC()
+//        initPlayVC()
         return true
     }
     
-    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handle = FBSDKApplicationDelegate.sharedInstance()?.application(app, open: url, options: options)
+        return handle!
+    }
     
     func applicationWillResignActive(_ application: UIApplication) {
         print("applicationWillResignActive")
@@ -134,10 +144,11 @@ extension AppDelegate {
         window?.makeKeyAndVisible()
     }
     
-    func initPlayVC()  {
+    func initPlayVC() -> UINavigationController  {
         let vc = PlayVC(nibName: "PlayVC",bundle: nil)
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.isNavigationBarHidden = true
+        return nav
     }
     
     func initTabVC(_ index: Int) -> UITabBarController{

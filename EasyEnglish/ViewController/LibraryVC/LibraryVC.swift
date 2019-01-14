@@ -64,6 +64,7 @@ extension LibraryVC {
         tableViewLeft.dataSource = viewModelNote
         viewModelNote.handleSelectRow = { (index) in
             self.goPlay(arrData: self.arrNote, index: index)
+            self.tableViewLeft.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
         
         tableViewRight.register(VideoPlayCell.self)
@@ -72,6 +73,7 @@ extension LibraryVC {
         viewModelHistory.isPlaylist = true
         viewModelHistory.handleSelectRow = { (index) in
             self.goPlay(arrData: self.arrHistory, index: index)
+            self.tableViewRight.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
     }
     

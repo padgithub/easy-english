@@ -104,6 +104,7 @@ class PlayVC: BaseVC {
     
     @IBAction func actionAutoPlay(_ sender: Any) {
         isAutoPlay = !isAutoPlay
+        TAppDelegate.isAutoPlay = isAutoPlay
     }
     
     @IBAction func actionToolBar(_ sender: UIButton) {
@@ -127,7 +128,12 @@ class PlayVC: BaseVC {
             break
         case 606: //back
             print(sender.tag)
-            viewYoutubePlayer.mute()
+            TAppDelegate.indexPlaying -= 1
+            if TAppDelegate.indexPlaying < 0{
+                TAppDelegate.indexPlaying = 0
+            }
+            viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
+            self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
             break
         case 607: // pause sit top
             print(sender.tag)
@@ -141,7 +147,12 @@ class PlayVC: BaseVC {
             break
         case 608: // next
             print(sender.tag)
-            viewYoutubePlayer.unMute()
+            TAppDelegate.indexPlaying += 1
+            if TAppDelegate.indexPlaying == TAppDelegate.arrVideoPlaying.count{
+                TAppDelegate.indexPlaying = 0
+            }
+            viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
+            self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
             break
         case 609: //mo rong man hinh
             print(sender.tag)
@@ -201,6 +212,7 @@ extension PlayVC {
         viewYoutubePlayer.translatesAutoresizingMaskIntoConstraints = false
         viewPlayer.addSubview(viewYoutubePlayer)
         frameViewPlay(viewPlayer)
+        isAutoPlay = TAppDelegate.isAutoPlay
         
         if TAppDelegate.isPlay {
             viewYoutubePlayer.play()
@@ -235,8 +247,19 @@ extension PlayVC {
             self.silder.value = Float(current) ?? 0
         }
         
+        youtubeShare.handleAutoPlay = {
+            self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
+        }
+        
         TAppDelegate.handleReturnForeground = {
             self.isPlay = !TAppDelegate.isPlay
+        }
+        
+        viewModel.handleSelectRow = { (index) in
+            if index != TAppDelegate.indexPlaying {
+                viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[index].id)
+                TAppDelegate.indexPlaying = index
+            }
         }
         configToolbarTF()
     }
@@ -249,7 +272,7 @@ extension PlayVC {
             TAppDelegate.arrVideoPlaying[index].timeUpdate = item.timeUpdate
         }
         viewModel.arrData = TAppDelegate.arrVideoPlaying
-        tableView.reloadData()
+//        tableView.reloadData()
         self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
     }
     
@@ -288,6 +311,7 @@ extension PlayVC {
     func back(){
         self.clickBack()
         TAppDelegate.isNew = false
+        self.initZoomOutView()
         showZoomOutView()
     }
 }

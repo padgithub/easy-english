@@ -16,6 +16,7 @@ target 'EasyEnglish' do
   pod 'GRDBCipher'
   pod 'KRProgressHUD'
   pod 'Alamofire'
+  pod 'FBSDKLoginKit'
   
   target 'EasyEnglishTests' do
     inherit! :search_paths

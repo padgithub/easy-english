@@ -31,7 +31,8 @@ class VideoHomeCell: UITableViewCell {
     }
     
     @IBAction func actionMoreOption(_ sender: Any) {
-         handleMoreOption?()
+        print("more option")
+        handleMoreOption?()
     }
     
 }

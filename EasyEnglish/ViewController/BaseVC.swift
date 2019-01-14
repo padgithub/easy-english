@@ -2,7 +2,7 @@
 //  BaseVC.swift
 //  Real Estate
 //
-//  Created by Hoa on 12/22/18.
+//  Created by Anh Dũng on 12/22/18.
 //  Copyright © 2018 Hoa. All rights reserved.
 //
 
@@ -13,6 +13,7 @@ let kBarHeight = (DeviceType.IS_IPHONE_X) ? 84 : 50
 class BaseVC: UIViewController {
     
     var zoomOutView = ZoomOutViewPlayVideo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,17 +27,6 @@ class BaseVC: UIViewController {
         self.tabBarController?.background()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.initZoomOutView()
-        zoomOutView.isPlay = TAppDelegate.isPlay
-        if !TAppDelegate.isShowZoomOutView {
-            zoomOutView.addSubViewVideo()
-            if TAppDelegate.isPlay {
-                viewYoutubePlayer.play()
-            }
-        }
-    }
-    
     func insertHistory() {
         let obj = HistoryObj()
         obj.video_id = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id
@@ -48,35 +38,44 @@ class BaseVC: UIViewController {
 extension BaseVC {
     
     func initZoomOutView() {
+        let window = UIApplication.shared.keyWindow!
         zoomOutView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(zoomOutView)
-        
+        window.addSubview(zoomOutView)
         zoomOutView.leadingAnchor.constraint(equalTo: (TAppDelegate.window?.leadingAnchor)!, constant: 5).isActive = true
         zoomOutView.trailingAnchor.constraint(equalTo: (TAppDelegate.window?.trailingAnchor)!, constant: -5).isActive = true
         
         zoomOutView.bottomAnchor.constraint(equalTo: (TAppDelegate.window?.bottomAnchor)!, constant: CGFloat(-5 - kBarHeight) ).isActive = true
         zoomOutView.heightAnchor.constraint(equalToConstant: 85*heightRatio)
         
+        zoomOutView.addSubViewVideo()
+        
         zoomOutView.handleReturnView = {
-            self.removeZoomOutView()
             let vc = PlayVC(nibName: "PlayVC", bundle: nil)
             vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.popToViewController(vc, animated: true)
+            self.removeZoomOutView()
         }
         
         zoomOutView.handleRemoveView = {
             self.removeZoomOutView()
         }
         
-        zoomOutView.isHidden = TAppDelegate.isShowZoomOutView
+//        zoomOutView.isHidden = TAppDelegate.isShowZoomOutView
     }
     func showZoomOutView() {
         TAppDelegate.isShowZoomOutView = false
         zoomOutView.isPlay = !TAppDelegate.isPlay
         zoomOutView.isHidden = false
+        zoomOutView.isPlay = TAppDelegate.isPlay
+        if !TAppDelegate.isShowZoomOutView {
+            if TAppDelegate.isPlay {
+                viewYoutubePlayer.play()
+            }
+        }
     }
     
     func removeZoomOutView() {
+//        zoomOutView.removeFromSuperview()
         TAppDelegate.isPlay = false
         TAppDelegate.isShowZoomOutView = true
         zoomOutView.isHidden = true
@@ -114,7 +113,6 @@ extension BaseVC {
         }
         insertHistory()
     }
-    
 }
 
 extension UITabBarController {
@@ -130,3 +128,14 @@ extension UITabBarController {
     }
 }
 
+
+extension UIScreen {
+    var minEdge: CGFloat {
+        return UIScreen.main.bounds.minEdge
+    }
+}
+extension CGRect {
+    var minEdge: CGFloat {
+        return min(width, height)
+    }
+}

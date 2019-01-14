@@ -24,6 +24,7 @@ class VideoServiceView: NSObject {
     var handleDuration: ((String) -> Void)?
     var handleCurentime: ((String,String) -> Void)?
     var handlePlayWhenPause: (() -> Void)?
+    var handleAutoPlay: (() -> Void)?
     
     override init() {
         super.init()
@@ -50,8 +51,22 @@ extension VideoServiceView: YouTubePlayerDelegate {
     }
     
     func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
-        if playerState == .Paused {
+        switch playerState {
+        case .Paused:
             handlePlayWhenPause?()
+            break
+        case .Ended:
+            if TAppDelegate.isAutoPlay {
+                TAppDelegate.indexPlaying += 1
+                if TAppDelegate.indexPlaying == TAppDelegate.arrVideoPlaying.count{
+                    TAppDelegate.indexPlaying = 0
+                }
+                viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
+                handleAutoPlay?()
+            }
+            break
+        default:
+            break
         }
     }
     
@@ -90,14 +105,24 @@ extension VideoServiceView: YouTubePlayerDelegate {
             return .commandFailed
         }
         
-//        commandCenter.nextTrackCommand.addTarget { [unowned self] event in
-//            return .commandFailed
-//        }
-//        
-//        commandCenter.nextTrackCommand.addTarget { [unowned self] event in
-//            return .commandFailed
-//        }
-//        
+        commandCenter.nextTrackCommand.addTarget { [unowned self] event in
+            TAppDelegate.indexPlaying -= 1
+            if TAppDelegate.indexPlaying < 0{
+                TAppDelegate.indexPlaying = 0
+            }
+            self.viewPlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
+            return .commandFailed
+        }
+        
+        commandCenter.previousTrackCommand.addTarget { [unowned self] event in
+            TAppDelegate.indexPlaying -= 1
+            if TAppDelegate.indexPlaying < 0{
+                TAppDelegate.indexPlaying = 0
+            }
+            self.viewPlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
+            return .commandFailed
+        }
+        
     }
 }
 

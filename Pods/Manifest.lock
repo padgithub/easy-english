@@ -1,6 +1,16 @@
 PODS:
   - Alamofire (4.7.3)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - DGElasticPullToRefresh (1.1)
+  - FBSDKCoreKit (4.38.1):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.38.1):
+    - FBSDKCoreKit
   - GRDBCipher (3.5.0):
     - SQLCipher (~> 3.4.1)
   - Instructions (1.2.0)
@@ -23,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DGElasticPullToRefresh
+  - FBSDKLoginKit
   - GRDBCipher
   - Instructions
   - Kingfisher
@@ -35,7 +46,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Bolts
     - DGElasticPullToRefresh
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - GRDBCipher
     - Instructions
     - Kingfisher
@@ -50,7 +64,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
+  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
+  FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
   GRDBCipher: 7793bde2d6845a8ca7d73176467638e0abf2135b
   Instructions: 763c2452bd78e05d8f969a21c1cbc3c07deef33a
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
@@ -63,6 +80,6 @@ SPEC CHECKSUMS:
   ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 15ae7f9cb59612b66eb1b51f2a1d40c97ce69a4b
+PODFILE CHECKSUM: 06bbc1d7ecaf44ede7cb80cb6dbed0fb9285294f
 
 COCOAPODS: 1.6.0.beta.2
