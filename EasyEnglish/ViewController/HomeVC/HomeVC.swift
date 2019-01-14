@@ -43,7 +43,8 @@ extension HomeVC {
             TAppDelegate.titleCatagory = array[0]
             TAppDelegate.idVideoPlaying = self.arrData[index].id
             TAppDelegate.arrVideoPlaying = arrTemp
-            self.zoomOutView.lbTitleVideo.text = self.arrData[index].snippet.title
+            TAppDelegate.titleZoomView = self.arrData[index].snippet.title
+            
             if !TAppDelegate.isShowZoomOutView {
                 viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
             }else{
@@ -106,50 +107,4 @@ extension HomeVC {
     //                       animations: [fromAnimation, zoomAnimation], delay: 0.5)
     //    }
 }
-
-
-//VideoManager.shareInstance.fethVideoListAPI(playlistId: self.arrData[index].playlistId, isShowLoad: true, success: { (respone) in
-//                var videoIds = ""
-//                let itemsVideo = respone["items"].arrayValue
-//                for i in itemsVideo {
-//                    let videoId = i["snippet"]["resourceId"]["videoId"].stringValue
-//                    videoIds.append(videoId+",")
-//                }
-//                if videoIds.count > 0 {
-//                    videoIds.removeLast()
-//                }
-//                VideoManager.shareInstance.getInfoVideo(videoId: videoIds, success: { (videos) in
-//                    var arrTemp = videos.items
-//                    self.initData()
-//                    let developer = self.arrData[index].subTitle
-//                    let array = developer.components(separatedBy: " / ")
-//
-//                    for i in videos.items {
-//                        i.playlistId = self.arrData[index].playlistId
-//                        i.subTitle = "\(array[0]) / \(array[1])"
-//                        VideoManager.shareInstance.addVideo(videoItem: i)
-//                    }
-//                    //
-//                    TAppDelegate.titlePlaylist = array[1]
-//                    TAppDelegate.titleCatagory = array[0]
-//                    TAppDelegate.idVideoPlaying = arrTemp[index].id
-//                    TAppDelegate.arrVideoPlaying = arrTemp
-//                    self.zoomOutView.lbTitleVideo.text = arrTemp[index].snippet.title
-//
-//                    if !TAppDelegate.isShowZoomOutView {
-//                        if TAppDelegate.indexPlaying != index {
-//                            viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
-//                        }
-//                    }else{
-//                        let vc = PlayVC(nibName: "PlayVC", bundle: nil)
-//                        TAppDelegate.isNew = true
-//                        vc.hidesBottomBarWhenPushed = true
-//                        self.navigationController?.pushViewController(vc, animated: true)
-//                    }
-//                    TAppDelegate.indexPlaying = index
-//                    self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
-//
-//                    //
-//                })
-//            })
 

@@ -21,7 +21,6 @@ class ZoomOutViewPlayVideo: UIView {
         }
     }
     
-    var handleReturnView:(() -> Void)?
     var handleRemoveView:(() -> Void)?
     var handlePlayPause:(() -> Void)?
     
@@ -40,13 +39,14 @@ class ZoomOutViewPlayVideo: UIView {
         view.frame = self.bounds
         self.addSubview(view)
         ctrHeight.constant = 85*heightRatio
+        
     }
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     @IBAction func actionReturnView(_ sender: Any) {
-        handleReturnView?()
+        TAppDelegate.handleReturnView?()
     }
     
     @IBAction func actionRemoveView(_ sender: Any) {

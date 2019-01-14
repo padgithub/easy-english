@@ -40,7 +40,7 @@ extension ListVideoVC {
             TAppDelegate.idVideoPlaying = self.arrData[index].id
             TAppDelegate.arrVideoPlaying = self.arrData
             TAppDelegate.titlePlaylist = self.playlist.title ?? ""
-            self.zoomOutView.lbTitleVideo.text = self.arrData[index].snippet.title
+            TAppDelegate.titleZoomView = self.arrData[index].snippet.title
             if !TAppDelegate.isShowZoomOutView {
                 if TAppDelegate.indexPlaying != index {
                     viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)

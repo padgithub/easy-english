@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var indexPlaying = 0
     var titleCatagory = ""
     var titlePlaylist = ""
+    var titleZoomView = ""
     var handleReloadDataNotes: (() -> Void)?
+    var handleReturnView: (() -> Void)?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

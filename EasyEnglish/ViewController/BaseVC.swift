@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftEntryKit
 
 let kBarHeight = (DeviceType.IS_IPHONE_X) ? 84 : 50
 
@@ -27,6 +28,18 @@ class BaseVC: UIViewController {
         self.tabBarController?.background()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        TAppDelegate.handleReturnView = {
+            let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+            self.removeZoomOutView()
+        }
+        zoomOutView.handleRemoveView = {
+            self.removeZoomOutView()
+        }
+    }
+    
     func insertHistory() {
         let obj = HistoryObj()
         obj.video_id = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id
@@ -37,48 +50,32 @@ class BaseVC: UIViewController {
 
 extension BaseVC {
     
-    func initZoomOutView() {
-        let window = UIApplication.shared.keyWindow!
-        zoomOutView.translatesAutoresizingMaskIntoConstraints = false
-        window.addSubview(zoomOutView)
-        zoomOutView.leadingAnchor.constraint(equalTo: (TAppDelegate.window?.leadingAnchor)!, constant: 5).isActive = true
-        zoomOutView.trailingAnchor.constraint(equalTo: (TAppDelegate.window?.trailingAnchor)!, constant: -5).isActive = true
-        
-        zoomOutView.bottomAnchor.constraint(equalTo: (TAppDelegate.window?.bottomAnchor)!, constant: CGFloat(-5 - kBarHeight) ).isActive = true
-        zoomOutView.heightAnchor.constraint(equalToConstant: 85*heightRatio)
-        
-        zoomOutView.addSubViewVideo()
-        
-        zoomOutView.handleReturnView = {
-            let vc = PlayVC(nibName: "PlayVC", bundle: nil)
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.popToViewController(vc, animated: true)
-            self.removeZoomOutView()
-        }
-        
-        zoomOutView.handleRemoveView = {
-            self.removeZoomOutView()
-        }
-        
-//        zoomOutView.isHidden = TAppDelegate.isShowZoomOutView
-    }
     func showZoomOutView() {
+        showNib()
         TAppDelegate.isShowZoomOutView = false
         zoomOutView.isPlay = !TAppDelegate.isPlay
-        zoomOutView.isHidden = false
         zoomOutView.isPlay = TAppDelegate.isPlay
         if !TAppDelegate.isShowZoomOutView {
+            zoomOutView.addSubViewVideo()
             if TAppDelegate.isPlay {
                 viewYoutubePlayer.play()
             }
         }
+        zoomOutView.lbTitleVideo.text = TAppDelegate.titleZoomView
     }
     
     func removeZoomOutView() {
-//        zoomOutView.removeFromSuperview()
+        removeNib()
         TAppDelegate.isPlay = false
         TAppDelegate.isShowZoomOutView = true
-        zoomOutView.isHidden = true
+    }
+    
+    func showNib() {
+        SwiftEntryKit.display(entry: zoomOutView, using: attributes(), presentInsideKeyWindow: false, rollbackWindow: SwiftEntryKit.RollbackWindow.custom(window: TAppDelegate.window!))
+    }
+    
+    func removeNib() {
+        SwiftEntryKit.dismiss()
     }
     
     func clickBack() {
@@ -94,8 +91,7 @@ extension BaseVC {
         TAppDelegate.titleCatagory = array[0]
         TAppDelegate.idVideoPlaying = arrData[index].id
         TAppDelegate.arrVideoPlaying = arrTemp
-        
-        self.zoomOutView.lbTitleVideo.text = arrData[index].snippet.title
+        TAppDelegate.titleZoomView = arrData[index].snippet.title
         
         if !TAppDelegate.isShowZoomOutView {
             viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
@@ -112,6 +108,33 @@ extension BaseVC {
             }
         }
         insertHistory()
+    }
+    
+    func attributes() -> EKAttributes {
+        var attributes: EKAttributes
+        attributes = .bottomFloat
+        attributes.hapticFeedbackType = .success
+        attributes.displayDuration = 1000000
+        attributes.screenBackground = .clear
+        attributes.entryBackground = .clear
+        attributes.screenInteraction = .forward
+        attributes.entryInteraction = .absorbTouches
+        
+        attributes.entranceAnimation = .init(translate: .init(duration: 0.5, spring: .init(damping: 0.9, initialVelocity: 0)),
+                                             scale: .init(from: 0.8, to: 1, duration: 0.5, spring: .init(damping: 0.8, initialVelocity: 0)),
+                                             fade: .init(from: 0.7, to: 1, duration: 0.3))
+        attributes.exitAnimation = .init(translate: .init(duration: 0.5),
+                                         scale: .init(from: 1, to: 0.8, duration: 0.5),
+                                         fade: .init(from: 1, to: 0, duration: 0.5))
+        attributes.popBehavior = .animated(animation: .init(translate: .init(duration: 0.3),
+                                                            scale: .init(from: 1, to: 0.8, duration: 0.3)))
+        attributes.shadow = .active(with: .init(color: .black, opacity: 0.3, radius: 6))
+        attributes.positionConstraints.verticalOffset = CGFloat(kBarHeight - 30)
+        attributes.positionConstraints.size = .init(width: .offset(value: 5), height: .intrinsic)
+        attributes.positionConstraints.maxSize = .init(width: .constant(value: UIScreen.main.minEdge), height: .intrinsic)
+        
+        attributes.statusBar = .dark
+        return attributes
     }
 }
 
