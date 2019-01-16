@@ -165,27 +165,27 @@ extension AppDelegate {
         tabVC.tabBar.isTranslucent = false
         //
         let tabP = HomeVC(nibName:"HomeVC",bundle: nil)
-        tabP.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_bb_home")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_home")!.withRenderingMode(.alwaysOriginal))
+        tabP.tabBarItem = UITabBarItem(title: "txt_home".localized, image: UIImage(named: "ic_bb_home")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_home")!.withRenderingMode(.alwaysOriginal))
         let navP = UINavigationController(rootViewController: tabP)
         navP.isNavigationBarHidden = true
         
         let tabT = ContentListVC(nibName:"ContentListVC",bundle: nil)
-        tabT.tabBarItem = UITabBarItem(title: "Catagorys", image: UIImage(named: "ic_bb_trengding")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_trengding")!.withRenderingMode(.alwaysOriginal))
+        tabT.tabBarItem = UITabBarItem(title: "txt_catalogue".localized, image: UIImage(named: "ic_bb_trengding")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_trengding")!.withRenderingMode(.alwaysOriginal))
         let navT = UINavigationController(rootViewController: tabT)
         navT.isNavigationBarHidden = true
         
         let tabF = FavoritesVC(nibName:"FavoritesVC",bundle: nil)
-        tabF.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(named: "ic_bb_sub")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_sub")!.withRenderingMode(.alwaysOriginal))
+        tabF.tabBarItem = UITabBarItem(title: "txt_favorites".localized, image: UIImage(named: "ic_bb_sub")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_sub")!.withRenderingMode(.alwaysOriginal))
         let navF = UINavigationController(rootViewController: tabF)
         navF.isNavigationBarHidden = true
         
         let tabM = InboxVC(nibName:"InboxVC",bundle: nil)
-        tabM.tabBarItem = UITabBarItem(title: "Inbox", image: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal))
+        tabM.tabBarItem = UITabBarItem(title: "txt_inbox".localized, image: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal))
         let navM = UINavigationController(rootViewController: tabM)
         navM.isNavigationBarHidden = true
         
         let tabL = LibraryVC(nibName:"LibraryVC",bundle: nil)
-        tabL.tabBarItem = UITabBarItem(title: "Library", image: UIImage(named: "ic_bb_libray")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_libray")!.withRenderingMode(.alwaysOriginal))
+        tabL.tabBarItem = UITabBarItem(title: "txt_library".localized, image: UIImage(named: "ic_bb_libray")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_libray")!.withRenderingMode(.alwaysOriginal))
         let navL = UINavigationController(rootViewController: tabL)
         navL.isNavigationBarHidden = true
         

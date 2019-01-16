@@ -16,6 +16,7 @@
                 <outlet property="imgRight" destination="S6j-MQ-pAM" id="U56-b8-Zay"/>
                 <outlet property="lbTitleNav" destination="RfF-R1-mTh" id="ERx-9F-jgg"/>
                 <outlet property="viewLeft" destination="cbZ-9h-clC" id="aZC-qf-bcp"/>
+                <outlet property="viewReight" destination="boz-sG-ziG" id="59z-QT-C5f"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

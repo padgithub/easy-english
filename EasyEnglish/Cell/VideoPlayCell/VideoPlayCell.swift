@@ -48,7 +48,7 @@ extension VideoPlayCell {
         let url = video.snippet.thumbnails.medium.url
         urlString = url
         if url.count > 0 {
-            self.img.kf.setImage(with: URL(string: url), placeholder: #imageLiteral(resourceName: "ic_delete"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
+            self.img.kf.setImage(with: URL(string: url), placeholder: #imageLiteral(resourceName: "ic_app"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
                 
             }, completionHandler: { (image, error, cacheType, imageURL) in
                 if image != nil && self.urlString == imageURL?.absoluteString{
@@ -67,7 +67,7 @@ extension VideoPlayCell {
         if let url = playlist.thumbnail {
             urlString = url
             if url.count > 0 {
-                self.img.kf.setImage(with: URL(string: url), placeholder: #imageLiteral(resourceName: "ic_delete"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
+                self.img.kf.setImage(with: URL(string: url), placeholder: #imageLiteral(resourceName: "ic_app"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
                     
                 }, completionHandler: { (image, error, cacheType, imageURL) in
                     if image != nil && self.urlString == imageURL?.absoluteString{

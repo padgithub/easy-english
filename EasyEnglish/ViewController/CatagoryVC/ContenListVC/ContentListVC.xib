@@ -30,6 +30,9 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasBack" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewReight" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="txt_catalogue"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qSW-qg-R4z">

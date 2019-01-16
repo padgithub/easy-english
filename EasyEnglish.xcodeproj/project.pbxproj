@@ -61,7 +61,6 @@
 		0138FCA121E30863001B6BAF /* ListModelPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FCA021E30863001B6BAF /* ListModelPlaylistView.swift */; };
 		01AD43CE21E72F96000156D2 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43CC21E72F95000156D2 /* ToolBarView.swift */; };
 		01AD43CF21E72F96000156D2 /* ToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AD43CD21E72F95000156D2 /* ToolBarView.xib */; };
-		01AD43D121E7376A000156D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01AD43D021E7376A000156D2 /* Localizable.strings */; };
 		01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43D221E73A75000156D2 /* HistoryManager.swift */; };
 		01B3DB3D21D62FE20051221E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DB3C21D62FE20051221E /* AppDelegate.swift */; };
 		01B3DB4221D62FE20051221E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DB4021D62FE20051221E /* Main.storyboard */; };
@@ -97,6 +96,7 @@
 		01B3DD9121D917DE0051221E /* PlayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DD8F21D917DE0051221E /* PlayVC.xib */; };
 		01EE354C21EF98AC00C3346F /* VideoHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE354A21EF98AC00C3346F /* VideoHomeCell.swift */; };
 		01EE354E21EF99D400C3346F /* VideoHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE354D21EF99D400C3346F /* VideoHomeCell.xib */; };
+		01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01EE355121EFAAE200C3346F /* Localizable.strings */; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
 		7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
@@ -178,7 +178,6 @@
 		0138FCA021E30863001B6BAF /* ListModelPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModelPlaylistView.swift; sourceTree = "<group>"; };
 		01AD43CC21E72F95000156D2 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		01AD43CD21E72F95000156D2 /* ToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolBarView.xib; sourceTree = "<group>"; };
-		01AD43D021E7376A000156D2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		01AD43D221E73A75000156D2 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
 		01B3DB3921D62FE20051221E /* EasyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3DB3C21D62FE20051221E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +220,7 @@
 		01B3DD8F21D917DE0051221E /* PlayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayVC.xib; sourceTree = "<group>"; };
 		01EE354A21EF98AC00C3346F /* VideoHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHomeCell.swift; sourceTree = "<group>"; };
 		01EE354D21EF99D400C3346F /* VideoHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoHomeCell.xib; sourceTree = "<group>"; };
+		01EE355021EFAAE200C3346F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		161AFF1FA117FDBF2981F173 /* Pods-EasyEnglishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishUITests/Pods-EasyEnglishUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BACCE45EDA637804DBD243 /* Pods-EasyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.release.xcconfig"; sourceTree = "<group>"; };
@@ -516,7 +516,7 @@
 				01B3DB4521D62FE70051221E /* LaunchScreen.storyboard */,
 				01B3DB4821D62FE70051221E /* Info.plist */,
 				0138FC0D21DF7163001B6BAF /* EasyEnglish-Bridging-Header.h */,
-				01AD43D021E7376A000156D2 /* Localizable.strings */,
+				01EE355121EFAAE200C3346F /* Localizable.strings */,
 			);
 			path = EasyEnglish;
 			sourceTree = "<group>";
@@ -864,7 +864,7 @@
 				0138FC6E21E11661001B6BAF /* database.db in Resources */,
 				01B3DD2721D631150051221E /* DropBoxUITB.xib in Resources */,
 				01B3DD2321D631150051221E /* NavigationView.xib in Resources */,
-				01AD43D121E7376A000156D2 /* Localizable.strings in Resources */,
+				01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */,
 				0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */,
 				01B3DD2021D631150051221E /* MagicView.xib in Resources */,
 				01B3DD3321D631150051221E /* JoinView.xib in Resources */,
@@ -1133,6 +1133,14 @@
 				01B3DB4621D62FE70051221E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		01EE355121EFAAE200C3346F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01EE355021EFAAE200C3346F /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

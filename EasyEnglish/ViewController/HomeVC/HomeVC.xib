@@ -27,6 +27,11 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="yA1-eP-imG"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="txt_home"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewReight" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fCu-KO-adc">
                     <rect key="frame" x="0.0" y="50" width="375" height="617"/>

@@ -10,6 +10,13 @@ import UIKit
 
 //@IBDesignable
 class KHLabel: UILabel {
+    
+    @IBInspectable var lzTitle: String = "" {
+        didSet {
+            self.text = lzTitle.localized
+        }
+    }
+    
     @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet {
             layer.borderColor = borderColor.cgColor

@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  EasyEnglish
+
+  Created by Anh Dũng on 1/10/19.
+  Copyright © 2019 Anh Dũng. All rights reserved.
+*/
+
+//TabBar
+"txt_home" = "Home";
+"txt_catalogue" = "Catalogues";
+"txt_favorites" = "Favorites";
+"txt_library" = "Library";
+"txt_inbox" = "Inbox";
+//ToolBar
+"txt_fplaylist" = "Favorite Playlist";
+"txt_fvideo" = "Favorite Video";
+"txt_mynote" = "My Note";
+"txt_history" = "History";
+//Player
+"txt_autoplay" = "Auto Play";
+"txt_next_video" = "Next Video";
+"txt_share" = "Share";
+"txt_addto" = "Add to";
+
+
+
+

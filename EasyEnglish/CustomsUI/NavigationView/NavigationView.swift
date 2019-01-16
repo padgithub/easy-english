@@ -10,6 +10,7 @@ import UIKit
 
 class NavigationView: UIView {
     
+    @IBOutlet weak var viewReight: UIView!
     @IBOutlet weak var viewLeft: UIView!
     @IBOutlet weak var imgRight: KHImageView!
     @IBOutlet weak var imgLeft: KHImageView!
@@ -25,6 +26,12 @@ class NavigationView: UIView {
     @IBInspectable open var hasViewLeft: Bool = true {
         didSet {
             viewLeft.isHidden = !hasViewLeft
+        }
+    }
+    
+    @IBInspectable open var hasViewReight: Bool = false {
+        didSet {
+            viewReight.isHidden = !hasViewReight
         }
     }
     
