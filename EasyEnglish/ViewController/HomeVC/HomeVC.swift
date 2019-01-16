@@ -34,7 +34,11 @@ extension HomeVC {
         tableView.register(VideoHomeCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
-        
+        tableView.addInfiniteScrolling {
+            self.loadData()
+            self.tableView.reloadData()
+            self.tableView.infiniteScrollingView.stopAnimating()
+        }
         viewModel.handleSelectRow = { (index) in
             let arrTemp = VideoManager.shareInstance.fetchAllForPlaylistId(playlistId: self.arrData[index].playlistId)
             let developer = self.arrData[index].subTitle
@@ -78,6 +82,7 @@ extension HomeVC {
     }
     
     func refresh() {
+        self.arrData.removeAll()
         initData()
         tableView.reloadData()
         //        animate()
@@ -85,13 +90,14 @@ extension HomeVC {
     }
     
     func loadData() {
-        self.arrData.removeAll()
-        self.arrData = VideoManager.shareInstance.fetchVideoListDBRanDom()
+        let arr = VideoManager.shareInstance.fetchVideoListDBRanDom()
+        self.arrData.append(contentsOf: arr)
+        viewModel.arrData = self.arrData
+        print(self.arrData.count)
     }
     
     func initData() {
         loadData()
-        viewModel.arrData = self.arrData
         tableView.reloadData()
     }
     //    func animate() {

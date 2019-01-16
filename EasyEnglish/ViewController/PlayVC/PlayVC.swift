@@ -86,10 +86,10 @@ class PlayVC: BaseVC {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
-            ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT
+            ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT + (DeviceType.IS_IPHONE_X ? 21 : 0)
         } else {
             print("Portrait")
-            ctrHeightViewVideo.constant = 225*heightRatio
+            ctrHeightViewVideo.constant = ScreenSize.SCREEN_WIDTH * 9 / 16
         }
     }
     
@@ -204,7 +204,7 @@ class PlayVC: BaseVC {
 extension PlayVC {
     func initUI() {
         textViewNote.delegate = self
-        ctrHeightViewVideo.constant = 230*heightRatio
+        ctrHeightViewVideo.constant = ScreenSize.SCREEN_WIDTH * 9 / 16
         tableView.register(VideoPlayCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel

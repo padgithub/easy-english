@@ -129,7 +129,7 @@ extension BaseVC {
         attributes.popBehavior = .animated(animation: .init(translate: .init(duration: 0.3),
                                                             scale: .init(from: 1, to: 0.8, duration: 0.3)))
         attributes.shadow = .active(with: .init(color: .black, opacity: 0.3, radius: 6))
-        attributes.positionConstraints.verticalOffset = CGFloat(kBarHeight - 30)
+        attributes.positionConstraints.verticalOffset = CGFloat(DeviceType.IS_IPHONE_X ? kBarHeight - 30 : kBarHeight + 5)
         attributes.positionConstraints.size = .init(width: .offset(value: 5), height: .intrinsic)
         attributes.positionConstraints.maxSize = .init(width: .constant(value: UIScreen.main.minEdge), height: .intrinsic)
         

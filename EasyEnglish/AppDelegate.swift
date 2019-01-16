@@ -189,7 +189,7 @@ extension AppDelegate {
         let navL = UINavigationController(rootViewController: tabL)
         navL.isNavigationBarHidden = true
         
-        tabVC.viewControllers = [navP, navT, navF, navM, navL]
+        tabVC.viewControllers = [navP, navT, navF, navL]
         tabVC.selectedIndex = index
         return tabVC
     }
