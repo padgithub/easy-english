@@ -50,6 +50,24 @@ class HistoryManger: NSObject {
         return listVideo
     }
     
+    func fetchTop10History() -> [Items] {
+        var listVideo:[Items] = []
+        do {
+            try dbQueues.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM historys ORDER BY createDate DESC LIMIT 10")
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = HistoryObj(data: row)
+                    let video = VideoManager.shareInstance.getInfoVideoDB(videoId: story.video_id)
+                    video.timeHistory = story.creatDate
+                    listVideo.append(video)
+                }
+            }
+        } catch _ {
+        }
+        return listVideo
+    }
+    
     func isExistingVideo(videoId: String) -> Bool{
         var videoItem : [HistoryObj] = []
         do {

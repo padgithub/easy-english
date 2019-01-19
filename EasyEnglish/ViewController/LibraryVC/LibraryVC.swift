@@ -10,6 +10,8 @@ import UIKit
 
 class LibraryVC: BaseVC {
 
+    @IBOutlet weak var btShow: KHButton!
+    @IBOutlet weak var lbStatus: KHLabel!
     @IBOutlet weak var viewToolReight: UIView!
     @IBOutlet weak var viewToolLeft: UIView!
     @IBOutlet weak var toolBar: ToolBarView!
@@ -43,6 +45,9 @@ class LibraryVC: BaseVC {
     
     override func viewDidAppear(_ animated: Bool) {
         self.loadData()
+    }
+    @IBAction func actionShowAllHistory(_ sender: Any) {
+        loadData()
     }
     
 }
@@ -98,7 +103,15 @@ extension LibraryVC {
             loadDataNote()
             tableViewLeft.backgroundColor = self.arrNote.count == 0 ? UIColor.clear : UIColor.white
         }else{
-            loadDataHistory()
+            if lbStatus.text == "txt_last_10_video".localized {
+                btShow.setTitle("txt_show_10".localized, for: .normal)
+                lbStatus.text = "txt_all_history".localized
+                loadDataAllHistory()
+            }else{
+                btShow.setTitle("txt_show_all_history".localized, for: .normal)
+                lbStatus.text = "txt_last_10_video".localized
+                loadDataTop10History()
+            }
             tableViewRight.backgroundColor = self.arrHistory.count == 0 ? UIColor.clear : UIColor.white
         }
     }
@@ -109,7 +122,13 @@ extension LibraryVC {
         tableViewLeft.reloadData()
     }
     
-    func loadDataHistory() {
+    func loadDataTop10History() {
+        self.arrHistory = HistoryManger.shared.fetchTop10History()
+        viewModelHistory.arrData = self.arrHistory
+        tableViewRight.reloadData()
+    }
+    
+    func loadDataAllHistory() {
         self.arrHistory = HistoryManger.shared.fetchAllHistory()
         viewModelHistory.arrData = self.arrHistory
         tableViewRight.reloadData()
@@ -117,7 +136,7 @@ extension LibraryVC {
     
     func initData() {
         loadDataNote()
-        loadDataHistory()
+        loadDataTop10History()
     }
 }
 

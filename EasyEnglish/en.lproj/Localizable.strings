@@ -34,4 +34,8 @@
 "txt_select_action" = "Select Action";
 "txt_share_video" = "Share Video";
 "txt_share_playlist" = "Share Playlist";
+"txt_show_all_history" = "Show all";
+"txt_last_10_video" = "Last 10 videos";
+"txt_show_10" = "Show last";
+"txt_all_history" = "All historys";
 
