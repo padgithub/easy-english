@@ -32,11 +32,7 @@ class VideoServiceView: NSObject {
         viewPlayer.playerVars = ["playsinline": "1",
                                  "controls": "0"
                                     as AnyObject] as YouTubePlayerView.YouTubePlayerParameters
-    }
-    
-    func loadVideo(){
-        viewPlayer.loadVideoURL(URL(string: "https://www.youtube.com/watch?v=o6tA8CBRQ5o")!)
-//        loadVideo(url: "https://www.fufanapp.com/wallpaper/wallpaper/abstract/10/video.MOV")
+        viewPlayer.backgroundColor = UIColor.clear
     }
 }
 
@@ -122,7 +118,6 @@ extension VideoServiceView: YouTubePlayerDelegate {
             self.viewPlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
             return .commandFailed
         }
-        
     }
 }
 

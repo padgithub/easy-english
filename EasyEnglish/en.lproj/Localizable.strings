@@ -5,8 +5,9 @@
   Created by Anh Dũng on 1/10/19.
   Copyright © 2019 Anh Dũng. All rights reserved.
 */
-
+"app_name" = "Easy English";
 //TabBar
+"no_data" = "Emtry";
 "txt_home" = "Home";
 "txt_catalogue" = "Catalogues";
 "txt_favorites" = "Favorites";
@@ -22,7 +23,15 @@
 "txt_next_video" = "Next Video";
 "txt_share" = "Share";
 "txt_addto" = "Add to";
-
-
-
+//More action
+"txt_delete_all_hitory_video" = "Delete all Videos";
+"txt_delete_history_video" = "Delete Videos";
+"txt_cancel" = "Cancel";
+"txt_add_fa_video" = "Add video to favorite";
+"txt_remove_fa_video" = "Remove video from favorite";
+"txt_add_fa_playlist" = "Add playlist to favorite";
+"txt_remove_fa_playlist" = "Remove playlist from favorite";
+"txt_select_action" = "Select Action";
+"txt_share_video" = "Share Video";
+"txt_share_playlist" = "Share Playlist";
 

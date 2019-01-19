@@ -14,6 +14,7 @@ class Category: NSObject {
     var name = ""
     var group_id = 0
     var icon = ""
+    var desc = ""
     var playlists: [Playlist] = []
     
     init(data: Row) {
@@ -21,6 +22,7 @@ class Category: NSObject {
         name       = data["name"] as! String
         group_id   = data["group_id"]
         icon       = data["icon"] as! String
+        desc       = data["desc"] ?? ""
     }
     
     override init() {

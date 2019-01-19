@@ -128,6 +128,46 @@ class PlaylistManager: NSObject {
         }
     }
     
+    func checkFavorite(playlist: Playlist) -> Bool{
+        var playlistItem : [Playlist] = []
+        do {
+            try dbQueue.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM playlists where playlist_id = '\(playlist.playlistId)' AND favorited = 1")
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = Playlist(data: row)
+                    playlistItem.append(story)
+                }
+            }
+        } catch _ {
+        }
+        if playlistItem.count != 0 {
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func getInfoPlaylistDB(playlistId: String) -> Playlist{
+        var plsItem : [Playlist] = []
+        do {
+            try dbQueue.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM playlists where playlist_id = '\(playlistId)'")
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let story = Playlist(data: row)
+                    plsItem.append(story)
+                }
+            }
+        } catch _ {
+        }
+        if plsItem.count != 0 {
+            return plsItem[0]
+        }else{
+            return Playlist()
+        }
+    }
+    
     func insert_update_playlist(obj: Playlist) {
         if isExistingPlaylist(playlist: obj) {
             do {

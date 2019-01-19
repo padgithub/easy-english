@@ -116,9 +116,11 @@ class PlayVC: BaseVC {
             break
         case 602: //add playlist
             print(sender.tag)
+            actionSheet()
             break
         case 603: //share
             print(sender.tag)
+            actionSheetShare()
             break
         case 604: //more
             print(sender.tag)
@@ -168,6 +170,14 @@ class PlayVC: BaseVC {
                 self.frameViewPlay(self.viewPlayer)
             }
             break
+        case 613: //add playlist
+            print(sender.tag)
+            actionSheet()
+            break
+        case 612: //share
+            print(sender.tag)
+            actionSheetShare()
+            break
         default:
             print(sender.tag)
         }
@@ -198,7 +208,6 @@ class PlayVC: BaseVC {
         let currentValue = Int(sender.value)
         viewYoutubePlayer.seekTo(Float(currentValue), seekAhead: true)
     }
-    
 }
 
 extension PlayVC {
@@ -241,7 +250,7 @@ extension PlayVC {
         
         youtubeShare.handleCurentime = { (current,duration) in
             self.current = Int(Float(current) ?? 0)
-            self.duration = Int(duration) ?? 0
+            self.duration = Int(Float(duration) ?? 0) - Int(Float(current) ?? 0)
             self.lbTimeEnd.text = self.timeStringFrom(self.duration)
             self.lbTimeStart.text = self.timeStringFrom(self.current ,self.duration)
             self.silder.value = Float(current) ?? 0
@@ -261,7 +270,32 @@ extension PlayVC {
                 TAppDelegate.indexPlaying = index
             }
         }
+        viewModel.handleMoreOptionCell = { (item) in
+            let title = VideoManager.shareInstance.checkFavorited(videoId: item.id) ? "txt_remove_fa_video".localized : "txt_add_fa_video".localized
+            _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+                if action.title == "txt_remove_fa_video".localized {
+                    self.removeFavorite(item)
+                }
+                if action.title == "txt_add_fa_video".localized {
+                    self.addFavorite(item)
+                }
+                if action.title == "txt_share".localized {
+                    self.share(item)
+                }
+            })
+        }
         configToolbarTF()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction(sender:)))
+        lbTitileSub.isUserInteractionEnabled = true
+        lbTitileSub.addGestureRecognizer(tap)
+    }
+    
+    @objc
+    func tapFunction(sender:UITapGestureRecognizer) {
+        print("tap working")
+        let vc = ListVideoVC(nibName: "ListVideoVC",bundle: nil)
+        vc.arrData = TAppDelegate.arrVideoPlaying
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func initData() {
@@ -280,7 +314,7 @@ extension PlayVC {
         lbTitleVideo.text = video.snippet.title
         lbViewer.text = "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
         textViewNote.text = video.notes
-        lbStatusNote.text = "\(Date.init(seconds: video.timeUpdate).string("dd/mm/yyyy hh:mm a")) | Auto save"
+        lbStatusNote.text = "\(Date.init(seconds: video.timeUpdate).string("dd/MM/yyyy hh:mm a")) | Auto save"
         lbTitileSub.text = TAppDelegate.titlePlaylist
         lbSub.text = TAppDelegate.titleCatagory
         lbDislike.text = "\(Int(video.statistics.dislikeCount) ?? 0 * 4) K"
@@ -319,8 +353,9 @@ extension PlayVC {
     func configToolbarTF() {
         let numberToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         numberToolbar.barStyle = .default
-        numberToolbar.barTintColor = UIColor("AE0000", alpha: 1.0)
-        numberToolbar.backgroundColor = UIColor("AE0000", alpha: 1.0)
+        numberToolbar.barTintColor = UIColor("FF7934", alpha: 1.0)
+        numberToolbar.backgroundColor =  UIColor.clear //UIColor("FF7934", alpha: 1.0)
+        numberToolbar.setBackgroundImage(UIImage(named: "bg"), forToolbarPosition: .top, barMetrics: .default)
         let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(doneWithNumberPad))
         cancel.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white], for: .normal)
         let done = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneWithNumberPad))
@@ -339,6 +374,41 @@ extension PlayVC {
     
     @objc func doneWithNumberPad() {
         textViewNote.endEditing(true)
+    }
+    
+    func actionSheet() {
+        let itemVideo = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying]
+        let titleVideo = VideoManager.shareInstance.checkFavorited(videoId: itemVideo.id) ? "txt_remove_fa_video".localized : "txt_add_fa_video".localized
+        let itemPlaylist = PlaylistManager.shareInstance.getInfoPlaylistDB(playlistId: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].playlistId)
+        let titlePlaylist = PlaylistManager.shareInstance.checkFavorite(playlist: itemPlaylist) ? "txt_remove_fa_playlist".localized : "txt_add_fa_playlist".localized
+        
+        _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [(titleVideo, .default), (titlePlaylist, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+            if action.title == "txt_add_fa_video".localized {
+                self.addFavorite(itemVideo)
+            }
+            if action.title == "txt_remove_fa_video".localized {
+                self.removeFavorite(itemVideo)
+            }
+            if action.title == "txt_add_fa_playlist".localized {
+                self.addFavorite(itemPlaylist)
+            }
+            if action.title == "txt_remove_fa_playlist".localized {
+                self.removeFavorite(itemPlaylist)
+            }
+        })
+    }
+    
+    func actionSheetShare() {
+        let itemVideo = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying]
+        let itemPlaylist = PlaylistManager.shareInstance.getInfoPlaylistDB(playlistId: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].playlistId)
+        _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [("txt_share_video".localized, .default), ("txt_share_playlist".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+            if action.title == "txt_share_video".localized {
+                self.share(itemVideo)
+            }
+            if action.title == "txt_share_playlist".localized {
+                self.share(itemPlaylist)
+            }
+        })
     }
 }
 

@@ -84,8 +84,6 @@
 		01B3DD3021D631150051221E /* KHImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9421D631140051221E /* KHImageView.swift */; };
 		01B3DD3121D631150051221E /* KHTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9521D631140051221E /* KHTextView.swift */; };
 		01B3DD3221D631150051221E /* KHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9621D631140051221E /* KHLabel.swift */; };
-		01B3DD3321D631150051221E /* JoinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC9821D631140051221E /* JoinView.xib */; };
-		01B3DD3421D631150051221E /* JoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9921D631140051221E /* JoinView.swift */; };
 		01B3DD3521D631150051221E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9B21D631140051221E /* BaseVC.swift */; };
 		01B3DD6F21D631150051221E /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DD0A21D631140051221E /* MTBBarcodeScanner.m */; };
 		01B3DD7021D631150051221E /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DD0C21D631140051221E /* MarqueeLabel.swift */; };
@@ -207,8 +205,6 @@
 		01B3DC9421D631140051221E /* KHImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHImageView.swift; sourceTree = "<group>"; };
 		01B3DC9521D631140051221E /* KHTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHTextView.swift; sourceTree = "<group>"; };
 		01B3DC9621D631140051221E /* KHLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHLabel.swift; sourceTree = "<group>"; };
-		01B3DC9821D631140051221E /* JoinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinView.xib; sourceTree = "<group>"; };
-		01B3DC9921D631140051221E /* JoinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
 		01B3DC9B21D631140051221E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		01B3DD0921D631140051221E /* MTBBarcodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBBarcodeScanner.h; sourceTree = "<group>"; };
 		01B3DD0A21D631140051221E /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBBarcodeScanner.m; sourceTree = "<group>"; };
@@ -551,7 +547,6 @@
 				01B3DC8721D631140051221E /* DropBoxUITB */,
 				01B3DC8A21D631140051221E /* TextFieldView */,
 				01B3DC9021D631140051221E /* CustomControl */,
-				01B3DC9721D631140051221E /* JoinView */,
 			);
 			path = CustomsUI;
 			sourceTree = "<group>";
@@ -614,15 +609,6 @@
 			path = CustomControl;
 			sourceTree = "<group>";
 		};
-		01B3DC9721D631140051221E /* JoinView */ = {
-			isa = PBXGroup;
-			children = (
-				01B3DC9821D631140051221E /* JoinView.xib */,
-				01B3DC9921D631140051221E /* JoinView.swift */,
-			);
-			path = JoinView;
-			sourceTree = "<group>";
-		};
 		01B3DC9A21D631140051221E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,8 +665,8 @@
 		01B3DD8321D8D4E80051221E /* VideoHomeCell */ = {
 			isa = PBXGroup;
 			children = (
-				01EE354D21EF99D400C3346F /* VideoHomeCell.xib */,
 				01EE354A21EF98AC00C3346F /* VideoHomeCell.swift */,
+				01EE354D21EF99D400C3346F /* VideoHomeCell.xib */,
 			);
 			path = VideoHomeCell;
 			sourceTree = "<group>";
@@ -867,7 +853,6 @@
 				01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */,
 				0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */,
 				01B3DD2021D631150051221E /* MagicView.xib in Resources */,
-				01B3DD3321D631150051221E /* JoinView.xib in Resources */,
 				0138FC0021DF4267001B6BAF /* LoginVC.xib in Resources */,
 				01B3DD2121D631150051221E /* ButtonView.xib in Resources */,
 				0138FBFB21DF1BC0001B6BAF /* LibraryVC.xib in Resources */,
@@ -1037,7 +1022,6 @@
 				0138FC1A21DF7679001B6BAF /* UIScrollView+SVPullToRefresh.m in Sources */,
 				01B3DD2F21D631150051221E /* KHView.swift in Sources */,
 				01B3DD3021D631150051221E /* KHImageView.swift in Sources */,
-				01B3DD3421D631150051221E /* JoinView.swift in Sources */,
 				0138FC9721E3008C001B6BAF /* Define.swift in Sources */,
 				0138FC5B21E10F63001B6BAF /* Playlist.swift in Sources */,
 				0138FC9321E3008C001B6BAF /* InAppPurchase.swift in Sources */,

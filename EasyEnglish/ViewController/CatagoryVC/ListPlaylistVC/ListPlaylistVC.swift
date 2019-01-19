@@ -43,6 +43,20 @@ extension ListPlaylistVC {
             TAppDelegate.titleCatagory = self.categories.name
             self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
+        viewModel.handleMoreOption = { (item) in
+            let title = PlaylistManager.shareInstance.checkFavorite(playlist: item) ? "txt_remove_fa_playlist".localized : "txt_add_fa_playlist".localized
+            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+                if action.title == "txt_add_fa_playlist".localized {
+                    self.addFavorite(item)
+                }
+                if action.title == "txt_remove_fa_playlist".localized {
+                    self.removeFavorite(item)
+                }
+                if action.title == "txt_share".localized {
+                    self.share(item)
+                }
+            })
+        }
     }
     
     func initData() {

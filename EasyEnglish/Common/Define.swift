@@ -72,3 +72,10 @@ extension EnumCollection {
         }
     }
 }
+
+class FilePaths {
+    static let documentsPath : AnyObject = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask,true)[0] as AnyObject
+    struct VidToLive {
+        static var livePath = FilePaths.documentsPath.appending("/data/")
+    }
+}

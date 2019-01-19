@@ -22,6 +22,7 @@ class ContentListVC: BaseVC {
     }
     
     func initUI() {
+        navi.title = "txt_catalogue".localized.uppercased()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 44.0
@@ -65,7 +66,6 @@ extension ContentListVC: UITableViewDelegate, UITableViewDataSource {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? CollapsibleTableViewHeader ?? CollapsibleTableViewHeader(reuseIdentifier: "header")
         
         header.titleLabel.text = listGroup[section].name
-        header.arrowLabel.text = ">"
         header.setCollapsed(listGroup[section].collapsed)
         
         header.section = section

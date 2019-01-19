@@ -11,6 +11,7 @@ import UIKit
 class ListModelPlaylistView: NSObject {
     var arrData: [Playlist]
     var handleSelectRow: ((Int) -> Void)?
+    var handleMoreOption: ((Playlist) -> Void)?
     
     override init() {
         arrData = []
@@ -30,6 +31,9 @@ extension ListModelPlaylistView: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as VideoPlayCell
         cell.selectionStyle = .none
         cell.configCell(playlist: arrData[indexPath.row])
+        cell.handleMoreOption = {
+            self.handleMoreOption?(self.arrData[indexPath.row])
+        }
         return cell
     }
 }

@@ -56,7 +56,7 @@ class VideoManager: NSObject {
         var videoItem : [Items] = []
         do {
             try dbQueue.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM videos ORDER BY RANDOM() LIMIT 20")
+                let query = String.init(format: "SELECT DISTINCT * FROM videos ORDER BY RANDOM(), id ASC LIMIT 10")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let story = Items(dataDB: row)

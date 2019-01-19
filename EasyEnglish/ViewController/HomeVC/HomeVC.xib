@@ -28,26 +28,63 @@
                         <constraint firstAttribute="height" constant="50" id="yA1-eP-imG"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="txt_home"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="app_name"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewReight" value="NO"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IF-xB-Yhv">
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="documents-empty" translatesAutoresizingMaskIntoConstraints="NO" id="oyX-eZ-z2r">
+                            <rect key="frame" x="165" y="246" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="88p-1n-8yk"/>
+                                <constraint firstAttribute="width" secondItem="oyX-eZ-z2r" secondAttribute="height" multiplier="1:1" id="FFj-oU-Uhh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0X-gm-QdA" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                            <rect key="frame" x="20" y="301" width="335" height="0.0"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="no_data"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="j0X-gm-QdA" secondAttribute="trailing" constant="20" id="3o4-CZ-5WM"/>
+                        <constraint firstItem="oyX-eZ-z2r" firstAttribute="centerY" secondItem="1IF-xB-Yhv" secondAttribute="centerY" constant="-40" id="EWb-cm-R7c"/>
+                        <constraint firstItem="oyX-eZ-z2r" firstAttribute="centerX" secondItem="1IF-xB-Yhv" secondAttribute="centerX" id="K2p-uf-w8f"/>
+                        <constraint firstItem="j0X-gm-QdA" firstAttribute="top" secondItem="oyX-eZ-z2r" secondAttribute="bottom" constant="10" id="YBk-a9-Z8I"/>
+                        <constraint firstItem="j0X-gm-QdA" firstAttribute="leading" secondItem="1IF-xB-Yhv" secondAttribute="leading" constant="20" id="kXV-CD-9MW"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fCu-KO-adc">
                     <rect key="frame" x="0.0" y="50" width="375" height="617"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="fCu-KO-adc" secondAttribute="bottom" id="10H-4d-6n1"/>
+                <constraint firstItem="1IF-xB-Yhv" firstAttribute="top" secondItem="ntW-4m-ci9" secondAttribute="bottom" id="FkX-k5-SCo"/>
+                <constraint firstAttribute="bottom" secondItem="1IF-xB-Yhv" secondAttribute="bottom" id="Lop-JA-wrL"/>
                 <constraint firstItem="ntW-4m-ci9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mte-w8-qz5"/>
                 <constraint firstItem="ntW-4m-ci9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TrI-m9-duw"/>
                 <constraint firstItem="fCu-KO-adc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WO9-Bs-v7u"/>
+                <constraint firstItem="1IF-xB-Yhv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b1S-Cs-wNe"/>
                 <constraint firstAttribute="trailing" secondItem="fCu-KO-adc" secondAttribute="trailing" id="pBA-Z3-Si6"/>
+                <constraint firstAttribute="trailing" secondItem="1IF-xB-Yhv" secondAttribute="trailing" id="r5p-f2-ufy"/>
                 <constraint firstAttribute="trailing" secondItem="ntW-4m-ci9" secondAttribute="trailing" id="v42-Np-lyF"/>
                 <constraint firstItem="fCu-KO-adc" firstAttribute="top" secondItem="ntW-4m-ci9" secondAttribute="bottom" id="x08-X2-w0o"/>
             </constraints>
+            <point key="canvasLocation" x="133.59999999999999" y="154.27286356821591"/>
         </view>
     </objects>
+    <resources>
+        <image name="documents-empty" width="48" height="48"/>
+    </resources>
 </document>

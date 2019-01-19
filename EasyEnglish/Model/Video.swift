@@ -55,6 +55,7 @@ class Items: NSObject {
     var farvorites = 0
     var timeUpdate = Date().secondsSince1970
     var subTitle = ""
+    var timeHistory = 0
     //
     var kind = ""
     var etag = ""

@@ -12,7 +12,7 @@ class ListNoteModelView: NSObject {
     
     var arrData: [Items]
     var handleSelectRow: ((Int) -> Void)?
-    
+    var handleMoreOptionCell: ((Int) -> Void)?
     override init() {
         arrData = []
     }

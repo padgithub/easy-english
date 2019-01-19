@@ -36,11 +36,12 @@ class HistoryManger: NSObject {
         var listVideo:[Items] = []
         do {
             try dbQueues.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM historys ORDER BY createDate")
+                let query = String.init(format: "SELECT * FROM historys ORDER BY createDate DESC")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let story = HistoryObj(data: row)
                     let video = VideoManager.shareInstance.getInfoVideoDB(videoId: story.video_id)
+                    video.timeHistory = story.creatDate
                     listVideo.append(video)
                 }
             }
@@ -86,12 +87,36 @@ class HistoryManger: NSObject {
             try dbQueues.inDatabase { db in
                 try db.execute(
                     "UPDATE historys set createDate = :i1 where video_id = :i2",
-                    arguments: ["i1":obj.id,"i2":obj.video_id])
+                    arguments: ["i1":obj.creatDate,"i2":obj.video_id])
                 print("updated")
             }
         } catch _ {
         }
     }
+    
+    func removeHistory(_ obj: Items) {
+        do {
+            try dbQueues.inDatabase { db in
+                try db.execute(
+                    "DELETE FROM historys WHERE where video_id = :i2",
+                    arguments: ["i2":obj.id])
+                print("delete recond")
+            }
+        } catch _ {
+        }
+    }
+    
+    func removeAllHistory() {
+        do {
+            try dbQueues.inDatabase { db in
+                try db.execute(
+                    "DELETE FROM historys")
+                print("delete all")
+            }
+        } catch _ {
+        }
+    }
+
     
     func insertOrUpdate(_ obj: HistoryObj) {
         if isExistingVideo(videoId: obj.video_id) {

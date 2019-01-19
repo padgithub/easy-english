@@ -47,7 +47,7 @@ class FavoritesVC: BaseVC {
 
 extension FavoritesVC {
     func initUI() {
-        navi.title = ""
+        navi.title = "txt_favorites".localized.uppercased()
         toolBar.handleActionG2Left = {
             self.swicthView = false
         }
@@ -69,6 +69,17 @@ extension FavoritesVC {
             TAppDelegate.titleCatagory = catogry.name
             self.tableViewLeft.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
+        viewModelList.handleMoreOption = {(item) in
+            _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [("txt_remove_fa_playlist".localized, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+                if action.title == "txt_remove_fa_playlist".localized {
+                    self.removeFavorite(item)
+                    self.loadData()
+                }
+                if action.title == "txt_share".localized {
+                    self.share(item)
+                }
+            })
+        }
         //
         tableViewReight.register(VideoPlayCell.self)
         tableViewReight.delegate = viewModelVideo
@@ -76,6 +87,18 @@ extension FavoritesVC {
         viewModelVideo.isPlaylist = true
         viewModelVideo.handleSelectRow = { (index) in
             self.goPlay(arrData: self.arrDataVideo, index: index)
+            self.tableViewReight.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
+        }
+        viewModelVideo.handleMoreOptionCell = { (item) in
+            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [("txt_remove_fa_video".localized, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+                if action.title == "txt_remove_fa_video".localized {
+                    self.removeFavorite(item)
+                    self.loadData()
+                }
+                if action.title == "txt_share".localized {
+                    self.share(item)
+                }
+            })
         }
     }
     
@@ -90,12 +113,14 @@ extension FavoritesVC {
     func loadDataPlayList() {
         self.arrDataList = PlaylistManager.shareInstance.fetchPlayListFevorited()
         viewModelList.arrData = self.arrDataList
+        tableViewLeft.backgroundColor = self.arrDataList.count == 0 ? UIColor.clear : UIColor.white
         tableViewLeft.reloadData()
     }
     
     func loadDataVideo() {
         self.arrDataVideo = VideoManager.shareInstance.fetchAllFavorited()
         viewModelVideo.arrData = self.arrDataVideo
+        tableViewReight.backgroundColor = self.arrDataVideo.count == 0 ? UIColor.clear : UIColor.white
         tableViewReight.reloadData()
     }
     

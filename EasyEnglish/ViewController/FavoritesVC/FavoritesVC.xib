@@ -54,33 +54,99 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STo-bi-gxG">
                             <rect key="frame" x="0.0" y="50" width="375" height="567"/>
                             <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kC-XT-xlE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="documents-empty" translatesAutoresizingMaskIntoConstraints="NO" id="FXH-7b-YW4">
+                                            <rect key="frame" x="165" y="221" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="FXH-7b-YW4" secondAttribute="height" multiplier="1:1" id="3C7-nt-7Sx"/>
+                                                <constraint firstAttribute="width" constant="45" id="dQq-w6-z1s"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugy-Bm-oWn" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="276" width="335" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="no_data"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ugy-Bm-oWn" firstAttribute="leading" secondItem="5kC-XT-xlE" secondAttribute="leading" constant="20" id="Rch-ds-dlU"/>
+                                        <constraint firstItem="ugy-Bm-oWn" firstAttribute="top" secondItem="FXH-7b-YW4" secondAttribute="bottom" constant="10" id="nwe-w2-VEH"/>
+                                        <constraint firstAttribute="trailing" secondItem="ugy-Bm-oWn" secondAttribute="trailing" constant="20" id="uXN-ms-m4A"/>
+                                        <constraint firstItem="FXH-7b-YW4" firstAttribute="centerY" secondItem="5kC-XT-xlE" secondAttribute="centerY" constant="-40" id="ueV-fT-vcS"/>
+                                        <constraint firstItem="FXH-7b-YW4" firstAttribute="centerX" secondItem="5kC-XT-xlE" secondAttribute="centerX" id="y0G-5N-Tvr"/>
+                                    </constraints>
+                                </view>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="025-kD-PKp">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" red="0.32156862749999998" green="0.16862745100000001" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="025-kD-PKp" secondAttribute="bottom" id="FTF-Jv-SNf"/>
+                                <constraint firstItem="5kC-XT-xlE" firstAttribute="top" secondItem="STo-bi-gxG" secondAttribute="top" id="Gec-8H-adD"/>
                                 <constraint firstAttribute="trailing" secondItem="025-kD-PKp" secondAttribute="trailing" id="PL9-O4-HtF"/>
+                                <constraint firstAttribute="bottom" secondItem="5kC-XT-xlE" secondAttribute="bottom" id="QbF-df-eLy"/>
                                 <constraint firstItem="025-kD-PKp" firstAttribute="leading" secondItem="STo-bi-gxG" secondAttribute="leading" id="T7g-Mo-A6L"/>
                                 <constraint firstItem="025-kD-PKp" firstAttribute="top" secondItem="STo-bi-gxG" secondAttribute="top" id="TDa-mF-bk0"/>
+                                <constraint firstAttribute="trailing" secondItem="5kC-XT-xlE" secondAttribute="trailing" id="krw-o2-Y9f"/>
+                                <constraint firstItem="5kC-XT-xlE" firstAttribute="leading" secondItem="STo-bi-gxG" secondAttribute="leading" id="loG-MQ-LXr"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-Fr-yR5" userLabel="ViewToolLeft">
                             <rect key="frame" x="0.0" y="50" width="375" height="567"/>
                             <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mod-p2-ogb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="documents-empty" translatesAutoresizingMaskIntoConstraints="NO" id="IeT-P3-WQ8">
+                                            <rect key="frame" x="165" y="221" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="IeT-P3-WQ8" secondAttribute="height" multiplier="1:1" id="VZV-9g-y8V"/>
+                                                <constraint firstAttribute="width" constant="45" id="zbC-Bb-OIR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6M-XW-Otb" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="276" width="335" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="no_data"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="IeT-P3-WQ8" firstAttribute="centerY" secondItem="Mod-p2-ogb" secondAttribute="centerY" constant="-40" id="5dU-NZ-VaH"/>
+                                        <constraint firstItem="v6M-XW-Otb" firstAttribute="leading" secondItem="Mod-p2-ogb" secondAttribute="leading" constant="20" id="Ecy-dd-acy"/>
+                                        <constraint firstAttribute="trailing" secondItem="v6M-XW-Otb" secondAttribute="trailing" constant="20" id="THd-rK-Lee"/>
+                                        <constraint firstItem="v6M-XW-Otb" firstAttribute="top" secondItem="IeT-P3-WQ8" secondAttribute="bottom" constant="10" id="eXI-3h-cb3"/>
+                                        <constraint firstItem="IeT-P3-WQ8" firstAttribute="centerX" secondItem="Mod-p2-ogb" secondAttribute="centerX" id="kFI-OS-fOd"/>
+                                    </constraints>
+                                </view>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-dL-BpF">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" red="0.31372549020000001" green="0.70588235290000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="cF2-dL-BpF" firstAttribute="top" secondItem="2Fz-Fr-yR5" secondAttribute="top" id="61I-yR-Sln"/>
+                                <constraint firstAttribute="trailing" secondItem="Mod-p2-ogb" secondAttribute="trailing" id="KkP-fK-0k7"/>
+                                <constraint firstItem="Mod-p2-ogb" firstAttribute="leading" secondItem="2Fz-Fr-yR5" secondAttribute="leading" id="PhR-uw-hba"/>
+                                <constraint firstAttribute="bottom" secondItem="Mod-p2-ogb" secondAttribute="bottom" id="Pxw-NW-xOo"/>
                                 <constraint firstAttribute="bottom" secondItem="cF2-dL-BpF" secondAttribute="bottom" id="edF-Wq-rMw"/>
                                 <constraint firstItem="cF2-dL-BpF" firstAttribute="leading" secondItem="2Fz-Fr-yR5" secondAttribute="leading" id="iNc-tD-hL0"/>
                                 <constraint firstAttribute="trailing" secondItem="cF2-dL-BpF" secondAttribute="trailing" id="lJ9-ci-sVL"/>
+                                <constraint firstItem="Mod-p2-ogb" firstAttribute="top" secondItem="2Fz-Fr-yR5" secondAttribute="top" id="xVq-e4-r4L"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -113,4 +179,7 @@
             <point key="canvasLocation" x="114.40000000000001" y="53.523238380809602"/>
         </view>
     </objects>
+    <resources>
+        <image name="documents-empty" width="48" height="48"/>
+    </resources>
 </document>

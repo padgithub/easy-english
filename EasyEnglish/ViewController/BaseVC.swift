@@ -136,6 +136,31 @@ extension BaseVC {
         attributes.statusBar = .dark
         return attributes
     }
+    
+    func addFavorite(_ obj: Items){
+        VideoManager.shareInstance.add_remove_favorited(video: obj, true)
+    }
+    
+    func addFavorite(_ obj: Playlist) {
+        PlaylistManager.shareInstance.addfavorited(playlistId: obj.playlistId)
+    }
+    
+    func removeFavorite(_ obj: Items) {
+        VideoManager.shareInstance.add_remove_favorited(video: obj, false)
+    }
+    
+    func removeFavorite(_ obj: Playlist) {
+        PlaylistManager.shareInstance.removefavorited(playlistId: obj.playlistId)
+    }
+    
+    func share(_ obj: Playlist) {
+        
+    }
+    
+    func share(_ obj: Items) {
+        
+    }
+    
 }
 
 extension UITabBarController {

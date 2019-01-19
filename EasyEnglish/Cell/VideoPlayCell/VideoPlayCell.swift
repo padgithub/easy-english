@@ -20,6 +20,7 @@ class VideoPlayCell: UITableViewCell {
     
     var handleMoreOption: (() -> Void)?
     var urlString = ""
+    var isHistoryView = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,7 +60,11 @@ extension VideoPlayCell {
         lbDuration.text = video.contentDetails.duration.ISO8601DateComponents()
         lbSub.text = TAppDelegate.titleCatagory
         lbTitleVideo.text = video.snippet.title
-        lbViewer.text = "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
+        lbViewer.text = isHistoryView ? Date.init(seconds: Double(video.timeHistory)).string("dd/MM/YYYY hh:mm a") : "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
+        if isHistoryView {
+            lbViewer.textAlignment = .right
+            lbSub.text = ""
+        }
         
     }
     

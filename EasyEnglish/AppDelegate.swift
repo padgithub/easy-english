@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        print(FilePaths.VidToLive.livePath)
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         youtubeShare.turnAudio()
@@ -175,7 +175,7 @@ extension AppDelegate {
         navT.isNavigationBarHidden = true
         
         let tabF = FavoritesVC(nibName:"FavoritesVC",bundle: nil)
-        tabF.tabBarItem = UITabBarItem(title: "txt_favorites".localized, image: UIImage(named: "ic_bb_sub")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_sub")!.withRenderingMode(.alwaysOriginal))
+        tabF.tabBarItem = UITabBarItem(title: "txt_favorites".localized, image: UIImage(named: "ic_bb_favorite")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_favorite")!.withRenderingMode(.alwaysOriginal))
         let navF = UINavigationController(rootViewController: tabF)
         navF.isNavigationBarHidden = true
         

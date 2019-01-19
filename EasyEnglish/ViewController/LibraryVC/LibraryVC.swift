@@ -41,22 +41,25 @@ class LibraryVC: BaseVC {
         initData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.loadData()
+    }
+    
 }
 
 extension LibraryVC {
     func initUI() {
+        navi.title = "txt_library".localized.uppercased()
         TAppDelegate.handleReloadDataNotes = {
             self.loadData()
         }
-        navi.title = ""
+        
         toolBar.handleActionG2Left = {
             self.swicthView = false
-            self.loadData()
         }
         
         toolBar.handleActionG2Right = {
             self.swicthView = true
-            self.loadData()
         }
         
         tableViewLeft.register(NotesCell.self)
@@ -71,17 +74,32 @@ extension LibraryVC {
         tableViewRight.delegate = viewModelHistory
         tableViewRight.dataSource = viewModelHistory
         viewModelHistory.isPlaylist = true
+        viewModelHistory.isHisotryView = true
         viewModelHistory.handleSelectRow = { (index) in
             self.goPlay(arrData: self.arrHistory, index: index)
             self.tableViewRight.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
+        }
+        viewModelHistory.handleMoreOptionCell = { (item) in
+            _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [("txt_delete_history_video".localized, .default), ("txt_delete_all_hitory_video".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+                if action.title == "txt_delete_history_video".localized {
+                    HistoryManger.shared.removeHistory(item)
+                    self.loadData()
+                }
+                if action.title == "txt_delete_all_hitory_video".localized {
+                    HistoryManger.shared.removeAllHistory()
+                    self.loadData()
+                }
+            })
         }
     }
     
     func loadData(){
         if toolBar.indexSelected == 0 {
             loadDataNote()
+            tableViewLeft.backgroundColor = self.arrNote.count == 0 ? UIColor.clear : UIColor.white
         }else{
             loadDataHistory()
+            tableViewRight.backgroundColor = self.arrHistory.count == 0 ? UIColor.clear : UIColor.white
         }
     }
     
@@ -98,7 +116,8 @@ extension LibraryVC {
     }
     
     func initData() {
-        loadData()
+        loadDataNote()
+        loadDataHistory()
     }
 }
 
