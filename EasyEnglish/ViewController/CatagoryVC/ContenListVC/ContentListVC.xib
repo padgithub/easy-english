@@ -29,10 +29,12 @@
                         <constraint firstAttribute="height" constant="80" id="lSZ-ut-fro"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="YES"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasBack" value="NO"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewReight" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewReight" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="txt_catalogue"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasProfile" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasSetting" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qSW-qg-R4z">

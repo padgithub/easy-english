@@ -28,7 +28,7 @@ class ListVideoVC: BaseVC {
 extension ListVideoVC {
     func initUI() {
         navi.title = playlist.title ?? ""
-        navi.handleLeft = {
+        navi.handleBack = {
             self.clickBack()
         }
         tableView.register(VideoPlayCell.self)

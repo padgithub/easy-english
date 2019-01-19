@@ -7,7 +7,7 @@
 */
 "app_name" = "Easy English";
 //TabBar
-"no_data" = "Emtry";
+"no_data" = "Empty";
 "txt_home" = "Home";
 "txt_catalogue" = "Catalogues";
 "txt_favorites" = "Favorites";

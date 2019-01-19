@@ -81,11 +81,11 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boz-sG-ziG">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boz-sG-ziG">
                             <rect key="frame" x="359" y="0.0" width="50" height="50"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navi_search" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
+                                    <rect key="frame" x="7" y="7" width="36" height="36"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfM-QA-6Yh">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -98,13 +98,11 @@
                             <constraints>
                                 <constraint firstItem="UfM-QA-6Yh" firstAttribute="leading" secondItem="boz-sG-ziG" secondAttribute="leading" id="1e2-da-HDo"/>
                                 <constraint firstAttribute="width" secondItem="boz-sG-ziG" secondAttribute="height" multiplier="1:1" id="4VM-Ms-FcE"/>
-                                <constraint firstAttribute="trailing" secondItem="S6j-MQ-pAM" secondAttribute="trailing" id="4rw-ON-EIn"/>
                                 <constraint firstItem="UfM-QA-6Yh" firstAttribute="top" secondItem="boz-sG-ziG" secondAttribute="top" id="9eN-Od-bH2"/>
-                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="top" secondItem="boz-sG-ziG" secondAttribute="top" id="Npe-6z-4vl"/>
-                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="leading" secondItem="boz-sG-ziG" secondAttribute="leading" id="Nzn-zI-4dE"/>
                                 <constraint firstAttribute="bottom" secondItem="UfM-QA-6Yh" secondAttribute="bottom" id="eH4-wn-UlO"/>
-                                <constraint firstAttribute="bottom" secondItem="S6j-MQ-pAM" secondAttribute="bottom" id="vo4-To-CGW"/>
+                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="centerX" secondItem="boz-sG-ziG" secondAttribute="centerX" id="nOm-iH-wJj"/>
                                 <constraint firstAttribute="trailing" secondItem="UfM-QA-6Yh" secondAttribute="trailing" id="wEy-At-mZT"/>
+                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="centerY" secondItem="boz-sG-ziG" secondAttribute="centerY" id="wvP-al-NPq"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -113,8 +111,10 @@
                         <constraint firstAttribute="trailing" secondItem="boz-sG-ziG" secondAttribute="trailing" constant="5" id="2c8-63-CoE"/>
                         <constraint firstAttribute="bottom" secondItem="cbZ-9h-clC" secondAttribute="bottom" id="3sM-PW-4B4"/>
                         <constraint firstItem="cbZ-9h-clC" firstAttribute="top" secondItem="o1g-h4-9wz" secondAttribute="top" id="5Yh-Ie-80b"/>
+                        <constraint firstItem="S6j-MQ-pAM" firstAttribute="height" secondItem="RKS-mO-IQd" secondAttribute="height" id="Cg1-Ah-ycb"/>
                         <constraint firstItem="boz-sG-ziG" firstAttribute="leading" secondItem="RfF-R1-mTh" secondAttribute="trailing" id="FHa-QZ-y8H"/>
                         <constraint firstItem="boz-sG-ziG" firstAttribute="top" secondItem="o1g-h4-9wz" secondAttribute="top" id="JiH-AA-QIw"/>
+                        <constraint firstItem="S6j-MQ-pAM" firstAttribute="width" secondItem="RKS-mO-IQd" secondAttribute="width" id="Nsk-BA-wkJ"/>
                         <constraint firstItem="RfF-R1-mTh" firstAttribute="centerY" secondItem="o1g-h4-9wz" secondAttribute="centerY" id="isz-in-tCW"/>
                         <constraint firstItem="cbZ-9h-clC" firstAttribute="leading" secondItem="o1g-h4-9wz" secondAttribute="leading" constant="5" id="kxo-e6-aU4"/>
                         <constraint firstItem="RfF-R1-mTh" firstAttribute="leading" secondItem="cbZ-9h-clC" secondAttribute="trailing" id="l0l-HS-8hE"/>
@@ -146,6 +146,6 @@
     <resources>
         <image name="bg" width="377" height="144"/>
         <image name="icon-arrow-left" width="17" height="17"/>
-        <image name="navi_search" width="14.666666984558105" height="14.666666984558105"/>
+        <image name="settings" width="23" height="23"/>
     </resources>
 </document>

@@ -43,6 +43,10 @@ class FavoritesVC: BaseVC {
         initData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadData()
+    }
+    
 }
 
 extension FavoritesVC {

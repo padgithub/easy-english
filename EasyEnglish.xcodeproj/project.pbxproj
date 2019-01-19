@@ -312,6 +312,8 @@
 		0138FBFC21DF4241001B6BAF /* CommonVC */ = {
 			isa = PBXGroup;
 			children = (
+				01FB921B21F32E2F0022016D /* ProfileVC */,
+				01FB921A21F32E1D0022016D /* SettingVC */,
 				0138FC0121DF426D001B6BAF /* LoginVC */,
 			);
 			path = CommonVC;
@@ -705,6 +707,20 @@
 				01B3DD8F21D917DE0051221E /* PlayVC.xib */,
 			);
 			path = PlayVC;
+			sourceTree = "<group>";
+		};
+		01FB921A21F32E1D0022016D /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		01FB921B21F32E2F0022016D /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileVC;
 			sourceTree = "<group>";
 		};
 		8E65447970EC3CE49E6569D4 /* Frameworks */ = {

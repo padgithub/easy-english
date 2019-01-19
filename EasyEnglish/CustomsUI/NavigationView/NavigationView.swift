@@ -37,12 +37,42 @@ class NavigationView: UIView {
     
     @IBInspectable open var hasBack: Bool = true {
         didSet {
-            
+            if hasBack {
+                imgLeft.image = UIImage(named: "icon-arrow-left")
+                imgLeft.contentMode = .center
+            }
         }
     }
     
-    var handleLeft: (() -> Void)?
-    var handleRight: (() -> Void)?
+    @IBInspectable open var hasProfile: Bool = false {
+        didSet {
+            if hasProfile {
+                imgLeft.image = randomAvatar()
+                imgLeft.contentMode = .scaleToFill
+            }
+        }
+    }
+    
+    @IBInspectable open var hasSetting: Bool = true {
+        didSet {
+            if hasSetting {
+                imgRight.image = UIImage(named: "settings")
+            }
+        }
+    }
+    
+    @IBInspectable open var hasSearch: Bool = false {
+        didSet {
+            if hasSetting {
+                imgRight.image = UIImage(named: "navi_search")
+            }
+        }
+    }
+    
+    var handleBack: (() -> Void)?
+    var handleProfile: (() -> Void)?
+    var handleSetting: (() -> Void)?
+    var handleSearch: (() -> Void)?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -78,9 +108,24 @@ class NavigationView: UIView {
     }
     
     @IBAction func actionLeft(_ sender: Any) {
-        handleLeft?()
+        if hasBack {
+            handleBack?()
+        }else if hasProfile {
+            handleProfile?()
+        }
     }
     @IBAction func actionRight(_ sender: Any) {
-        handleRight?()
+        if hasSetting {
+            handleSetting?()
+        }else if hasSearch {
+            handleSearch?()
+        }
+    }
+}
+
+extension NavigationView {
+    func randomAvatar() -> UIImage {
+        let number = Int.random(in: 1 ..< 10)
+        return UIImage(named: "\(number)")!
     }
 }

@@ -29,7 +29,7 @@ extension ListPlaylistVC {
     func initUI() {
         navi.title = categories.name
         
-        navi.handleLeft = {
+        navi.handleBack = {
             self.clickBack()
         }
         tableView.register(VideoPlayCell.self)
