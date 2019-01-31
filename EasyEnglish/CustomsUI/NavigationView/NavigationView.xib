@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="ctrHeightStatusBar" destination="jRs-gf-Tp3" id="isW-Qf-Rso"/>
+                <outlet property="imageBackground" destination="OYX-W8-87Y" id="svO-AQ-xav"/>
                 <outlet property="imgLeft" destination="RKS-mO-IQd" id="t4S-3a-3Du"/>
                 <outlet property="imgRight" destination="S6j-MQ-pAM" id="U56-b8-Zay"/>
                 <outlet property="lbTitleNav" destination="RfF-R1-mTh" id="ERx-9F-jgg"/>
@@ -84,8 +85,8 @@
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boz-sG-ziG">
                             <rect key="frame" x="359" y="0.0" width="50" height="50"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
-                                    <rect key="frame" x="7" y="7" width="36" height="36"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-MQ-pAM" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
+                                    <rect key="frame" x="15" y="15" width="20" height="20"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfM-QA-6Yh">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -99,8 +100,10 @@
                                 <constraint firstItem="UfM-QA-6Yh" firstAttribute="leading" secondItem="boz-sG-ziG" secondAttribute="leading" id="1e2-da-HDo"/>
                                 <constraint firstAttribute="width" secondItem="boz-sG-ziG" secondAttribute="height" multiplier="1:1" id="4VM-Ms-FcE"/>
                                 <constraint firstItem="UfM-QA-6Yh" firstAttribute="top" secondItem="boz-sG-ziG" secondAttribute="top" id="9eN-Od-bH2"/>
+                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="width" secondItem="boz-sG-ziG" secondAttribute="height" multiplier="1:2.5" id="V6q-2o-9JD"/>
                                 <constraint firstAttribute="bottom" secondItem="UfM-QA-6Yh" secondAttribute="bottom" id="eH4-wn-UlO"/>
                                 <constraint firstItem="S6j-MQ-pAM" firstAttribute="centerX" secondItem="boz-sG-ziG" secondAttribute="centerX" id="nOm-iH-wJj"/>
+                                <constraint firstItem="S6j-MQ-pAM" firstAttribute="height" secondItem="boz-sG-ziG" secondAttribute="height" multiplier="1/2.5" id="u1x-PQ-9GO"/>
                                 <constraint firstAttribute="trailing" secondItem="UfM-QA-6Yh" secondAttribute="trailing" id="wEy-At-mZT"/>
                                 <constraint firstItem="S6j-MQ-pAM" firstAttribute="centerY" secondItem="boz-sG-ziG" secondAttribute="centerY" id="wvP-al-NPq"/>
                             </constraints>
@@ -111,10 +114,8 @@
                         <constraint firstAttribute="trailing" secondItem="boz-sG-ziG" secondAttribute="trailing" constant="5" id="2c8-63-CoE"/>
                         <constraint firstAttribute="bottom" secondItem="cbZ-9h-clC" secondAttribute="bottom" id="3sM-PW-4B4"/>
                         <constraint firstItem="cbZ-9h-clC" firstAttribute="top" secondItem="o1g-h4-9wz" secondAttribute="top" id="5Yh-Ie-80b"/>
-                        <constraint firstItem="S6j-MQ-pAM" firstAttribute="height" secondItem="RKS-mO-IQd" secondAttribute="height" id="Cg1-Ah-ycb"/>
                         <constraint firstItem="boz-sG-ziG" firstAttribute="leading" secondItem="RfF-R1-mTh" secondAttribute="trailing" id="FHa-QZ-y8H"/>
                         <constraint firstItem="boz-sG-ziG" firstAttribute="top" secondItem="o1g-h4-9wz" secondAttribute="top" id="JiH-AA-QIw"/>
-                        <constraint firstItem="S6j-MQ-pAM" firstAttribute="width" secondItem="RKS-mO-IQd" secondAttribute="width" id="Nsk-BA-wkJ"/>
                         <constraint firstItem="RfF-R1-mTh" firstAttribute="centerY" secondItem="o1g-h4-9wz" secondAttribute="centerY" id="isz-in-tCW"/>
                         <constraint firstItem="cbZ-9h-clC" firstAttribute="leading" secondItem="o1g-h4-9wz" secondAttribute="leading" constant="5" id="kxo-e6-aU4"/>
                         <constraint firstItem="RfF-R1-mTh" firstAttribute="leading" secondItem="cbZ-9h-clC" secondAttribute="trailing" id="l0l-HS-8hE"/>
@@ -122,7 +123,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.68235294117647061" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="0hw-Va-2vV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6P9-Ou-OFF"/>
                 <constraint firstAttribute="trailing" secondItem="o1g-h4-9wz" secondAttribute="trailing" id="7Nd-8j-iz9"/>

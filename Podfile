@@ -17,7 +17,7 @@ target 'EasyEnglish' do
   pod 'KRProgressHUD'
   pod 'Alamofire'
   pod 'FBSDKLoginKit'
-  
+
   target 'EasyEnglishTests' do
     inherit! :search_paths
     # Pods for testing

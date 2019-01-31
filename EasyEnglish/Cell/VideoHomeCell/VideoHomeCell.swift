@@ -50,9 +50,14 @@ extension VideoHomeCell {
                 }
             })
         }
+        imageAvatar.image = randomAvatar()
         lbSub.text = obj.subTitle
         lbTitleVideo.text = obj.snippet.title
         lbDuration.text = obj.contentDetails.duration.ISO8601DateComponents()
     }
     
+    func randomAvatar() -> UIImage {
+        let number = Int.random(in: 1 ..< 10)
+        return UIImage(named: "\(number)")!
+    }
 }

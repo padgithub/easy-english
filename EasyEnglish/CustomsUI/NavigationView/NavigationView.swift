@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NavigationView: UIView {
     
+    @IBOutlet weak var imageBackground: UIImageView!
     @IBOutlet weak var viewReight: UIView!
     @IBOutlet weak var viewLeft: UIView!
     @IBOutlet weak var imgRight: KHImageView!
@@ -47,7 +49,11 @@ class NavigationView: UIView {
     @IBInspectable open var hasProfile: Bool = false {
         didSet {
             if hasProfile {
-                imgLeft.image = randomAvatar()
+                if let image = SaveHelper.get(.fbImage) as? String, image != "" {
+                    imgLeft.downloaded(from: image)
+                }else{
+                    imgLeft.image = randomAvatar()
+                }
                 imgLeft.contentMode = .scaleToFill
             }
         }

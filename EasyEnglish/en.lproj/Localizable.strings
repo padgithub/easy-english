@@ -13,20 +13,24 @@
 "txt_favorites" = "Favorites";
 "txt_library" = "Library";
 "txt_inbox" = "Inbox";
+"txt_document" = "Document";
 //ToolBar
 "txt_fplaylist" = "Favorite Playlist";
 "txt_fvideo" = "Favorite Video";
 "txt_mynote" = "My Note";
 "txt_history" = "History";
+"txt_profile" = "Profile";
 //Player
 "txt_autoplay" = "Auto Play";
 "txt_next_video" = "Next Video";
 "txt_share" = "Share";
 "txt_addto" = "Add to";
+"txt_setting" = "Setting";
 //More action
 "txt_delete_all_hitory_video" = "Delete all Videos";
 "txt_delete_history_video" = "Delete Videos";
 "txt_cancel" = "Cancel";
+"txt_oke" = "OK";
 "txt_add_fa_video" = "Add video to favorite";
 "txt_remove_fa_video" = "Remove video from favorite";
 "txt_add_fa_playlist" = "Add playlist to favorite";
@@ -38,4 +42,14 @@
 "txt_last_10_video" = "Last 10 videos";
 "txt_show_10" = "Show last";
 "txt_all_history" = "All historys";
+//Setting
+"txt_st_toolbar" = "Using Toolbar play video of system";
+"txt_st_lg" = "Language";
+"txt_st_star_app" = "Ranking";
+"txt_st_contact" = "Contact";
+"txt_st_share" = "Share app";
+"txt_st_about" = "About";
+"txt_select_language" = "Select Language";
+"txt_restart_app" = "Restart App";
+"txt_restart_app_msg" = "Successfully. Please restart to continue using";
 

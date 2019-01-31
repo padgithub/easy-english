@@ -52,6 +52,12 @@ class FavoritesVC: BaseVC {
 extension FavoritesVC {
     func initUI() {
         navi.title = "txt_favorites".localized.uppercased()
+        navi.handleSetting = {
+            self.openSetting()
+        }
+        navi.handleProfile = {
+            self.openProfile()
+        }
         toolBar.handleActionG2Left = {
             self.swicthView = false
         }
@@ -74,7 +80,7 @@ extension FavoritesVC {
             self.tableViewLeft.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
         viewModelList.handleMoreOption = {(item) in
-            _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [("txt_remove_fa_playlist".localized, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [("txt_remove_fa_playlist".localized, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
                 if action.title == "txt_remove_fa_playlist".localized {
                     self.removeFavorite(item)
                     self.loadData()

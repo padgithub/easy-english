@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  EasyEnglish
+
+  Created by Anh Dũng on 1/10/19.
+  Copyright © 2019 Anh Dũng. All rights reserved.
+*/
+"app_name" = "Easy English";
+//TabBar
+"no_data" = "Không có dữ liệu";
+"txt_home" = "Trang chủ";
+"txt_catalogue" = "Danh mục";
+"txt_favorites" = "Yêu thích";
+"txt_library" = "Thư viện";
+"txt_inbox" = "Hộp thư";
+"txt_document" = "Tài liệu";
+//ToolBar
+"txt_fplaylist" = "DS phát yêu thích";
+"txt_fvideo" = "Video yêu thích";
+"txt_mynote" = "Ghi chú của tôi";
+"txt_history" = "Lịch sử";
+//Player
+"txt_autoplay" = "Tự động phát";
+"txt_next_video" = "Video tiếp theo";
+"txt_share" = "Chia sẻ";
+"txt_addto" = "Thêm vào";
+"txt_setting" = "Cài đặt";
+"txt_profile" = "Hồ sơ";
+//More action
+"txt_delete_all_hitory_video" = "Xóa tất cả video";
+"txt_delete_history_video" = "Xóa video";
+"txt_cancel" = "Hủy";
+"txt_oke" = "Chấp nhận";
+"txt_add_fa_video" = "Thêm video vào yêu thích";
+"txt_remove_fa_video" = "Xóa video khỏi yêu thích";
+"txt_add_fa_playlist" = "Thêm ds phát vào yêu thích";
+"txt_remove_fa_playlist" = "Xóa ds phát khỏi yêu thích";
+"txt_select_action" = "Chọn chức năng";
+"txt_share_video" = "Chia sẻ video";
+"txt_share_playlist" = "Chia sẻ danh sách phát";
+"txt_show_all_history" = "Hiển thị tất cả";
+"txt_last_10_video" = "10 video gần nhất";
+"txt_show_10" = "Hiển thị gần nhất";
+"txt_all_history" = "Tất cả lịch sử";
+//Setting
+"txt_st_toolbar" = "SD thanh công cụ phát video của hệ thống";
+"txt_st_lg" = "Ngôn ngữ";
+"txt_st_star_app" = "Xếp hạng";
+"txt_st_contact" = "Liên hệ";
+"txt_st_share" = "Chia sẻ ứng dụng";
+"txt_st_about" = "Thông tin";
+"txt_select_language" = "Chọn ngôn ngữ";
+"txt_restart_app" = "Khởi động lại ứng dụng";
+"txt_restart_app_msg" = "Cài đặt được thay đổi thành công. Vui lòng khởi động lại ứng dụng để tiếp tục sử dụng";

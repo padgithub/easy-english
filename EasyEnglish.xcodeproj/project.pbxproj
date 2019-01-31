@@ -10,6 +10,9 @@
 		011F365721E897E500B32E72 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F365521E897E500B32E72 /* NotesCell.swift */; };
 		011F365821E897E500B32E72 /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011F365621E897E500B32E72 /* NotesCell.xib */; };
 		011F365A21E89D7E00B32E72 /* ListNoteModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011F365921E89D7E00B32E72 /* ListNoteModelView.swift */; };
+		011FCA4B21FCAE4600922968 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FCA4921FCAE4600922968 /* SettingVC.swift */; };
+		011FCA4C21FCAE4600922968 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011FCA4A21FCAE4600922968 /* SettingVC.xib */; };
+		011FCA5121FD81AE00922968 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FCA5021FD81AE00922968 /* LanguageManager.swift */; };
 		0124129821DDC1F80078B60F /* ZoomOutViewPlayVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124129721DDC1F80078B60F /* ZoomOutViewPlayVideo.xib */; };
 		0124129B21DDC2210078B60F /* ZoomOutViewPlayVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124129A21DDC2210078B60F /* ZoomOutViewPlayVideo.swift */; };
 		012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012412A121DDFAFE0078B60F /* VideoServiceView.swift */; };
@@ -48,7 +51,6 @@
 		0138FC8521E2FFA1001B6BAF /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8121E2FFA1001B6BAF /* Parse.swift */; };
 		0138FC9121E3008C001B6BAF /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8721E3008C001B6BAF /* TimerHelper.swift */; };
 		0138FC9221E3008C001B6BAF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8821E3008C001B6BAF /* AlertHelper.swift */; };
-		0138FC9321E3008C001B6BAF /* InAppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8921E3008C001B6BAF /* InAppPurchase.swift */; };
 		0138FC9421E3008C001B6BAF /* LocalDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8A21E3008C001B6BAF /* LocalDataHelper.swift */; };
 		0138FC9521E3008C001B6BAF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8B21E3008C001B6BAF /* Common.swift */; };
 		0138FC9621E3008C001B6BAF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8C21E3008C001B6BAF /* Extension.swift */; };
@@ -56,9 +58,11 @@
 		0138FC9821E3008C001B6BAF /* GCDHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8E21E3008C001B6BAF /* GCDHelpers.swift */; };
 		0138FC9921E3008C001B6BAF /* SaveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8F21E3008C001B6BAF /* SaveHelper.swift */; };
 		0138FC9A21E3008C001B6BAF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC9021E3008C001B6BAF /* Device.swift */; };
-		0138FC9E21E30474001B6BAF /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC9C21E30474001B6BAF /* InboxVC.swift */; };
-		0138FC9F21E30474001B6BAF /* InboxVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC9D21E30474001B6BAF /* InboxVC.xib */; };
 		0138FCA121E30863001B6BAF /* ListModelPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FCA021E30863001B6BAF /* ListModelPlaylistView.swift */; };
+		014B456C2202D47100478735 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B456A2202D47100478735 /* ProfileVC.swift */; };
+		014B456D2202D47100478735 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014B456B2202D47100478735 /* ProfileVC.xib */; };
+		014B45712202D6FE00478735 /* DocumentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B456F2202D6FE00478735 /* DocumentVC.swift */; };
+		014B45722202D6FE00478735 /* DocumentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014B45702202D6FE00478735 /* DocumentVC.xib */; };
 		01AD43CE21E72F96000156D2 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43CC21E72F95000156D2 /* ToolBarView.swift */; };
 		01AD43CF21E72F96000156D2 /* ToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AD43CD21E72F95000156D2 /* ToolBarView.xib */; };
 		01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43D221E73A75000156D2 /* HistoryManager.swift */; };
@@ -121,6 +125,12 @@
 		011F365521E897E500B32E72 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		011F365621E897E500B32E72 /* NotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
 		011F365921E89D7E00B32E72 /* ListNoteModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNoteModelView.swift; sourceTree = "<group>"; };
+		011FCA4921FCAE4600922968 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		011FCA4A21FCAE4600922968 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
+		011FCA4D21FD7CA900922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		011FCA4E21FD7CA900922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		011FCA4F21FD7CB200922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		011FCA5021FD81AE00922968 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		0124129721DDC1F80078B60F /* ZoomOutViewPlayVideo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomOutViewPlayVideo.xib; sourceTree = "<group>"; };
 		0124129A21DDC2210078B60F /* ZoomOutViewPlayVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomOutViewPlayVideo.swift; sourceTree = "<group>"; };
 		012412A121DDFAFE0078B60F /* VideoServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoServiceView.swift; sourceTree = "<group>"; };
@@ -163,7 +173,6 @@
 		0138FC8121E2FFA1001B6BAF /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 		0138FC8721E3008C001B6BAF /* TimerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		0138FC8821E3008C001B6BAF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
-		0138FC8921E3008C001B6BAF /* InAppPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchase.swift; sourceTree = "<group>"; };
 		0138FC8A21E3008C001B6BAF /* LocalDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataHelper.swift; sourceTree = "<group>"; };
 		0138FC8B21E3008C001B6BAF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		0138FC8C21E3008C001B6BAF /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -171,9 +180,11 @@
 		0138FC8E21E3008C001B6BAF /* GCDHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDHelpers.swift; sourceTree = "<group>"; };
 		0138FC8F21E3008C001B6BAF /* SaveHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveHelper.swift; sourceTree = "<group>"; };
 		0138FC9021E3008C001B6BAF /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		0138FC9C21E30474001B6BAF /* InboxVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxVC.swift; sourceTree = "<group>"; };
-		0138FC9D21E30474001B6BAF /* InboxVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxVC.xib; sourceTree = "<group>"; };
 		0138FCA021E30863001B6BAF /* ListModelPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModelPlaylistView.swift; sourceTree = "<group>"; };
+		014B456A2202D47100478735 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		014B456B2202D47100478735 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		014B456F2202D6FE00478735 /* DocumentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentVC.swift; sourceTree = "<group>"; };
+		014B45702202D6FE00478735 /* DocumentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentVC.xib; sourceTree = "<group>"; };
 		01AD43CC21E72F95000156D2 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		01AD43CD21E72F95000156D2 /* ToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolBarView.xib; sourceTree = "<group>"; };
 		01AD43D221E73A75000156D2 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
@@ -398,6 +409,7 @@
 				0138FC6021E10F75001B6BAF /* VideoManager.swift */,
 				0138FC6221E10F75001B6BAF /* GroupManager.swift */,
 				01AD43D221E73A75000156D2 /* HistoryManager.swift */,
+				011FCA5021FD81AE00922968 /* LanguageManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -444,7 +456,6 @@
 			children = (
 				0138FC8721E3008C001B6BAF /* TimerHelper.swift */,
 				0138FC8821E3008C001B6BAF /* AlertHelper.swift */,
-				0138FC8921E3008C001B6BAF /* InAppPurchase.swift */,
 				0138FC8A21E3008C001B6BAF /* LocalDataHelper.swift */,
 				0138FC8B21E3008C001B6BAF /* Common.swift */,
 				0138FC8C21E3008C001B6BAF /* Extension.swift */,
@@ -456,13 +467,13 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		0138FC9B21E30474001B6BAF /* InboxVC */ = {
+		014B456E2202D6D100478735 /* DocumentVC */ = {
 			isa = PBXGroup;
 			children = (
-				0138FC9C21E30474001B6BAF /* InboxVC.swift */,
-				0138FC9D21E30474001B6BAF /* InboxVC.xib */,
+				014B456F2202D6FE00478735 /* DocumentVC.swift */,
+				014B45702202D6FE00478735 /* DocumentVC.xib */,
 			);
-			path = InboxVC;
+			path = DocumentVC;
 			sourceTree = "<group>";
 		};
 		01AD43CB21E72F95000156D2 /* ToolBarView */ = {
@@ -619,7 +630,7 @@
 				0138FBE321DF1AC3001B6BAF /* HomeVC */,
 				0138FC2A21E10A31001B6BAF /* CatagoryVC */,
 				0138FBE421DF1B12001B6BAF /* FavoritesVC */,
-				0138FC9B21E30474001B6BAF /* InboxVC */,
+				014B456E2202D6D100478735 /* DocumentVC */,
 				0138FBE021DF1A89001B6BAF /* LibraryVC */,
 				01B3DD8D21D917C40051221E /* PlayVC */,
 			);
@@ -712,6 +723,8 @@
 		01FB921A21F32E1D0022016D /* SettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				011FCA4921FCAE4600922968 /* SettingVC.swift */,
+				011FCA4A21FCAE4600922968 /* SettingVC.xib */,
 			);
 			path = SettingVC;
 			sourceTree = "<group>";
@@ -719,6 +732,8 @@
 		01FB921B21F32E2F0022016D /* ProfileVC */ = {
 			isa = PBXGroup;
 			children = (
+				014B456A2202D47100478735 /* ProfileVC.swift */,
+				014B456B2202D47100478735 /* ProfileVC.xib */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -841,6 +856,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 01B3DB3021D62FE20051221E;
 			productRefGroup = 01B3DB3A21D62FE20051221E /* Products */;
@@ -869,9 +885,12 @@
 				01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */,
 				0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */,
 				01B3DD2021D631150051221E /* MagicView.xib in Resources */,
+				014B456D2202D47100478735 /* ProfileVC.xib in Resources */,
 				0138FC0021DF4267001B6BAF /* LoginVC.xib in Resources */,
 				01B3DD2121D631150051221E /* ButtonView.xib in Resources */,
 				0138FBFB21DF1BC0001B6BAF /* LibraryVC.xib in Resources */,
+				014B45722202D6FE00478735 /* DocumentVC.xib in Resources */,
+				011FCA4C21FCAE4600922968 /* SettingVC.xib in Resources */,
 				01EE354E21EF99D400C3346F /* VideoHomeCell.xib in Resources */,
 				0138FC6F21E11661001B6BAF /* history.db in Resources */,
 				011F365821E897E500B32E72 /* NotesCell.xib in Resources */,
@@ -881,7 +900,6 @@
 				0138FBE821DF1B32001B6BAF /* FavoritesVC.xib in Resources */,
 				0138FBEC21DF1B61001B6BAF /* HomeVC.xib in Resources */,
 				01AD43CF21E72F96000156D2 /* ToolBarView.xib in Resources */,
-				0138FC9F21E30474001B6BAF /* InboxVC.xib in Resources */,
 				0124129821DDC1F80078B60F /* ZoomOutViewPlayVideo.xib in Resources */,
 				01B3DD9121D917DE0051221E /* PlayVC.xib in Resources */,
 			);
@@ -980,7 +998,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GRDBCipher/GRDBCipher.framework",
 				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
@@ -998,7 +1019,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGElasticPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDBCipher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
@@ -1038,9 +1062,9 @@
 				0138FC1A21DF7679001B6BAF /* UIScrollView+SVPullToRefresh.m in Sources */,
 				01B3DD2F21D631150051221E /* KHView.swift in Sources */,
 				01B3DD3021D631150051221E /* KHImageView.swift in Sources */,
+				011FCA5121FD81AE00922968 /* LanguageManager.swift in Sources */,
 				0138FC9721E3008C001B6BAF /* Define.swift in Sources */,
 				0138FC5B21E10F63001B6BAF /* Playlist.swift in Sources */,
-				0138FC9321E3008C001B6BAF /* InAppPurchase.swift in Sources */,
 				01B3DD2821D631150051221E /* DropBoxUITB.swift in Sources */,
 				011F365A21E89D7E00B32E72 /* ListNoteModelView.swift in Sources */,
 				01B3DD2221D631150051221E /* ButtonView.swift in Sources */,
@@ -1048,11 +1072,11 @@
 				0138FC9421E3008C001B6BAF /* LocalDataHelper.swift in Sources */,
 				0138FC8421E2FFA1001B6BAF /* APIRequest.swift in Sources */,
 				01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */,
-				0138FC9E21E30474001B6BAF /* InboxVC.swift in Sources */,
 				012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */,
 				0138FC1C21E100EF001B6BAF /* GradientView.swift in Sources */,
 				0138FC1921DF7679001B6BAF /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				01B3DB3D21D62FE20051221E /* AppDelegate.swift in Sources */,
+				014B456C2202D47100478735 /* ProfileVC.swift in Sources */,
 				0138FCA121E30863001B6BAF /* ListModelPlaylistView.swift in Sources */,
 				0138FC9921E3008C001B6BAF /* SaveHelper.swift in Sources */,
 				01B3DD6F21D631150051221E /* MTBBarcodeScanner.m in Sources */,
@@ -1076,12 +1100,14 @@
 				0138FBFF21DF4267001B6BAF /* LoginVC.swift in Sources */,
 				01B3DD3221D631150051221E /* KHLabel.swift in Sources */,
 				0138FC9821E3008C001B6BAF /* GCDHelpers.swift in Sources */,
+				014B45712202D6FE00478735 /* DocumentVC.swift in Sources */,
 				0138FC6421E10F75001B6BAF /* PlaylistManager.swift in Sources */,
 				0138FC9521E3008C001B6BAF /* Common.swift in Sources */,
 				0138FC6521E10F75001B6BAF /* VideoManager.swift in Sources */,
 				0138FC3721E10B5A001B6BAF /* CollapsibleTableViewCell.swift in Sources */,
 				0138FC9621E3008C001B6BAF /* Extension.swift in Sources */,
 				0138FBFA21DF1BC0001B6BAF /* LibraryVC.swift in Sources */,
+				011FCA4B21FCAE4600922968 /* SettingVC.swift in Sources */,
 				0138FC5921E10F63001B6BAF /* ItemsVideo.swift in Sources */,
 				0138FC7921E11833001B6BAF /* ListPlaylistVC.swift in Sources */,
 			);
@@ -1123,6 +1149,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				01B3DB4121D62FE20051221E /* Base */,
+				011FCA4D21FD7CA900922968 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1131,6 +1158,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				01B3DB4621D62FE70051221E /* Base */,
+				011FCA4E21FD7CA900922968 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1139,6 +1167,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				01EE355021EFAAE200C3346F /* en */,
+				011FCA4F21FD7CB200922968 /* vi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1150,6 +1179,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1211,6 +1241,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

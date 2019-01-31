@@ -58,7 +58,9 @@ extension VideoPlayCell {
             })
         }
         lbDuration.text = video.contentDetails.duration.ISO8601DateComponents()
-        lbSub.text = TAppDelegate.titleCatagory
+        let developer = video.subTitle
+        let array = developer.components(separatedBy: " / ")
+        lbSub.text = array[0]
         lbTitleVideo.text = video.snippet.title
         lbViewer.text = isHistoryView ? Date.init(seconds: Double(video.timeHistory)).string("dd/MM/YYYY hh:mm a") : "\(Int(video.statistics.viewCount) ?? 0 * 3) lượt xem"
         if isHistoryView {
@@ -86,5 +88,4 @@ extension VideoPlayCell {
         viewDuration.isHidden = true
         lbTitleVideo.text = playlist.title
     }
-    
 }

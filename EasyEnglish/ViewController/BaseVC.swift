@@ -8,15 +8,29 @@
 
 import UIKit
 import SwiftEntryKit
+//import FBAudienceNetwork
 
 let kBarHeight = (DeviceType.IS_IPHONE_X) ? 84 : 50
-
+let placementID = "335878217019048_338994906707379"
 class BaseVC: UIViewController {
     
+//    var nativeAd = FBNativeAd(placementID: placementID)
     var zoomOutView = ZoomOutViewPlayVideo()
+//    var interstitialAd = FBInterstitialAd()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let token = FBSDKAccessToken.current() {
+            print(token)
+        }
+        
+//        nativeAd.delegate = self
+//        nativeAd.loadAd()
+//
+//        interstitialAd = FBInterstitialAd(placementID: "335878217019048_338732016733668")
+//        interstitialAd.delegate = self
+//        interstitialAd.load()
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -26,15 +40,16 @@ class BaseVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.background()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
         TAppDelegate.handleReturnView = {
             let vc = PlayVC(nibName: "PlayVC", bundle: nil)
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
             self.removeZoomOutView()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         zoomOutView.handleRemoveView = {
             self.removeZoomOutView()
         }
@@ -49,6 +64,18 @@ class BaseVC: UIViewController {
 }
 
 extension BaseVC {
+    
+    func openSetting() {
+        let vc = SettingVC.init(nibName: "SettingVC", bundle: nil)
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func openProfile() {
+        let vc = ProfileVC.init(nibName: "ProfileVC", bundle: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.tabBarController?.present(vc, animated: true, completion: nil)
+    }
     
     func showZoomOutView() {
         showNib()
@@ -83,7 +110,7 @@ extension BaseVC {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func goPlay(arrData: [Items],index: Int) {
+    func goPlay(arrData: [Items], index: Int) {
         let arrTemp = VideoManager.shareInstance.fetchAllForPlaylistId(playlistId: arrData[index].playlistId)
         let developer = arrData[index].subTitle
         let array = developer.components(separatedBy: " / ")
@@ -92,7 +119,6 @@ extension BaseVC {
         TAppDelegate.idVideoPlaying = arrData[index].id
         TAppDelegate.arrVideoPlaying = arrTemp
         TAppDelegate.titleZoomView = arrData[index].snippet.title
-        
         if !TAppDelegate.isShowZoomOutView {
             viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
         }else{
@@ -187,3 +213,32 @@ extension CGRect {
         return min(width, height)
     }
 }
+
+//extension BaseVC: FBNativeAdDelegate {
+//    func nativeAdDidLoad(_ nativeAd: FBNativeAd) {
+//        showNativeAd()
+//    }
+//
+//    func showNativeAd() {
+//        if self.nativeAd.isAdValid {
+//            let adView = FBNativeAdView(nativeAd: self.nativeAd, with: .genericHeight300)
+//            self.zoomOutView.addSubview(adView)
+//            let size = self.zoomOutView.bounds.size
+//            let xOffset = size.width / 2 - 160
+//            let yOffset = (size.height > size.width) ? 100 : 20
+//            adView.frame = CGRect(x: Int(xOffset), y: yOffset, width: 320, height: 300)
+//        }
+//    }
+//}
+
+//extension BaseVC: FBInterstitialAdDelegate {
+//    func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
+//        if interstitialAd.isAdValid {
+//            interstitialAd.show(fromRootViewController: self)
+//        }
+//    }
+//    
+//    func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
+//        print(error)
+//    }
+//}

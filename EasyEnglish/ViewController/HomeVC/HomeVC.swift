@@ -32,6 +32,12 @@ class HomeVC: BaseVC {
 extension HomeVC {
     func initUI(){
         navi.title = "app_name".localized.uppercased()
+        navi.handleProfile = {
+            self.openProfile()
+        }
+        navi.handleSetting = {
+            self.openSetting()
+        }
         tableView.register(VideoHomeCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel

@@ -35,6 +35,8 @@ enum SaveKey: String {
     case email = "email"
     case pass = "pass"
     case isLogin = "isLogin"
+    case fbImage = "fbImage"
+    case fbName = "fbName"
 }
 
 enum TypeMyRife {

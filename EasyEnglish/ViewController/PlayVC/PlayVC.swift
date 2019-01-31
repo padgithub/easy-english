@@ -8,9 +8,13 @@
 
 import UIKit
 import YouTubePlayer
+//import FBAudienceNetwork
 
 class PlayVC: BaseVC {
 
+    @IBOutlet weak var btMoreBack: KHButton!
+    @IBOutlet weak var viewToolPlay2: UIView!
+    @IBOutlet weak var imageSub: UIImageView!
     @IBOutlet weak var lbDislike: UILabel!
     @IBOutlet weak var lbLiker: UILabel!
     @IBOutlet weak var lbViewer: UILabel!
@@ -34,11 +38,12 @@ class PlayVC: BaseVC {
     @IBOutlet weak var lbStatusNote: UILabel!
     @IBOutlet weak var textViewNote: UITextView!
     @IBOutlet weak var viewNote: UIView!
+    @IBOutlet weak var adView: KHView!
     
     var viewModel = ListModelView()
     var current: Int = 0
     var duration: Int = 0
-    
+//    var adViews = FBAdView()
     var isAutoPlay = false {
         didSet{
             btAutoPlay.setImage(isAutoPlay ? UIImage(named: "ic_auto_play_on") : UIImage(named: "ic_auto_play_off"), for: .normal)
@@ -111,8 +116,9 @@ class PlayVC: BaseVC {
         //601
         switch sender.tag {
         case 601: // hien toolbar
-            viewToolBarPlayer.isHidden = false
-            print(sender.tag,sender.allControlEvents.rawValue)
+            if !UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
+                viewToolBarPlayer.isHidden = false
+            }
             break
         case 602: //add playlist
             print(sender.tag)
@@ -187,6 +193,10 @@ class PlayVC: BaseVC {
         self.back()
     }
     
+    @IBAction func actionBack(_ sender: Any) {
+        self.back()
+    }
+    
     @IBAction func actionToolBarDragRepeat(_ sender: UIButton) {
         switch sender.tag {
         case 610: //tua luu
@@ -212,6 +222,14 @@ class PlayVC: BaseVC {
 
 extension PlayVC {
     func initUI() {
+//        adViews = FBAdView(placementID: "335878217019048_338994906707379", adSize: kFBAdSizeHeight50Banner, rootViewController: self)
+//        adView.addSubview(adViews)
+//        adViews.frame = adView.frame
+//
+//        adViews.delegate = self
+//        adViews.loadAd()
+        
+        imageSub.image = randomAvatar()
         textViewNote.delegate = self
         ctrHeightViewVideo.constant = ScreenSize.SCREEN_WIDTH * 9 / 16
         tableView.register(VideoPlayCell.self)
@@ -222,6 +240,7 @@ extension PlayVC {
         viewPlayer.addSubview(viewYoutubePlayer)
         frameViewPlay(viewPlayer)
         isAutoPlay = TAppDelegate.isAutoPlay
+        isShowNote = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].notes != ""
         
         if TAppDelegate.isPlay {
             viewYoutubePlayer.play()
@@ -268,11 +287,12 @@ extension PlayVC {
             if index != TAppDelegate.indexPlaying {
                 viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[index].id)
                 TAppDelegate.indexPlaying = index
+                self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[index])
             }
         }
         viewModel.handleMoreOptionCell = { (item) in
             let title = VideoManager.shareInstance.checkFavorited(videoId: item.id) ? "txt_remove_fa_video".localized : "txt_add_fa_video".localized
-            _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
                 if action.title == "txt_remove_fa_video".localized {
                     self.removeFavorite(item)
                 }
@@ -288,6 +308,12 @@ extension PlayVC {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction(sender:)))
         lbTitileSub.isUserInteractionEnabled = true
         lbTitileSub.addGestureRecognizer(tap)
+        
+        if UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
+            viewToolBarPlayer.isHidden = true
+            viewToolPlay2.isHidden = true
+            btMoreBack.isHidden = false
+        }
     }
     
     @objc
@@ -401,7 +427,7 @@ extension PlayVC {
     func actionSheetShare() {
         let itemVideo = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying]
         let itemPlaylist = PlaylistManager.shareInstance.getInfoPlaylistDB(playlistId: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].playlistId)
-        _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [("txt_share_video".localized, .default), ("txt_share_playlist".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+        _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [("txt_share_video".localized, .default), ("txt_share_playlist".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
             if action.title == "txt_share_video".localized {
                 self.share(itemVideo)
             }
@@ -410,6 +436,16 @@ extension PlayVC {
             }
         })
     }
+    
+    func randomAvatar() -> UIImage {
+        let number = Int.random(in: 1 ..< 10)
+        return UIImage(named: "\(number)")!
+    }
+    
+    func popBack() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension PlayVC : UITextViewDelegate {
@@ -422,5 +458,20 @@ extension PlayVC : UITextViewDelegate {
     }
 }
 
+//extension PlayVC : FBAdViewDelegate {
+//    func adView(_ adView: FBAdView, didFailWithError error: Error) {
+//        print("Ad failed to load")
+//        print(error)
+//    }
+//
+//    func adViewDidLoad(_ adView: FBAdView) {
+//        showBanner()
+//    }
+//    func showBanner() {
+//        if (self.adViews.isAdValid) {
+//            self.adView.addSubview(self.adViews)
+//        }
+//    }
+//}
 
 

@@ -7,13 +7,16 @@
 //
 
 import UIKit
+//import FBAudienceNetwork
 
 class ContentListVC: BaseVC {
     
+    @IBOutlet weak var baner: UIView!
     @IBOutlet weak var navi: NavigationView!
     @IBOutlet weak var tableView: UITableView!
     
     var listGroup: [Group] = []
+//    var adView = FBAdView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +26,21 @@ class ContentListVC: BaseVC {
     
     func initUI() {
         navi.title = "txt_catalogue".localized.uppercased()
+        navi.handleSetting = {
+            self.openSetting()
+        }
+        navi.handleProfile = {
+            self.openProfile()
+        }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableView.automaticDimension
+//        adView = FBAdView(placementID: "335878217019048_339002996706570", adSize: kFBAdSizeHeight50Banner, rootViewController: self)
+//        baner.addSubview(adView)
+//        adView.frame = CGRect(x: 0, y: 0, width: 320, height: 90)
+//        adView.delegate = self
+//        adView.loadAd()
     }
     
     func initData() {
@@ -101,3 +115,19 @@ extension ContentListVC: CollapsibleTableViewHeaderDelegate {
     }
     
 }
+//
+//extension ContentListVC : FBAdViewDelegate {
+//    func adView(_ adView: FBAdView, didFailWithError error: Error) {
+//        print("Ad failed to load")
+//        print(error)
+//    }
+//
+//    func adViewDidLoad(_ adView: FBAdView) {
+//        showBanner()
+//    }
+//    func showBanner() {
+//        if (self.adView.isAdValid) {
+//            self.baner.addSubview(self.adView)
+//        }
+//    }
+//}

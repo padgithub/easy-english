@@ -594,7 +594,7 @@ extension UITableView: UITableViewDelegate {
     @IBInspectable var circle: Bool = false {
         didSet {
             if circle {
-                cornerRadius = self.bounds.height/2
+                cornerRadius = self.frame.height/2
                 layer.masksToBounds = true
             }
         }

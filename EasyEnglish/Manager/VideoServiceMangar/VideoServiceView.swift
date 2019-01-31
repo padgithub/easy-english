@@ -29,9 +29,15 @@ class VideoServiceView: NSObject {
     override init() {
         super.init()
         viewPlayer.delegate = self
-        viewPlayer.playerVars = ["playsinline": "1",
-                                 "controls": "0"
-                                    as AnyObject] as YouTubePlayerView.YouTubePlayerParameters
+        
+        if UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
+            viewPlayer.playerVars = ["playsinline": "1"
+                                        as AnyObject] as YouTubePlayerView.YouTubePlayerParameters
+        }else{
+            viewPlayer.playerVars = ["playsinline": "1",
+                                     "controls": "0"
+                                        as AnyObject] as YouTubePlayerView.YouTubePlayerParameters
+        }
         viewPlayer.backgroundColor = UIColor.clear
     }
 }
@@ -49,7 +55,9 @@ extension VideoServiceView: YouTubePlayerDelegate {
     func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
         switch playerState {
         case .Paused:
-            handlePlayWhenPause?()
+            if !UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
+                handlePlayWhenPause?()
+            }
             break
         case .Ended:
             if TAppDelegate.isAutoPlay {
@@ -135,7 +143,6 @@ extension VideoServiceView {
             self.viewPlayer.layer.addSublayer(playerLayer)
         }
     }
-    
 }
 
 let viewYoutubePlayer = VideoServiceView.shared.viewPlayer

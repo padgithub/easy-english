@@ -40,12 +40,12 @@ class LibraryVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-        initData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.loadData()
+        self.loadDataAllHistory()
     }
+    
     @IBAction func actionShowAllHistory(_ sender: Any) {
         loadData()
     }
@@ -55,6 +55,14 @@ class LibraryVC: BaseVC {
 extension LibraryVC {
     func initUI() {
         navi.title = "txt_library".localized.uppercased()
+        
+        navi.handleSetting = {
+            self.openSetting()
+        }
+        navi.handleProfile = {
+            self.openProfile()
+        }
+        
         TAppDelegate.handleReloadDataNotes = {
             self.loadData()
         }
@@ -85,7 +93,7 @@ extension LibraryVC {
             self.tableViewRight.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
         }
         viewModelHistory.handleMoreOptionCell = { (item) in
-            _ = UIAlertController.present(style: .actionSheet, title: "Select action", message: nil, attributedActionTitles: [("txt_delete_history_video".localized, .default), ("txt_delete_all_hitory_video".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [("txt_delete_history_video".localized, .default), ("txt_delete_all_hitory_video".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
                 if action.title == "txt_delete_history_video".localized {
                     HistoryManger.shared.removeHistory(item)
                     self.loadData()
@@ -132,11 +140,6 @@ extension LibraryVC {
         self.arrHistory = HistoryManger.shared.fetchAllHistory()
         viewModelHistory.arrData = self.arrHistory
         tableViewRight.reloadData()
-    }
-    
-    func initData() {
-        loadDataNote()
-        loadDataTop10History()
     }
 }
 

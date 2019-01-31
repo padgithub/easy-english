@@ -179,8 +179,8 @@ extension AppDelegate {
         let navF = UINavigationController(rootViewController: tabF)
         navF.isNavigationBarHidden = true
         
-        let tabM = InboxVC(nibName:"InboxVC",bundle: nil)
-        tabM.tabBarItem = UITabBarItem(title: "txt_inbox".localized, image: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal))
+        let tabM = DocumentVC(nibName:"DocumentVC",bundle: nil)
+        tabM.tabBarItem = UITabBarItem(title: "txt_document".localized, image: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal))
         let navM = UINavigationController(rootViewController: tabM)
         navM.isNavigationBarHidden = true
         
@@ -193,5 +193,4 @@ extension AppDelegate {
         tabVC.selectedIndex = index
         return tabVC
     }
-    
 }
