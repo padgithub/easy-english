@@ -8,21 +8,23 @@
 
 import UIKit
 import YouTubePlayer
+import Sheeeeeeeeet
 //import FBAudienceNetwork
 
 class PlayVC: BaseVC {
 
+    @IBOutlet weak var viewBlack: UIView!
     @IBOutlet weak var btMoreBack: KHButton!
     @IBOutlet weak var viewToolPlay2: UIView!
     @IBOutlet weak var imageSub: UIImageView!
-    @IBOutlet weak var lbDislike: UILabel!
-    @IBOutlet weak var lbLiker: UILabel!
-    @IBOutlet weak var lbViewer: UILabel!
-    @IBOutlet weak var lbTitleVideo: UILabel!
-    @IBOutlet weak var lbTimeEnd: UILabel!
-    @IBOutlet weak var lbTimeStart: UILabel!
-    @IBOutlet weak var lbTitileSub: UILabel!
-    @IBOutlet weak var lbSub: UILabel!
+    @IBOutlet weak var lbDislike: KHLabel!
+    @IBOutlet weak var lbLiker: KHLabel!
+    @IBOutlet weak var lbViewer: KHLabel!
+    @IBOutlet weak var lbTitleVideo: KHLabel!
+    @IBOutlet weak var lbTimeEnd: KHLabel!
+    @IBOutlet weak var lbTimeStart: KHLabel!
+    @IBOutlet weak var lbTitileSub: KHLabel!
+    @IBOutlet weak var lbSub: KHLabel!
     //
     @IBOutlet weak var silder: UISlider!
     @IBOutlet weak var btPlayPause: UIButton!
@@ -35,7 +37,7 @@ class PlayVC: BaseVC {
     @IBOutlet weak var ctrHeighViewMoreInfo: NSLayoutConstraint!
     @IBOutlet weak var viewMoreInfoVideo: UIView!
     @IBOutlet weak var ctrHeightViewNote: NSLayoutConstraint!
-    @IBOutlet weak var lbStatusNote: UILabel!
+    @IBOutlet weak var lbStatusNote: KHLabel!
     @IBOutlet weak var textViewNote: UITextView!
     @IBOutlet weak var viewNote: UIView!
     @IBOutlet weak var adView: KHView!
@@ -91,9 +93,11 @@ class PlayVC: BaseVC {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
-            ctrHeightViewVideo.constant = ScreenSize.SCREEN_HEIGHT + (DeviceType.IS_IPHONE_X ? 21 : 0)
+            viewBlack.isHidden = false
+            ctrHeightViewVideo.constant = size.height - (DeviceType.IS_IPHONE_X ? 21 : 0)
         } else {
             print("Portrait")
+            viewBlack.isHidden = true
             ctrHeightViewVideo.constant = ScreenSize.SCREEN_WIDTH * 9 / 16
         }
     }
@@ -131,8 +135,9 @@ class PlayVC: BaseVC {
         case 604: //more
             print(sender.tag)
             break
-        case 605: // mo rong thu nho
+        case 605: // chat luong video
             print(sender.tag)
+//           showQualityPopup()
             break
         case 606: //back
             print(sender.tag)
@@ -142,6 +147,7 @@ class PlayVC: BaseVC {
             }
             viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
             self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
+            self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
             break
         case 607: // pause sit top
             print(sender.tag)
@@ -161,6 +167,7 @@ class PlayVC: BaseVC {
             }
             viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
             self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
+            self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
             break
         case 609: //mo rong man hinh
             print(sender.tag)
@@ -190,7 +197,9 @@ class PlayVC: BaseVC {
     }
     
     @IBAction func actionToolBarDragExit(_ sender: UIButton) {
-        self.back()
+        if TAppDelegate.deviceOrientation == .portrait {
+            self.back()
+        }
     }
     
     @IBAction func actionBack(_ sender: Any) {
@@ -376,6 +385,25 @@ extension PlayVC {
 }
 
 extension PlayVC {
+    
+    func showQualityPopup() {
+        let title = ActionSheetTitle(title: "txt_select_quality".localized)
+        let item1 = ActionSheetSingleSelectItem(title: "240", isSelected: true, value: 1, tapBehavior: .dismiss)
+        let item2 = ActionSheetSingleSelectItem(title: "360", isSelected: true, value: 1, tapBehavior: .dismiss)
+        let item3 = ActionSheetSingleSelectItem(title: "429", isSelected: true, value: 1, tapBehavior: .dismiss)
+        let button = ActionSheetOkButton(title: "OK")
+        let items = [title, item1, item2, item3, button]
+        let sheet = ActionSheet(items: items) { sheet, item in
+            guard item.isOkButton else { return }
+            let times = sheet.items.compactMap { $0 as? ActionSheetSingleSelectItem }
+            let selectedTime = times.first { $0.isSelected }
+            
+        }
+        sheet.present(in: self, from: self.view) {
+            
+        }
+    }
+    
     func configToolbarTF() {
         let numberToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         numberToolbar.barStyle = .default

@@ -120,7 +120,6 @@ extension LibraryVC {
                 lbStatus.text = "txt_last_10_video".localized
                 loadDataTop10History()
             }
-            tableViewRight.backgroundColor = self.arrHistory.count == 0 ? UIColor.clear : UIColor.white
         }
     }
     
@@ -133,12 +132,14 @@ extension LibraryVC {
     func loadDataTop10History() {
         self.arrHistory = HistoryManger.shared.fetchTop10History()
         viewModelHistory.arrData = self.arrHistory
+        tableViewRight.backgroundColor = self.arrHistory.count == 0 ? UIColor.clear : UIColor.white
         tableViewRight.reloadData()
     }
     
     func loadDataAllHistory() {
         self.arrHistory = HistoryManger.shared.fetchAllHistory()
         viewModelHistory.arrData = self.arrHistory
+        tableViewRight.backgroundColor = self.arrHistory.count == 0 ? UIColor.clear : UIColor.white
         tableViewRight.reloadData()
     }
 }

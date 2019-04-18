@@ -16,6 +16,7 @@ target 'EasyEnglish' do
   pod 'GRDBCipher'
   pod 'KRProgressHUD'
   pod 'Alamofire'
+  pod 'Sheeeeeeeeet'
   pod 'FBSDKLoginKit'
 
   target 'EasyEnglishTests' do

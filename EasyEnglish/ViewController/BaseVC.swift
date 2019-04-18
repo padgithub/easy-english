@@ -140,11 +140,12 @@ extension BaseVC {
         var attributes: EKAttributes
         attributes = .bottomFloat
         attributes.hapticFeedbackType = .success
-        attributes.displayDuration = 1000000
+        attributes.displayDuration = .infinity
         attributes.screenBackground = .clear
         attributes.entryBackground = .clear
         attributes.screenInteraction = .forward
         attributes.entryInteraction = .absorbTouches
+        attributes.scroll = .disabled
         
         attributes.entranceAnimation = .init(translate: .init(duration: 0.5, spring: .init(damping: 0.9, initialVelocity: 0)),
                                              scale: .init(from: 0.8, to: 1, duration: 0.5, spring: .init(damping: 0.8, initialVelocity: 0)),

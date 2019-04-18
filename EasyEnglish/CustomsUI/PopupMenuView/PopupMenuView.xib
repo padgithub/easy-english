@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupMenuView" customModule="RifeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="ctrHeightViewSort" destination="InN-cH-6Q1" id="w5s-fC-Bin"/>
+                <outlet property="postionYForTable" destination="Khs-wn-MPb" id="jfX-L6-caG"/>
+                <outlet property="tbFilter" destination="WiN-xI-ATJ" id="C3i-Bu-rdq"/>
+                <outlet property="viewBorder" destination="aCP-1M-19x" id="WzH-Hx-yov"/>
+                <outlet property="viewShadow" destination="hUf-x0-2tK" id="2Ij-eC-99w"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xd7-DI-R3D">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUf-x0-2tK">
+                            <rect key="frame" x="149" y="129" width="250" height="272"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCP-1M-19x" customClass="KHView" customModule="RifeApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="272"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WiN-xI-ATJ">
+                                            <rect key="frame" x="0.0" y="10" width="250" height="262"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="gRA-3F-RiO"/>
+                                                <outlet property="delegate" destination="-1" id="1ro-28-cxX"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="WiN-xI-ATJ" secondAttribute="bottom" id="84o-B9-vgf"/>
+                                        <constraint firstItem="WiN-xI-ATJ" firstAttribute="leading" secondItem="aCP-1M-19x" secondAttribute="leading" id="INc-fk-PeT"/>
+                                        <constraint firstItem="WiN-xI-ATJ" firstAttribute="top" secondItem="aCP-1M-19x" secondAttribute="top" constant="10" id="krt-qN-rfn"/>
+                                        <constraint firstAttribute="trailing" secondItem="WiN-xI-ATJ" secondAttribute="trailing" id="mZv-4x-svK"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="aCP-1M-19x" secondAttribute="trailing" id="2TD-6h-zAm"/>
+                                <constraint firstAttribute="bottom" secondItem="aCP-1M-19x" secondAttribute="bottom" id="GH0-id-uqe"/>
+                                <constraint firstAttribute="height" constant="272" id="InN-cH-6Q1"/>
+                                <constraint firstItem="aCP-1M-19x" firstAttribute="top" secondItem="hUf-x0-2tK" secondAttribute="top" id="odY-Md-t3o"/>
+                                <constraint firstItem="aCP-1M-19x" firstAttribute="leading" secondItem="hUf-x0-2tK" secondAttribute="leading" id="vQj-YN-zvw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hUf-x0-2tK" firstAttribute="top" secondItem="Xd7-DI-R3D" secondAttribute="top" constant="129" id="Khs-wn-MPb"/>
+                        <constraint firstAttribute="trailing" secondItem="hUf-x0-2tK" secondAttribute="trailing" constant="15" id="L3g-WW-IuQ"/>
+                        <constraint firstItem="hUf-x0-2tK" firstAttribute="width" secondItem="Xd7-DI-R3D" secondAttribute="width" multiplier="250:414" id="LUk-hJ-ncT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Xd7-DI-R3D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5hZ-s9-iAO"/>
+                <constraint firstAttribute="bottom" secondItem="Xd7-DI-R3D" secondAttribute="bottom" id="Fe8-lI-vxo"/>
+                <constraint firstAttribute="trailing" secondItem="Xd7-DI-R3D" secondAttribute="trailing" id="Jrx-jo-TEu"/>
+                <constraint firstItem="Xd7-DI-R3D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UAf-Ff-mJF"/>
+            </constraints>
+            <point key="canvasLocation" x="-112.5" y="39.5"/>
+        </view>
+    </objects>
+</document>

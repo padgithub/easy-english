@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendingVC" customModule="EasyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="btPlay" destination="qE8-X9-Eky" id="qbq-a4-7yC"/>
+                <outlet property="navi" destination="qjf-A7-nv6" id="44M-2A-SEW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,6 +27,10 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="pj1-vt-igQ"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasBack" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-X9-Eky">
                     <rect key="frame" x="0.0" y="50" width="375" height="617"/>

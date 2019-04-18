@@ -602,7 +602,6 @@ extension UITableView: UITableViewDelegate {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
         if shadowAdded { return }
         shadowAdded = true
         let shadowLayer = UIView(frame: self.frame)
@@ -614,6 +613,10 @@ extension UITableView: UITableViewDelegate {
         shadowLayer.layer.shadowRadius = 1
         shadowLayer.layer.masksToBounds = true
         shadowLayer.clipsToBounds = false
+        if circle {
+            layer.cornerRadius = self.bounds.height/2
+            layer.masksToBounds = true
+        }
         self.superview?.addSubview(shadowLayer)
         self.superview?.bringSubviewToFront(self)
     }

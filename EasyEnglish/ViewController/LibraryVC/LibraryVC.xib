@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -103,15 +103,15 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gji-iz-oqg">
                                     <rect key="frame" x="0.0" y="39.5" width="375" height="527.5"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="documents-empty" translatesAutoresizingMaskIntoConstraints="NO" id="hdC-hb-wdl">
-                                            <rect key="frame" x="165" y="201.5" width="45" height="45"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_no_data" translatesAutoresizingMaskIntoConstraints="NO" id="hdC-hb-wdl">
+                                            <rect key="frame" x="87.5" y="124" width="200" height="200"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="45" id="lMr-gV-ocy"/>
+                                                <constraint firstAttribute="width" constant="200" id="lMr-gV-ocy"/>
                                                 <constraint firstAttribute="width" secondItem="hdC-hb-wdl" secondAttribute="height" multiplier="1:1" id="yvn-da-oyo"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9z-7T-t9k" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="256.5" width="335" height="0.0"/>
+                                            <rect key="frame" x="20" y="334" width="335" height="0.0"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -156,15 +156,15 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKK-kH-swW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="documents-empty" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-S4-P9X">
-                                            <rect key="frame" x="165" y="221" width="45" height="45"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_no_data" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-S4-P9X">
+                                            <rect key="frame" x="87.5" y="143.5" width="200" height="200"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Sqd-S4-P9X" secondAttribute="height" multiplier="1:1" id="F0h-KS-OKH"/>
-                                                <constraint firstAttribute="width" constant="45" id="dvu-Xx-5qD"/>
+                                                <constraint firstAttribute="width" constant="200" id="dvu-Xx-5qD"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6D-5n-al1" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="276" width="335" height="0.0"/>
+                                            <rect key="frame" x="20" y="353.5" width="335" height="0.0"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -230,6 +230,6 @@
         </view>
     </objects>
     <resources>
-        <image name="documents-empty" width="48" height="48"/>
+        <image name="img_no_data" width="360" height="206"/>
     </resources>
 </document>

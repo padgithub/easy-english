@@ -22,7 +22,6 @@ class ProfileVC: BaseVC, FBSDKLoginButtonDelegate {
         initUI()
         initFB()
     }
-    
 }
 
 extension ProfileVC {
@@ -78,6 +77,14 @@ extension ProfileVC {
         SaveHelper.save("", key: .fbImage)
         SaveHelper.save("", key: .fbName)
         initUI()
+    }
+}
+extension ProfileVC : WKUIDelegate, WKNavigationDelegate, UIWebViewDelegate {
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if navigationAction.targetFrame?.isMainFrame == nil {
+            webView.load(navigationAction.request)
+        }
+        return nil
     }
 }
 

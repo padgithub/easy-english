@@ -29,7 +29,6 @@ class VideoServiceView: NSObject {
     override init() {
         super.init()
         viewPlayer.delegate = self
-        
         if UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
             viewPlayer.playerVars = ["playsinline": "1"
                                         as AnyObject] as YouTubePlayerView.YouTubePlayerParameters

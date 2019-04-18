@@ -536,7 +536,7 @@ open class MarqueeLabel: UILabel, CAAnimationDelegate {
         
         // Iterate through properties
         sublabel.text = super.text
-        sublabel.font = super.font
+        sublabel.font = Common.getFontForDeviceWithFontDefault(fontDefault: super.font)
         sublabel.textColor = super.textColor
         sublabel.backgroundColor = super.backgroundColor ?? UIColor.clear
         sublabel.shadowColor = super.shadowColor

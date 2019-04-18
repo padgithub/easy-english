@@ -12,6 +12,8 @@ import AVKit
 class TrendingVC: BaseVC {
 
     
+    @IBOutlet weak var navi: NavigationView!
+    
     @IBOutlet weak var btPlay: UIButton!
     
     let playerViewController = AVPlayerViewController()
@@ -20,19 +22,27 @@ class TrendingVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadVideo(url: "https://photos.google.com/u/4/search/_tra_/photo/AF1QipMcX-ZhlJz-Hz9qivsXrURiL-iC4sl-LJ-7MpY7")
-        // Do any additional setup after loading the view.
+        initUI()
+    }
+}
+
+extension TrendingVC {
+    func initUI(){
+        navi.handleBack = {
+            self.clickBack()
+        }
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(normalTap(_:)))
         tapGesture.numberOfTapsRequired = 1
         btPlay.addGestureRecognizer(tapGesture)
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
         btPlay.addGestureRecognizer(longGesture)
+        
+        loadVideo(url: "https://doc-00-18-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a413mees0h32876oeta9i5hruc11s1n2/1551232800000/04915393280927761197/*/10TIV1W-DQYSXcMWM4d4LqYP9bw0jVn5R")
     }
-
-
+    
     private func loadVideo(url: String) {
         playerViewController.player = player
-    
+        
         let u = URL.init(string: url)
         if u != nil {
             self.player = AVPlayer(url: u!)
@@ -68,3 +78,4 @@ class TrendingVC: BaseVC {
         }
     }
 }
+

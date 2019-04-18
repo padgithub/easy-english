@@ -13,6 +13,8 @@
 		011FCA4B21FCAE4600922968 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FCA4921FCAE4600922968 /* SettingVC.swift */; };
 		011FCA4C21FCAE4600922968 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011FCA4A21FCAE4600922968 /* SettingVC.xib */; };
 		011FCA5121FD81AE00922968 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FCA5021FD81AE00922968 /* LanguageManager.swift */; };
+		011FF9412226365B00A765D9 /* TrendingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011FF93F2226365A00A765D9 /* TrendingVC.xib */; };
+		011FF9422226365B00A765D9 /* TrendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FF9402226365A00A765D9 /* TrendingVC.swift */; };
 		0124129821DDC1F80078B60F /* ZoomOutViewPlayVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124129721DDC1F80078B60F /* ZoomOutViewPlayVideo.xib */; };
 		0124129B21DDC2210078B60F /* ZoomOutViewPlayVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0124129A21DDC2210078B60F /* ZoomOutViewPlayVideo.swift */; };
 		012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012412A121DDFAFE0078B60F /* VideoServiceView.swift */; };
@@ -89,7 +91,6 @@
 		01B3DD3121D631150051221E /* KHTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9521D631140051221E /* KHTextView.swift */; };
 		01B3DD3221D631150051221E /* KHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9621D631140051221E /* KHLabel.swift */; };
 		01B3DD3521D631150051221E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9B21D631140051221E /* BaseVC.swift */; };
-		01B3DD6F21D631150051221E /* MTBBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DD0A21D631140051221E /* MTBBarcodeScanner.m */; };
 		01B3DD7021D631150051221E /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DD0C21D631140051221E /* MarqueeLabel.swift */; };
 		01B3DD8721D8D50A0051221E /* VideoPlayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DD8521D8D50A0051221E /* VideoPlayCell.swift */; };
 		01B3DD8821D8D50A0051221E /* VideoPlayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DD8621D8D50A0051221E /* VideoPlayCell.xib */; };
@@ -99,6 +100,8 @@
 		01EE354C21EF98AC00C3346F /* VideoHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE354A21EF98AC00C3346F /* VideoHomeCell.swift */; };
 		01EE354E21EF99D400C3346F /* VideoHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE354D21EF99D400C3346F /* VideoHomeCell.xib */; };
 		01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01EE355121EFAAE200C3346F /* Localizable.strings */; };
+		01F757242258B218007BA54E /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F757202258B218007BA54E /* MBCircularProgressBarView.m */; };
+		01F757252258B218007BA54E /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F757212258B218007BA54E /* MBCircularProgressBarLayer.m */; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
 		7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
@@ -131,6 +134,8 @@
 		011FCA4E21FD7CA900922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		011FCA4F21FD7CB200922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		011FCA5021FD81AE00922968 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		011FF93F2226365A00A765D9 /* TrendingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendingVC.xib; sourceTree = "<group>"; };
+		011FF9402226365A00A765D9 /* TrendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingVC.swift; sourceTree = "<group>"; };
 		0124129721DDC1F80078B60F /* ZoomOutViewPlayVideo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomOutViewPlayVideo.xib; sourceTree = "<group>"; };
 		0124129A21DDC2210078B60F /* ZoomOutViewPlayVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomOutViewPlayVideo.swift; sourceTree = "<group>"; };
 		012412A121DDFAFE0078B60F /* VideoServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoServiceView.swift; sourceTree = "<group>"; };
@@ -217,8 +222,6 @@
 		01B3DC9521D631140051221E /* KHTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHTextView.swift; sourceTree = "<group>"; };
 		01B3DC9621D631140051221E /* KHLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHLabel.swift; sourceTree = "<group>"; };
 		01B3DC9B21D631140051221E /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
-		01B3DD0921D631140051221E /* MTBBarcodeScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBBarcodeScanner.h; sourceTree = "<group>"; };
-		01B3DD0A21D631140051221E /* MTBBarcodeScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBBarcodeScanner.m; sourceTree = "<group>"; };
 		01B3DD0C21D631140051221E /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
 		01B3DD8521D8D50A0051221E /* VideoPlayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayCell.swift; sourceTree = "<group>"; };
 		01B3DD8621D8D50A0051221E /* VideoPlayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayCell.xib; sourceTree = "<group>"; };
@@ -228,6 +231,10 @@
 		01EE354A21EF98AC00C3346F /* VideoHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHomeCell.swift; sourceTree = "<group>"; };
 		01EE354D21EF99D400C3346F /* VideoHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoHomeCell.xib; sourceTree = "<group>"; };
 		01EE355021EFAAE200C3346F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		01F757202258B218007BA54E /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCircularProgressBarView.m; sourceTree = "<group>"; };
+		01F757212258B218007BA54E /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
+		01F757222258B218007BA54E /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarView.h; sourceTree = "<group>"; };
+		01F757232258B218007BA54E /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
 		161AFF1FA117FDBF2981F173 /* Pods-EasyEnglishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishUITests/Pods-EasyEnglishUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BACCE45EDA637804DBD243 /* Pods-EasyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.release.xcconfig"; sourceTree = "<group>"; };
@@ -274,6 +281,15 @@
 				011F365621E897E500B32E72 /* NotesCell.xib */,
 			);
 			path = NoteCell;
+			sourceTree = "<group>";
+		};
+		011FF93E2226365A00A765D9 /* TrendingVC */ = {
+			isa = PBXGroup;
+			children = (
+				011FF93F2226365A00A765D9 /* TrendingVC.xib */,
+				011FF9402226365A00A765D9 /* TrendingVC.swift */,
+			);
+			path = TrendingVC;
 			sourceTree = "<group>";
 		};
 		0124129921DDC2010078B60F /* ZoomOutViewPlayVideo */ = {
@@ -625,6 +641,7 @@
 		01B3DC9A21D631140051221E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				011FF93E2226365A00A765D9 /* TrendingVC */,
 				01B3DC9B21D631140051221E /* BaseVC.swift */,
 				0138FBFC21DF4241001B6BAF /* CommonVC */,
 				0138FBE321DF1AC3001B6BAF /* HomeVC */,
@@ -640,20 +657,11 @@
 		01B3DC9D21D631140051221E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				01F7571F2258B218007BA54E /* MBCircularProgressBar */,
 				0138FC1221DF7679001B6BAF /* SVPullToRefresh */,
-				01B3DD0821D631140051221E /* Scanners */,
 				01B3DD0B21D631140051221E /* MarqueeLabel */,
 			);
 			path = Libraries;
-			sourceTree = "<group>";
-		};
-		01B3DD0821D631140051221E /* Scanners */ = {
-			isa = PBXGroup;
-			children = (
-				01B3DD0921D631140051221E /* MTBBarcodeScanner.h */,
-				01B3DD0A21D631140051221E /* MTBBarcodeScanner.m */,
-			);
-			path = Scanners;
 			sourceTree = "<group>";
 		};
 		01B3DD0B21D631140051221E /* MarqueeLabel */ = {
@@ -718,6 +726,17 @@
 				01B3DD8F21D917DE0051221E /* PlayVC.xib */,
 			);
 			path = PlayVC;
+			sourceTree = "<group>";
+		};
+		01F7571F2258B218007BA54E /* MBCircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				01F757202258B218007BA54E /* MBCircularProgressBarView.m */,
+				01F757212258B218007BA54E /* MBCircularProgressBarLayer.m */,
+				01F757222258B218007BA54E /* MBCircularProgressBarView.h */,
+				01F757232258B218007BA54E /* MBCircularProgressBarLayer.h */,
+			);
+			path = MBCircularProgressBar;
 			sourceTree = "<group>";
 		};
 		01FB921A21F32E1D0022016D /* SettingVC */ = {
@@ -886,6 +905,7 @@
 				0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */,
 				01B3DD2021D631150051221E /* MagicView.xib in Resources */,
 				014B456D2202D47100478735 /* ProfileVC.xib in Resources */,
+				011FF9412226365B00A765D9 /* TrendingVC.xib in Resources */,
 				0138FC0021DF4267001B6BAF /* LoginVC.xib in Resources */,
 				01B3DD2121D631150051221E /* ButtonView.xib in Resources */,
 				0138FBFB21DF1BC0001B6BAF /* LibraryVC.xib in Resources */,
@@ -1009,6 +1029,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
+				"${BUILT_PRODUCTS_DIR}/Sheeeeeeeeet/Sheeeeeeeeet.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
@@ -1030,6 +1051,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sheeeeeeeeet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
@@ -1079,11 +1101,11 @@
 				014B456C2202D47100478735 /* ProfileVC.swift in Sources */,
 				0138FCA121E30863001B6BAF /* ListModelPlaylistView.swift in Sources */,
 				0138FC9921E3008C001B6BAF /* SaveHelper.swift in Sources */,
-				01B3DD6F21D631150051221E /* MTBBarcodeScanner.m in Sources */,
 				0138FC7521E11819001B6BAF /* ListVideoVC.swift in Sources */,
 				01B3DD1F21D631150051221E /* MagicView.swift in Sources */,
 				011F365721E897E500B32E72 /* NotesCell.swift in Sources */,
 				01B3DD2D21D631150051221E /* KHTextField.swift in Sources */,
+				01F757252258B218007BA54E /* MBCircularProgressBarLayer.m in Sources */,
 				01B3DD2921D631150051221E /* TextFieldView.swift in Sources */,
 				0138FC6721E10F75001B6BAF /* GroupManager.swift in Sources */,
 				01EE354C21EF98AC00C3346F /* VideoHomeCell.swift in Sources */,
@@ -1110,6 +1132,8 @@
 				011FCA4B21FCAE4600922968 /* SettingVC.swift in Sources */,
 				0138FC5921E10F63001B6BAF /* ItemsVideo.swift in Sources */,
 				0138FC7921E11833001B6BAF /* ListPlaylistVC.swift in Sources */,
+				011FF9422226365B00A765D9 /* TrendingVC.swift in Sources */,
+				01F757242258B218007BA54E /* MBCircularProgressBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

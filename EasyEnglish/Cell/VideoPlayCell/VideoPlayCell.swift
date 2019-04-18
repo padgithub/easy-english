@@ -13,10 +13,10 @@ class VideoPlayCell: UITableViewCell {
 
     @IBOutlet weak var viewDuration: KHView!
     @IBOutlet weak var img: UIImageView!
-    @IBOutlet weak var lbTitleVideo: UILabel!
-    @IBOutlet weak var lbSub: UILabel!
-    @IBOutlet weak var lbDuration: UILabel!
-    @IBOutlet weak var lbViewer: UILabel!
+    @IBOutlet weak var lbTitleVideo: KHLabel!
+    @IBOutlet weak var lbSub: KHLabel!
+    @IBOutlet weak var lbDuration: KHLabel!
+    @IBOutlet weak var lbViewer: KHLabel!
     
     var handleMoreOption: (() -> Void)?
     var urlString = ""

@@ -13,9 +13,9 @@ class VideoHomeCell: UITableViewCell {
 
     @IBOutlet weak var imageVideo: UIImageView!
     @IBOutlet weak var imageAvatar: UIImageView!
-    @IBOutlet weak var lbSub: UILabel!
-    @IBOutlet weak var lbTitleVideo: UILabel!
-    @IBOutlet weak var lbDuration: UILabel!
+    @IBOutlet weak var lbSub: KHLabel!
+    @IBOutlet weak var lbTitleVideo: KHLabel!
+    @IBOutlet weak var lbDuration: KHLabel!
     
     var handleMoreOption: (() -> Void)?
     var urlString = ""

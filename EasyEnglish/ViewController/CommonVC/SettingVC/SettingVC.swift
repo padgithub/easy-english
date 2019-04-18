@@ -73,6 +73,8 @@ class SettingVC: BaseVC {
             }
             break
         case 26:
+            let vc = TrendingVC(nibName: "TrendingVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         default:
             break

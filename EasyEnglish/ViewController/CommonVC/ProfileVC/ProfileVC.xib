@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -69,6 +69,122 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9e-Hq-JC0">
+                                    <rect key="frame" x="0.0" y="89" width="345" height="391"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV1-zM-eM5" customClass="MBCircularProgressBarView">
+                                            <rect key="frame" x="103.5" y="10" width="138" height="138"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="OV1-zM-eM5" secondAttribute="height" multiplier="1:1" id="UMF-Pe-HsG"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                    <real key="value" value="100"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="decimalPlaces">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-fm-med" customClass="MBCircularProgressBarView">
+                                            <rect key="frame" x="20" y="198" width="130.5" height="130"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="cyc-fm-med" secondAttribute="height" multiplier="1:1" id="ffF-YA-bcS"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                    <real key="value" value="100"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="decimalPlaces">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderPadding">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqd-Ka-kvA" customClass="MBCircularProgressBarView">
+                                            <rect key="frame" x="194.5" y="198" width="130.5" height="130"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Gqd-Ka-kvA" secondAttribute="height" multiplier="1:1" id="wVo-jg-QMp"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                    <real key="value" value="100"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                    <real key="value" value="49"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="progressAppearanceType">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="decimalPlaces">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderPadding">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-ad-0dn" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="158" width="305" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-eh-d1A" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="348" width="130.5" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cww-9s-D2w" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                            <rect key="frame" x="194.5" y="348" width="130.5" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ha8-ad-0dn" firstAttribute="centerX" secondItem="OV1-zM-eM5" secondAttribute="centerX" id="1Rv-jF-7GG"/>
+                                        <constraint firstItem="OV1-zM-eM5" firstAttribute="centerX" secondItem="l9e-Hq-JC0" secondAttribute="centerX" id="660-33-DJk"/>
+                                        <constraint firstItem="cww-9s-D2w" firstAttribute="leading" secondItem="Gqd-Ka-kvA" secondAttribute="leading" id="9wO-0m-D5c"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gqd-Ka-kvA" secondAttribute="trailing" constant="20" id="EN0-93-yjT"/>
+                                        <constraint firstItem="OV1-zM-eM5" firstAttribute="top" secondItem="l9e-Hq-JC0" secondAttribute="top" constant="10" id="Ge6-yf-Sem"/>
+                                        <constraint firstItem="DBN-eh-d1A" firstAttribute="centerX" secondItem="cyc-fm-med" secondAttribute="centerX" id="MOP-hE-oAi"/>
+                                        <constraint firstItem="DBN-eh-d1A" firstAttribute="trailing" secondItem="cyc-fm-med" secondAttribute="trailing" id="PN0-Dh-Iet"/>
+                                        <constraint firstItem="DBN-eh-d1A" firstAttribute="top" secondItem="cyc-fm-med" secondAttribute="bottom" constant="20" id="XTX-cT-4dl"/>
+                                        <constraint firstItem="DBN-eh-d1A" firstAttribute="leading" secondItem="cyc-fm-med" secondAttribute="leading" id="cUy-FS-jFx"/>
+                                        <constraint firstItem="ha8-ad-0dn" firstAttribute="leading" secondItem="l9e-Hq-JC0" secondAttribute="leading" constant="20" id="dPl-Pj-tJL"/>
+                                        <constraint firstItem="cyc-fm-med" firstAttribute="height" secondItem="l9e-Hq-JC0" secondAttribute="height" multiplier="1/3" id="gKt-9e-T5e"/>
+                                        <constraint firstItem="cww-9s-D2w" firstAttribute="trailing" secondItem="Gqd-Ka-kvA" secondAttribute="trailing" id="gV3-JM-XjY"/>
+                                        <constraint firstItem="cww-9s-D2w" firstAttribute="top" secondItem="Gqd-Ka-kvA" secondAttribute="bottom" constant="20" id="k3C-vd-kKz"/>
+                                        <constraint firstItem="Gqd-Ka-kvA" firstAttribute="top" secondItem="cyc-fm-med" secondAttribute="top" id="kaX-va-YoT"/>
+                                        <constraint firstItem="Gqd-Ka-kvA" firstAttribute="bottom" secondItem="cyc-fm-med" secondAttribute="bottom" id="rcG-k0-Ijs"/>
+                                        <constraint firstItem="cww-9s-D2w" firstAttribute="centerX" secondItem="Gqd-Ka-kvA" secondAttribute="centerX" id="tNO-OW-f9A"/>
+                                        <constraint firstItem="ha8-ad-0dn" firstAttribute="top" secondItem="OV1-zM-eM5" secondAttribute="bottom" constant="10" id="tlh-pH-9rZ"/>
+                                        <constraint firstItem="cyc-fm-med" firstAttribute="leading" secondItem="l9e-Hq-JC0" secondAttribute="leading" constant="20" id="vTB-8s-Tv0"/>
+                                        <constraint firstAttribute="trailing" secondItem="ha8-ad-0dn" secondAttribute="trailing" constant="20" id="wtE-E1-TIT"/>
+                                        <constraint firstItem="cyc-fm-med" firstAttribute="top" secondItem="ha8-ad-0dn" secondAttribute="bottom" constant="20" id="yhp-s9-7jK"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -76,7 +192,11 @@
                                 <constraint firstItem="ydh-JV-dEN" firstAttribute="top" secondItem="pn9-P7-MU7" secondAttribute="top" id="3Gn-ZC-jHA"/>
                                 <constraint firstItem="ydh-JV-dEN" firstAttribute="leading" secondItem="pn9-P7-MU7" secondAttribute="leading" id="FuF-e3-ygG"/>
                                 <constraint firstItem="RoJ-Rr-na3" firstAttribute="top" secondItem="ydh-JV-dEN" secondAttribute="bottom" constant="20" id="KwX-Ud-QNZ"/>
+                                <constraint firstItem="l9e-Hq-JC0" firstAttribute="leading" secondItem="pn9-P7-MU7" secondAttribute="leading" id="VsB-L7-1Go"/>
+                                <constraint firstItem="l9e-Hq-JC0" firstAttribute="top" secondItem="RoJ-Rr-na3" secondAttribute="bottom" id="WMZ-0A-HmM"/>
                                 <constraint firstItem="RoJ-Rr-na3" firstAttribute="leading" secondItem="pn9-P7-MU7" secondAttribute="leading" constant="10" id="dkO-wg-fnJ"/>
+                                <constraint firstAttribute="bottom" secondItem="l9e-Hq-JC0" secondAttribute="bottom" id="foK-bT-jhr"/>
+                                <constraint firstAttribute="trailing" secondItem="l9e-Hq-JC0" secondAttribute="trailing" id="lIk-5m-jzL"/>
                                 <constraint firstAttribute="trailing" secondItem="RoJ-Rr-na3" secondAttribute="trailing" constant="10" id="vCP-83-FWf"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
@@ -148,6 +268,7 @@
                 <constraint firstItem="OfQ-3Q-oR6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rgk-Dm-0tS"/>
                 <constraint firstAttribute="trailing" secondItem="D4Q-gI-Pl2" secondAttribute="trailing" id="Wwj-HA-FKl"/>
                 <constraint firstItem="3fh-2w-z9L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="fgP-cm-Rvf"/>
+                <constraint firstItem="OV1-zM-eM5" firstAttribute="height" secondItem="1zl-Uv-eKf" secondAttribute="height" id="hPP-On-RMI"/>
                 <constraint firstAttribute="trailing" secondItem="gSA-PG-BiO" secondAttribute="trailing" id="hYP-lb-JX7"/>
                 <constraint firstAttribute="bottom" secondItem="gSA-PG-BiO" secondAttribute="bottom" id="jC3-T0-abI"/>
                 <constraint firstAttribute="trailing" secondItem="ZTV-kA-34p" secondAttribute="trailing" constant="15" id="jXQ-Kh-eAn"/>
@@ -161,6 +282,6 @@
         </view>
     </objects>
     <resources>
-        <image name="1" width="150.46530151367188" height="150.46530151367188"/>
+        <image name="1" width="512" height="512"/>
     </resources>
 </document>
