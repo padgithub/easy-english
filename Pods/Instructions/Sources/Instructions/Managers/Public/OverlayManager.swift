@@ -40,7 +40,7 @@ public class OverlayManager {
     /// Setting this property to anything but `nil` will
     /// enable the effect. `overlayColor` will be ignored if this
     /// property is set.
-    public var blurEffectStyle: UIBlurEffectStyle? {
+    public var blurEffectStyle: UIBlurEffect.Style? {
         didSet {
             overlayStyleManager = updateOverlayStyleManager()
         }
@@ -85,7 +85,7 @@ public class OverlayManager {
     }
 
     /// Define the window level for the overlay.
-    public var windowLevel = UIWindowLevelNormal + 1
+    public var windowLevel = UIWindow.Level.normal + 1
 
     // MARK: - Internal Properties
     /// Delegate to which tell that the overlay view received a tap event.
@@ -226,7 +226,7 @@ public class OverlayManager {
     }
 
     private func updateOverlayStyleManager() -> OverlayStyleManager {
-        if let style = blurEffectStyle, !UIAccessibilityIsReduceTransparencyEnabled() {
+        if let style = blurEffectStyle, !UIAccessibility.isReduceTransparencyEnabled {
             let blurringOverlayStyleManager = BlurringOverlayStyleManager(style: style)
             self.updateDependencies(of: blurringOverlayStyleManager)
             return blurringOverlayStyleManager

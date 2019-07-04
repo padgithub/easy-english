@@ -68,14 +68,14 @@ class CoachMarkLayoutHelper {
                                     withCoachMark coachMark: CoachMark,
                                     inParentView parentView: UIView
     ) -> [NSLayoutConstraint] {
-        return NSLayoutConstraint.constraints(withVisualFormat: "H:|-(==\(coachMark.horizontalMargin))-[currentCoachMarkView(<=\(coachMark.maxWidth))]-(>=\(coachMark.horizontalMargin))-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["currentCoachMarkView": coachMarkView])
+        return NSLayoutConstraint.constraints(withVisualFormat: "H:|-(==\(coachMark.horizontalMargin))-[currentCoachMarkView(<=\(coachMark.maxWidth))]-(>=\(coachMark.horizontalMargin))-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["currentCoachMarkView": coachMarkView])
     }
 
     private func middleConstraints(for coachMarkView: CoachMarkView,
                                    withCoachMark coachMark: CoachMark,
                                    inParentView parentView: UIView
     ) -> [NSLayoutConstraint] {
-        var constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(>=\(coachMark.horizontalMargin))-[currentCoachMarkView(<=\(coachMark.maxWidth)@1000)]-(>=\(coachMark.horizontalMargin))-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["currentCoachMarkView": coachMarkView])
+        var constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(>=\(coachMark.horizontalMargin))-[currentCoachMarkView(<=\(coachMark.maxWidth)@1000)]-(>=\(coachMark.horizontalMargin))-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["currentCoachMarkView": coachMarkView])
 
         constraints.append(NSLayoutConstraint(
             item: coachMarkView, attribute: .centerX, relatedBy: .equal,
@@ -90,7 +90,7 @@ class CoachMarkLayoutHelper {
                                      withCoachMark coachMark: CoachMark,
                                      inParentView parentView: UIView
     ) -> [NSLayoutConstraint] {
-        return NSLayoutConstraint.constraints(withVisualFormat: "H:|-(>=\(coachMark.horizontalMargin))-[currentCoachMarkView(<=\(coachMark.maxWidth))]-(==\(coachMark.horizontalMargin))-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["currentCoachMarkView": coachMarkView])
+        return NSLayoutConstraint.constraints(withVisualFormat: "H:|-(>=\(coachMark.horizontalMargin))-[currentCoachMarkView(<=\(coachMark.maxWidth))]-(==\(coachMark.horizontalMargin))-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["currentCoachMarkView": coachMarkView])
     }
 
     /// Returns the arrow offset, based on the layout and the

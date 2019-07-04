@@ -59,7 +59,7 @@ public extension NSObject {
     public func dg_addObserver(_ observer: NSObject, forKeyPath keyPath: String) {
         let observerInfo = [keyPath : observer]
         
-        if dg_observers.index(where: { $0 == observerInfo }) == nil {
+        if dg_observers.firstIndex(where: { $0 == observerInfo }) == nil {
             dg_observers.append(observerInfo)
             addObserver(observer, forKeyPath: keyPath, options: .new, context: nil)
         }
@@ -68,7 +68,7 @@ public extension NSObject {
     public func dg_removeObserver(_ observer: NSObject, forKeyPath keyPath: String) {
         let observerInfo = [keyPath : observer]
         
-        if let index = dg_observers.index(where: { $0 == observerInfo}) {
+        if let index = dg_observers.firstIndex(where: { $0 == observerInfo}) {
             dg_observers.remove(at: index)
             removeObserver(observer, forKeyPath: keyPath)
         }
@@ -157,8 +157,8 @@ public extension UIPanGestureRecognizer {
 // MARK: -
 // MARK: (UIGestureRecognizerState) Extension
 
-public extension UIGestureRecognizerState {
-    func dg_isAnyOf(_ values: [UIGestureRecognizerState]) -> Bool {
+public extension UIGestureRecognizer.State {
+    func dg_isAnyOf(_ values: [UIGestureRecognizer.State]) -> Bool {
         return values.contains(where: { $0 == self })
     }
 }

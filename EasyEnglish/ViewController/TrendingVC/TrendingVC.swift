@@ -37,7 +37,7 @@ extension TrendingVC {
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
         btPlay.addGestureRecognizer(longGesture)
         
-        loadVideo(url: "https://doc-00-18-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a413mees0h32876oeta9i5hruc11s1n2/1551232800000/04915393280927761197/*/10TIV1W-DQYSXcMWM4d4LqYP9bw0jVn5R")
+        loadVideo(url: "https://video.xx.fbcdn.net/v/t42.9040-2/60755725_430335767752451_5684257317810339840_n.mp4?_nc_cat=103&efg=eyJ2ZW5jb2RlX3RhZyI6InByZW11dGVfc3ZlX3NkIn0%3D&_nc_ht=video-iad3-1.xx&oh=ed5159f12df40866f68a2896fc89ba62&oe=5CDCFF18")
     }
     
     private func loadVideo(url: String) {
