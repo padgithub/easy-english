@@ -159,6 +159,7 @@ open class YouTubePlayerView: UIView, UIWebViewDelegate {
     }
     
     
+    
     // MARK: Player controls
     
     open func mute() {
@@ -184,6 +185,14 @@ open class YouTubePlayerView: UIView, UIWebViewDelegate {
     open func clear() {
         evaluatePlayerCommand("clearVideo()")
     }
+    
+//    open func setPlaybackQuality(_ quality: YouTubePlaybackQuality) {
+//        evaluatePlayerCommand("setPlaybackQuality(suggestedQuality:\(quality)")
+//    }
+//    
+//    open func getPlaybackQuality() -> String? {
+//        return evaluatePlayerCommand("getPlaybackQuality()")
+//    }
     
     open func seekTo(_ seconds: Float, seekAhead: Bool) {
         evaluatePlayerCommand("seekTo(\(seconds), \(seekAhead))")

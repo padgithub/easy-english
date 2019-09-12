@@ -17,7 +17,9 @@ target 'EasyEnglish' do
   pod 'KRProgressHUD'
   pod 'Alamofire'
   pod 'Sheeeeeeeeet'
-  pod 'FBSDKLoginKit'
+  pod 'Google-Mobile-Ads-SDK'
+#  pod 'FBSDKLoginKit'
+
 
   target 'EasyEnglishTests' do
     inherit! :search_paths

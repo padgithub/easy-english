@@ -53,6 +53,9 @@ class SettingVC: BaseVC {
             changeLanguage()
             break
         case 23:
+            if let url = URL(string: "mailto:\(Contansts.myMailContact)") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
             break
         case 24:
             //Set the default sharing message.
@@ -68,12 +71,10 @@ class SettingVC: BaseVC {
             break
         case 25:
             //Rate
-            UIApplication.shared.open(URL(string: "itms://itunes.apple.com/app/id1437957886")!, options: [:]) { (true) in
-                
-            }
+            AppStoreReviewManager.requestReviewNow()
             break
         case 26:
-            let vc = TrendingVC(nibName: "TrendingVC", bundle: nil)
+            let vc = AboutAppVC(nibName: "AboutAppVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
             break
         default:

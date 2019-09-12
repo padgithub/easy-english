@@ -188,7 +188,7 @@ struct DeviceType
     static let IS_IPHONE_6P         = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 736.0
     static let IS_IPHONE_7          = IS_IPHONE_6
     static let IS_IPHONE_7P         = IS_IPHONE_6P
-    static let IS_IPHONE_X         = UIDevice.current.userInterfaceIdiom == .phone && (ScreenSize.SCREEN_MAX_LENGTH == 812.0 || ScreenSize.SCREEN_MAX_LENGTH == 896.0)
+    static let IS_IPHONE_X         = UIDevice.current.userInterfaceIdiom == .phone && (ScreenSize.SCREEN_MAX_LENGTH >= 812.0 || ScreenSize.SCREEN_MAX_LENGTH == 896.0)
     static let IS_IPAD              = UIDevice.current.userInterfaceIdiom == .pad
     static let IS_IPAD_PRO_9_7      = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.SCREEN_MAX_LENGTH == 1024.0
     static let IS_IPAD_PRO_12_9     = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.SCREEN_MAX_LENGTH == 1366.0

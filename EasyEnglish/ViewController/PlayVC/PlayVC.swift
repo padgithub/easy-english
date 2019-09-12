@@ -12,7 +12,6 @@ import Sheeeeeeeeet
 //import FBAudienceNetwork
 
 class PlayVC: BaseVC {
-
     @IBOutlet weak var viewBlack: UIView!
     @IBOutlet weak var btMoreBack: KHButton!
     @IBOutlet weak var viewToolPlay2: UIView!
@@ -41,11 +40,13 @@ class PlayVC: BaseVC {
     @IBOutlet weak var textViewNote: UITextView!
     @IBOutlet weak var viewNote: UIView!
     @IBOutlet weak var adView: KHView!
+    @IBOutlet weak var imgLoader: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var viewModel = ListModelView()
     var current: Int = 0
     var duration: Int = 0
-//    var adViews = FBAdView()
+    //    var adViews = FBAdView()
     var isAutoPlay = false {
         didSet{
             btAutoPlay.setImage(isAutoPlay ? UIImage(named: "ic_auto_play_on") : UIImage(named: "ic_auto_play_off"), for: .normal)
@@ -54,7 +55,7 @@ class PlayVC: BaseVC {
     
     var isPlay = false {
         didSet{
-           btPlayPause.setImage(isPlay ? UIImage(named: "ic_play_play") : UIImage(named: "ic_play_pause"), for: .normal)
+            btPlayPause.setImage(isPlay ? UIImage(named: "ic_play_play") : UIImage(named: "ic_play_pause"), for: .normal)
         }
     }
     
@@ -85,9 +86,13 @@ class PlayVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
         initUI()
         initData()
-        setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -102,7 +107,7 @@ class PlayVC: BaseVC {
         }
     }
     
-
+    
     @IBAction func actionCollapsMoreInfo(_ sender: Any) {
         isMoreInfoVideo = !isMoreInfoVideo
     }
@@ -137,7 +142,7 @@ class PlayVC: BaseVC {
             break
         case 605: // chat luong video
             print(sender.tag)
-//           showQualityPopup()
+            showQualityPopup()
             break
         case 606: //back
             print(sender.tag)
@@ -231,12 +236,12 @@ class PlayVC: BaseVC {
 
 extension PlayVC {
     func initUI() {
-//        adViews = FBAdView(placementID: "335878217019048_338994906707379", adSize: kFBAdSizeHeight50Banner, rootViewController: self)
-//        adView.addSubview(adViews)
-//        adViews.frame = adView.frame
-//
-//        adViews.delegate = self
-//        adViews.loadAd()
+        //        adViews = FBAdView(placementID: "335878217019048_338994906707379", adSize: kFBAdSizeHeight50Banner, rootViewController: self)
+        //        adView.addSubview(adViews)
+        //        adViews.frame = adView.frame
+        //
+        //        adViews.delegate = self
+        //        adViews.loadAd()
         
         imageSub.image = randomAvatar()
         textViewNote.delegate = self
@@ -253,6 +258,9 @@ extension PlayVC {
         
         if TAppDelegate.isPlay {
             viewYoutubePlayer.play()
+            isPlay = true
+        }else{
+            isPlay = false
         }
         
         if TAppDelegate.isNew {
@@ -323,6 +331,16 @@ extension PlayVC {
             viewToolPlay2.isHidden = true
             btMoreBack.isHidden = false
         }
+        
+        youtubeShare.handleReadyPlay = {
+            self.isPlay = !TAppDelegate.isPlay
+            self.imgLoader.isHidden = true
+        }
+        
+        if TAppDelegate.isPlay {
+            self.imgLoader.isHidden = true
+        }
+        
     }
     
     @objc
@@ -341,7 +359,7 @@ extension PlayVC {
             TAppDelegate.arrVideoPlaying[index].timeUpdate = item.timeUpdate
         }
         viewModel.arrData = TAppDelegate.arrVideoPlaying
-//        tableView.reloadData()
+        tableView.reloadData()
         self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
     }
     
@@ -387,6 +405,8 @@ extension PlayVC {
 extension PlayVC {
     
     func showQualityPopup() {
+        //        print(viewYoutubePlayer.getPlaybackQuality())
+        
         let title = ActionSheetTitle(title: "txt_select_quality".localized)
         let item1 = ActionSheetSingleSelectItem(title: "240", isSelected: true, value: 1, tapBehavior: .dismiss)
         let item2 = ActionSheetSingleSelectItem(title: "360", isSelected: true, value: 1, tapBehavior: .dismiss)

@@ -25,6 +25,7 @@ class VideoServiceView: NSObject {
     var handleCurentime: ((String,String) -> Void)?
     var handlePlayWhenPause: (() -> Void)?
     var handleAutoPlay: (() -> Void)?
+    var handleReadyPlay: (() -> Void)?
     
     override init() {
         super.init()
@@ -49,14 +50,18 @@ extension VideoServiceView: YouTubePlayerDelegate {
         Timer.every(1) {
             self.handleCurentime?(videoPlayer.getCurrentTime() ?? "",videoPlayer.getDuration() ?? "")
         }
+        handleReadyPlay?()
     }
     
     func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
         switch playerState {
+        case .Playing:
+            TAppDelegate.isPlay = true
         case .Paused:
             if !UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
                 handlePlayWhenPause?()
             }
+            TAppDelegate.isPlay = false
             break
         case .Ended:
             if TAppDelegate.isAutoPlay {

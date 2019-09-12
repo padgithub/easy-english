@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutAppVC" customModule="EasyEnglish" customModuleProvider="target">
+            <connections>
+                <outlet property="navi" destination="FrN-9j-u4j" id="KA2-ey-mhl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FrN-9j-u4j" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="eoO-kF-kRP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasBack" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewReight" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="txt_st_about"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0PW-qh-BlC">
+                    <rect key="frame" x="0.0" y="70" width="414" height="792"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-0y-2Py" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                            <rect key="frame" x="15" y="15" width="384" height="17.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="txt_info_app"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Htt-0y-2Py" firstAttribute="centerX" secondItem="0PW-qh-BlC" secondAttribute="centerX" id="ZGM-Qu-4B0"/>
+                        <constraint firstItem="Htt-0y-2Py" firstAttribute="top" secondItem="0PW-qh-BlC" secondAttribute="top" constant="15" id="axa-77-oOw"/>
+                        <constraint firstAttribute="bottom" secondItem="Htt-0y-2Py" secondAttribute="bottom" constant="15" id="mIR-QR-P7i"/>
+                        <constraint firstItem="Htt-0y-2Py" firstAttribute="width" secondItem="0PW-qh-BlC" secondAttribute="width" multiplier="389/419" id="oHw-1D-a0o"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FrN-9j-u4j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5YS-Oq-pJx"/>
+                <constraint firstItem="0PW-qh-BlC" firstAttribute="top" secondItem="FrN-9j-u4j" secondAttribute="bottom" id="CFV-nC-0ND"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FrN-9j-u4j" secondAttribute="trailing" id="IWO-cB-Wjk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0PW-qh-BlC" secondAttribute="bottom" id="Jzk-BB-hOP"/>
+                <constraint firstItem="0PW-qh-BlC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LPr-gi-Otm"/>
+                <constraint firstItem="FrN-9j-u4j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PTt-bg-HXj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0PW-qh-BlC" secondAttribute="trailing" id="Xke-el-uge"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

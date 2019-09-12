@@ -11,7 +11,7 @@
 
 #import "SVPullToRefresh.h"
 #import "MBCircularProgressBarView.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
+//#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 #endif /* EasyEnglish_Bridging_Header_h */

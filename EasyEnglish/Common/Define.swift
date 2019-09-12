@@ -12,6 +12,10 @@ let isIPad = DeviceType.IS_IPAD
 let heightRatio = (isIPad) ? 1.3 : ScreenSize.SCREEN_HEIGHT/736
 let widthRatio = (isIPad) ? 1.4 : ScreenSize.SCREEN_WIDTH/414
 
+let kAdmodCellTableView = "ca-app-pub-5652014623246123/3857059810"
+let kAdmodFull = "ca-app-pub-5652014623246123/4268231155"
+let kAdmodBaner = "ca-app-pub-5652014623246123/3323595396"
+
 class API {
     static let v1 = "/v1"
     static let act = "?act="
@@ -81,3 +85,9 @@ class FilePaths {
         static var livePath = FilePaths.documentsPath.appending("/data/")
     }
 }
+
+class Contansts {
+    static let myMailContact = "padit.service@gmail.com"
+}
+
+

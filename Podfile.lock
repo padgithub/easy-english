@@ -1,16 +1,30 @@
 PODS:
   - Alamofire (4.7.3)
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
   - DGElasticPullToRefresh (1.1)
-  - FBSDKCoreKit (4.38.1):
-    - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.38.1):
-    - FBSDKCoreKit
+  - Google-Mobile-Ads-SDK (7.44.0):
+    - GoogleAppMeasurement (~> 6.0)
+  - GoogleAppMeasurement (6.0.1):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (6.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.1.0)
+  - GoogleUtilities/Logger (6.1.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.1.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.1.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.1.0)"
+  - GoogleUtilities/Reachability (6.1.0):
+    - GoogleUtilities/Logger
   - GRDBCipher (3.5.0):
     - SQLCipher (~> 3.4.1)
   - Instructions (1.2.0)
@@ -18,6 +32,11 @@ PODS:
   - KRActivityIndicatorView (3.0.0)
   - KRProgressHUD (3.4.0):
     - KRActivityIndicatorView (= 3.0.0)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - QuickLayout (2.1.1)
   - Sheeeeeeeeet (1.0.1)
   - SQLCipher (3.4.2):
@@ -34,7 +53,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DGElasticPullToRefresh
-  - FBSDKLoginKit
+  - Google-Mobile-Ads-SDK
   - GRDBCipher
   - Instructions
   - Kingfisher
@@ -48,15 +67,16 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Bolts
     - DGElasticPullToRefresh
-    - FBSDKCoreKit
-    - FBSDKLoginKit
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - GRDBCipher
     - Instructions
     - Kingfisher
     - KRActivityIndicatorView
     - KRProgressHUD
+    - nanopb
     - QuickLayout
     - Sheeeeeeeeet
     - SQLCipher
@@ -67,15 +87,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
-  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
-  FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
+  Google-Mobile-Ads-SDK: 1e72b4f438d997ab0f2ee62b3a7b0cbcc87c47cb
+  GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
+  GoogleUtilities: 84df567c76ca84f67b7bb40e769fdd4acc746a10
   GRDBCipher: 7793bde2d6845a8ca7d73176467638e0abf2135b
   Instructions: 763c2452bd78e05d8f969a21c1cbc3c07deef33a
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   KRActivityIndicatorView: c414000730a6f4969eeb354bee4f2aebc89c2c2e
   KRProgressHUD: 79c8703f82179fe34b3602f10b30726f887983fa
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   QuickLayout: 9af2b7fd89a6552828f51a5aba28d1bcdb8b340c
   Sheeeeeeeeet: 7fd02a640d50f63e1b615dac7e17b8b5068c3db0
   SQLCipher: f9fcf29b2e59ced7defc2a2bdd0ebe79b40d4990
@@ -84,6 +105,6 @@ SPEC CHECKSUMS:
   ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 5fe94518118ac4826b79d6934aa05fd2e41c0d22
+PODFILE CHECKSUM: 56962054c6eec7a3fa2bf3046ea53d39038d9b53
 
 COCOAPODS: 1.6.0.beta.2

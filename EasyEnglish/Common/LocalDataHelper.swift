@@ -15,6 +15,7 @@ class LocalDataHelper: NSObject {
     var coordinate: CLLocationCoordinate2D?
     var time: Double = 0
     var isLogin: Bool = false
+    var playVC = PlayVC(nibName: "PlayVC", bundle: nil)
     
     override init() {
         super.init()

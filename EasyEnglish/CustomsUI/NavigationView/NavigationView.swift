@@ -21,7 +21,7 @@ class NavigationView: UIView {
     
     @IBInspectable open var title: String = "" {
         didSet {
-            lbTitleNav.text = title.localized 
+            lbTitleNav.text = title.localized.uppercased()
         }
     }
     

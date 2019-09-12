@@ -59,7 +59,7 @@ extension HomeVC {
             if !TAppDelegate.isShowZoomOutView {
                 viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
             }else{
-                let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+                let vc = localDataShared.playVC
                 TAppDelegate.isNew = true
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -101,6 +101,8 @@ extension HomeVC {
         
         tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        AppUpdate.shared.delegate = self
+        AppUpdate.shared.showUpdateWithConfirmation()
     }
     
     func refresh() {
@@ -136,3 +138,26 @@ extension HomeVC {
     //    }
 }
 
+extension HomeVC: AppUpdateDelegate {
+    func appUpdaterDidShowUpdateDialog() {
+        print("appUpdaterDidShowUpdateDialog")
+    }
+    
+    func appUpdaterUserDidCancel() {
+        print("appUpdaterUserDidCancel")
+//        if hasAutoLogin {
+//            self.login()
+//        }
+    }
+    
+    func appUpdaterUserDidLaunchAppStore() {
+        print("appUpdaterUserDidLaunchAppStore")
+    }
+    
+    func appUpdaterHaveNotUpdate() {
+        print("appUpdaterHaveNotUpdate")
+//        if hasAutoLogin {
+//            self.login()
+//        }
+    }
+}

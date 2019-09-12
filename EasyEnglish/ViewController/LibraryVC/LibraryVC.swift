@@ -40,6 +40,7 @@ class LibraryVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        loadDataNote()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +65,7 @@ extension LibraryVC {
         }
         
         TAppDelegate.handleReloadDataNotes = {
-            self.loadData()
+            self.loadDataNote()
         }
         
         toolBar.handleActionG2Left = {
@@ -126,6 +127,7 @@ extension LibraryVC {
     func loadDataNote() {
         self.arrNote = VideoManager.shareInstance.fetchAllForNote()
         viewModelNote.arrData = self.arrNote
+        tableViewLeft.backgroundColor = self.arrNote.count == 0 ? UIColor.clear : UIColor.white
         tableViewLeft.reloadData()
     }
     

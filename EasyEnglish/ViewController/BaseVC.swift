@@ -20,9 +20,9 @@ class BaseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let token = FBSDKAccessToken.current() {
-            print(token)
-        }
+//        if let token = FBSDKAccessToken.current() {
+//            print(token)
+//        }
         
 //        nativeAd.delegate = self
 //        nativeAd.loadAd()
@@ -42,7 +42,7 @@ class BaseVC: UIViewController {
         self.tabBarController?.background()
         
         TAppDelegate.handleReturnView = {
-            let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+            let vc = localDataShared.playVC
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
             self.removeZoomOutView()
@@ -72,9 +72,9 @@ extension BaseVC {
     }
     
     func openProfile() {
-        let vc = ProfileVC.init(nibName: "ProfileVC", bundle: nil)
-        vc.modalPresentationStyle = .fullScreen
-        self.tabBarController?.present(vc, animated: true, completion: nil)
+//        let vc = ProfileVC.init(nibName: "ProfileVC", bundle: nil)
+//        vc.modalPresentationStyle = .fullScreen
+//        self.tabBarController?.present(vc, animated: true, completion: nil)
     }
     
     func showZoomOutView() {
@@ -122,7 +122,7 @@ extension BaseVC {
         if !TAppDelegate.isShowZoomOutView {
             viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
         }else{
-            let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+            let vc = localDataShared.playVC
             TAppDelegate.isNew = true
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)

@@ -46,7 +46,7 @@ extension ListVideoVC {
                     viewYoutubePlayer.loadVideoID(TAppDelegate.idVideoPlaying)
                 }
             }else{
-                let vc = PlayVC(nibName: "PlayVC", bundle: nil)
+                let vc = localDataShared.playVC
                 TAppDelegate.isNew = true
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)

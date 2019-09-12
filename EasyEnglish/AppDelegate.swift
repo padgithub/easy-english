@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print(FilePaths.VidToLive.livePath)
-        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
+//        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         youtubeShare.turnAudio()
         configSQL()
@@ -41,14 +41,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().unselectedItemTintColor = UIColor("9D271B", alpha: 1.0)
         UITabBar.appearance().tintColor = UIColor.white
         
-        initMainVC()
+        checkUpdateDB()
 //        initPlayVC()
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let handle = FBSDKApplicationDelegate.sharedInstance()?.application(app, open: url, options: options)
-        return handle!
+//        let handle = FBSDKApplicationDelegate.sharedInstance()?.application(app, open: url, options: options)
+//        return handle!
+        // Determine who sent the URL.
+        let sendingAppID = options[.sourceApplication]
+        print("source application = \(sendingAppID ?? "Unknown")")
+        
+        // Process the URL.
+        guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
+            let albumPath = components.path,
+            let params = components.queryItems else {
+                print("Invalid URL or album path missing")
+                return false
+        }
+        
+        if let photoIndex = params.first(where: { $0.name == "index" })?.value {
+            print("albumPath = \(albumPath)")
+            print("photoIndex = \(photoIndex)")
+            return true
+        } else {
+            print("Photo index missing")
+            return false
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -134,6 +154,20 @@ extension AppDelegate {
                 } catch let error as NSError {
                     print("Unable to create database \(error.debugDescription)")
                 }
+            }
+        }
+    }
+    
+    
+    func checkUpdateDB() {
+        let dbShared = DBManager()
+        dbShared.checkDB { (bool) in
+            if bool {
+                dbShared.downloadDB(success: { (xong) in
+                    self.initMainVC()
+                })
+            }else{
+                self.initMainVC()
             }
         }
     }
