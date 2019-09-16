@@ -52,6 +52,7 @@ class KHLabel: UILabel {
         if !isAttributeString {
             font = Common.getFontForDeviceWithFontDefault(fontDefault: font)
         }
+        font = Common.getFontForDeviceWithFontDefault(fontDefault: font)
     }
     
     override open func layoutSubviews() {

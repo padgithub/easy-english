@@ -45,7 +45,8 @@ extension ListPlaylistVC {
         }
         viewModel.handleMoreOption = { (item) in
             let title = PlaylistManager.shareInstance.checkFavorite(playlist: item) ? "txt_remove_fa_playlist".localized : "txt_add_fa_playlist".localized
-            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+            
+            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_report".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
                 if action.title == "txt_add_fa_playlist".localized {
                     self.addFavorite(item)
                 }
@@ -54,6 +55,9 @@ extension ListPlaylistVC {
                 }
                 if action.title == "txt_share".localized {
                     self.share(item)
+                }
+                if action.title == "txt_report".localized {
+                    
                 }
             })
         }

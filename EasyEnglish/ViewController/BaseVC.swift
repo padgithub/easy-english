@@ -188,6 +188,35 @@ extension BaseVC {
         
     }
     
+    
+    func report(_ obj: Items) {
+        let alert = UIAlertController(title: "txt_title_report".localized, message: "txt_msg_report".localized, preferredStyle: UIAlertController.Style.alert )
+        let cancel = UIAlertAction(title: "txt_cancel".localized, style: .default) { (alertAction) in }
+        alert.addAction(cancel)
+        
+        let done = UIAlertAction(title: "txt_send".localized, style: .default) { (alertAction) in
+            let textField = alert.textFields![0] as UITextField
+            if let text = textField.text, text != "" {
+                DBManager().report(playlistId: obj.playlistId, videoId: obj.id, email: text, success: { (bool) in
+                    if bool {
+                        Common.showAlert("txt_report_success".localized)
+                    }else{
+                        Common.showAlert("txt_report_err".localized)
+                    }
+                })
+            } else {
+                print("TF 1 is Empty...")
+            }
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "txt_planhoder_report".localized
+            textField.keyboardType = .emailAddress
+        }
+        alert.addAction(done)
+        
+        self.present(alert, animated:true, completion: nil)
+    }
 }
 
 extension UITabBarController {

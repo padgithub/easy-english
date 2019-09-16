@@ -15,7 +15,7 @@ class DBManager: NSObject {
     }
     
     func checkDB(success: @escaping (Bool) -> Void ) {
-        apiRequestShared.webServiceCall("https://easyapp-padit.glitch.me/checkdb", params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
+        apiRequestShared.webServiceCall("https://easyapp-api.herokuapp.com/checkdb", params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
             success(response.responeJson["status"].boolValue)
         }
     }
@@ -24,7 +24,7 @@ class DBManager: NSObject {
         let fileManager = FileManager.default
         let destinationSqliteURL = GroupManager.database
         
-        Alamofire.request("https://easyapp-padit.glitch.me/filedb").downloadProgress(closure : { (progress) in
+        Alamofire.request("https://easyapp-api.herokuapp.com/filedb").downloadProgress(closure : { (progress) in
             print(progress.fractionCompleted)
             
         }).responseData{ (response) in
@@ -54,4 +54,12 @@ class DBManager: NSObject {
             }
         }
     }
+    
+    func report(playlistId: String, videoId: String, email: String, success: @escaping (Bool) -> Void) {
+       let url = "https://easyapp-api.herokuapp.com/addReport?playlistId=\(playlistId)&videoId=\(videoId)&email=\(email)"
+        apiRequestShared.webServiceCall(url, params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
+            success(response.responeJson["status"].boolValue)
+        }
+    }
+    
 }

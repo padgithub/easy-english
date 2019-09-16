@@ -13,6 +13,7 @@ import Sheeeeeeeeet
 
 class PlayVC: BaseVC {
     @IBOutlet weak var viewBlack: UIView!
+    @IBOutlet weak var imgButtonMoreInfo: UIImageView!
     @IBOutlet weak var btMoreBack: KHButton!
     @IBOutlet weak var viewToolPlay2: UIView!
     @IBOutlet weak var imageSub: UIImageView!
@@ -68,7 +69,7 @@ class PlayVC: BaseVC {
                 ctrHeighViewMoreInfo.constant = 0
                 viewMoreInfoVideo.isHidden = true
             }
-            btInfoVideo.setImage(isMoreInfoVideo ? UIImage(named: "ic_un_collaps") : UIImage(named: "ic_collapte"), for: .normal)
+            imgButtonMoreInfo.image = isMoreInfoVideo ? UIImage(named: "ic_un_collaps") : UIImage(named: "ic_collapte")
         }
     }
     
@@ -203,6 +204,10 @@ class PlayVC: BaseVC {
     
     @IBAction func actionToolBarDragExit(_ sender: UIButton) {
         if TAppDelegate.deviceOrientation == .portrait {
+            self.back()
+        }
+        
+        if DeviceType.IS_IPAD {
             self.back()
         }
     }

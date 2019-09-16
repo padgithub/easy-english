@@ -18,20 +18,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="398" height="486.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYm-Cy-NqF" customClass="CustomView" customModule="EasyEnglish" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQZ-0U-5jR" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                        <rect key="frame" x="20" y="31" width="358" height="445"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYm-Cy-NqF" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
                         <rect key="frame" x="20" y="31" width="358" height="445"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRM-Nk-jBl">
-                                <rect key="frame" x="0.0" y="364.5" width="358" height="80.5"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRM-Nk-jBl">
+                                <rect key="frame" x="0.0" y="275" width="358" height="170"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-tE-Hmm">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="80.5"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-Kp-KxW" customClass="GradientView2" customModule="EasyEnglish" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="170"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                <color key="value" red="1" green="0.47450980390000003" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                <color key="value" red="1" green="0.18149280030000001" blue="0.071572966249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="049-Yh-DM3" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="56.5" height="56.5"/>
+                                        <rect key="frame" x="10" y="10" width="57.5" height="57"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ec-bz-Rtn" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="56.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="57"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
@@ -50,14 +65,14 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play guitar for beginners: playing exercise 1 for beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i05-qi-eiB" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="76.5" y="10" width="271.5" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play guitar for beginners: playing exercise 1 for beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i05-qi-eiB" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <rect key="frame" x="77.5" y="10" width="270.5" height="33.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ Vựng / Học Tựng với Alamty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-Nl-BPZ" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="76.5" y="48.5" width="271.5" height="13.5"/>
+                                        <rect key="frame" x="77.5" y="48.5" width="270.5" height="13.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -66,16 +81,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="049-Yh-DM3" firstAttribute="leading" secondItem="pRM-Nk-jBl" secondAttribute="leading" constant="10" id="1Fd-5d-3yW"/>
-                                    <constraint firstItem="DCH-tE-Hmm" firstAttribute="leading" secondItem="pRM-Nk-jBl" secondAttribute="leading" id="5oF-xX-3Fq"/>
-                                    <constraint firstAttribute="bottom" secondItem="DCH-tE-Hmm" secondAttribute="bottom" id="DSf-R8-prX"/>
+                                    <constraint firstItem="ZIS-Kp-KxW" firstAttribute="leading" secondItem="pRM-Nk-jBl" secondAttribute="leading" id="BLc-Pl-Q2e"/>
                                     <constraint firstItem="xHv-Nl-BPZ" firstAttribute="leading" secondItem="i05-qi-eiB" secondAttribute="leading" id="Fah-Gm-eus"/>
                                     <constraint firstItem="xHv-Nl-BPZ" firstAttribute="top" secondItem="i05-qi-eiB" secondAttribute="bottom" constant="5" id="Gqm-dK-SYo"/>
                                     <constraint firstAttribute="trailing" secondItem="i05-qi-eiB" secondAttribute="trailing" constant="10" id="IxR-7f-yNr"/>
-                                    <constraint firstItem="DCH-tE-Hmm" firstAttribute="top" secondItem="pRM-Nk-jBl" secondAttribute="top" id="Jfy-Fr-RTn"/>
                                     <constraint firstItem="xHv-Nl-BPZ" firstAttribute="trailing" secondItem="i05-qi-eiB" secondAttribute="trailing" id="LAU-V7-ZSv"/>
-                                    <constraint firstAttribute="trailing" secondItem="DCH-tE-Hmm" secondAttribute="trailing" id="NUC-6j-FEd"/>
-                                    <constraint firstItem="049-Yh-DM3" firstAttribute="height" secondItem="pRM-Nk-jBl" secondAttribute="height" multiplier="0.7" id="RPQ-BA-Wei"/>
-                                    <constraint firstAttribute="height" constant="80.5" id="YuL-hv-01W"/>
+                                    <constraint firstItem="049-Yh-DM3" firstAttribute="height" secondItem="pRM-Nk-jBl" secondAttribute="width" multiplier="0.16" id="RPQ-BA-Wei"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZIS-Kp-KxW" secondAttribute="bottom" id="TML-4h-h6U"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZIS-Kp-KxW" secondAttribute="trailing" id="g2P-ZE-ygy"/>
+                                    <constraint firstItem="ZIS-Kp-KxW" firstAttribute="top" secondItem="pRM-Nk-jBl" secondAttribute="top" id="gZr-iH-1Lz"/>
                                     <constraint firstItem="049-Yh-DM3" firstAttribute="top" secondItem="pRM-Nk-jBl" secondAttribute="top" constant="10" id="kT9-FQ-oDh"/>
                                     <constraint firstItem="i05-qi-eiB" firstAttribute="leading" secondItem="049-Yh-DM3" secondAttribute="trailing" constant="10" id="mD9-x8-8yw"/>
                                     <constraint firstItem="i05-qi-eiB" firstAttribute="top" secondItem="049-Yh-DM3" secondAttribute="top" id="nCN-jZ-Oa9"/>
@@ -83,20 +97,20 @@
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="049-Yh-DM3" secondAttribute="bottom" constant="10" id="yCn-nZ-djB"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9Z-A4-SRD">
-                                <rect key="frame" x="0.0" y="0.0" width="358" height="364.5"/>
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9Z-A4-SRD">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="275"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fRw-be-mE9">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="201.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBA-tT-7pb">
-                                        <rect key="frame" x="13" y="10" width="332" height="16"/>
+                                        <rect key="frame" x="13" y="10" width="332" height="23"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeS-W6-mcB">
-                                                <rect key="frame" x="232" y="0.0" width="100" height="16"/>
+                                                <rect key="frame" x="232" y="0.0" width="100" height="23"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_list" translatesAutoresizingMaskIntoConstraints="NO" id="PHE-N3-JtV" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
-                                                        <rect key="frame" x="95" y="0.0" width="5" height="16"/>
+                                                        <rect key="frame" x="95" y="0.0" width="5" height="23"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="5" id="jzO-pH-nhY"/>
@@ -108,7 +122,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoY-fU-JFh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="16"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="23"/>
                                                         <connections>
                                                             <action selector="actionMoreOption:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jy2-xO-Vzf"/>
                                                         </connections>
@@ -127,10 +141,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCt-b1-tU7" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="16"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="23"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-wd-BAh" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                                        <rect key="frame" x="10.5" y="3" width="20" height="10"/>
+                                                        <rect key="frame" x="10.5" y="6.5" width="20" height="10"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -149,8 +163,9 @@
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
+                                                        <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -196,9 +211,9 @@
                             <constraint firstItem="f9Z-A4-SRD" firstAttribute="leading" secondItem="EYm-Cy-NqF" secondAttribute="leading" id="6M6-wY-WDy"/>
                             <constraint firstItem="pRM-Nk-jBl" firstAttribute="top" secondItem="f9Z-A4-SRD" secondAttribute="bottom" id="9t9-WI-gb4"/>
                             <constraint firstItem="f9Z-A4-SRD" firstAttribute="top" secondItem="EYm-Cy-NqF" secondAttribute="top" id="DsM-ke-Hgo"/>
+                            <constraint firstItem="GBA-tT-7pb" firstAttribute="height" secondItem="049-Yh-DM3" secondAttribute="height" multiplier="1/2.5" id="EEl-YG-jj3"/>
                             <constraint firstItem="pRM-Nk-jBl" firstAttribute="leading" secondItem="EYm-Cy-NqF" secondAttribute="leading" id="hUj-Kl-kpg"/>
                             <constraint firstAttribute="trailing" secondItem="f9Z-A4-SRD" secondAttribute="trailing" id="poe-g0-Ylp"/>
-                            <constraint firstItem="GBA-tT-7pb" firstAttribute="height" secondItem="pRM-Nk-jBl" secondAttribute="height" multiplier="0.2" id="uu9-Aa-id8"/>
                             <constraint firstAttribute="trailing" secondItem="pRM-Nk-jBl" secondAttribute="trailing" id="xtc-hg-b5K"/>
                             <constraint firstAttribute="bottom" secondItem="pRM-Nk-jBl" secondAttribute="bottom" id="zf1-J4-enm"/>
                         </constraints>
@@ -212,6 +227,10 @@
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="EYm-Cy-NqF" secondAttribute="bottom" id="CMa-hD-IED"/>
                     <constraint firstItem="EYm-Cy-NqF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="DTq-UE-n5L"/>
+                    <constraint firstItem="hQZ-0U-5jR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Mch-oL-jLD"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hQZ-0U-5jR" secondAttribute="bottom" id="N5a-FY-NOa"/>
+                    <constraint firstItem="hQZ-0U-5jR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Opp-O8-aS1"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hQZ-0U-5jR" secondAttribute="trailing" id="XIs-1X-w2h"/>
                     <constraint firstItem="EYm-Cy-NqF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YuD-hs-YWD"/>
                     <constraint firstAttribute="trailingMargin" secondItem="EYm-Cy-NqF" secondAttribute="trailing" id="bRM-HN-XGo"/>
                 </constraints>
@@ -227,7 +246,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bg" width="377" height="144"/>
         <image name="ic_list" width="4" height="15.5"/>
     </resources>
 </document>

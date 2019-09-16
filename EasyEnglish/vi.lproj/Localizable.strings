@@ -21,6 +21,7 @@
 "txt_history" = "Lịch sử";
 //Player
 "txt_cancel" = "Hủy";
+"txt_send" = "Gửi";
 "txt_done" = "Hoàn tất";
 "txt_autoplay" = "Tự động phát";
 "txt_next_video" = "Video tiếp theo";
@@ -54,5 +55,12 @@
 "txt_select_language" = "Chọn ngôn ngữ";
 "txt_restart_app" = "Khởi động lại ứng dụng";
 "txt_restart_app_msg" = "Cài đặt được thay đổi thành công. Vui lòng khởi động lại ứng dụng để tiếp tục sử dụng";
+//Report Alert
+"txt_report" = "Báo cáo";
+"txt_title_report" = "Báo cáo";
+"txt_msg_report" = "Bạn có chắc chắn muốn báo cáo video này không. Vui lòng nhập email hoặc tên của bạn để báo cáo.";
+"txt_planhoder_report" = "Tên hoặc email của bạn (tùy chọn)";
+"txt_report_success" = "Báo cáo thành công. Cảm ơn bạn đã báo cáo.";
+"txt_report_err" = "Đã xảy ra lỗi. Vui lòng thử lại.";
 //
 "txt_info_app" = "Học Tiếng Hàn Quốc Qua Videos\nBạn đang tìm ứng dụng học tiếng hàn để luyện tập kỹ năng: Nghe – Nói – Đọc Viết? Bạn đang tìm ứng dụng để luyện thi TOPIK? Hãy tải và học ngay tại EASY KOREAN vì nó hoàn toàn miễn phí!\nTại đây tổng hợp hơn 10.000 Video dạy học Tiếng Hàn của các giáo viên chuyên môn và nổi tiếng trong cộng đồng Dạy Học Tiếng Hàn hiện nay. Các bài học được biên soạn dành cho trình độ nhập môn lẫn nâng cao, bài giảng trực tiếp về các kỹ năng: giao tiếp, từ vựng, ngữ pháp, phát âm chuẩn…luyện nghe, luyện dịch tiếng hàn qua bài hát, phim Hàn Quốc.\n\nĐặc biệt tại EASY KOREAN bạn có thể theo học trọn bộ Video bài giảng GIÁO TRÌNH TIẾNG HÀN TỔNG HỢP DÀNH CHO NGƯỜI VIỆT NAM. Đây là bộ giáo trình bài bản, dễ học, hiện đang được sử dụng phổ biến nhất tại Việt Nam. Và, bài giảng luyện giải đề thi TOPIK I, II miễn phí.\n\nNgoài các bài học, EASY KOREAN còn chia sẻ video giới thiệu về văn hóa, ẩm thực Hàn Quốc, Cuộc sống du học sinh tại Hàn Quốc giúp các bạn tìm hiểu thêm về văn hóa của xứ sở Kim Chi. Hãy Cài Đặt Ngay để cùng học nhé!\n\nCác điểm nổi bật của EASY KOREAN:\n\n- Dành cho các bạn từ chưa biết gì đến nâng cao\n- Luyện kĩ năng nghe, nói, đọc, viết.\n- Tăng cường vốn từ vựng, luyện tập giao tiếp theo các chủ đề.\n- Tìm hiểu ngữ pháp đầy đủ từ A-Z\n- Luyện thi TOPIK I và TOPIK II \n- Luyện nghe Tiếng Hàn qua bài hát\n- Luyện nghe Tiếng Hàn qua những bộ phim hay (Kết hợp xem phim Hàn luôn nè)\n\nDanh Mục các bài học trực tuyến bao gồm:\n\n1. Học Tiếng Hàn – Luyện tập kỹ năng\n- Luyện Phát Âm Tiếng Hàn\n- Luyện Nghe Tiếng Hàn\n- Luyện Nói Tiếng Hàn\n- Từ Vựng Tiếng Hàn\n- Ngữ Pháp Tiếng Hàn\n- Giao Tiếp Tiếng Hàn\n2. LUYỆN THI TOPIK:\n- Luyện Thi Topik I (Level 1,2)\n- Luyện Thi Topik II (Level 3,4,5,6)\n3. KÊNH HỌC TIẾNG HÀN: \n- Tiếng Hàn Tổng Hợp Dành cho người Việt Nam\n- Hàn Quốc Nori \n- SEEMILE \n- Cheri Hyeri \n- MasterTOPIK \n- Học Tiếng Hàn Qua Bài Hát \n- Học Tiếng Hàn Qua Phim Ảnh \n- Học Tiếng Hàn Trên VTV\n\n4. Học Tiếng Hàn Quốc Với Người Nổi Tiếng: \n- Học Tiếng Hàn Quốc Với BTS (JUNGKOOK) \n- Học Tiếng Hàn Quốc Với Wanna One \n- Học Tiếng Hàn Quốc Với Twice \n- Học Tiếng Hàn Quốc Với BlackPink \n- Học Tiếng Hàn Quốc Với SHINee \n- Học Tiếng Hàn Quốc Với Red Velvet \n- Học Tiếng Hàn Quốc Với AOA \n- Học Tiếng Hàn Quốc Với SNSD \n- Học Tiếng Hàn Quốc Với Lovelyz\n5. KHÁM PHÁ HÀN QUỐC: \n- Du Học Hàn Quốc \n- Khám Phá Hàn Quốc \n- Văn Hóa Hàn Quốc \n- Du Lịch Hàn Quốc \n- Ẩm Thực Hàn Quốc\n\nỨng dụng EASY KOREAN là HOÀN TOÀN MIỄN PHÍ.\nHÃY CÀI ĐẶT VÀ CÙNG NHAU HỌC NHÉ!\n-------------------------\nTất cả các video trên youtube, và ứng dụng của chúng tôi chỉ cung cấp link và play từ Youtube. Tất cả bản quyền đều thuộc người upload lên Youtube\n-------------------------";

@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-@IBDesignable class GradientView: UIView {
+@IBDesignable class GradientView2: UIView {
     
     private var gradientLayer: CAGradientLayer!
     
