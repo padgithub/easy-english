@@ -87,7 +87,7 @@ class FilePaths {
 }
 
 class Contansts {
-    static let myMailContact = "padit.service@gmail.com"
+    static let myMailContact = "contact@padit.org"
 }
 
 

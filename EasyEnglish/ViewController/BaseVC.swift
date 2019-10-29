@@ -20,6 +20,11 @@ class BaseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
 //        if let token = FBSDKAccessToken.current() {
 //            print(token)
 //        }
@@ -181,11 +186,11 @@ extension BaseVC {
     }
     
     func share(_ obj: Playlist) {
-        
+        Common.showAlert("Coming Soon")
     }
     
     func share(_ obj: Items) {
-        
+        Common.showAlert("Coming Soon")
     }
     
     

@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingVC: BaseVC {
-
+    
     @IBOutlet weak var lbVersion: KHLabel!
     @IBOutlet weak var lbLanguege: KHLabel!
     @IBOutlet weak var imgFlags: UIImageView!
@@ -53,15 +53,13 @@ class SettingVC: BaseVC {
             changeLanguage()
             break
         case 23:
-            if let url = URL(string: "mailto:\(Contansts.myMailContact)") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
+            sendEmail()
             break
         case 24:
             //Set the default sharing message.
             let message = "Message goes here."
             //Set the link to share.
-            if let link = NSURL(string: "http://yoururl.com")
+            if let link = NSURL(string: "https://itunes.apple.com/app/id1479709335")
             {
                 let objectsToShare = [message,link] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
@@ -81,7 +79,6 @@ class SettingVC: BaseVC {
             break
         }
     }
-    
 }
 
 extension SettingVC {
@@ -132,5 +129,15 @@ extension SettingVC {
             if action.title == "txt_oke".localized {
             }
         })
+    }
+    
+    func sendEmail() {
+        if let url = URL(string: "mailto:\(Contansts.myMailContact)") {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
 }

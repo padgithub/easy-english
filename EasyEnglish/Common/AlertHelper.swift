@@ -46,19 +46,11 @@ public extension UIAlertController {
         }
         NotificationCenter.default.addObserver(alertController, selector: #selector(AlertController.hideAlertController), name: NSNotification.Name(rawValue: NotificationCenterKey.DismissAllAlert), object: nil)
         
-        if DeviceType.IS_IPAD {
-            alertController.popoverPresentationController?.sourceView = viewController.view
-            alertController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
-            alertController.popoverPresentationController?.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
-            viewController.present(alertController, animated: true) {
-                print("option menu presented")
-            }
-        } else {
-            let alertWindow = UIWindow(frame: UIScreen.main.bounds)
-            alertWindow.rootViewController = UIViewController()
-            alertWindow.windowLevel = UIWindow.Level.alert + 1;
-            alertWindow.makeKeyAndVisible()
-            alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
+        alertController.popoverPresentationController?.sourceView = viewController.view
+        alertController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        alertController.popoverPresentationController?.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
+        viewController.present(alertController, animated: true) {
+            print("option menu presented")
         }
         
         return alertController

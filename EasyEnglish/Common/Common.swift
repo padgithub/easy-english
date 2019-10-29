@@ -17,18 +17,19 @@ let TApp = UIApplication.shared
 
 class Common {
     static func showAlert(_ strMessage: String){
-        self.dismissAllAlert()
-        let alert = AlertController(title: "app_name".localized, message: strMessage.localized, preferredStyle: UIAlertController.Style.alert)
-        let okAction: UIAlertAction = UIAlertAction(title: "txt_ok".localized, style: .cancel) { action -> Void in
-            
-        }
-        self.addNotificationCenter(observer: alert, selector: #selector(AlertController.hideAlertController), key: NotificationCenterKey.DismissAllAlert)
-        alert.addAction(okAction)
-        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
-        alertWindow.rootViewController = UIViewController()
-        alertWindow.windowLevel = UIWindow.Level.alert + 1;
-        alertWindow.makeKeyAndVisible()
-        alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+//        self.dismissAllAlert()
+//        let alert = AlertController(title: "app_name".localized, message: strMessage.localized, preferredStyle: UIAlertController.Style.alert)
+//        let okAction: UIAlertAction = UIAlertAction(title: "txt_ok".localized, style: .cancel) { action -> Void in
+//
+//        }
+//        self.addNotificationCenter(observer: alert, selector: #selector(AlertController.hideAlertController), key: NotificationCenterKey.DismissAllAlert)
+//        alert.addAction(okAction)
+//        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+//        alertWindow.rootViewController = UIViewController()
+//        alertWindow.windowLevel = UIWindow.Level.alert + 1;
+//        alertWindow.makeKeyAndVisible()
+//        alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+        Toast.init(text: strMessage ?? "").show()
     }
     
     static func dismissAllAlert() {

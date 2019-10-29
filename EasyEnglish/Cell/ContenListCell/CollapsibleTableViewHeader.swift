@@ -47,7 +47,6 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         titleLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
-        
         //
         // Call tapHeader when tapping on this header
         //
