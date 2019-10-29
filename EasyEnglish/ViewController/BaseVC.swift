@@ -196,8 +196,9 @@ extension BaseVC {
         
         let done = UIAlertAction(title: "txt_send".localized, style: .default) { (alertAction) in
             let textField = alert.textFields![0] as UITextField
+            let textFieldContent = alert.textFields![1] as UITextField
             if let text = textField.text, text != "" {
-                DBManager().report(playlistId: obj.playlistId, videoId: obj.id, email: text, success: { (bool) in
+                DBManager().report(playlistId: obj.playlistId, videoId: obj.id, email: text, contents: textFieldContent.text ?? "", success: { (bool) in
                     if bool {
                         Common.showAlert("txt_report_success".localized)
                     }else{
@@ -205,12 +206,52 @@ extension BaseVC {
                     }
                 })
             } else {
-                print("TF 1 is Empty...")
+                Common.showAlert("txt_report_req".localized)
             }
         }
         
         alert.addTextField { (textField) in
             textField.placeholder = "txt_planhoder_report".localized
+            textField.keyboardType = .emailAddress
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "txt_planhoder_report_ontents".localized
+            textField.keyboardType = .emailAddress
+        }
+        alert.addAction(done)
+        
+        self.present(alert, animated:true, completion: nil)
+    }
+    
+    func report(_ obj: Playlist) {
+        let alert = UIAlertController(title: "txt_title_report".localized, message: "txt_msg_report".localized, preferredStyle: UIAlertController.Style.alert )
+        let cancel = UIAlertAction(title: "txt_cancel".localized, style: .default) { (alertAction) in }
+        alert.addAction(cancel)
+        
+        let done = UIAlertAction(title: "txt_send".localized, style: .default) { (alertAction) in
+            let textField = alert.textFields![0] as UITextField
+            let textFieldContent = alert.textFields![1] as UITextField
+            if let text = textField.text, text != "" {
+                DBManager().report(playlistId: obj.playlistId, videoId: "", email: text, contents: textFieldContent.text ?? "", success: { (bool) in
+                    if bool {
+                        Common.showAlert("txt_report_success".localized)
+                    }else{
+                        Common.showAlert("txt_report_err".localized)
+                    }
+                })
+            } else {
+                Common.showAlert("txt_report_req".localized)
+            }
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "txt_planhoder_report".localized
+            textField.keyboardType = .emailAddress
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "txt_planhoder_report_ontents".localized
             textField.keyboardType = .emailAddress
         }
         alert.addAction(done)
@@ -227,7 +268,7 @@ extension UITabBarController {
         tabBar.frame = tabFrame
         let tabBackground = UIImageView(frame: CGRect.init(x: 0, y: 0, width: Int(ScreenSize.SCREEN_WIDTH), height: kBarHeight))
         tabBackground.image = #imageLiteral(resourceName: "bg")
-        tabBackground.contentMode = .scaleToFill
+        tabBackground.contentMode = .scaleAspectFill
         tabBar.insertSubview(tabBackground, at: 0)
     }
 }

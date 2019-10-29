@@ -23,6 +23,7 @@
 "txt_cancel" = "Hủy";
 "txt_send" = "Gửi";
 "txt_done" = "Hoàn tất";
+"txt_ok" = "OK";
 "txt_autoplay" = "Tự động phát";
 "txt_next_video" = "Video tiếp theo";
 "txt_share" = "Chia sẻ";
@@ -59,7 +60,9 @@
 "txt_report" = "Báo cáo";
 "txt_title_report" = "Báo cáo";
 "txt_msg_report" = "Bạn có chắc chắn muốn báo cáo video này không. Vui lòng nhập email hoặc tên của bạn để báo cáo.";
-"txt_planhoder_report" = "Tên hoặc email của bạn (tùy chọn)";
+"txt_planhoder_report" = "Tên hoặc email của bạn";
+"txt_planhoder_report_ontents" = "Nội dung (tùy chọn)";
+"txt_report_req" = "Vui lòng nhập tên hoặc email";
 "txt_report_success" = "Báo cáo thành công. Cảm ơn bạn đã báo cáo.";
 "txt_report_err" = "Đã xảy ra lỗi. Vui lòng thử lại.";
 //

@@ -24,6 +24,7 @@
 "txt_cancel" = "Cancel";
 "txt_send" = "Send";
 "txt_done" = "Done";
+"txt_ok" = "OK";
 "txt_autoplay" = "Auto Play";
 "txt_next_video" = "Next Video";
 "txt_share" = "Share";
@@ -59,7 +60,9 @@
 "txt_report" = "Report";
 "txt_title_report" = "Report";
 "txt_msg_report" = "Are you sure you want to report this video. Please enter your email or name to report.";
-"txt_planhoder_report" = "Your name or email (option)";
+"txt_planhoder_report" = "Your name or email";
+"txt_planhoder_report_ontents" = "Contents (option)";
+"txt_report_req" = "Please enter your name or email.";
 "txt_report_success" = "Report successfully. Thanks.";
 "txt_report_err" = "An error occurred. Please try again.";
 //

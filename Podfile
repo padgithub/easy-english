@@ -8,7 +8,7 @@ target 'EasyEnglish' do
   # Pods for EasyEnglish
   pod 'YouTubePlayer'
   pod 'ViewAnimator'
-  pod 'Instructions'
+#  pod 'Instructions'
   pod 'DGElasticPullToRefresh'
   pod 'Kingfisher'
   pod 'SwiftEntryKit'
@@ -16,8 +16,8 @@ target 'EasyEnglish' do
   pod 'GRDBCipher'
   pod 'KRProgressHUD'
   pod 'Alamofire'
-  pod 'Sheeeeeeeeet'
-  pod 'Google-Mobile-Ads-SDK'
+#  pod 'Sheeeeeeeeet'
+#  pod 'Google-Mobile-Ads-SDK'
 #  pod 'FBSDKLoginKit'
 
 

@@ -8,7 +8,6 @@
 
 import UIKit
 import YouTubePlayer
-import Sheeeeeeeeet
 //import FBAudienceNetwork
 
 class PlayVC: BaseVC {
@@ -143,7 +142,7 @@ class PlayVC: BaseVC {
             break
         case 605: // chat luong video
             print(sender.tag)
-            showQualityPopup()
+//            showQualityPopup()
             break
         case 606: //back
             print(sender.tag)
@@ -314,7 +313,7 @@ extension PlayVC {
         }
         viewModel.handleMoreOptionCell = { (item) in
             let title = VideoManager.shareInstance.checkFavorited(videoId: item.id) ? "txt_remove_fa_video".localized : "txt_add_fa_video".localized
-            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
+            _ = UIAlertController.present(style: .actionSheet, title: "txt_select_action".localized, message: nil, attributedActionTitles: [(title, .default), ("txt_share".localized, .default), ("txt_report".localized, .default), ("txt_cancel".localized, .cancel)], handler: { (action) in
                 if action.title == "txt_remove_fa_video".localized {
                     self.removeFavorite(item)
                 }
@@ -323,6 +322,10 @@ extension PlayVC {
                 }
                 if action.title == "txt_share".localized {
                     self.share(item)
+                }
+                
+                if action.title == "txt_report".localized {
+                    self.report(item)
                 }
             })
         }
@@ -409,25 +412,25 @@ extension PlayVC {
 
 extension PlayVC {
     
-    func showQualityPopup() {
-        //        print(viewYoutubePlayer.getPlaybackQuality())
-        
-        let title = ActionSheetTitle(title: "txt_select_quality".localized)
-        let item1 = ActionSheetSingleSelectItem(title: "240", isSelected: true, value: 1, tapBehavior: .dismiss)
-        let item2 = ActionSheetSingleSelectItem(title: "360", isSelected: true, value: 1, tapBehavior: .dismiss)
-        let item3 = ActionSheetSingleSelectItem(title: "429", isSelected: true, value: 1, tapBehavior: .dismiss)
-        let button = ActionSheetOkButton(title: "OK")
-        let items = [title, item1, item2, item3, button]
-        let sheet = ActionSheet(items: items) { sheet, item in
-            guard item.isOkButton else { return }
-            let times = sheet.items.compactMap { $0 as? ActionSheetSingleSelectItem }
-            let selectedTime = times.first { $0.isSelected }
-            
-        }
-        sheet.present(in: self, from: self.view) {
-            
-        }
-    }
+//    func showQualityPopup() {
+//        //        print(viewYoutubePlayer.getPlaybackQuality())
+//
+//        let title = ActionSheetTitle(title: "txt_select_quality".localized)
+//        let item1 = ActionSheetSingleSelectItem(title: "240", isSelected: true, value: 1, tapBehavior: .dismiss)
+//        let item2 = ActionSheetSingleSelectItem(title: "360", isSelected: true, value: 1, tapBehavior: .dismiss)
+//        let item3 = ActionSheetSingleSelectItem(title: "429", isSelected: true, value: 1, tapBehavior: .dismiss)
+//        let button = ActionSheetOkButton(title: "OK")
+//        let items = [title, item1, item2, item3, button]
+//        let sheet = ActionSheet(items: items) { sheet, item in
+//            guard item.isOkButton else { return }
+//            let times = sheet.items.compactMap { $0 as? ActionSheetSingleSelectItem }
+//            let selectedTime = times.first { $0.isSelected }
+//
+//        }
+//        sheet.present(in: self, from: self.view) {
+//
+//        }
+//    }
     
     func configToolbarTF() {
         let numberToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))

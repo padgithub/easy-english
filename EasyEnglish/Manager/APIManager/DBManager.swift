@@ -55,8 +55,8 @@ class DBManager: NSObject {
         }
     }
     
-    func report(playlistId: String, videoId: String, email: String, success: @escaping (Bool) -> Void) {
-       let url = "https://easyapp-api.herokuapp.com/addReport?playlistId=\(playlistId)&videoId=\(videoId)&email=\(email)"
+    func report(playlistId: String, videoId: String, email: String, contents: String, success: @escaping (Bool) -> Void) {
+       let url = "https://easyapp-api.herokuapp.com/addReport?playlistId=\(playlistId)&videoId=\(videoId)&email=\(email)&contents=\(contents)"
         apiRequestShared.webServiceCall(url, params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
             success(response.responeJson["status"].boolValue)
         }

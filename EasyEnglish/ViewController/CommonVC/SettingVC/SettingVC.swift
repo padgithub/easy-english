@@ -121,9 +121,8 @@ extension SettingVC {
     }
     
     func restartApp() {
-        _ = self.presentAlert(style: .alert, title: "txt_restart_app", message: "txt_restart_app_msg", actionTitles: ["txt_oke".localized,"txt_cancel".localized], handler: { (action) in
+        _ = self.presentAlert(style: .alert, title: "txt_restart_app", message: "txt_restart_app_msg", actionTitles: ["txt_oke".localized], handler: { (action) in
             if action.title == "txt_oke".localized {
-                exit(0)
             }
         })
     }
@@ -131,7 +130,6 @@ extension SettingVC {
     func allwayRestartApp() {
         _ = self.presentAlert(style: .alert, title: "txt_restart_app", message: "txt_restart_app_msg", actionTitles: ["txt_oke".localized], handler: { (action) in
             if action.title == "txt_oke".localized {
-                exit(0)
             }
         })
     }

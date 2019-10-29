@@ -57,7 +57,7 @@ extension ListPlaylistVC {
                     self.share(item)
                 }
                 if action.title == "txt_report".localized {
-                    
+                    self.report(item)
                 }
             })
         }
@@ -68,6 +68,6 @@ extension ListPlaylistVC {
     }
     
     func loadData() {
-        arrData = PlaylistManager.shareInstance.fetchPlayList(category_id: categories.group_id)
+        arrData = PlaylistManager.shareInstance.fetchPlayList(category_id: categories.id)
     }
 }
