@@ -72,6 +72,8 @@ extension ListVideoVC {
                 }
             })
         }
+        
+        AdmobManager.shared.addBannerViewToBottom(inVC: self)
     }
     
     func initData() {

@@ -61,6 +61,8 @@ extension ListPlaylistVC {
                 }
             })
         }
+        
+        AdmobManager.shared.addBannerViewToTop(inVC: self)
     }
     
     func initData() {
