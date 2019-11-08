@@ -247,6 +247,8 @@ extension PlayVC {
         //        adViews.delegate = self
         //        adViews.loadAd()
         
+        AdmobManager.shared.addBannerViewToBottom(inVC: self)
+        
         imageSub.image = randomAvatar()
         textViewNote.delegate = self
         ctrHeightViewVideo.constant = ScreenSize.SCREEN_WIDTH * 9 / 16

@@ -35,7 +35,6 @@ class BaseVC: UIViewController {
 //        interstitialAd = FBInterstitialAd(placementID: "335878217019048_338732016733668")
 //        interstitialAd.delegate = self
 //        interstitialAd.load()
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,6 +51,8 @@ class BaseVC: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             self.removeZoomOutView()
         }
+        
+        AdmobManager.shared.forceShowAdd()
     }
     
     override func viewDidAppear(_ animated: Bool) {

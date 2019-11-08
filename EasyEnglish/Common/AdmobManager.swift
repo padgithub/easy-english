@@ -11,6 +11,7 @@ import GoogleMobileAds
 
 let adSize = UIDevice.current.userInterfaceIdiom == .pad ? kGADAdSizeLeaderboard: kGADAdSizeBanner
 let numberToShowAd = 10
+
 let keyBanner = ""
 let keyInterstitial = ""
 
@@ -70,7 +71,7 @@ class AdmobManager: NSObject {
     }
     
     func openRateView(){
-//        SKStoreReviewController.requestReview()
+        SKStoreReviewController.requestReview()
     }
     
     func addBannerView(frame: CGRect, inVC: UIViewController){
