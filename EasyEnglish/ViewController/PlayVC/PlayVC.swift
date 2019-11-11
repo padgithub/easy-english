@@ -42,6 +42,7 @@ class PlayVC: BaseVC {
     @IBOutlet weak var adView: KHView!
     @IBOutlet weak var imgLoader: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var ctrHeightViewAd: NSLayoutConstraint!
     
     var viewModel = ListModelView()
     var current: Int = 0
@@ -247,8 +248,6 @@ extension PlayVC {
         //        adViews.delegate = self
         //        adViews.loadAd()
         
-        AdmobManager.shared.addBannerViewToBottom(inVC: self)
-        
         imageSub.image = randomAvatar()
         textViewNote.delegate = self
         ctrHeightViewVideo.constant = ScreenSize.SCREEN_WIDTH * 9 / 16
@@ -350,7 +349,8 @@ extension PlayVC {
         if TAppDelegate.isPlay {
             self.imgLoader.isHidden = true
         }
-        
+        ctrHeightViewAd.constant = adSize.size.height
+        AdmobManager.shared.addBannerInView(view: adView, inVC: self)
     }
     
     @objc

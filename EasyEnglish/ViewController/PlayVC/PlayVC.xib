@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +15,7 @@
                 <outlet property="btMoreBack" destination="hhu-io-Wvt" id="7Ok-6I-3Iz"/>
                 <outlet property="btPlayPause" destination="9hT-id-3lq" id="p4X-uk-T9E"/>
                 <outlet property="ctrHeighViewMoreInfo" destination="zTG-Te-HXI" id="Aid-mI-qN1"/>
+                <outlet property="ctrHeightViewAd" destination="Exd-G2-swy" id="BAk-Gv-ytb"/>
                 <outlet property="ctrHeightViewNote" destination="yD9-A9-Uyu" id="Cdk-Uq-sSB"/>
                 <outlet property="ctrHeightViewVideo" destination="I62-k6-V8B" id="rA3-RJ-sg7"/>
                 <outlet property="imageSub" destination="lDR-jW-uZj" id="ldm-9G-lOf"/>
@@ -763,13 +763,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycA-Dx-Kdt" userLabel="ViewADS" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                    <rect key="frame" x="10" y="320" width="355" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="320" width="375" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-Wz-Yvi" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVk-ue-fB2" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
@@ -786,14 +786,14 @@
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="10"/>
+                                                    <real key="value" value="0.0"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" id="Exd-G2-swy"/>
+                                        <constraint firstAttribute="height" constant="50" id="Exd-G2-swy"/>
                                         <constraint firstAttribute="trailing" secondItem="Of1-Wz-Yvi" secondAttribute="trailing" id="UCF-Hm-eSR"/>
                                         <constraint firstItem="Of1-Wz-Yvi" firstAttribute="leading" secondItem="ycA-Dx-Kdt" secondAttribute="leading" id="Wz0-Nz-OZs"/>
                                         <constraint firstItem="Of1-Wz-Yvi" firstAttribute="top" secondItem="ycA-Dx-Kdt" secondAttribute="top" id="qTV-FZ-T0A"/>
@@ -804,7 +804,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ur2-IH-P0M">
-                                    <rect key="frame" x="0.0" y="320" width="375" height="681"/>
+                                    <rect key="frame" x="0.0" y="375" width="375" height="681"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-fg-FL5" userLabel="View1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="46.333333333333336"/>
@@ -870,14 +870,14 @@
                                 <constraint firstItem="u6M-GW-kMV" firstAttribute="top" secondItem="dOk-cI-U5n" secondAttribute="top" id="Mgf-5l-Guv"/>
                                 <constraint firstItem="ycA-Dx-Kdt" firstAttribute="top" secondItem="QuC-c2-PZq" secondAttribute="bottom" constant="5" id="O24-2e-n0k"/>
                                 <constraint firstItem="u6M-GW-kMV" firstAttribute="leading" secondItem="dOk-cI-U5n" secondAttribute="leading" id="Pch-XP-MTh"/>
-                                <constraint firstItem="Ur2-IH-P0M" firstAttribute="top" secondItem="ycA-Dx-Kdt" secondAttribute="bottom" id="QRg-Nv-XX1"/>
+                                <constraint firstItem="Ur2-IH-P0M" firstAttribute="top" secondItem="ycA-Dx-Kdt" secondAttribute="bottom" constant="5" id="QRg-Nv-XX1"/>
                                 <constraint firstAttribute="trailing" secondItem="Ur2-IH-P0M" secondAttribute="trailing" id="V62-kO-JGB"/>
                                 <constraint firstAttribute="trailing" secondItem="u6M-GW-kMV" secondAttribute="trailing" id="Ypf-tE-GyF"/>
-                                <constraint firstItem="ycA-Dx-Kdt" firstAttribute="leading" secondItem="dOk-cI-U5n" secondAttribute="leading" constant="10" id="dZ4-xp-alt"/>
+                                <constraint firstItem="ycA-Dx-Kdt" firstAttribute="leading" secondItem="dOk-cI-U5n" secondAttribute="leading" id="dZ4-xp-alt"/>
                                 <constraint firstItem="QuC-c2-PZq" firstAttribute="top" secondItem="u6M-GW-kMV" secondAttribute="bottom" id="fZl-KD-WL1"/>
                                 <constraint firstItem="4W5-qR-dCY" firstAttribute="width" secondItem="u6M-GW-kMV" secondAttribute="width" id="iZx-lU-yYR"/>
                                 <constraint firstItem="Ur2-IH-P0M" firstAttribute="leading" secondItem="dOk-cI-U5n" secondAttribute="leading" id="mqM-Y5-HQN"/>
-                                <constraint firstAttribute="trailing" secondItem="ycA-Dx-Kdt" secondAttribute="trailing" constant="10" id="ygY-y7-V7s"/>
+                                <constraint firstAttribute="trailing" secondItem="ycA-Dx-Kdt" secondAttribute="trailing" id="ygY-y7-V7s"/>
                                 <constraint firstAttribute="trailing" secondItem="QuC-c2-PZq" secondAttribute="trailing" id="zer-7A-k6w"/>
                                 <constraint firstAttribute="bottom" secondItem="Ur2-IH-P0M" secondAttribute="bottom" id="zm0-Ks-mww"/>
                             </constraints>

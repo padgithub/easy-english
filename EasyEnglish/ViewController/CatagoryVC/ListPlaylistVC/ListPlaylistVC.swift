@@ -12,7 +12,8 @@ class ListPlaylistVC: BaseVC {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navi: NavigationView!
-    
+    @IBOutlet weak var adView: UIView!
+    @IBOutlet weak var ctrHeightViewAd: NSLayoutConstraint!
     var viewModel = ListModelPlaylistView()
     var arrData = [Playlist]()
     var categories = Category()
@@ -22,6 +23,12 @@ class ListPlaylistVC: BaseVC {
         initUI()
         loadData()
         initData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ctrHeightViewAd.constant = adSize.size.height
+        AdmobManager.shared.addBannerInView(view: adView, inVC: self)
     }
 }
 
@@ -61,8 +68,6 @@ extension ListPlaylistVC {
                 }
             })
         }
-        
-        AdmobManager.shared.addBannerViewToTop(inVC: self)
     }
     
     func initData() {

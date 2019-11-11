@@ -57,11 +57,11 @@ class SettingVC: BaseVC {
             break
         case 24:
             //Set the default sharing message.
-            let message = "Message goes here."
+//            let message = "Message goes here."
             //Set the link to share.
             if let link = NSURL(string: "https://itunes.apple.com/app/id1479709335")
             {
-                let objectsToShare = [message,link] as [Any]
+                let objectsToShare = [link] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
                 self.present(activityVC, animated: true, completion: nil)

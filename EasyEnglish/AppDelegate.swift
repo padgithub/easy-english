@@ -36,8 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(FilePaths.VidToLive.livePath)
 //        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         //Config Admob
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-        AdmobManager.shared.fullRootViewController = (self.window?.rootViewController)
+        GADMobileAds.sharedInstance().start { (status) in
+            
+        }
+        AdmobManager.shared.fullRootViewController = (self.window?.rootViewController)!
         //
         youtubeShare.turnAudio()
         configSQL()
@@ -232,3 +234,5 @@ extension AppDelegate {
         return tabVC
     }
 }
+
+

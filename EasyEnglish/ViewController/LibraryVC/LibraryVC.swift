@@ -18,7 +18,8 @@ class LibraryVC: BaseVC {
     @IBOutlet weak var navi: NavigationView!
     @IBOutlet weak var tableViewLeft: UITableView!
     @IBOutlet weak var tableViewRight: UITableView!
-    
+    @IBOutlet weak var adView: UIView!
+    @IBOutlet weak var ctrHeightViewAd: NSLayoutConstraint!
     var viewModelNote = ListNoteModelView()
     var viewModelHistory = ListModelView()
     
@@ -105,6 +106,10 @@ extension LibraryVC {
                 }
             })
         }
+        
+        //Admob
+        ctrHeightViewAd.constant = adSize.size.height
+        AdmobManager.shared.addBannerInView(view: adView, inVC: self)
     }
     
     func loadData(){

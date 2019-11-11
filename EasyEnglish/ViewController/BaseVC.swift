@@ -25,16 +25,6 @@ class BaseVC: UIViewController {
         } else {
             // Fallback on earlier versions
         }
-//        if let token = FBSDKAccessToken.current() {
-//            print(token)
-//        }
-        
-//        nativeAd.delegate = self
-//        nativeAd.loadAd()
-//
-//        interstitialAd = FBInterstitialAd(placementID: "335878217019048_338732016733668")
-//        interstitialAd.delegate = self
-//        interstitialAd.load()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -12,6 +12,8 @@ class ListVideoVC: BaseVC {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navi: NavigationView!
+    @IBOutlet weak var adView: UIView!
+    @IBOutlet weak var ctrHeightViewAd: NSLayoutConstraint!
     
     var viewModel = ListModelView()
     var arrData = [Items]()
@@ -23,6 +25,13 @@ class ListVideoVC: BaseVC {
         initUI()
         loadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ctrHeightViewAd.constant = adSize.size.height
+        AdmobManager.shared.addBannerInView(view: adView, inVC: self)
+    }
+
 }
 
 extension ListVideoVC {
@@ -72,8 +81,6 @@ extension ListVideoVC {
                 }
             })
         }
-        
-        AdmobManager.shared.addBannerViewToBottom(inVC: self)
     }
     
     func initData() {
