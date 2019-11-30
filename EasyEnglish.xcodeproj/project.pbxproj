@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -139,7 +139,6 @@
 		018D5A58232949F400ADA3C0 /* ItemsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC5421E10F62001B6BAF /* ItemsVideo.swift */; };
 		018D5A59232949F400ADA3C0 /* ListPlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC7721E11833001B6BAF /* ListPlaylistVC.swift */; };
 		018D5A5A232949F400ADA3C0 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F757202258B218007BA54E /* MBCircularProgressBarView.m */; };
-		018D5A5C232949F400ADA3C0 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
 		018D5A5E232949F400ADA3C0 /* ContentListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC3421E10B59001B6BAF /* ContentListVC.xib */; };
 		018D5A5F232949F400ADA3C0 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8C21D631140051221E /* TextFieldView.xib */; };
 		018D5A61232949F400ADA3C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DB4321D62FE70051221E /* Assets.xcassets */; };
@@ -209,9 +208,11 @@
 		01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01EE355121EFAAE200C3346F /* Localizable.strings */; };
 		01F757242258B218007BA54E /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F757202258B218007BA54E /* MBCircularProgressBarView.m */; };
 		01F757252258B218007BA54E /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F757212258B218007BA54E /* MBCircularProgressBarLayer.m */; };
+		2D49703BD3AB7D2ED66A8FE9 /* Pods_EasyKorean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CC735EEF3D9F597F0EB255 /* Pods_EasyKorean.framework */; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
 		7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
+		98A17317749F1F6C77CFD26C /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -354,13 +355,16 @@
 		01F757222258B218007BA54E /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarView.h; sourceTree = "<group>"; };
 		01F757232258B218007BA54E /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
 		161AFF1FA117FDBF2981F173 /* Pods-EasyEnglishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishUITests/Pods-EasyEnglishUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2BAAC487FAF0D5DB388D5466 /* Pods-EasyKorean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKorean.debug.xcconfig"; path = "Target Support Files/Pods-EasyKorean/Pods-EasyKorean.debug.xcconfig"; sourceTree = "<group>"; };
 		2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45BACCE45EDA637804DBD243 /* Pods-EasyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.release.xcconfig"; sourceTree = "<group>"; };
 		499A9427697047D9BBD40088 /* Pods-EasyEnglishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.release.xcconfig"; sourceTree = "<group>"; };
+		70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		77853C2C102491B6C41A4AC8 /* Pods-EasyEnglishUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglishUITests/Pods-EasyEnglishUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A708446E7193FBECAC1ACD09 /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
+		9C168C54ECA149C8A1AFB297 /* Pods-EasyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.release.xcconfig"; sourceTree = "<group>"; };
 		A769842B01898F344C4E78D4 /* Pods-EasyEnglishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9CC735EEF3D9F597F0EB255 /* Pods_EasyKorean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKorean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1968497E2AB7461327817C0 /* Pods-EasyKorean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKorean.release.xcconfig"; path = "Target Support Files/Pods-EasyKorean/Pods-EasyKorean.release.xcconfig"; sourceTree = "<group>"; };
 		FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -369,7 +373,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				018D5A5C232949F400ADA3C0 /* Pods_EasyEnglish.framework in Frameworks */,
+				2D49703BD3AB7D2ED66A8FE9 /* Pods_EasyKorean.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */,
+				98A17317749F1F6C77CFD26C /* Pods_EasyEnglish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,6 +920,7 @@
 				CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */,
 				FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */,
 				2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */,
+				B9CC735EEF3D9F597F0EB255 /* Pods_EasyKorean.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -922,12 +928,14 @@
 		AD30D091A641D78B8E9D4892 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A708446E7193FBECAC1ACD09 /* Pods-EasyEnglish.debug.xcconfig */,
-				45BACCE45EDA637804DBD243 /* Pods-EasyEnglish.release.xcconfig */,
 				A769842B01898F344C4E78D4 /* Pods-EasyEnglishTests.debug.xcconfig */,
 				499A9427697047D9BBD40088 /* Pods-EasyEnglishTests.release.xcconfig */,
 				77853C2C102491B6C41A4AC8 /* Pods-EasyEnglishUITests.debug.xcconfig */,
 				161AFF1FA117FDBF2981F173 /* Pods-EasyEnglishUITests.release.xcconfig */,
+				70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */,
+				9C168C54ECA149C8A1AFB297 /* Pods-EasyEnglish.release.xcconfig */,
+				2BAAC487FAF0D5DB388D5466 /* Pods-EasyKorean.debug.xcconfig */,
+				D1968497E2AB7461327817C0 /* Pods-EasyKorean.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -939,11 +947,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 018D5A7A232949F400ADA3C0 /* Build configuration list for PBXNativeTarget "EasyKorean" */;
 			buildPhases = (
-				018D5A15232949F400ADA3C0 /* [CP] Check Pods Manifest.lock */,
+				E6AA7FC350B9A0E1A3847172 /* [CP] Check Pods Manifest.lock */,
 				018D5A16232949F400ADA3C0 /* Sources */,
 				018D5A5B232949F400ADA3C0 /* Frameworks */,
 				018D5A5D232949F400ADA3C0 /* Resources */,
-				018D5A79232949F400ADA3C0 /* [CP] Embed Pods Frameworks */,
+				52DE3E3C7F4DD1F72D8FC10E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1151,80 +1159,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		018D5A15232949F400ADA3C0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyEnglish-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		018D5A79232949F400ADA3C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/GRDBCipher/GRDBCipher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
-				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
-				"${BUILT_PRODUCTS_DIR}/Sheeeeeeeeet/Sheeeeeeeeet.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
-				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGElasticPullToRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDBCipher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sheeeeeeeeet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4ACA1387913AC400F6F53D0C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1245,6 +1179,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52DE3E3C7F4DD1F72D8FC10E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKorean/Pods-EasyKorean-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKorean/Pods-EasyKorean-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKorean/Pods-EasyKorean-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6154E135A2F9DC6963A8E723 /* [CP] Check Pods Manifest.lock */ = {
@@ -1291,7 +1242,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F36A17DD0C46048A512EF9EA /* [CP] Embed Pods Frameworks */ = {
+		E6AA7FC350B9A0E1A3847172 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1299,44 +1250,31 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/GRDBCipher/GRDBCipher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
-				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
-				"${BUILT_PRODUCTS_DIR}/Sheeeeeeeeet/Sheeeeeeeeet.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
-				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGElasticPullToRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDBCipher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sheeeeeeeeet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"$(DERIVED_FILE_DIR)/Pods-EasyKorean-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F36A17DD0C46048A512EF9EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1569,18 +1507,19 @@
 /* Begin XCBuildConfiguration section */
 		018D5A7B232949F400ADA3C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A708446E7193FBECAC1ACD09 /* Pods-EasyEnglish.debug.xcconfig */;
+			baseConfigurationReference = 2BAAC487FAF0D5DB388D5466 /* Pods-EasyKorean.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Korean";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = "EasyEnglish copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1593,8 +1532,6 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"GRDBCipher\"",
-					"-framework",
-					"\"Instructions\"",
 					"-framework",
 					"\"KRActivityIndicatorView\"",
 					"-framework",
@@ -1647,18 +1584,19 @@
 		};
 		018D5A7C232949F400ADA3C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45BACCE45EDA637804DBD243 /* Pods-EasyEnglish.release.xcconfig */;
+			baseConfigurationReference = D1968497E2AB7461327817C0 /* Pods-EasyKorean.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Korean";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = "EasyEnglish copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1671,8 +1609,6 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"GRDBCipher\"",
-					"-framework",
-					"\"Instructions\"",
 					"-framework",
 					"\"KRActivityIndicatorView\"",
 					"-framework",
@@ -1843,7 +1779,7 @@
 		};
 		01B3DB6221D62FE70051221E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A708446E7193FBECAC1ACD09 /* Pods-EasyEnglish.debug.xcconfig */;
+			baseConfigurationReference = 70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1867,8 +1803,6 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"GRDBCipher\"",
-					"-framework",
-					"\"Instructions\"",
 					"-framework",
 					"\"KRActivityIndicatorView\"",
 					"-framework",
@@ -1921,7 +1855,7 @@
 		};
 		01B3DB6321D62FE70051221E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45BACCE45EDA637804DBD243 /* Pods-EasyEnglish.release.xcconfig */;
+			baseConfigurationReference = 9C168C54ECA149C8A1AFB297 /* Pods-EasyEnglish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1945,8 +1879,6 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"GRDBCipher\"",
-					"-framework",
-					"\"Instructions\"",
 					"-framework",
 					"\"KRActivityIndicatorView\"",
 					"-framework",

@@ -11,7 +11,7 @@ import StoreKit
 @available(iOS 10.3, *)
 enum AppStoreReviewManager {
     // 1.
-    static let minimumReviewWorthyActionCount = 3
+    static let minimumReviewWorthyActionCount = 5
     
     static func requestReviewIfAppropriate() {
         let defaults = UserDefaults.standard
@@ -32,21 +32,21 @@ enum AppStoreReviewManager {
         }
         
         // 6.
-        let bundleVersionKey = kCFBundleVersionKey as String
-        let currentVersion = bundle.object(forInfoDictionaryKey: bundleVersionKey) as? String
-        let lastVersion = defaults.string(forKey: "lastReviewRequestAppVersion")
-        
-        // 7.
-        guard lastVersion == nil || lastVersion != currentVersion else {
-            return
-        }
+//        let bundleVersionKey = kCFBundleVersionKey as String
+//        let currentVersion = bundle.object(forInfoDictionaryKey: bundleVersionKey) as? String
+//        let lastVersion = defaults.string(forKey: "lastReviewRequestAppVersion")
+//
+//        // 7.
+//        guard lastVersion == nil || lastVersion != currentVersion else {
+//            return
+//        }
         
         // 8.
         SKStoreReviewController.requestReview()
         
         // 9.
         defaults.set(0, forKey: "reviewWorthyActionCount")
-        defaults.set(currentVersion, forKey: "lastReviewRequestAppVersion")
+//        defaults.set(currentVersion, forKey: "lastReviewRequestAppVersion")
     }
     
     static func requestReviewNow() {

@@ -30,7 +30,6 @@ class AdmobManager: NSObject {
     override init() {
         super.init()
         self.createAndLoadInterstitial()
-        counter = numberToShowAd - 2
         
         if #available(iOS 11.0, *) {
             let window = UIApplication.shared.keyWindow
@@ -48,8 +47,6 @@ class AdmobManager: NSObject {
         let witdh = UIScreen.main.bounds.size.width
         let height: CGFloat = inVC.view.bounds.size.height
         let frame = CGRect.init(x: (witdh - adSize.size.width)/2 , y: height - adSize.size.height - bottomSafe, width: adSize.size.width, height: adSize.size.height)
-        let request = GADRequest()
-        request.testDevices = [ kGADSimulatorID, "777465d8c44cabb18c9d65f1f5192b0c2a172ccb"]
         banerView.frame = frame
     }
     
@@ -57,16 +54,12 @@ class AdmobManager: NSObject {
         let witdh = UIScreen.main.bounds.size.width
         let height: CGFloat = inVC.view.bounds.size.height
         let frame = CGRect.init(x: (witdh - adSize.size.width)/2 , y: height - adSize.size.height - bottomSafe, width: adSize.size.width, height: adSize.size.height)
-        let request = GADRequest()
-        request.testDevices = [ kGADSimulatorID, "777465d8c44cabb18c9d65f1f5192b0c2a172ccb"]
         self.addBannerView(frame: frame, inVC: inVC)
     }
     
     func addBannerViewToTop(inVC: UIViewController){
         let witdh = UIScreen.main.bounds.size.width
         let frame = CGRect.init(x: (witdh - adSize.size.width)/2 , y: 0, width: adSize.size.width, height: adSize.size.height)
-        let request = GADRequest()
-        request.testDevices = [ kGADSimulatorID, "777465d8c44cabb18c9d65f1f5192b0c2a172ccb"]
         self.addBannerView(frame: frame, inVC: inVC)
     }
     
@@ -110,7 +103,6 @@ class AdmobManager: NSObject {
         bannerView.frame = frame
         inVC.view.addSubview(bannerView)
         let request = GADRequest()
-        request.testDevices = [ kGADSimulatorID, "777465d8c44cabb18c9d65f1f5192b0c2a172ccb"]
         bannerView.load(request)
 
         return bannerView
@@ -120,63 +112,40 @@ class AdmobManager: NSObject {
         interstitial = GADInterstitial(adUnitID: keyInterstitial)
         interstitial.delegate = self
         let request = GADRequest()
-        request.testDevices = [ kGADSimulatorID, "777465d8c44cabb18c9d65f1f5192b0c2a172ccb"]
         interstitial.load(request)
     }
     
-    func logEvent(){
+    func logEvent(_ issShow: Bool){
+        
         if self.loadFullAdError {
             self.createAndLoadInterstitial()
             self.loadFullAdError = false
         }
         counter = counter + 1
         if  counter >= numberToShowAd {
-            if interstitial.isReady{
-                interstitial.present(fromRootViewController: fullRootViewController)
-                counter = 1
-                isShowAds = true
+            if interstitial.isReady && issShow {
+                if let vc = TAppDelegate.window?.rootViewController {
+                    interstitial.present(fromRootViewController: vc)
+                    counter = 1
+                    isShowAds = true
+                }
             }else{
+                counter = 1
                 self.openRateView()
             }
         }else{
             if isShowAds{
                 isShowAds = false
-                self.openRateView()
-            }
-        }
-    }
-    
-    func logEvent(inVC: UIViewController){
-        if self.loadFullAdError {
-            self.createAndLoadInterstitial()
-            self.loadFullAdError = false
-        }
-        counter = counter + 1
-        if  counter >= numberToShowAd {
-            if interstitial.isReady{
-                interstitial.present(fromRootViewController: inVC)
-                counter = 1
-                isShowAds = true
-            }else{
-                self.openRateView()
-            }
-        }else{
-            if isShowAds{
-                isShowAds = false
-                self.openRateView()
+//                self.openRateView()
             }
         }
     }
     
     func forceShowAdd(){
         counter = numberToShowAd
-        self.logEvent()
+        self.logEvent(true)
     }
-    
-    func forceShowAdd(inVC: UIViewController){
-        counter = numberToShowAd
-        self.logEvent(inVC: inVC)
-    }
+
 }
 
 extension AdmobManager: GADBannerViewDelegate{

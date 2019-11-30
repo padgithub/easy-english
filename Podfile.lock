@@ -1,44 +1,42 @@
 PODS:
   - Alamofire (4.7.3)
   - DGElasticPullToRefresh (1.1)
-  - Google-Mobile-Ads-SDK (7.44.0):
+  - Google-Mobile-Ads-SDK (7.52.0):
     - GoogleAppMeasurement (~> 6.0)
-  - GoogleAppMeasurement (6.0.1):
+  - GoogleAppMeasurement (6.1.6):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (6.1.0):
+    - nanopb (= 0.3.9011)
+  - GoogleUtilities/AppDelegateSwizzler (6.3.2):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.1.0)
-  - GoogleUtilities/Logger (6.1.0):
+  - GoogleUtilities/Environment (6.3.2)
+  - GoogleUtilities/Logger (6.3.2):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.1.0):
+  - GoogleUtilities/MethodSwizzler (6.3.2):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.1.0):
+  - GoogleUtilities/Network (6.3.2):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.1.0)"
-  - GoogleUtilities/Reachability (6.1.0):
+  - "GoogleUtilities/NSData+zlib (6.3.2)"
+  - GoogleUtilities/Reachability (6.3.2):
     - GoogleUtilities/Logger
   - GRDBCipher (3.5.0):
     - SQLCipher (~> 3.4.1)
-  - Instructions (1.2.0)
   - Kingfisher (4.10.1)
   - KRActivityIndicatorView (3.0.0)
   - KRProgressHUD (3.4.0):
     - KRActivityIndicatorView (= 3.0.0)
-  - nanopb (0.3.901):
-    - nanopb/decode (= 0.3.901)
-    - nanopb/encode (= 0.3.901)
-  - nanopb/decode (0.3.901)
-  - nanopb/encode (0.3.901)
+  - nanopb (0.3.9011):
+    - nanopb/decode (= 0.3.9011)
+    - nanopb/encode (= 0.3.9011)
+  - nanopb/decode (0.3.9011)
+  - nanopb/encode (0.3.9011)
   - QuickLayout (2.1.1)
-  - Sheeeeeeeeet (1.0.1)
   - SQLCipher (3.4.2):
     - SQLCipher/standard (= 3.4.2)
   - SQLCipher/common (3.4.2)
@@ -55,30 +53,26 @@ DEPENDENCIES:
   - DGElasticPullToRefresh
   - Google-Mobile-Ads-SDK
   - GRDBCipher
-  - Instructions
   - Kingfisher
   - KRProgressHUD
-  - Sheeeeeeeeet
   - SwiftEntryKit
   - SwiftyJSON
   - ViewAnimator
   - YouTubePlayer
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - DGElasticPullToRefresh
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
     - GRDBCipher
-    - Instructions
     - Kingfisher
     - KRActivityIndicatorView
     - KRProgressHUD
     - nanopb
     - QuickLayout
-    - Sheeeeeeeeet
     - SQLCipher
     - SwiftEntryKit
     - SwiftyJSON
@@ -88,23 +82,21 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
-  Google-Mobile-Ads-SDK: 1e72b4f438d997ab0f2ee62b3a7b0cbcc87c47cb
-  GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
-  GoogleUtilities: 84df567c76ca84f67b7bb40e769fdd4acc746a10
+  Google-Mobile-Ads-SDK: 62f6244637306cb60a1b4adda067f53224c7a860
+  GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
+  GoogleUtilities: 547a86735c6f0ee30ad17e94df4fc21f616b71cb
   GRDBCipher: 7793bde2d6845a8ca7d73176467638e0abf2135b
-  Instructions: 763c2452bd78e05d8f969a21c1cbc3c07deef33a
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   KRActivityIndicatorView: c414000730a6f4969eeb354bee4f2aebc89c2c2e
   KRProgressHUD: 79c8703f82179fe34b3602f10b30726f887983fa
-  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   QuickLayout: 9af2b7fd89a6552828f51a5aba28d1bcdb8b340c
-  Sheeeeeeeeet: 7fd02a640d50f63e1b615dac7e17b8b5068c3db0
   SQLCipher: f9fcf29b2e59ced7defc2a2bdd0ebe79b40d4990
   SwiftEntryKit: f0dd54bb0fb9f234738cd15a32365265cb975be8
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 56962054c6eec7a3fa2bf3046ea53d39038d9b53
+PODFILE CHECKSUM: 2b408e43bfdec73b984448a8b5e5cc5d9f37e4e6
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.8.4

@@ -13,7 +13,7 @@ import SwiftEntryKit
 let kBarHeight = (DeviceType.IS_IPHONE_X) ? 84 : 50
 let placementID = "335878217019048_338994906707379"
 class BaseVC: UIViewController {
-    
+    var isShowInterestl = true
 //    var nativeAd = FBNativeAd(placementID: placementID)
     var zoomOutView = ZoomOutViewPlayVideo()
 //    var interstitialAd = FBInterstitialAd()
@@ -42,7 +42,7 @@ class BaseVC: UIViewController {
             self.removeZoomOutView()
         }
         
-        AdmobManager.shared.logEvent()
+        AdmobManager.shared.logEvent(isShowInterestl)
     }
     
     override func viewDidAppear(_ animated: Bool) {

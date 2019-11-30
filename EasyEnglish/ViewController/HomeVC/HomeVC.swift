@@ -31,6 +31,7 @@ class HomeVC: BaseVC {
 
 extension HomeVC {
     func initUI(){
+        isShowInterestl = false
         navi.title = "app_name".localized.uppercased()
         navi.handleProfile = {
             self.openProfile()

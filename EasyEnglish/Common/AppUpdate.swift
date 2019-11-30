@@ -180,13 +180,11 @@ class AppUpdate: NSObject {
             })
             alert.addAction(updateAction)
         }
-        
-        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
-        alertWindow.rootViewController = UIViewController()
-        alertWindow.makeKeyAndVisible()
-        alertWindow.rootViewController?.present(alert, animated: true, completion: {
-            self.delegate?.appUpdaterDidShowUpdateDialog()
-        })
+        if let vc = TAppDelegate.window?.rootViewController {
+            vc.present(alert, animated: true, completion: {
+                self.delegate?.appUpdaterDidShowUpdateDialog()
+            })
+        }
     }
 }
 

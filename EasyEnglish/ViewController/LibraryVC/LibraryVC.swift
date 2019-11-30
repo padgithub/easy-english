@@ -56,6 +56,7 @@ class LibraryVC: BaseVC {
 
 extension LibraryVC {
     func initUI() {
+        isShowInterestl = false
         navi.title = "txt_library".localized.uppercased()
         
         navi.handleSetting = {

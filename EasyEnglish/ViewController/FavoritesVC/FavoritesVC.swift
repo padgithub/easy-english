@@ -51,6 +51,7 @@ class FavoritesVC: BaseVC {
 
 extension FavoritesVC {
     func initUI() {
+        isShowInterestl = false
         navi.title = "txt_favorites".localized.uppercased()
         navi.handleSetting = {
             self.openSetting()

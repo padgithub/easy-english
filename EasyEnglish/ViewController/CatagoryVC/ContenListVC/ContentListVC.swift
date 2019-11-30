@@ -25,6 +25,7 @@ class ContentListVC: BaseVC {
     }
     
     func initUI() {
+        isShowInterestl = false
         navi.title = "txt_catalogue".localized.uppercased()
         navi.handleSetting = {
             self.openSetting()

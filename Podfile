@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '9.0'
 
 target 'EasyEnglish' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -8,7 +8,7 @@ target 'EasyEnglish' do
   # Pods for EasyEnglish
   pod 'YouTubePlayer'
   pod 'ViewAnimator'
-  pod 'Instructions'
+#  pod 'Instructions'
   pod 'DGElasticPullToRefresh'
   pod 'Kingfisher'
   pod 'SwiftEntryKit'
@@ -16,8 +16,8 @@ target 'EasyEnglish' do
   pod 'GRDBCipher'
   pod 'KRProgressHUD'
   pod 'Alamofire'
-  pod 'Sheeeeeeeeet'
-#  pod 'Google-Mobile-Ads-SDK'
+#  pod 'Sheeeeeeeeet'
+  pod 'Google-Mobile-Ads-SDK'
 #  pod 'FBSDKLoginKit'
 
 
@@ -31,4 +31,24 @@ target 'EasyEnglish' do
     # Pods for testing
   end
 
+end
+
+target 'EasyKorean' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for EasyEnglish
+  pod 'YouTubePlayer'
+  pod 'ViewAnimator'
+#  pod 'Instructions'
+  pod 'DGElasticPullToRefresh'
+  pod 'Kingfisher'
+  pod 'SwiftEntryKit'
+  pod 'SwiftyJSON'
+  pod 'GRDBCipher'
+  pod 'KRProgressHUD'
+  pod 'Alamofire'
+#  pod 'Sheeeeeeeeet'
+  pod 'Google-Mobile-Ads-SDK'
+#  pod 'FBSDKLoginKit'
 end
