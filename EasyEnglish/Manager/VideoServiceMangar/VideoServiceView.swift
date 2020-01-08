@@ -43,27 +43,38 @@ class VideoServiceView: NSObject {
 }
 
 extension VideoServiceView: YouTubePlayerDelegate {
+    func playerQualityChanged(_ videoPlayer: YouTubePlayerView, playbackQuality: YouTubePlaybackQuality) {
+        
+    }
+    
     func playerReady(_ videoPlayer: YouTubePlayerView) {
         videoPlayer.play()
         TAppDelegate.isPlay = true
-        handleDuration?(videoPlayer.getDuration() ?? "")
+        videoPlayer.getDuration { (dura) in
+            self.handleDuration?(dura ?? "")
+        }
+        
         Timer.every(1) {
-            self.handleCurentime?(videoPlayer.getCurrentTime() ?? "",videoPlayer.getDuration() ?? "")
+            videoPlayer.getCurrentTime { (time) in
+                videoPlayer.getDuration { (duration) in
+                    self.handleCurentime?(time ?? "",duration ?? "")
+                }
+            }
         }
         handleReadyPlay?()
     }
     
     func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
         switch playerState {
-        case .Playing:
+        case .playing:
             TAppDelegate.isPlay = true
-        case .Paused:
+        case .paused:
             if !UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
                 handlePlayWhenPause?()
             }
             TAppDelegate.isPlay = false
             break
-        case .Ended:
+        case .ended:
             if TAppDelegate.isAutoPlay {
                 TAppDelegate.indexPlaying += 1
                 if TAppDelegate.indexPlaying == TAppDelegate.arrVideoPlaying.count{
