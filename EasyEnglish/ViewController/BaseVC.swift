@@ -51,6 +51,14 @@ class BaseVC: UIViewController {
         }
     }
     
+    func menuContainerViewController() -> MFSideMenuContainerViewController {
+        return self.navigationController?.parent as! MFSideMenuContainerViewController
+    }
+    
+    func openMenu() {
+        TAppDelegate.menuContainerViewController?.toggleLeftSideMenuCompletion(nil)
+    }
+    
     func insertHistory() {
         let obj = HistoryObj()
         obj.video_id = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id

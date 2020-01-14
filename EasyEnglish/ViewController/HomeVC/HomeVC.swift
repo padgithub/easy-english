@@ -34,7 +34,7 @@ extension HomeVC {
         isShowInterestl = false
         navi.title = "app_name".localized.uppercased()
         navi.handleProfile = {
-            self.openProfile()
+            self.openMenu()
         }
         navi.handleSetting = {
             self.openSetting()

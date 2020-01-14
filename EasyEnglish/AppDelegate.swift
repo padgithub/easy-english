@@ -13,7 +13,7 @@ import GoogleMobileAds
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    var menuContainerViewController: MFSideMenuContainerViewController? = nil
     var tabVC: UITabBarController?
     
     var isShowZoomOutView = true
@@ -170,10 +170,10 @@ extension AppDelegate {
         dbShared.checkDB { (bool) in
             if bool {
                 dbShared.downloadDB(success: { (xong) in
-                    self.initMainVC()
+                    self.initMenu()
                 })
             }else{
-                self.initMainVC()
+                self.initMenu()
             }
         }
     }
@@ -236,3 +236,14 @@ extension AppDelegate {
 }
 
 
+extension AppDelegate {
+    func initMenu() {
+        let menuVC = MenuVC(nibName: "MenuVC", bundle: nil)
+        let homeVC = HomeVC.init()
+        let navi = UINavigationController(rootViewController: homeVC)
+        navi.isNavigationBarHidden = true
+        menuContainerViewController  = MFSideMenuContainerViewController.container(withCenter: navi,
+                                                                                   leftMenuViewController: menuVC,  rightMenuViewController: nil)
+        self.window?.rootViewController = menuContainerViewController
+    }
+}

@@ -6,7 +6,7 @@ target 'EasyEnglish' do
   use_frameworks!
 
   # Pods for EasyEnglish
-  pod 'YouTubePlayer'
+#  pod 'YouTubePlayer'
   pod 'ViewAnimator'
 #  pod 'Instructions'
   pod 'DGElasticPullToRefresh'
@@ -38,7 +38,7 @@ target 'EasyKorean' do
   use_frameworks!
 
   # Pods for EasyEnglish
-  pod 'YouTubePlayer'
+#  pod 'YouTubePlayer'
   pod 'ViewAnimator'
 #  pod 'Instructions'
   pod 'DGElasticPullToRefresh'

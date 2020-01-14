@@ -119,11 +119,7 @@ open class YouTubePlayerView: UIView, UIWebViewDelegate {
         if #available(iOS 10.0, *) {
             webConfiguration.mediaTypesRequiringUserActionForPlayback = []
         } else {
-            if #available(iOS 9.0, *) {
-                webConfiguration.requiresUserActionForMediaPlayback = false
-            } else {
-                // Fallback on earlier versions
-            }
+            webConfiguration.requiresUserActionForMediaPlayback = false
         }
         
         webView = WKWebView(frame: CGRect.zero, configuration: webConfiguration)

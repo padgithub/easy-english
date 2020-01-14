@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -389,14 +390,14 @@
                                                         <action selector="actionCollapsMoreInfo:" destination="-1" eventType="touchUpInside" id="0kD-gv-E8O"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play guitar for beginners: playing exercise 1 for beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-hr-aBk" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="0.0" width="301.66666666666669" height="58.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How to play guitar for beginners: playing exercise 1 for beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-hr-aBk" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="10" width="301.66666666666669" height="30.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600k Views" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjo-bQ-OU5" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="58.333333333333321" width="355" height="19.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="600k Views" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjo-bQ-OU5" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="50.333333333333314" width="355" height="15.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -407,16 +408,15 @@
                                                 <constraint firstItem="lZX-aU-UX8" firstAttribute="centerX" secondItem="Jfg-IT-VRa" secondAttribute="centerX" id="0KG-RO-dts"/>
                                                 <constraint firstItem="lZX-aU-UX8" firstAttribute="height" secondItem="Jfg-IT-VRa" secondAttribute="height" multiplier="1/5" id="19g-nd-lOG"/>
                                                 <constraint firstItem="lZX-aU-UX8" firstAttribute="centerY" secondItem="Jfg-IT-VRa" secondAttribute="centerY" id="71t-62-2tN"/>
-                                                <constraint firstItem="0Oc-hr-aBk" firstAttribute="height" secondItem="0e8-RL-PmE" secondAttribute="height" multiplier="1/1.5" id="A6P-fM-hns"/>
                                                 <constraint firstAttribute="trailing" secondItem="Hjo-bQ-OU5" secondAttribute="trailing" constant="5" id="BPT-Zv-73f"/>
                                                 <constraint firstItem="Jfg-IT-VRa" firstAttribute="top" secondItem="0e8-RL-PmE" secondAttribute="top" id="Dxg-ZM-bJE"/>
                                                 <constraint firstItem="Jfg-IT-VRa" firstAttribute="leading" secondItem="0Oc-hr-aBk" secondAttribute="trailing" id="Z4h-tv-Uzf"/>
                                                 <constraint firstAttribute="trailing" secondItem="Jfg-IT-VRa" secondAttribute="trailing" id="fzd-Qq-n4Q"/>
-                                                <constraint firstItem="0Oc-hr-aBk" firstAttribute="top" secondItem="0e8-RL-PmE" secondAttribute="top" id="iWs-A0-HHR"/>
+                                                <constraint firstItem="0Oc-hr-aBk" firstAttribute="top" secondItem="0e8-RL-PmE" secondAttribute="top" constant="10" id="iWs-A0-HHR"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jfg-IT-VRa" secondAttribute="bottom" id="myy-i4-i7w"/>
                                                 <constraint firstItem="0Oc-hr-aBk" firstAttribute="leading" secondItem="0e8-RL-PmE" secondAttribute="leading" constant="15" id="vlm-Cd-0BB"/>
                                                 <constraint firstAttribute="bottom" secondItem="Hjo-bQ-OU5" secondAttribute="bottom" constant="10" id="wEb-Xq-Vvk"/>
-                                                <constraint firstItem="Hjo-bQ-OU5" firstAttribute="top" secondItem="0Oc-hr-aBk" secondAttribute="bottom" id="wKb-kV-wf6"/>
+                                                <constraint firstItem="Hjo-bQ-OU5" firstAttribute="top" secondItem="0Oc-hr-aBk" secondAttribute="bottom" constant="10" id="wKb-kV-wf6"/>
                                                 <constraint firstItem="Hjo-bQ-OU5" firstAttribute="leading" secondItem="0e8-RL-PmE" secondAttribute="leading" constant="15" id="yc5-qj-yW1"/>
                                             </constraints>
                                         </view>

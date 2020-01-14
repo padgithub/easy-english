@@ -209,6 +209,26 @@
 		01F757242258B218007BA54E /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F757202258B218007BA54E /* MBCircularProgressBarView.m */; };
 		01F757252258B218007BA54E /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F757212258B218007BA54E /* MBCircularProgressBarLayer.m */; };
 		2D49703BD3AB7D2ED66A8FE9 /* Pods_EasyKorean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CC735EEF3D9F597F0EB255 /* Pods_EasyKorean.framework */; };
+		320C9F5E23CE2C4900742479 /* DemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320C9F5C23CE2C4900742479 /* DemoVC.swift */; };
+		320C9F5F23CE2C4900742479 /* DemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320C9F5D23CE2C4900742479 /* DemoVC.xib */; };
+		320C9F6023CE2CF600742479 /* DemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320C9F5C23CE2C4900742479 /* DemoVC.swift */; };
+		320C9F6123CE2CFC00742479 /* DemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320C9F5D23CE2C4900742479 /* DemoVC.xib */; };
+		320C9F6F23CE2FF900742479 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320C9F6E23CE2FF000742479 /* YouTubePlayer.framework */; };
+		320C9F7023CE2FF900742479 /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 320C9F6E23CE2FF000742479 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		324858E023CC0D750089D925 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */; };
+		324858E123CC0D750089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */; };
+		324858E223CC0D750089D925 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DF23CC0D740089D925 /* MFSideMenuShadow.m */; };
+		324858E923CC0DD00089D925 /* MenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324858E423CC0DD00089D925 /* MenuVC.xib */; };
+		324858EA23CC0DD00089D925 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324858E623CC0DD00089D925 /* MenuCell.swift */; };
+		324858EB23CC0DD00089D925 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324858E723CC0DD00089D925 /* MenuCell.xib */; };
+		324858EC23CC0DD00089D925 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324858E823CC0DD00089D925 /* MenuVC.swift */; };
+		324858ED23CC0DE60089D925 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324858E823CC0DD00089D925 /* MenuVC.swift */; };
+		324858EE23CC0DEB0089D925 /* MenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324858E423CC0DD00089D925 /* MenuVC.xib */; };
+		324858EF23CC0DF20089D925 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324858E623CC0DD00089D925 /* MenuCell.swift */; };
+		324858F023CC0DF20089D925 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324858E723CC0DD00089D925 /* MenuCell.xib */; };
+		324858F123CC0DFE0089D925 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */; };
+		324858F223CC0E030089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */; };
+		324858F323CC0E090089D925 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DF23CC0D740089D925 /* MFSideMenuShadow.m */; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
 		7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
@@ -230,7 +250,28 @@
 			remoteGlobalIDString = 01B3DB3821D62FE20051221E;
 			remoteInfo = EasyEnglish;
 		};
+		320C9F6D23CE2FF000742479 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320C9F6923CE2FF000742479 /* YouTubePlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 502AE85F1A475FD500306AD1;
+			remoteInfo = YouTubePlayer;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		320C9F7123CE2FFA00742479 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				320C9F7023CE2FF900742479 /* YouTubePlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		011F365521E897E500B32E72 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
@@ -357,6 +398,20 @@
 		161AFF1FA117FDBF2981F173 /* Pods-EasyEnglishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishUITests/Pods-EasyEnglishUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2BAAC487FAF0D5DB388D5466 /* Pods-EasyKorean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKorean.debug.xcconfig"; path = "Target Support Files/Pods-EasyKorean/Pods-EasyKorean.debug.xcconfig"; sourceTree = "<group>"; };
 		2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		320C9F5C23CE2C4900742479 /* DemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
+		320C9F5D23CE2C4900742479 /* DemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoVC.xib; sourceTree = "<group>"; };
+		320C9F6923CE2FF000742479 /* YouTubePlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouTubePlayer.xcodeproj; path = EasyEnglish/Framework/YouTubePlayer/YouTubePlayer.xcodeproj; sourceTree = "<group>"; };
+		324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		324858DB23CC0D740089D925 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		324858DC23CC0D740089D925 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		324858DD23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		324858DE23CC0D740089D925 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		324858DF23CC0D740089D925 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		324858E423CC0DD00089D925 /* MenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuVC.xib; sourceTree = "<group>"; };
+		324858E623CC0DD00089D925 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		324858E723CC0DD00089D925 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		324858E823CC0DD00089D925 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		499A9427697047D9BBD40088 /* Pods-EasyEnglishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.release.xcconfig"; sourceTree = "<group>"; };
 		70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		77853C2C102491B6C41A4AC8 /* Pods-EasyEnglishUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglishUITests/Pods-EasyEnglishUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -374,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D49703BD3AB7D2ED66A8FE9 /* Pods_EasyKorean.framework in Frameworks */,
+				320C9F6F23CE2FF900742479 /* YouTubePlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +529,7 @@
 		0138FBFC21DF4241001B6BAF /* CommonVC */ = {
 			isa = PBXGroup;
 			children = (
+				324858E323CC0DD00089D925 /* MenuVC */,
 				01FB921B21F32E2F0022016D /* ProfileVC */,
 				01FB921A21F32E1D0022016D /* SettingVC */,
 				0138FC0121DF426D001B6BAF /* LoginVC */,
@@ -782,6 +839,7 @@
 		01B3DC9A21D631140051221E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				320C9F5B23CE2C3400742479 /* Demo */,
 				01B3DC9B21D631140051221E /* BaseVC.swift */,
 				0138FBFC21DF4241001B6BAF /* CommonVC */,
 				0138FBE321DF1AC3001B6BAF /* HomeVC */,
@@ -797,6 +855,7 @@
 		01B3DC9D21D631140051221E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				324858D823CC0D740089D925 /* SideMenu */,
 				012203C023688A3E004925BA /* Toast */,
 				01F7571F2258B218007BA54E /* MBCircularProgressBar */,
 				0138FC1221DF7679001B6BAF /* SVPullToRefresh */,
@@ -914,9 +973,60 @@
 			path = ProfileVC;
 			sourceTree = "<group>";
 		};
+		320C9F5B23CE2C3400742479 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				320C9F5C23CE2C4900742479 /* DemoVC.swift */,
+				320C9F5D23CE2C4900742479 /* DemoVC.xib */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		320C9F6A23CE2FF000742479 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				320C9F6E23CE2FF000742479 /* YouTubePlayer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		324858D823CC0D740089D925 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */,
+				324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */,
+				324858DB23CC0D740089D925 /* MFSideMenu.h */,
+				324858DC23CC0D740089D925 /* MFSideMenuShadow.h */,
+				324858DD23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.h */,
+				324858DE23CC0D740089D925 /* MFSideMenuContainerViewController.h */,
+				324858DF23CC0D740089D925 /* MFSideMenuShadow.m */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		324858E323CC0DD00089D925 /* MenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				324858E423CC0DD00089D925 /* MenuVC.xib */,
+				324858E523CC0DD00089D925 /* view */,
+				324858E823CC0DD00089D925 /* MenuVC.swift */,
+			);
+			path = MenuVC;
+			sourceTree = "<group>";
+		};
+		324858E523CC0DD00089D925 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				324858E623CC0DD00089D925 /* MenuCell.swift */,
+				324858E723CC0DD00089D925 /* MenuCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		8E65447970EC3CE49E6569D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				320C9F6923CE2FF000742479 /* YouTubePlayer.xcodeproj */,
 				CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */,
 				FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */,
 				2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */,
@@ -952,6 +1062,7 @@
 				018D5A5B232949F400ADA3C0 /* Frameworks */,
 				018D5A5D232949F400ADA3C0 /* Resources */,
 				52DE3E3C7F4DD1F72D8FC10E /* [CP] Embed Pods Frameworks */,
+				320C9F7123CE2FFA00742479 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1062,6 +1173,12 @@
 			mainGroup = 01B3DB3021D62FE20051221E;
 			productRefGroup = 01B3DB3A21D62FE20051221E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 320C9F6A23CE2FF000742479 /* Products */;
+					ProjectRef = 320C9F6923CE2FF000742479 /* YouTubePlayer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				01B3DB3821D62FE20051221E /* EasyEnglish */,
@@ -1071,6 +1188,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		320C9F6E23CE2FF000742479 /* YouTubePlayer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouTubePlayer.framework;
+			remoteRef = 320C9F6D23CE2FF000742479 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		018D5A5D232949F400ADA3C0 /* Resources */ = {
@@ -1089,14 +1216,17 @@
 				018D5A68232949F400ADA3C0 /* LoginVC.xib in Resources */,
 				018D5A69232949F400ADA3C0 /* ButtonView.xib in Resources */,
 				018D5A6A232949F400ADA3C0 /* LibraryVC.xib in Resources */,
+				324858F023CC0DF20089D925 /* MenuCell.xib in Resources */,
 				018D5A6B232949F400ADA3C0 /* DocumentVC.xib in Resources */,
 				018D5A6C232949F400ADA3C0 /* SettingVC.xib in Resources */,
 				018D5A6D232949F400ADA3C0 /* VideoHomeCell.xib in Resources */,
 				018D5A6E232949F400ADA3C0 /* history.db in Resources */,
 				018D5A6F232949F400ADA3C0 /* NotesCell.xib in Resources */,
 				018D5A70232949F400ADA3C0 /* ListPlaylistVC.xib in Resources */,
+				320C9F6123CE2CFC00742479 /* DemoVC.xib in Resources */,
 				018D5A71232949F400ADA3C0 /* Main.storyboard in Resources */,
 				018D5A72232949F400ADA3C0 /* VideoPlayCell.xib in Resources */,
+				324858EE23CC0DEB0089D925 /* MenuVC.xib in Resources */,
 				018D5A73232949F400ADA3C0 /* FavoritesVC.xib in Resources */,
 				018D5A74232949F400ADA3C0 /* HomeVC.xib in Resources */,
 				018D5A80232A17FD00ADA3C0 /* LaunchScreenKorean.storyboard in Resources */,
@@ -1121,7 +1251,9 @@
 				01B3DD2321D631150051221E /* NavigationView.xib in Resources */,
 				01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */,
 				0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */,
+				324858E923CC0DD00089D925 /* MenuVC.xib in Resources */,
 				01B3DD2021D631150051221E /* MagicView.xib in Resources */,
+				320C9F5F23CE2C4900742479 /* DemoVC.xib in Resources */,
 				0138FC0021DF4267001B6BAF /* LoginVC.xib in Resources */,
 				01B3DD2121D631150051221E /* ButtonView.xib in Resources */,
 				0138FBFB21DF1BC0001B6BAF /* LibraryVC.xib in Resources */,
@@ -1129,6 +1261,7 @@
 				011FCA4C21FCAE4600922968 /* SettingVC.xib in Resources */,
 				01EE354E21EF99D400C3346F /* VideoHomeCell.xib in Resources */,
 				0138FC6F21E11661001B6BAF /* history.db in Resources */,
+				324858EB23CC0DD00089D925 /* MenuCell.xib in Resources */,
 				011F365821E897E500B32E72 /* NotesCell.xib in Resources */,
 				0138FC7A21E11833001B6BAF /* ListPlaylistVC.xib in Resources */,
 				01B3DB4221D62FE20051221E /* Main.storyboard in Resources */,
@@ -1337,6 +1470,8 @@
 				018D5A43232949F400ADA3C0 /* AlertHelper.swift in Sources */,
 				018D5A44232949F400ADA3C0 /* DBManager.swift in Sources */,
 				018D5A45232949F400ADA3C0 /* Video.swift in Sources */,
+				324858F223CC0E030089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				324858F123CC0DFE0089D925 /* MFSideMenuContainerViewController.m in Sources */,
 				018D5A46232949F400ADA3C0 /* ToolBarView.swift in Sources */,
 				018D5A47232949F400ADA3C0 /* VideoPlayCell.swift in Sources */,
 				018D5A48232949F400ADA3C0 /* BaseVC.swift in Sources */,
@@ -1344,10 +1479,14 @@
 				018D5A4A232949F400ADA3C0 /* NavigationView.swift in Sources */,
 				018D5A4B232949F400ADA3C0 /* LoginVC.swift in Sources */,
 				018D5A4C232949F400ADA3C0 /* KHLabel.swift in Sources */,
+				324858F323CC0E090089D925 /* MFSideMenuShadow.m in Sources */,
+				324858EF23CC0DF20089D925 /* MenuCell.swift in Sources */,
+				324858ED23CC0DE60089D925 /* MenuVC.swift in Sources */,
 				018D5A4D232949F400ADA3C0 /* GCDHelpers.swift in Sources */,
 				018D5A4E232949F400ADA3C0 /* DocumentVC.swift in Sources */,
 				018D5A4F232949F400ADA3C0 /* PlaylistManager.swift in Sources */,
 				018D5A50232949F400ADA3C0 /* Common.swift in Sources */,
+				320C9F6023CE2CF600742479 /* DemoVC.swift in Sources */,
 				018D5A51232949F400ADA3C0 /* VideoManager.swift in Sources */,
 				018D5A52232949F400ADA3C0 /* AppStoreReviewManager.swift in Sources */,
 				018D5A53232949F400ADA3C0 /* CollapsibleTableViewCell.swift in Sources */,
@@ -1373,15 +1512,18 @@
 				01B3DD8C21D8DCA60051221E /* ListModelView.swift in Sources */,
 				0138FBEB21DF1B61001B6BAF /* HomeVC.swift in Sources */,
 				0138FC9121E3008C001B6BAF /* TimerHelper.swift in Sources */,
+				324858EA23CC0DD00089D925 /* MenuCell.swift in Sources */,
 				0138FC8321E2FFA1001B6BAF /* API.swift in Sources */,
 				012203C823688A3E004925BA /* Toast.swift in Sources */,
 				0138FBE721DF1B32001B6BAF /* FavoritesVC.swift in Sources */,
 				012203C623688A3E004925BA /* ToastWindow.swift in Sources */,
 				01B3DD3121D631150051221E /* KHTextView.swift in Sources */,
+				324858E123CC0D750089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				0138FC6321E10F75001B6BAF /* CategoryManager.swift in Sources */,
 				0124129B21DDC2210078B60F /* ZoomOutViewPlayVideo.swift in Sources */,
 				0138FC5C21E10F63001B6BAF /* Category.swift in Sources */,
 				0138FC1A21DF7679001B6BAF /* UIScrollView+SVPullToRefresh.m in Sources */,
+				324858EC23CC0DD00089D925 /* MenuVC.swift in Sources */,
 				01B3DD2F21D631150051221E /* KHView.swift in Sources */,
 				01B3DD3021D631150051221E /* KHImageView.swift in Sources */,
 				011FCA5121FD81AE00922968 /* LanguageManager.swift in Sources */,
@@ -1403,6 +1545,7 @@
 				0138FC9921E3008C001B6BAF /* SaveHelper.swift in Sources */,
 				0138FC7521E11819001B6BAF /* ListVideoVC.swift in Sources */,
 				01B3DD1F21D631150051221E /* MagicView.swift in Sources */,
+				324858E223CC0D750089D925 /* MFSideMenuShadow.m in Sources */,
 				011F365721E897E500B32E72 /* NotesCell.swift in Sources */,
 				01B3DD2D21D631150051221E /* KHTextField.swift in Sources */,
 				01F757252258B218007BA54E /* MBCircularProgressBarLayer.m in Sources */,
@@ -1415,6 +1558,7 @@
 				01B3DD9021D917DE0051221E /* PlayVC.swift in Sources */,
 				0138FC9221E3008C001B6BAF /* AlertHelper.swift in Sources */,
 				013FD86A22F83D440010878A /* DBManager.swift in Sources */,
+				324858E023CC0D750089D925 /* MFSideMenuContainerViewController.m in Sources */,
 				0138FC5821E10F63001B6BAF /* Video.swift in Sources */,
 				01AD43CE21E72F96000156D2 /* ToolBarView.swift in Sources */,
 				01B3DD8721D8D50A0051221E /* VideoPlayCell.swift in Sources */,
@@ -1427,6 +1571,7 @@
 				014B45712202D6FE00478735 /* DocumentVC.swift in Sources */,
 				0138FC6421E10F75001B6BAF /* PlaylistManager.swift in Sources */,
 				0138FC9521E3008C001B6BAF /* Common.swift in Sources */,
+				320C9F5E23CE2C4900742479 /* DemoVC.swift in Sources */,
 				0138FC6521E10F75001B6BAF /* VideoManager.swift in Sources */,
 				01DB9BAB2301484E00912320 /* AppStoreReviewManager.swift in Sources */,
 				0138FC3721E10B5A001B6BAF /* CollapsibleTableViewCell.swift in Sources */,
