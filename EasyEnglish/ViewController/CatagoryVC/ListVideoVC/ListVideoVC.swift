@@ -29,7 +29,9 @@ class ListVideoVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ctrHeightViewAd.constant = adSize.size.height
-        AdmobManager.shared.addBannerInView(view: adView, inVC: self)
+        GCDCommon.mainQueue {
+            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
+        }
     }
 
 }

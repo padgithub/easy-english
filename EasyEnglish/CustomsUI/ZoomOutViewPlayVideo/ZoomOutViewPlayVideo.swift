@@ -50,7 +50,7 @@ class ZoomOutViewPlayVideo: UIView {
     }
     
     @IBAction func actionRemoveView(_ sender: Any) {
-        viewYoutubePlayer.stop()
+        viewYoutubePlayer.stopVideo()
         handleRemoveView?()
     }
     
@@ -58,9 +58,9 @@ class ZoomOutViewPlayVideo: UIView {
         isPlay = !isPlay
         TAppDelegate.isPlay = !TAppDelegate.isPlay
         if !isPlay {
-            viewYoutubePlayer.pause()
+            viewYoutubePlayer.pauseVideo()
         }else{
-            viewYoutubePlayer.play()
+            viewYoutubePlayer.playVideo()
         }
     }
 }

@@ -23,12 +23,12 @@ class DemoVC: BaseVC {
     }
 
     @IBAction func actionLoad(_ sender: Any) {
-        viewPlay.playerVars = [
-                   "playsinline": "1",
-                   "controls": "0",
-                   "showinfo": "0"
-                   ] as YouTubePlayerView.YouTubePlayerParameters
-               viewPlay.loadVideoID("pDmvctJIUsQ")
+//        viewPlay.playerVars = [
+//                   "playsinline": "1",
+//                   "controls": "0",
+//                   "showinfo": "0"
+//                   ] as YouTubePlayerView.YouTubePlayerParameters
+//               viewPlay.loadVideoID("pDmvctJIUsQ")
     }
     
     /*

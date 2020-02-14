@@ -140,6 +140,9 @@ class PlayVC: BaseVC {
             break
         case 604: //more
             print(sender.tag)
+            viewYoutubePlayer.getCurrentTime { (time) in
+                print(time)
+            }
             break
         case 605: // chat luong video
             print(sender.tag)
@@ -160,9 +163,9 @@ class PlayVC: BaseVC {
             isPlay = !isPlay
             TAppDelegate.isPlay = !TAppDelegate.isPlay
             if isPlay {
-                viewYoutubePlayer.pause()
+                viewYoutubePlayer.pauseVideo()
             }else{
-                viewYoutubePlayer.play()
+                viewYoutubePlayer.playVideo()
             }
             break
         case 608: // next
@@ -262,7 +265,7 @@ extension PlayVC {
         isShowNote = TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].notes != ""
         
         if TAppDelegate.isPlay {
-            viewYoutubePlayer.play()
+            viewYoutubePlayer.playVideo()
             isPlay = true
         }else{
             isPlay = false
@@ -350,7 +353,9 @@ extension PlayVC {
             self.imgLoader.isHidden = true
         }
         ctrHeightViewAd.constant = adSize.size.height
-        AdmobManager.shared.addBannerInView(view: adView, inVC: self)
+        GCDCommon.mainQueue {
+            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
+        }
     }
     
     @objc

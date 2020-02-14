@@ -89,7 +89,7 @@ extension BaseVC {
         if !TAppDelegate.isShowZoomOutView {
             zoomOutView.addSubViewVideo()
             if TAppDelegate.isPlay {
-                viewYoutubePlayer.play()
+                viewYoutubePlayer.playVideo()
             }
         }
         zoomOutView.lbTitleVideo.text = TAppDelegate.titleZoomView

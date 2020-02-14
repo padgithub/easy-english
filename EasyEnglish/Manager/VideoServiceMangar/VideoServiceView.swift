@@ -32,40 +32,45 @@ class VideoServiceView: NSObject {
         viewPlayer = YouTubePlayerView.init(frame: .zero)
         viewPlayer.delegate = self
         if UserDefaults.standard.bool(forKey: "TOOLBARPLAY") {
-            viewPlayer.playerVars = ["playsinline": "1"
-                                        as AnyObject] as YouTubePlayerView.YouTubePlayerParameters
+            viewPlayer.playerParams.playsInline = true
         }else{
-            viewPlayer.playerVars = ["playsinline": "1",
-                                     "controls": "0"
-                                        as AnyObject] as YouTubePlayerView.YouTubePlayerParameters
+            viewPlayer.playerParams.playsInline = true
+            viewPlayer.playerParams.showControls = false
         }
         viewPlayer.backgroundColor = UIColor.clear
     }
 }
 
 extension VideoServiceView: YouTubePlayerDelegate {
-    func playerQualityChanged(_ videoPlayer: YouTubePlayerView, playbackQuality: YouTubePlaybackQuality) {
+    func playerQualityChanged(_ videoPlayer: YouTubePlayerView, playbackQuality: PlaybackQuality) {
         
     }
     
     func playerReady(_ videoPlayer: YouTubePlayerView) {
-        videoPlayer.play()
+        videoPlayer.playVideo()
         TAppDelegate.isPlay = true
         videoPlayer.getDuration { (dura) in
-            self.handleDuration?(dura ?? "")
+            if let value = dura as? Double {
+                self.handleDuration?(value.toSting)
+            }else{
+                self.handleDuration?("")
+            }
         }
         
         Timer.every(1) {
             videoPlayer.getCurrentTime { (time) in
-                videoPlayer.getDuration { (duration) in
-                    self.handleCurentime?(time ?? "",duration ?? "")
+                if let value = time as? Double {
+                    videoPlayer.getDuration { (duration) in
+                        if let duration = duration as? Double {
+                            self.handleCurentime?(value.toSting,duration.toSting)
+                        }
+                    }
                 }
             }
         }
         handleReadyPlay?()
     }
-    
-    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
+    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: PlayerState) {
         switch playerState {
         case .playing:
             TAppDelegate.isPlay = true
@@ -109,7 +114,7 @@ extension VideoServiceView: YouTubePlayerDelegate {
 //                self.player.play()
 //                return .success
 //            }
-            self.viewPlayer.play()
+            self.viewPlayer.playVideo()
             TAppDelegate.isPlay = true
             return .commandFailed
         }
@@ -121,7 +126,7 @@ extension VideoServiceView: YouTubePlayerDelegate {
 //                return .success
 //            }
             TAppDelegate.isPlay = false
-            self.viewPlayer.pause()
+            self.viewPlayer.pauseVideo()
             return .commandFailed
         }
         

@@ -30,13 +30,11 @@ class MenuVC: UIViewController {
     @IBOutlet weak var lbTitleLogo: KHLabel!
     
     var arrItem: [MenuObj] = {
-        let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "settings"), title: "Home"),
-                                MenuObj(#imageLiteral(resourceName: "navi_search"), title: "Changer Passcode"),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_mail"), title: "Privacy Policy"),
-                                MenuObj(#imageLiteral(resourceName: "ic_share_bar"), title: "Share"),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "Rate App"),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_mail"), title: "Support"),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_mail"), title: "How to use")]
+        let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "Home"),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "Category"),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_favorite"), title: "Faverites"),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_libray"), title: "Lib")]
+        
         return items
     }()
     let indicator = UIActivityIndicatorView(style: .white)
@@ -93,7 +91,7 @@ extension MenuVC: UITableViewDataSource {
 
 extension MenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50*heightRatio
+        return 45*heightRatio
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

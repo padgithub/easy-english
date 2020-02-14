@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         youtubeShare.handlePlayWhenPause = {
             Timer.every(0.001) {
                 if self.isPlay {
-                    viewYoutubePlayer.play()
+                    viewYoutubePlayer.playVideo()
                 }
             }
         }
@@ -170,10 +170,10 @@ extension AppDelegate {
         dbShared.checkDB { (bool) in
             if bool {
                 dbShared.downloadDB(success: { (xong) in
-                    self.initMenu()
+                    self.initMainVC()
                 })
             }else{
-                self.initMenu()
+                self.initMainVC()
             }
         }
     }
