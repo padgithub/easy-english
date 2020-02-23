@@ -48,7 +48,6 @@
 		0138FC6421E10F75001B6BAF /* PlaylistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC5F21E10F75001B6BAF /* PlaylistManager.swift */; };
 		0138FC6521E10F75001B6BAF /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC6021E10F75001B6BAF /* VideoManager.swift */; };
 		0138FC6721E10F75001B6BAF /* GroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC6221E10F75001B6BAF /* GroupManager.swift */; };
-		0138FC6E21E11661001B6BAF /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC6A21E11661001B6BAF /* database.db */; };
 		0138FC6F21E11661001B6BAF /* history.db in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC6B21E11661001B6BAF /* history.db */; };
 		0138FC7521E11819001B6BAF /* ListVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC7321E11819001B6BAF /* ListVideoVC.swift */; };
 		0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC7421E11819001B6BAF /* ListVideoVC.xib */; };
@@ -142,7 +141,6 @@
 		018D5A5E232949F400ADA3C0 /* ContentListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC3421E10B59001B6BAF /* ContentListVC.xib */; };
 		018D5A5F232949F400ADA3C0 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8C21D631140051221E /* TextFieldView.xib */; };
 		018D5A61232949F400ADA3C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DB4321D62FE70051221E /* Assets.xcassets */; };
-		018D5A62232949F400ADA3C0 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 0138FC6A21E11661001B6BAF /* database.db */; };
 		018D5A63232949F400ADA3C0 /* DropBoxUITB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8821D631140051221E /* DropBoxUITB.xib */; };
 		018D5A64232949F400ADA3C0 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DC8221D631140051221E /* NavigationView.xib */; };
 		018D5A65232949F400ADA3C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01EE355121EFAAE200C3346F /* Localizable.strings */; };
@@ -227,6 +225,8 @@
 		324858F123CC0DFE0089D925 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */; };
 		324858F223CC0E030089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */; };
 		324858F323CC0E090089D925 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DF23CC0D740089D925 /* MFSideMenuShadow.m */; };
+		328B05FA240222A500C5E7AF /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 328B05F9240222A500C5E7AF /* database.db */; };
+		328B05FB240222A500C5E7AF /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 328B05F9240222A500C5E7AF /* database.db */; };
 		32F0310F23F68F9B00F04E87 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; };
 		32F0311023F68F9B00F04E87 /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
@@ -329,7 +329,6 @@
 		0138FC5F21E10F75001B6BAF /* PlaylistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistManager.swift; sourceTree = "<group>"; };
 		0138FC6021E10F75001B6BAF /* VideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		0138FC6221E10F75001B6BAF /* GroupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupManager.swift; sourceTree = "<group>"; };
-		0138FC6A21E11661001B6BAF /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.db; sourceTree = "<group>"; };
 		0138FC6B21E11661001B6BAF /* history.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = history.db; sourceTree = "<group>"; };
 		0138FC7321E11819001B6BAF /* ListVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoVC.swift; sourceTree = "<group>"; };
 		0138FC7421E11819001B6BAF /* ListVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListVideoVC.xib; sourceTree = "<group>"; };
@@ -421,6 +420,7 @@
 		324858E623CC0DD00089D925 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		324858E723CC0DD00089D925 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		324858E823CC0DD00089D925 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		328B05F9240222A500C5E7AF /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.db; sourceTree = "<group>"; };
 		32F0310923F68F9600F04E87 /* YouTubePlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouTubePlayer.xcodeproj; path = EasyEnglish/Framework/YouTubePlayer/YouTubePlayer.xcodeproj; sourceTree = "<group>"; };
 		499A9427697047D9BBD40088 /* Pods-EasyEnglishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.release.xcconfig"; sourceTree = "<group>"; };
 		70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
@@ -634,7 +634,7 @@
 		0138FC6821E11661001B6BAF /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				0138FC6A21E11661001B6BAF /* database.db */,
+				328B05F9240222A500C5E7AF /* database.db */,
 				0138FC6B21E11661001B6BAF /* history.db */,
 			);
 			path = Resource;
@@ -1218,13 +1218,13 @@
 				018D5A5E232949F400ADA3C0 /* ContentListVC.xib in Resources */,
 				018D5A5F232949F400ADA3C0 /* TextFieldView.xib in Resources */,
 				018D5A61232949F400ADA3C0 /* Assets.xcassets in Resources */,
-				018D5A62232949F400ADA3C0 /* database.db in Resources */,
 				018D5A63232949F400ADA3C0 /* DropBoxUITB.xib in Resources */,
 				018D5A64232949F400ADA3C0 /* NavigationView.xib in Resources */,
 				018D5A65232949F400ADA3C0 /* Localizable.strings in Resources */,
 				018D5A66232949F400ADA3C0 /* ListVideoVC.xib in Resources */,
 				018D5A67232949F400ADA3C0 /* MagicView.xib in Resources */,
 				018D5A68232949F400ADA3C0 /* LoginVC.xib in Resources */,
+				328B05FB240222A500C5E7AF /* database.db in Resources */,
 				018D5A69232949F400ADA3C0 /* ButtonView.xib in Resources */,
 				018D5A6A232949F400ADA3C0 /* LibraryVC.xib in Resources */,
 				324858F023CC0DF20089D925 /* MenuCell.xib in Resources */,
@@ -1257,7 +1257,6 @@
 				0138FC3921E10B5A001B6BAF /* ContentListVC.xib in Resources */,
 				01B3DD2A21D631150051221E /* TextFieldView.xib in Resources */,
 				01B3DB4421D62FE70051221E /* Assets.xcassets in Resources */,
-				0138FC6E21E11661001B6BAF /* database.db in Resources */,
 				01B3DD2721D631150051221E /* DropBoxUITB.xib in Resources */,
 				01B3DD2321D631150051221E /* NavigationView.xib in Resources */,
 				01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */,
@@ -1274,6 +1273,7 @@
 				0138FC6F21E11661001B6BAF /* history.db in Resources */,
 				324858EB23CC0DD00089D925 /* MenuCell.xib in Resources */,
 				011F365821E897E500B32E72 /* NotesCell.xib in Resources */,
+				328B05FA240222A500C5E7AF /* database.db in Resources */,
 				0138FC7A21E11833001B6BAF /* ListPlaylistVC.xib in Resources */,
 				01B3DB4221D62FE20051221E /* Main.storyboard in Resources */,
 				01B3DD8821D8D50A0051221E /* VideoPlayCell.xib in Resources */,
