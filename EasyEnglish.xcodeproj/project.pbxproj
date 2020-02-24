@@ -2004,7 +2004,7 @@
 					"\"UIKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ekorean;
+				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ejapanese;
 				PRODUCT_NAME = "E - Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2081,7 +2081,7 @@
 					"\"UIKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ekorean;
+				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ejapanese;
 				PRODUCT_NAME = "E - Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

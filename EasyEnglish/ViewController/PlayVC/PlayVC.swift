@@ -157,6 +157,7 @@ class PlayVC: BaseVC {
             viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
             self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
             self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
+            self.insertHistory()
             break
         case 607: // pause sit top
             print(sender.tag)
@@ -177,6 +178,7 @@ class PlayVC: BaseVC {
             viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying].id)
             self.tableView.selectRow(at: IndexPath(row: TAppDelegate.indexPlaying, section: 0), animated: true, scrollPosition: .top)
             self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[TAppDelegate.indexPlaying])
+            self.insertHistory()
             break
         case 609: //mo rong man hinh
             print(sender.tag)
@@ -313,6 +315,7 @@ extension PlayVC {
                 viewYoutubePlayer.loadVideoID(TAppDelegate.arrVideoPlaying[index].id)
                 TAppDelegate.indexPlaying = index
                 self.setDetailVideo(video: TAppDelegate.arrVideoPlaying[index])
+                self.insertHistory()
             }
         }
         viewModel.handleMoreOptionCell = { (item) in

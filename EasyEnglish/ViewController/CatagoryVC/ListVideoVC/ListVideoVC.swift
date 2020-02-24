@@ -64,6 +64,7 @@ extension ListVideoVC {
             }
             TAppDelegate.indexPlaying = index
             self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
+            self.insertHistory()
         }
         
         viewModel.handleMoreOptionCell = { (item) in
