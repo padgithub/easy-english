@@ -26,7 +26,7 @@ class VideoManager: NSObject {
     let config: Configuration = {
         var config = Configuration()
         config.foreignKeysEnabled = true
-        config.passphrase = "phanhoangtao"
+        config.passphrase = "xemcailon"
         return config
     }()
     
