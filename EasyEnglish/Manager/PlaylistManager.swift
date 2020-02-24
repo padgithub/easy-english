@@ -28,7 +28,7 @@ class PlaylistManager: NSObject {
     let config: Configuration = {
         var config = Configuration()
         config.foreignKeysEnabled = true
-        config.passphrase = "xemcailon"
+        config.passphrase = "phanhoangtao"
         return config
     }()
     
