@@ -63,6 +63,7 @@ class Items: NSObject {
     var snippet = Snippet()
     var contentDetails = ContentDetails()
     var statistics = Statistics()
+    var isViewAd = false
     
     override init() {
         super.init()

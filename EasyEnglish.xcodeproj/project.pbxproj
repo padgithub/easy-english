@@ -358,7 +358,7 @@
 		01AD43CC21E72F95000156D2 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		01AD43CD21E72F95000156D2 /* ToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolBarView.xib; sourceTree = "<group>"; };
 		01AD43D221E73A75000156D2 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
-		01B3DB3921D62FE20051221E /* E - Japanese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E - Japanese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B3DB3921D62FE20051221E /* Yume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3DB3C21D62FE20051221E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B3DB4121D62FE20051221E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01B3DB4321D62FE70051221E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -724,7 +724,7 @@
 		01B3DB3A21D62FE20051221E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01B3DB3921D62FE20051221E /* E - Japanese.app */,
+				01B3DB3921D62FE20051221E /* Yume.app */,
 				01B3DB4D21D62FE70051221E /* EasyEnglishTests.xctest */,
 				01B3DB5821D62FE70051221E /* EasyEnglishUITests.xctest */,
 				018D5A7D232949F400ADA3C0 /* EasyKorean.app */,
@@ -1085,9 +1085,9 @@
 			productReference = 018D5A7D232949F400ADA3C0 /* EasyKorean.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01B3DB3821D62FE20051221E /* EasyEnglish */ = {
+		01B3DB3821D62FE20051221E /* EasyJapanese */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01B3DB6121D62FE70051221E /* Build configuration list for PBXNativeTarget "EasyEnglish" */;
+			buildConfigurationList = 01B3DB6121D62FE70051221E /* Build configuration list for PBXNativeTarget "EasyJapanese" */;
 			buildPhases = (
 				4ACA1387913AC400F6F53D0C /* [CP] Check Pods Manifest.lock */,
 				01B3DB3521D62FE20051221E /* Sources */,
@@ -1100,9 +1100,9 @@
 			);
 			dependencies = (
 			);
-			name = EasyEnglish;
+			name = EasyJapanese;
 			productName = EasyEnglish;
-			productReference = 01B3DB3921D62FE20051221E /* E - Japanese.app */;
+			productReference = 01B3DB3921D62FE20051221E /* Yume.app */;
 			productType = "com.apple.product-type.application";
 		};
 		01B3DB4C21D62FE70051221E /* EasyEnglishTests */ = {
@@ -1194,7 +1194,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				01B3DB3821D62FE20051221E /* EasyEnglish */,
+				01B3DB3821D62FE20051221E /* EasyJapanese */,
 				018D5A14232949F400ADA3C0 /* EasyKorean */,
 				01B3DB4C21D62FE70051221E /* EasyEnglishTests */,
 				01B3DB5721D62FE70051221E /* EasyEnglishUITests */,
@@ -1621,12 +1621,12 @@
 /* Begin PBXTargetDependency section */
 		01B3DB4F21D62FE70051221E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01B3DB3821D62FE20051221E /* EasyEnglish */;
+			target = 01B3DB3821D62FE20051221E /* EasyJapanese */;
 			targetProxy = 01B3DB4E21D62FE70051221E /* PBXContainerItemProxy */;
 		};
 		01B3DB5A21D62FE70051221E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01B3DB3821D62FE20051221E /* EasyEnglish */;
+			target = 01B3DB3821D62FE20051221E /* EasyJapanese */;
 			targetProxy = 01B3DB5921D62FE70051221E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2005,7 +2005,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ejapanese;
-				PRODUCT_NAME = "E - Japanese";
+				PRODUCT_NAME = Yume;
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2082,7 +2082,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ejapanese;
-				PRODUCT_NAME = "E - Japanese";
+				PRODUCT_NAME = Yume;
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2196,7 +2196,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01B3DB6121D62FE70051221E /* Build configuration list for PBXNativeTarget "EasyEnglish" */ = {
+		01B3DB6121D62FE70051221E /* Build configuration list for PBXNativeTarget "EasyJapanese" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01B3DB6221D62FE70051221E /* Debug */,

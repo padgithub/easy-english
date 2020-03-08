@@ -14,6 +14,7 @@ class ListModelView: NSObject {
     var handleMoreOptionCell: ((Items) -> Void)?
     var isPlaylist = false
     var isHisotryView = false
+    var viewController = UIViewController()
     
     override init() {
         arrData = []

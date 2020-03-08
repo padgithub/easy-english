@@ -49,31 +49,48 @@ class NavigationView: UIView {
     @IBInspectable open var hasProfile: Bool = false {
         didSet {
             if hasProfile {
-                if let image = SaveHelper.get(.fbImage) as? String, image != "" {
-                    imgLeft.downloaded(from: image)
-                }else{
-                    imgLeft.image = randomAvatar()
-                }
-                imgLeft.contentMode = .scaleToFill
+//                if let image = SaveHelper.get(.fbImage) as? String, image != "" {
+//                    imgLeft.downloaded(from: image)
+//                }else{
+//                    imgLeft.image = randomAvatar()
+//                }
+//                imgLeft.contentMode = .scaleToFill
+                imgLeft.image = UIImage(named: "ic_menu")
+                imgLeft.contentMode = .center
             }
         }
     }
     
-    @IBInspectable open var hasSetting: Bool = true {
+    @IBInspectable open var imageRight: UIImage = UIImage.init(named: "settings")! {
         didSet {
-            if hasSetting {
-                imgRight.image = UIImage(named: "settings")
-            }
+            imgRight.image = imageRight
+            imgRight.contentMode = .center
         }
     }
     
-    @IBInspectable open var hasSearch: Bool = false {
+    @IBInspectable open var imageLeft: UIImage = UIImage.init(named: "ic_menu")! {
         didSet {
-            if hasSetting {
-                imgRight.image = UIImage(named: "navi_search")
-            }
+            imgLeft.image = imageLeft
+            imgLeft.contentMode = .center
         }
     }
+    
+    
+//    @IBInspectable open var hasSetting: Bool = true {
+//        didSet {
+//            if hasSetting {
+//                imgRight.image = UIImage(named: "settings")
+//            }
+//        }
+//    }
+    
+//    @IBInspectable open var hasSearch: Bool = false {
+//        didSet {
+//            if hasSetting {
+//                imgRight.image = UIImage(named: "navi_search")
+//            }
+//        }
+//    }
     
     var handleBack: (() -> Void)?
     var handleProfile: (() -> Void)?
@@ -121,11 +138,7 @@ class NavigationView: UIView {
         }
     }
     @IBAction func actionRight(_ sender: Any) {
-        if hasSetting {
-            handleSetting?()
-        }else if hasSearch {
-            handleSearch?()
-        }
+        handleSetting?()
     }
 }
 

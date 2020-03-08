@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="VideoPlayCell" customModule="EasyEnglish" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="VideoPlayCell" customModule="EasyKorean" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-a6-Dz5" customClass="CustomView" customModule="EasyEnglish" customModuleProvider="target">
-                        <rect key="frame" x="8" y="6" width="359" height="97.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-a6-Dz5" customClass="CustomView" customModule="EasyKorean" customModuleProvider="target">
+                        <rect key="frame" x="8" y="6" width="359" height="98"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hid-ET-Ovy">
-                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="97.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="173.5" height="98"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_app" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-8q-I5Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="173.5" height="98"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,11 +34,11 @@
                                     <constraint firstItem="BtO-8q-I5Y" firstAttribute="top" secondItem="Hid-ET-Ovy" secondAttribute="top" id="VeA-3V-dVO"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-0B-hm3" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                <rect key="frame" x="10" y="7" width="30.5" height="14"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-0B-hm3" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
+                                <rect key="frame" x="10" y="7" width="34.5" height="14"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcD-SJ-oar" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="2" width="20" height="9.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcD-SJ-oar" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                        <rect key="frame" x="7" y="2.5" width="20.5" height="9.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,6 +47,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="ZcD-SJ-oar" firstAttribute="leading" secondItem="gzD-0B-hm3" secondAttribute="leading" constant="7" id="1XV-1P-L7x"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZcD-SJ-oar" secondAttribute="trailing" constant="7" id="4r6-uJ-NhG"/>
                                     <constraint firstItem="ZcD-SJ-oar" firstAttribute="centerX" secondItem="gzD-0B-hm3" secondAttribute="centerX" id="R9a-SJ-uVE"/>
                                     <constraint firstItem="ZcD-SJ-oar" firstAttribute="centerY" secondItem="gzD-0B-hm3" secondAttribute="centerY" id="kYL-8u-Rgs"/>
                                 </constraints>
@@ -65,16 +65,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2j-Ea-EOw">
-                                <rect key="frame" x="172.5" y="0.0" width="186.5" height="97.5"/>
+                                <rect key="frame" x="173.5" y="0.0" width="185.5" height="98"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-8i-jPZ" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="7" width="156.5" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIc-8i-jPZ" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="7" width="155.5" height="14.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-C3-IgL" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="73" width="171.5" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-C3-IgL" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="73.5" width="170.5" height="14.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14.5" id="P4m-Hr-zPb"/>
                                         </constraints>
@@ -82,18 +82,19 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjX-fz-INu" customClass="MagicView" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="7"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjX-fz-INu" customClass="MagicView" customModule="EasyKorean" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="185.5" height="7"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="7" id="RDw-sW-zaK"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-xl-ZSf">
-                                        <rect key="frame" x="166.5" y="7" width="20" height="90.5"/>
+                                        <rect key="frame" x="165.5" y="7" width="20" height="91"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-JP-cLz">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
+                                                <color key="tintColor" red="0.49803921569999998" green="0.1333333333" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="ic_list_play"/>
                                                 <connections>
                                                     <action selector="actionMoreOption:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GTP-va-yqo"/>
@@ -108,8 +109,8 @@
                                             <constraint firstItem="Qj5-JP-cLz" firstAttribute="top" secondItem="H4X-xl-ZSf" secondAttribute="top" id="vMQ-jv-klc"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guitastic United" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afn-KC-Ztr" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="56.5" width="156.5" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guitastic United" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afn-KC-Ztr" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="57" width="155.5" height="14.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14.5" id="pIj-FB-4FG"/>
                                         </constraints>
@@ -118,7 +119,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDw-mg-qPB">
-                                        <rect key="frame" x="136.5" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="135.5" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="C02-AM-TnY"/>
                                             <constraint firstAttribute="height" constant="50" id="Ugu-2Y-XyW"/>
@@ -160,7 +161,6 @@
                             <constraint firstItem="S2j-Ea-EOw" firstAttribute="leading" secondItem="Hid-ET-Ovy" secondAttribute="trailing" id="Rgz-Ry-QAc"/>
                             <constraint firstItem="Hid-ET-Ovy" firstAttribute="width" secondItem="FE2-a6-Dz5" secondAttribute="height" multiplier="16:9" id="Z4M-AY-KD8"/>
                             <constraint firstItem="Hid-ET-Ovy" firstAttribute="leading" secondItem="FE2-a6-Dz5" secondAttribute="leading" id="Z8o-du-haB"/>
-                            <constraint firstItem="gzD-0B-hm3" firstAttribute="width" secondItem="FE2-a6-Dz5" secondAttribute="width" multiplier="30.5/359.48" id="iBZ-xU-JU0"/>
                             <constraint firstAttribute="trailing" secondItem="S2j-Ea-EOw" secondAttribute="trailing" id="ilE-FE-0fk"/>
                             <constraint firstAttribute="bottom" secondItem="Hid-ET-Ovy" secondAttribute="bottom" id="m2p-ac-J3L"/>
                             <constraint firstItem="S2j-Ea-EOw" firstAttribute="top" secondItem="FE2-a6-Dz5" secondAttribute="top" id="niI-AD-T1V"/>
@@ -193,7 +193,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_app" width="1024" height="1024"/>
+        <image name="ic_app" width="1025" height="1025"/>
         <image name="ic_list_play" width="4.5" height="17"/>
     </resources>
 </document>

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="EasyEnglish" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="EasyKorean" customModuleProvider="target">
             <connections>
                 <outlet property="navi" destination="ntW-4m-ci9" id="4ui-NG-IJM"/>
                 <outlet property="tableView" destination="fCu-KO-adc" id="uH9-rd-yg4"/>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntW-4m-ci9" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntW-4m-ci9" customClass="NavigationView" customModule="EasyKorean" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -28,9 +28,10 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="app_name"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewReight" value="YES"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="YES"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasBack" value="NO"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasProfile" value="YES"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="imageRight" value="ic_layout"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IF-xB-Yhv">
@@ -43,7 +44,7 @@
                                 <constraint firstAttribute="width" secondItem="oyX-eZ-z2r" secondAttribute="height" multiplier="1:1" id="FFj-oU-Uhh"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0X-gm-QdA" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0X-gm-QdA" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="20" y="301" width="335" height="0.0"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                             <nil key="textColor"/>
@@ -86,5 +87,6 @@
     </objects>
     <resources>
         <image name="documents-empty" width="64" height="64"/>
+        <image name="ic_layout" width="23" height="23"/>
     </resources>
 </document>

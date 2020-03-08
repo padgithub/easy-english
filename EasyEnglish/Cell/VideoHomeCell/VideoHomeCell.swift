@@ -8,14 +8,18 @@
 
 import UIKit
 import Kingfisher
+import GoogleMobileAds
 
 class VideoHomeCell: UITableViewCell {
 
+    @IBOutlet weak var contentViews: KHView!
     @IBOutlet weak var imageVideo: UIImageView!
     @IBOutlet weak var imageAvatar: UIImageView!
     @IBOutlet weak var lbSub: KHLabel!
     @IBOutlet weak var lbTitleVideo: KHLabel!
     @IBOutlet weak var lbDuration: KHLabel!
+    
+    var bannerView: GADBannerView!
     
     var handleMoreOption: (() -> Void)?
     var urlString = ""
@@ -54,6 +58,9 @@ extension VideoHomeCell {
         lbSub.text = obj.subTitle
         lbTitleVideo.text = obj.snippet.title
         lbDuration.text = obj.contentDetails.duration.ISO8601DateComponents()
+        if let _ = self.bannerView {
+            self.bannerView.removeFromSuperview()
+        }
     }
     
     func randomAvatar() -> UIImage {

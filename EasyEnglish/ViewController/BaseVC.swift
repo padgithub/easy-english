@@ -25,6 +25,8 @@ class BaseVC: UIViewController {
         } else {
             // Fallback on earlier versions
         }
+        
+        TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

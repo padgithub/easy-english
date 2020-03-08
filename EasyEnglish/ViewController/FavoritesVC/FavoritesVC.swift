@@ -15,6 +15,8 @@ class FavoritesVC: BaseVC {
     @IBOutlet weak var viewToolLeft: UIView!
     @IBOutlet weak var toolBar: ToolBarView!
     @IBOutlet weak var navi: NavigationView!
+    @IBOutlet weak var adView: UIView!
+    @IBOutlet weak var ctrHeightViewAd: NSLayoutConstraint!
     
     var viewModelList = ListModelPlaylistView()
     var viewModelVideo = ListModelView()
@@ -57,7 +59,7 @@ extension FavoritesVC {
             self.openSetting()
         }
         navi.handleProfile = {
-            self.openProfile()
+            self.openMenu()
         }
         toolBar.handleActionG2Left = {
             self.swicthView = false
@@ -110,6 +112,11 @@ extension FavoritesVC {
                     self.share(item)
                 }
             })
+        }
+        
+        ctrHeightViewAd.constant = adSize.size.height
+        GCDCommon.mainQueue {
+            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
         }
     }
     

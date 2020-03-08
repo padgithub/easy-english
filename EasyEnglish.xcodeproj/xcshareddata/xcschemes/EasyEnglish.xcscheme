@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "01B3DB3821D62FE20051221E"
-               BuildableName = "E - Japanese.app"
-               BlueprintName = "EasyEnglish"
+               BuildableName = "Yume.app"
+               BlueprintName = "EasyJapanese"
                ReferencedContainer = "container:EasyEnglish.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,8 +31,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01B3DB3821D62FE20051221E"
-            BuildableName = "E - Japanese.app"
-            BlueprintName = "EasyEnglish"
+            BuildableName = "Yume.app"
+            BlueprintName = "EasyJapanese"
             ReferencedContainer = "container:EasyEnglish.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01B3DB3821D62FE20051221E"
-            BuildableName = "E - Japanese.app"
-            BlueprintName = "EasyEnglish"
+            BuildableName = "Yume.app"
+            BlueprintName = "EasyJapanese"
             ReferencedContainer = "container:EasyEnglish.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -92,8 +92,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "01B3DB3821D62FE20051221E"
-            BuildableName = "E - Japanese.app"
-            BlueprintName = "EasyEnglish"
+            BuildableName = "Yume.app"
+            BlueprintName = "EasyJapanese"
             ReferencedContainer = "container:EasyEnglish.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

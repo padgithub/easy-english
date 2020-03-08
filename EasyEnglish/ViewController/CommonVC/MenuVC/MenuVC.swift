@@ -98,25 +98,26 @@ extension MenuVC: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.item {
         case 0:
-            let navi = UINavigationController(rootViewController: HomeVC.init())
+            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(0))
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case 1:
-            
+            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(1))
+            navi.isNavigationBarHidden = true
+            TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case 2:
-            
+            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(2))
+            navi.isNavigationBarHidden = true
+            TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case 3:
-            actionShare()
+            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(3))
+            navi.isNavigationBarHidden = true
+            TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
-        case 4: // rate
-            if #available(iOS 10.3, *) {
-                SKStoreReviewController.requestReview()
-            } else {
-                // Fallback on earlier versions
-            }
+        case 4:
             break
         case 5:
             actionSupport()
@@ -125,7 +126,7 @@ extension MenuVC: UITableViewDelegate {
             
             break
         default:
-//            Common.showAlert("Đang phát triển")
+            
             break
         }
     }

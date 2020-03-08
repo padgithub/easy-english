@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayVC" customModule="EasyEnglish" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayVC" customModule="EasyKorean" customModuleProvider="target">
             <connections>
                 <outlet property="adView" destination="hVk-ue-fB2" id="mtP-uH-30m"/>
                 <outlet property="btAutoPlay" destination="Dso-5R-K5H" id="NXY-1x-fsm"/>
@@ -71,7 +71,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxi-Gy-CO0">
                     <rect key="frame" x="0.0" y="44" width="375" height="938"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cul-jx-ORh" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cul-jx-ORh" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="187.66666666666666" y="141.66666666666666" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="11"/>
                             <nil key="textColor"/>
@@ -113,7 +113,7 @@
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLY-xf-BRU" userLabel="View1">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBx-yR-Pzu" customClass="MagicView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBx-yR-Pzu" customClass="MagicView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="10"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -197,13 +197,13 @@
                                         <constraint firstItem="p25-dd-guJ" firstAttribute="leading" secondItem="s3r-3r-Cuu" secondAttribute="trailing" id="twE-D0-DOP"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aav-dY-2oX" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aav-dY-2oX" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="10" y="158.33333333333334" width="28" height="13"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4K-8A-yEP" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4K-8A-yEP" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="337" y="158.33333333333334" width="28" height="13"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -358,31 +358,31 @@
                             <rect key="frame" x="0.0" y="223" width="375" height="715"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-GW-kMV" userLabel="View3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75.666666666666671"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4c-er-2xm" customClass="GradientView2" customModule="EasyEnglish" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.666666666666671"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4c-er-2xm" customClass="GradientView2" customModule="EasyKorean" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.666666666666671"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                                    <color key="value" red="1" green="0.47450980390000003" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="value" red="0.99607843139999996" green="0.26274509800000001" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                                    <color key="value" red="1" green="0.18149280030000001" blue="0.071572966249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="value" red="0.49803921569999998" green="0.1333333333" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0e8-RL-PmE" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.666666666666671"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0e8-RL-PmE" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.666666666666671"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_collapte" translatesAutoresizingMaskIntoConstraints="NO" id="lZX-aU-UX8">
-                                                    <rect key="frame" x="337" y="35" width="17.666666666666686" height="17.666666666666671"/>
+                                                    <rect key="frame" x="342.33333333333331" y="30.333333333333314" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="lZX-aU-UX8" secondAttribute="height" multiplier="1:1" id="E49-pH-xbd"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfg-IT-VRa">
-                                                    <rect key="frame" x="316.66666666666669" y="0.0" width="58.333333333333314" height="87.666666666666671"/>
+                                                    <rect key="frame" x="324.66666666666669" y="0.0" width="50.333333333333314" height="75.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Jfg-IT-VRa" secondAttribute="height" multiplier="1:1.5" id="l7x-r1-tiS"/>
                                                     </constraints>
@@ -390,13 +390,13 @@
                                                         <action selector="actionCollapsMoreInfo:" destination="-1" eventType="touchUpInside" id="0kD-gv-E8O"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How to play guitar for beginners: playing exercise 1 for beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-hr-aBk" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="10" width="301.66666666666669" height="30.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play guitar for beginners: playing exercise 1 for beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-hr-aBk" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="9.9999999999999982" width="309.66666666666669" height="30.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="600k Views" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjo-bQ-OU5" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600k Views" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjo-bQ-OU5" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="50.333333333333314" width="355" height="15.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -421,12 +421,12 @@
                                             </constraints>
                                         </view>
                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-S8-Cyy">
-                                            <rect key="frame" x="0.0" y="87.666666666666686" width="375" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="75.666666666666686" width="375" height="0.0"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnJ-CW-eI0">
                                                     <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="0.0"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-Yt-00L" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-Yt-00L" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="-17" width="91.666666666666671" height="12"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -452,7 +452,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFv-ce-heA">
                                                     <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="0.0"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypi-y8-9cg" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypi-y8-9cg" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="-17" width="92" height="12"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -478,7 +478,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sY-m9-oEa">
                                                     <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="0.0"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y52-SN-oaD" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y52-SN-oaD" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="-5" width="91.666666666666671" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -510,7 +510,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bC-An-jMx">
                                                     <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="0.0"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUm-nx-kCh" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUm-nx-kCh" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="-5" width="91.666666666666671" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -577,20 +577,20 @@
                                         <constraint firstAttribute="bottom" secondItem="hnl-S8-Cyy" secondAttribute="bottom" id="lo3-Ci-Hle"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuC-c2-PZq" userLabel="View2" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="87.6666666666667" width="375" height="227.33333333333337"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuC-c2-PZq" userLabel="View2" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="75.666666666666671" width="375" height="227.66666666666663"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUx-RK-B3n" userLabel="Viewgg">
-                                            <rect key="frame" x="67.999999999999986" y="0.0" width="245.66666666666663" height="72.333333333333329"/>
+                                            <rect key="frame" x="67.999999999999986" y="0.0" width="245.66666666666663" height="72.666666666666671"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hj ạkdsjf dfajlsdkf alds fald fad jflkadjf alkdsfj adf adf kladfjklaf adlfj lkdasfa " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-3n-0Ps" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hj ạkdsjf dfajlsdkf alds fald fad jflkadjf alkdsfj adf adf kladfjklaf adlfj lkdasfa " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-3n-0Ps" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                     <rect key="frame" x="5" y="10" width="235.66666666666666" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(120k Subscribers)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JE-Qa-fnE" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="37.333333333333314" width="235.66666666666666" height="10.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(120k Subscribers)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JE-Qa-fnE" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                                    <rect key="frame" x="5" y="37.666666666666629" width="235.66666666666666" height="10.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
                                                     <color key="textColor" red="0.98431372549019602" green="0.20000000000000001" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -607,10 +607,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="5JE-Qa-fnE" secondAttribute="trailing" constant="5" id="kGu-Ew-Qdb"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5E-GF-9WD" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5E-GF-9WD" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="10" y="6" width="58" height="58"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lDR-jW-uZj" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lDR-jW-uZj" customClass="KHImageView" customModule="EasyKorean" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -629,21 +629,21 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAj-7Z-feO" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                            <rect key="frame" x="318.66666666666669" y="11.666666666666632" width="46.333333333333314" height="46.333333333333343"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAj-7Z-feO" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
+                                            <rect key="frame" x="318.66666666666669" y="11.666666666666625" width="46.333333333333314" height="46.666666666666657"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4O-vW-phg" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="46.333333333333336"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4O-vW-phg" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="46.666666666666664"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="d44-WH-INV">
-                                                    <rect key="frame" x="13.666666666666631" y="13.999999999999998" width="18.666666666666671" height="18.333333333333329"/>
+                                                    <rect key="frame" x="13.666666666666631" y="14.000000000000002" width="18.666666666666671" height="18.666666666666671"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-BA-zG6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="46.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="46.666666666666664"/>
                                                     <connections>
                                                         <action selector="actionShowEditNote:" destination="-1" eventType="touchUpInside" id="hnN-Dd-c6I"/>
                                                     </connections>
@@ -669,28 +669,28 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4W5-qR-dCY">
-                                            <rect key="frame" x="0.0" y="77.333333333333314" width="375" height="150"/>
+                                            <rect key="frame" x="0.0" y="77.666666666666629" width="375" height="150"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2R-uy-XbG" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2R-uy-XbG" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="0.0" width="355" height="140"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7n-Mr-6Li" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7n-Mr-6Li" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="355" height="140"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ghi chú của bạn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99q-jO-6fM" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ghi chú của bạn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99q-jO-6fM" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                                     <rect key="frame" x="5" y="5" width="152.66666666666666" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                                     <color key="textColor" red="0.98431372549019602" green="0.20000000000000001" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2019 | Auto Save" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-PR-KKr" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2019 | Auto Save" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-PR-KKr" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                                                     <rect key="frame" x="167.66666666666663" y="5" width="177.33333333333337" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="00" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="que-YX-qE5">
-                                                                    <rect key="frame" x="0.0" y="21.333333333333321" width="355" height="118.66666666666669"/>
+                                                                    <rect key="frame" x="0.0" y="21.333333333333378" width="355" height="118.66666666666669"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -762,13 +762,13 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycA-Dx-Kdt" userLabel="ViewADS" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="320" width="375" height="50"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycA-Dx-Kdt" userLabel="ViewADS" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="308.33333333333337" width="375" height="50"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-Wz-Yvi" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-Wz-Yvi" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVk-ue-fB2" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVk-ue-fB2" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
@@ -804,20 +804,21 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ur2-IH-P0M">
-                                    <rect key="frame" x="0.0" y="375" width="375" height="681"/>
+                                    <rect key="frame" x="0.0" y="363.33333333333337" width="375" height="681.00000000000011"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-fg-FL5" userLabel="View1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="46.333333333333336"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dso-5R-K5H">
-                                                    <rect key="frame" x="10" y="0.0" width="66" height="46.333333333333336"/>
+                                                    <rect key="frame" x="10" y="0.0" width="33.333333333333336" height="46"/>
+                                                    <color key="tintColor" red="0.49803921569999998" green="0.1333333333" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="ic_auto_play_off"/>
                                                     <connections>
                                                         <action selector="actionAutoPlay:" destination="-1" eventType="touchUpInside" id="O45-nm-gdI"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzJ-xA-FLK" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="86" y="0.0" width="0.0" height="46.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzJ-xA-FLK" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                                    <rect key="frame" x="53.333333333333336" y="0.0" width="0.0" height="46"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -825,8 +826,8 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="txt_autoplay"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no8-LJ-JEg" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                                    <rect key="frame" x="355" y="0.0" width="0.0" height="46.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no8-LJ-JEg" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                                    <rect key="frame" x="355" y="0.0" width="0.0" height="46"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -849,7 +850,7 @@
                                             </constraints>
                                         </view>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O7E-DB-zC6">
-                                            <rect key="frame" x="0.0" y="46.333333333333371" width="375" height="634.66666666666663"/>
+                                            <rect key="frame" x="0.0" y="46" width="375" height="635"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableView>
                                     </subviews>
@@ -886,7 +887,7 @@
                             <rect key="frame" x="0.0" y="223" width="375" height="715"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-io-Wvt" customClass="KHButton" customModule="EasyEnglish" customModuleProvider="target">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-io-Wvt" customClass="KHButton" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="10" y="878" width="50" height="50"/>
                             <color key="backgroundColor" red="0.92941176469999998" green="0.44705882349999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -961,7 +962,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bg" width="377" height="144"/>
+        <image name="bg" width="375" height="85"/>
         <image name="edit" width="64" height="64"/>
         <image name="ic_add_list_bar" width="19" height="19.333333969116211"/>
         <image name="ic_auto_play_off" width="33.333332061767578" height="20"/>

@@ -63,7 +63,7 @@ extension LibraryVC {
             self.openSetting()
         }
         navi.handleProfile = {
-            self.openProfile()
+            self.openMenu()
         }
         
         TAppDelegate.handleReloadDataNotes = {

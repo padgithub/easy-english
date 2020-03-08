@@ -31,7 +31,7 @@ class ContentListVC: BaseVC {
             self.openSetting()
         }
         navi.handleProfile = {
-            self.openProfile()
+            self.openMenu()
         }
         tableView.delegate = self
         tableView.dataSource = self

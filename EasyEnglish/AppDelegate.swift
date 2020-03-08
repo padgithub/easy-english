@@ -170,10 +170,10 @@ extension AppDelegate {
         dbShared.checkDB { (bool) in
             if bool {
                 dbShared.downloadDB(success: { (xong) in
-                    self.initMainVC()
+                    self.initMenu()
                 })
             }else{
-                self.initMainVC()
+                self.initMenu()
             }
         }
     }
@@ -238,11 +238,12 @@ extension AppDelegate {
 
 extension AppDelegate {
     func initMenu() {
+        let tab = initTabVC(0)
         let menuVC = MenuVC(nibName: "MenuVC", bundle: nil)
         let homeVC = HomeVC.init()
         let navi = UINavigationController(rootViewController: homeVC)
         navi.isNavigationBarHidden = true
-        menuContainerViewController  = MFSideMenuContainerViewController.container(withCenter: navi,
+        menuContainerViewController  = MFSideMenuContainerViewController.container(withCenter: tab,
                                                                                    leftMenuViewController: menuVC,  rightMenuViewController: nil)
         self.window?.rootViewController = menuContainerViewController
     }

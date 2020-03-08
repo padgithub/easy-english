@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,15 +11,12 @@
         <array key="Gibson-Regular.ttf">
             <string>Gibson-Regular</string>
         </array>
-        <array key="MyriadPro-Bold.otf">
-            <string>MyriadPro-Bold</string>
-        </array>
         <array key="gibson-bold.ttf">
             <string>Gibson-Bold</string>
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuVC" customModule="LockApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuVC" customModule="E___Japanese" customModuleProvider="target">
             <connections>
                 <outlet property="imgAvatar" destination="iep-RD-MAZ" id="06f-hQ-oek"/>
                 <outlet property="lbEmail" destination="mdz-wA-U2A" id="tTh-kW-oCg"/>
@@ -48,7 +43,7 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-iE-lhJ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JY-iv-Gh4" customClass="KHView" customModule="LockApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JY-iv-Gh4" customClass="KHView" customModule="E___Japanese" customModuleProvider="target">
                             <rect key="frame" x="131.5" y="26" width="112" height="112"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iep-RD-MAZ" customClass="KHImageView">
@@ -79,13 +74,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn Nguyên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-bY-D3I" customClass="KHLabel" customModule="LockApp" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn Nguyên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-bY-D3I" customClass="KHLabel" customModule="E___Japanese" customModuleProvider="target">
                             <rect key="frame" x="91" y="138" width="193" height="24.5"/>
                             <fontDescription key="fontDescription" name="Gibson-Bold" family="Gibson" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nguyenvannguyen2006@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdz-wA-U2A" customClass="KHLabel" customModule="LockApp" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nguyenvannguyen2006@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdz-wA-U2A" customClass="KHLabel" customModule="E___Japanese" customModuleProvider="target">
                             <rect key="frame" x="61" y="162.5" width="253.5" height="19"/>
                             <fontDescription key="fontDescription" name="Gibson-Regular" family="Gibson" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,21 +101,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSx-Za-AVH">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_locker" translatesAutoresizingMaskIntoConstraints="NO" id="iCn-2L-AcU">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="iCn-2L-AcU">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-b0-1c3" customClass="MagicView" customModule="LockApp" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zng-kn-Yc4" customClass="KHLabel" customModule="LockApp" customModuleProvider="target">
-                            <rect key="frame" x="122" y="146" width="131.5" height="27"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="27"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zng-kn-Yc4" customClass="KHLabel" customModule="E___Japanese" customModuleProvider="target">
+                            <rect key="frame" x="151.5" y="132" width="72" height="32.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="L2a-ZP-8uc" customClass="KHImageView" customModule="LockApp" customModuleProvider="target">
-                            <rect key="frame" x="141" y="41" width="93" height="93"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="L2a-ZP-8uc" customClass="KHImageView" customModule="E___Japanese" customModuleProvider="target">
+                            <rect key="frame" x="141" y="26.5" width="93" height="93.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="L2a-ZP-8uc" secondAttribute="height" multiplier="1:1" id="bpf-xG-2O7"/>
                             </constraints>
@@ -128,19 +119,15 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.56862745100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="L2a-ZP-8uc" firstAttribute="top" secondItem="KXX-b0-1c3" secondAttribute="bottom" id="Btu-uZ-LP7"/>
-                        <constraint firstItem="KXX-b0-1c3" firstAttribute="leading" secondItem="zSx-Za-AVH" secondAttribute="leading" id="CNt-Yn-yHA"/>
-                        <constraint firstItem="L2a-ZP-8uc" firstAttribute="centerX" secondItem="KXX-b0-1c3" secondAttribute="centerX" id="M3q-r4-P0b"/>
+                        <constraint firstItem="L2a-ZP-8uc" firstAttribute="centerX" secondItem="zSx-Za-AVH" secondAttribute="centerX" id="94E-p1-zqv"/>
                         <constraint firstItem="zng-kn-Yc4" firstAttribute="top" secondItem="L2a-ZP-8uc" secondAttribute="bottom" constant="12" id="Q35-YZ-vys"/>
-                        <constraint firstItem="KXX-b0-1c3" firstAttribute="height" secondItem="zSx-Za-AVH" secondAttribute="height" multiplier="35:160" id="R3n-4b-aCn"/>
                         <constraint firstAttribute="trailing" secondItem="iCn-2L-AcU" secondAttribute="trailing" id="RIJ-Wa-fba"/>
+                        <constraint firstItem="L2a-ZP-8uc" firstAttribute="centerY" secondItem="zSx-Za-AVH" secondAttribute="centerY" constant="-20" id="Rer-ye-xmL"/>
                         <constraint firstItem="L2a-ZP-8uc" firstAttribute="height" secondItem="zSx-Za-AVH" secondAttribute="height" multiplier="93:186" id="TC0-e9-uhw"/>
-                        <constraint firstAttribute="trailing" secondItem="KXX-b0-1c3" secondAttribute="trailing" id="UyR-KP-bdS"/>
                         <constraint firstItem="iCn-2L-AcU" firstAttribute="top" secondItem="zSx-Za-AVH" secondAttribute="top" id="W5z-Zy-gsn"/>
                         <constraint firstAttribute="bottom" secondItem="iCn-2L-AcU" secondAttribute="bottom" id="bj1-pa-PAV"/>
                         <constraint firstItem="zng-kn-Yc4" firstAttribute="centerX" secondItem="L2a-ZP-8uc" secondAttribute="centerX" id="dlV-ea-08C"/>
                         <constraint firstItem="iCn-2L-AcU" firstAttribute="leading" secondItem="zSx-Za-AVH" secondAttribute="leading" id="pyN-04-FRj"/>
-                        <constraint firstItem="KXX-b0-1c3" firstAttribute="top" secondItem="zSx-Za-AVH" secondAttribute="top" id="vKb-Wp-XnO"/>
                     </constraints>
                 </view>
             </subviews>
@@ -165,7 +152,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bg_locker" width="621" height="1104"/>
+        <image name="bg" width="377" height="144"/>
         <image name="ic_logo" width="460" height="460"/>
         <image name="logo" width="1024" height="1024"/>
     </resources>

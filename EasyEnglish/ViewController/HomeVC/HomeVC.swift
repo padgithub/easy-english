@@ -23,10 +23,7 @@ class HomeVC: BaseVC {
         initUI()
         initData()
     }
-    
-    deinit {
-        tableView.dg_removePullToRefresh()
-    }
+   
 }
 
 extension HomeVC {
@@ -37,9 +34,14 @@ extension HomeVC {
             self.openMenu()
         }
         navi.handleSetting = {
-            self.openSetting()
+//            self.openSetting()
+            AdmobManager.shared.logEvent(true)
+            self.viewModel.isPlaylist = !self.viewModel.isPlaylist
+            self.navi.imageRight = self.viewModel.isPlaylist ? UIImage.init(named: "ic_layout2")! : UIImage.init(named: "ic_layout")!
+            self.tableView.reloadData()
         }
         tableView.register(VideoHomeCell.self)
+        tableView.register(VideoPlayCell.self)
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
         tableView.addInfiniteScrolling {
@@ -47,6 +49,7 @@ extension HomeVC {
             self.tableView.reloadData()
             self.tableView.infiniteScrollingView.stopAnimating()
         }
+        viewModel.viewController = self
         viewModel.handleSelectRow = { (index) in
             let arrTemp = VideoManager.shareInstance.fetchAllForPlaylistId(playlistId: self.arrData[index].playlistId)
             let developer = self.arrData[index].subTitle
