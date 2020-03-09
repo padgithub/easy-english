@@ -23,6 +23,7 @@ class MenuObj: NSObject {
 }
 
 class MenuVC: UIViewController {
+    @IBOutlet weak var lblVersion: KHLabel!
     @IBOutlet weak var tbMain: UITableView!
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var lbName: KHLabel!
@@ -30,10 +31,12 @@ class MenuVC: UIViewController {
     @IBOutlet weak var lbTitleLogo: KHLabel!
     
     var arrItem: [MenuObj] = {
-        let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "Home"),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "Category"),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_favorite"), title: "Faverites"),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_libray"), title: "Lib")]
+        let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "txt_home".localized),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_catalogue".localized),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_favorite"), title: "txt_favorites".localized),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_libray"), title: "txt_library".localized),
+                                MenuObj(#imageLiteral(resourceName: "ic_like_bar"), title: "txt_st_star_app".localized),
+                                MenuObj(#imageLiteral(resourceName: "ic_share"), title: "txt_st_share".localized)]
         
         return items
     }()
@@ -65,6 +68,8 @@ extension MenuVC {
 //        indicator.center = imgAvatar.center
 //        imgAvatar.addSubview(indicator)
 //        indicator.startAnimating()
+        let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
+        lblVersion.text = "v\(appVersion ?? "1.0.0")"
     }
 
     func initData() {
@@ -91,11 +96,11 @@ extension MenuVC: UITableViewDataSource {
 
 extension MenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45*heightRatio
+        return 42*heightRatio
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        
         switch indexPath.item {
         case 0:
             let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(0))
@@ -118,12 +123,19 @@ extension MenuVC: UITableViewDelegate {
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case 4:
+            TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
+            AppStoreReviewManager.requestReviewNow()
             break
         case 5:
-            actionSupport()
-            break
-        case 6:
-            
+            TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
+            if let link = NSURL(string: "https://itunes.apple.com/app/id1479709335")
+            {
+                let mes = "Learn Japanese by video - Good apps for everyone to download"
+                let objectsToShare = [mes,link] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.excludedActivityTypes = [.postToFacebook,.postToTwitter,.copyToPasteboard,.message,.mail, .addToReadingList]
+                self.present(activityVC, animated: true, completion: nil)
+            }
             break
         default:
             

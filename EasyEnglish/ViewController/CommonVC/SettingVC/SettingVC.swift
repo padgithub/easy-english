@@ -61,9 +61,10 @@ class SettingVC: BaseVC {
             //Set the link to share.
             if let link = NSURL(string: "https://itunes.apple.com/app/id1479709335")
             {
-                let objectsToShare = [link] as [Any]
+                let mes = "Learn Japanese by video - Good apps for everyone to download"
+                let objectsToShare = [mes,link] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-                activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                activityVC.excludedActivityTypes = [.postToFacebook,.postToTwitter,.copyToPasteboard,.message,.mail, .addToReadingList]
                 self.present(activityVC, animated: true, completion: nil)
             }
             break

@@ -358,7 +358,7 @@
 		01AD43CC21E72F95000156D2 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		01AD43CD21E72F95000156D2 /* ToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolBarView.xib; sourceTree = "<group>"; };
 		01AD43D221E73A75000156D2 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
-		01B3DB3921D62FE20051221E /* Yume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B3DB3921D62FE20051221E /* Yume Japanese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yume Japanese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3DB3C21D62FE20051221E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B3DB4121D62FE20051221E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01B3DB4321D62FE70051221E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -724,7 +724,7 @@
 		01B3DB3A21D62FE20051221E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01B3DB3921D62FE20051221E /* Yume.app */,
+				01B3DB3921D62FE20051221E /* Yume Japanese.app */,
 				01B3DB4D21D62FE70051221E /* EasyEnglishTests.xctest */,
 				01B3DB5821D62FE70051221E /* EasyEnglishUITests.xctest */,
 				018D5A7D232949F400ADA3C0 /* EasyKorean.app */,
@@ -1011,8 +1011,8 @@
 		324858E323CC0DD00089D925 /* MenuVC */ = {
 			isa = PBXGroup;
 			children = (
-				324858E423CC0DD00089D925 /* MenuVC.xib */,
 				324858E523CC0DD00089D925 /* view */,
+				324858E423CC0DD00089D925 /* MenuVC.xib */,
 				324858E823CC0DD00089D925 /* MenuVC.swift */,
 			);
 			path = MenuVC;
@@ -1102,7 +1102,7 @@
 			);
 			name = EasyJapanese;
 			productName = EasyEnglish;
-			productReference = 01B3DB3921D62FE20051221E /* Yume.app */;
+			productReference = 01B3DB3921D62FE20051221E /* Yume Japanese.app */;
 			productType = "com.apple.product-type.application";
 		};
 		01B3DB4C21D62FE70051221E /* EasyEnglishTests */ = {
@@ -2005,7 +2005,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ejapanese;
-				PRODUCT_NAME = Yume;
+				PRODUCT_NAME = "Yume Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2082,7 +2082,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.padit.ejapanese;
-				PRODUCT_NAME = Yume;
+				PRODUCT_NAME = "Yume Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

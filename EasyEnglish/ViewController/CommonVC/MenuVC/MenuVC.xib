@@ -16,12 +16,13 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuVC" customModule="E___Japanese" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuVC" customModule="EasyKorean" customModuleProvider="target">
             <connections>
                 <outlet property="imgAvatar" destination="iep-RD-MAZ" id="06f-hQ-oek"/>
                 <outlet property="lbEmail" destination="mdz-wA-U2A" id="tTh-kW-oCg"/>
                 <outlet property="lbName" destination="dgb-bY-D3I" id="eSb-dW-Eoa"/>
                 <outlet property="lbTitleLogo" destination="zng-kn-Yc4" id="TXg-tc-paI"/>
+                <outlet property="lblVersion" destination="Icv-jm-kCV" id="l1p-4T-1nO"/>
                 <outlet property="tbMain" destination="1VT-gw-WzI" id="fCc-Pc-vda"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,19 +32,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1VT-gw-WzI">
-                    <rect key="frame" x="0.0" y="186.5" width="375" height="563.5"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="Xwn-b6-LUM"/>
-                        <outlet property="delegate" destination="-1" id="AIP-CL-kWz"/>
-                    </connections>
-                </tableView>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-iE-lhJ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JY-iv-Gh4" customClass="KHView" customModule="E___Japanese" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JY-iv-Gh4" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="131.5" y="26" width="112" height="112"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iep-RD-MAZ" customClass="KHImageView">
@@ -74,13 +66,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn Nguyên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-bY-D3I" customClass="KHLabel" customModule="E___Japanese" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn Nguyên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-bY-D3I" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="91" y="138" width="193" height="24.5"/>
                             <fontDescription key="fontDescription" name="Gibson-Bold" family="Gibson" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nguyenvannguyen2006@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdz-wA-U2A" customClass="KHLabel" customModule="E___Japanese" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nguyenvannguyen2006@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdz-wA-U2A" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="61" y="162.5" width="253.5" height="19"/>
                             <fontDescription key="fontDescription" name="Gibson-Regular" family="Gibson" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,19 +90,25 @@
                         <constraint firstItem="mdz-wA-U2A" firstAttribute="top" secondItem="dgb-bY-D3I" secondAttribute="bottom" id="ytm-OL-G5i"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icv-jm-kCV" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="715" width="375" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSx-Za-AVH">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="iCn-2L-AcU">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zng-kn-Yc4" customClass="KHLabel" customModule="E___Japanese" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zng-kn-Yc4" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="151.5" y="132" width="72" height="32.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="L2a-ZP-8uc" customClass="KHImageView" customModule="E___Japanese" customModuleProvider="target">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="L2a-ZP-8uc" customClass="KHImageView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="141" y="26.5" width="93" height="93.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="L2a-ZP-8uc" secondAttribute="height" multiplier="1:1" id="bpf-xG-2O7"/>
@@ -130,12 +128,23 @@
                         <constraint firstItem="iCn-2L-AcU" firstAttribute="leading" secondItem="zSx-Za-AVH" secondAttribute="leading" id="pyN-04-FRj"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1VT-gw-WzI">
+                    <rect key="frame" x="0.0" y="186.5" width="375" height="518.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" red="0.49803921569999998" green="0.1333333333" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Xwn-b6-LUM"/>
+                        <outlet property="delegate" destination="-1" id="AIP-CL-kWz"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.16862745098039217" green="0.18823529411764706" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1VT-gw-WzI" secondAttribute="trailing" id="3m3-H5-9oN"/>
                 <constraint firstItem="fOG-iE-lhJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AyZ-Vv-dWO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1VT-gw-WzI" secondAttribute="bottom" id="BAm-dz-CjT"/>
+                <constraint firstItem="Icv-jm-kCV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="G6O-iA-hsp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Icv-jm-kCV" secondAttribute="bottom" constant="15" id="PzM-mt-QpD"/>
+                <constraint firstItem="Icv-jm-kCV" firstAttribute="top" secondItem="1VT-gw-WzI" secondAttribute="bottom" constant="10" id="TFc-XB-zdB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fOG-iE-lhJ" secondAttribute="trailing" id="boW-Yp-MIk"/>
                 <constraint firstItem="zSx-Za-AVH" firstAttribute="trailing" secondItem="fOG-iE-lhJ" secondAttribute="trailing" id="c1p-MI-xcG"/>
                 <constraint firstItem="fOG-iE-lhJ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="183/736" id="gcW-X5-Xvd"/>
@@ -143,6 +152,7 @@
                 <constraint firstItem="zSx-Za-AVH" firstAttribute="bottom" secondItem="fOG-iE-lhJ" secondAttribute="bottom" id="pZQ-9n-n1b"/>
                 <constraint firstItem="zSx-Za-AVH" firstAttribute="top" secondItem="fOG-iE-lhJ" secondAttribute="top" id="s0j-Y9-Kcm"/>
                 <constraint firstItem="1VT-gw-WzI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uir-QV-f71"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Icv-jm-kCV" secondAttribute="trailing" id="x78-at-1za"/>
                 <constraint firstItem="zSx-Za-AVH" firstAttribute="leading" secondItem="fOG-iE-lhJ" secondAttribute="leading" id="yMz-WH-ITz"/>
                 <constraint firstItem="fOG-iE-lhJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zJn-pM-Vxt"/>
             </constraints>
@@ -152,7 +162,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bg" width="377" height="144"/>
+        <image name="bg" width="375" height="85"/>
         <image name="ic_logo" width="460" height="460"/>
         <image name="logo" width="1024" height="1024"/>
     </resources>
