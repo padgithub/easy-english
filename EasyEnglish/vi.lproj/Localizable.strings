@@ -56,6 +56,7 @@
 "txt_select_language" = "Chọn ngôn ngữ";
 "txt_restart_app" = "Khởi động lại ứng dụng";
 "txt_restart_app_msg" = "Cài đặt được thay đổi thành công. Vui lòng khởi động lại ứng dụng để tiếp tục sử dụng";
+"txt_restart_app_msg_error" = "Có lỗi xảy ra khi cập nhật dữ liệu. Vui lòng khởi động lại ứng dụng để tiếp tục sử dụng.";
 //Report Alert
 "txt_report" = "Báo cáo";
 "txt_title_report" = "Báo cáo";

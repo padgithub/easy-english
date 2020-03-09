@@ -164,8 +164,6 @@
 		018D5A77232949F400ADA3C0 /* ZoomOutViewPlayVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0124129721DDC1F80078B60F /* ZoomOutViewPlayVideo.xib */; };
 		018D5A78232949F400ADA3C0 /* PlayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DD8F21D917DE0051221E /* PlayVC.xib */; };
 		018D5A80232A17FD00ADA3C0 /* LaunchScreenKorean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018D5A7F232A17FD00ADA3C0 /* LaunchScreenKorean.storyboard */; };
-		018D5A81232A18F200ADA3C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DB4521D62FE70051221E /* LaunchScreen.storyboard */; };
-		018D5A84232A198E00ADA3C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DB4521D62FE70051221E /* LaunchScreen.storyboard */; };
 		01AD43CE21E72F96000156D2 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43CC21E72F95000156D2 /* ToolBarView.swift */; };
 		01AD43CF21E72F96000156D2 /* ToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AD43CD21E72F95000156D2 /* ToolBarView.xib */; };
 		01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43D221E73A75000156D2 /* HistoryManager.swift */; };
@@ -227,8 +225,8 @@
 		324858F123CC0DFE0089D925 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */; };
 		324858F223CC0E030089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */; };
 		324858F323CC0E090089D925 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DF23CC0D740089D925 /* MFSideMenuShadow.m */; };
+		325E562F241621FD008EC38F /* LaunchScreenJapanese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */; };
 		32F0310F23F68F9B00F04E87 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; };
-		32F0311023F68F9B00F04E87 /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
 		7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
@@ -270,17 +268,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		32F0311123F68F9B00F04E87 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				32F0311023F68F9B00F04E87 /* YouTubePlayer.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -290,7 +277,6 @@
 		011FCA4921FCAE4600922968 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		011FCA4A21FCAE4600922968 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		011FCA4D21FD7CA900922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
-		011FCA4E21FD7CA900922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		011FCA4F21FD7CB200922968 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		011FCA5021FD81AE00922968 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		012203C123688A3E004925BA /* ToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastWindow.swift; sourceTree = "<group>"; };
@@ -354,7 +340,6 @@
 		018D5A7D232949F400ADA3C0 /* EasyKorean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyKorean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018D5A7E232949F500ADA3C0 /* EasyEnglish copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "EasyEnglish copy-Info.plist"; path = "/Users/padmac/SoucreCode/easy-english/EasyEnglish copy-Info.plist"; sourceTree = "<absolute>"; };
 		018D5A7F232A17FD00ADA3C0 /* LaunchScreenKorean.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenKorean.storyboard; sourceTree = "<group>"; };
-		018D5A83232A192B00ADA3C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		01AD43CC21E72F95000156D2 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		01AD43CD21E72F95000156D2 /* ToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolBarView.xib; sourceTree = "<group>"; };
 		01AD43D221E73A75000156D2 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
@@ -362,7 +347,6 @@
 		01B3DB3C21D62FE20051221E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B3DB4121D62FE20051221E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01B3DB4321D62FE70051221E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		01B3DB4621D62FE70051221E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B3DB4821D62FE70051221E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B3DB4D21D62FE70051221E /* EasyEnglishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyEnglishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3DB5121D62FE70051221E /* EasyEnglishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEnglishTests.swift; sourceTree = "<group>"; };
@@ -422,6 +406,7 @@
 		324858E623CC0DD00089D925 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		324858E723CC0DD00089D925 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		324858E823CC0DD00089D925 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenJapanese.storyboard; sourceTree = "<group>"; };
 		32F0310923F68F9600F04E87 /* YouTubePlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouTubePlayer.xcodeproj; path = EasyEnglish/Framework/YouTubePlayer/YouTubePlayer.xcodeproj; sourceTree = "<group>"; };
 		499A9427697047D9BBD40088 /* Pods-EasyEnglishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.release.xcconfig"; sourceTree = "<group>"; };
 		70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
@@ -747,11 +732,11 @@
 				01B3DB3C21D62FE20051221E /* AppDelegate.swift */,
 				01B3DB4021D62FE20051221E /* Main.storyboard */,
 				01B3DB4321D62FE70051221E /* Assets.xcassets */,
-				01B3DB4521D62FE70051221E /* LaunchScreen.storyboard */,
 				01B3DB4821D62FE70051221E /* Info.plist */,
 				0138FC0D21DF7163001B6BAF /* EasyEnglish-Bridging-Header.h */,
 				01EE355121EFAAE200C3346F /* Localizable.strings */,
 				018D5A7F232A17FD00ADA3C0 /* LaunchScreenKorean.storyboard */,
+				325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */,
 			);
 			path = EasyEnglish;
 			sourceTree = "<group>";
@@ -1094,7 +1079,6 @@
 				01B3DB3621D62FE20051221E /* Frameworks */,
 				01B3DB3721D62FE20051221E /* Resources */,
 				F36A17DD0C46048A512EF9EA /* [CP] Embed Pods Frameworks */,
-				32F0311123F68F9B00F04E87 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1245,7 +1229,6 @@
 				018D5A80232A17FD00ADA3C0 /* LaunchScreenKorean.storyboard in Resources */,
 				018D5A75232949F400ADA3C0 /* AboutAppVC.xib in Resources */,
 				018D5A76232949F400ADA3C0 /* ToolBarView.xib in Resources */,
-				018D5A84232A198E00ADA3C0 /* LaunchScreen.storyboard in Resources */,
 				018D5A77232949F400ADA3C0 /* ZoomOutViewPlayVideo.xib in Resources */,
 				018D5A78232949F400ADA3C0 /* PlayVC.xib in Resources */,
 			);
@@ -1255,11 +1238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				018D5A81232A18F200ADA3C0 /* LaunchScreen.storyboard in Resources */,
 				0138FC3921E10B5A001B6BAF /* ContentListVC.xib in Resources */,
 				01B3DD2A21D631150051221E /* TextFieldView.xib in Resources */,
 				01B3DB4421D62FE70051221E /* Assets.xcassets in Resources */,
 				01B3DD2721D631150051221E /* DropBoxUITB.xib in Resources */,
+				325E562F241621FD008EC38F /* LaunchScreenJapanese.storyboard in Resources */,
 				01B3DD2321D631150051221E /* NavigationView.xib in Resources */,
 				01EE354F21EFAAE200C3346F /* Localizable.strings in Resources */,
 				0138FC7621E11819001B6BAF /* ListVideoVC.xib in Resources */,
@@ -1639,16 +1622,6 @@
 				011FCA4D21FD7CA900922968 /* vi */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		01B3DB4521D62FE70051221E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01B3DB4621D62FE70051221E /* Base */,
-				011FCA4E21FD7CA900922968 /* vi */,
-				018D5A83232A192B00ADA3C0 /* en */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		01EE355121EFAAE200C3346F /* Localizable.strings */ = {

@@ -15,7 +15,7 @@ class DBManager: NSObject {
     }
     
     func checkDB(success: @escaping (Bool) -> Void ) {
-        apiRequestShared.webServiceCall("https://easyapp-api.herokuapp.com/checkdb", params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
+        apiRequestShared.webServiceCall("https://easyapp-api.herokuapp.com/checkdbJP", params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
             success(response.responeJson["status"].boolValue)
         }
     }
@@ -24,7 +24,7 @@ class DBManager: NSObject {
         let fileManager = FileManager.default
         let destinationSqliteURL = GroupManager.database
         
-        Alamofire.request("https://easyapp-api.herokuapp.com/filedb").downloadProgress(closure : { (progress) in
+        Alamofire.request("https://easyapp-api.herokuapp.com/filedbJP").downloadProgress(closure : { (progress) in
             print(progress.fractionCompleted)
             
         }).responseData{ (response) in
@@ -33,7 +33,7 @@ class DBManager: NSObject {
             print(response.result.description)
             
             if let data = response.result.value {
-                let fileURL = destinationSqliteURL.appendingPathComponent("sqlite.db")
+                let fileURL = destinationSqliteURL
                 do {
                     if fileManager.fileExists(atPath: destinationSqliteURL.path) {
                         do {
@@ -43,6 +43,7 @@ class DBManager: NSObject {
                         }
                     }
                     try data.write(to: fileURL)
+                    print("Wirte data sucess")
                     success(true)
                 } catch {
                     print("Something went wrong!")
@@ -56,7 +57,7 @@ class DBManager: NSObject {
     }
     
     func report(playlistId: String, videoId: String, email: String, contents: String, success: @escaping (Bool) -> Void) {
-       let url = "https://easyapp-api.herokuapp.com/addReport?playlistId=\(playlistId)&videoId=\(videoId)&email=\(email)&contents=\(contents)"
+       let url = "https://easyapp-api.herokuapp.com/addReportJP?playlistId=\(playlistId)&videoId=\(videoId)&email=\(email)&contents=\(contents)"
         apiRequestShared.webServiceCall(url, params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
             success(response.responeJson["status"].boolValue)
         }

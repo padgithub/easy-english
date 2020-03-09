@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingVC" customModule="EasyEnglish" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingVC" customModule="EasyKorean" customModuleProvider="target">
             <connections>
                 <outlet property="imgCheckbox" destination="AtK-Cr-bSI" id="KBB-xb-zN2"/>
                 <outlet property="imgFlags" destination="kBv-S9-wyZ" id="9Sq-3a-GCk"/>
@@ -24,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNl-Wx-pfa" customClass="NavigationView" customModule="EasyEnglish" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNl-Wx-pfa" customClass="NavigationView" customModule="EasyKorean" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -43,8 +41,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkR-iM-5YB">
                             <rect key="frame" x="0.0" y="10" width="375" height="247"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Korean" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFs-rj-j97" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="140.5" width="335" height="26"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Korean" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFs-rj-j97" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="158.5" width="335" height="26"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -52,16 +50,16 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="app_name"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-Op-P2Q" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
-                                    <rect key="frame" x="30" y="171.5" width="315" height="20"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-Op-P2Q" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
+                                    <rect key="frame" x="30" y="189.5" width="315" height="20"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNO-bN-3nt" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNO-bN-3nt" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="126" y="10" width="123" height="123.5"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_app2" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-2s-vtv" customClass="KHImageView" customModule="EasyEnglish" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-2s-vtv" customClass="KHImageView" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="123.5"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -87,7 +85,7 @@
                                 <constraint firstItem="0Ad-Op-P2Q" firstAttribute="leading" secondItem="OkR-iM-5YB" secondAttribute="leading" constant="30" id="0qd-OY-SMs"/>
                                 <constraint firstItem="0Ad-Op-P2Q" firstAttribute="centerX" secondItem="OkR-iM-5YB" secondAttribute="centerX" id="MqL-zX-94l"/>
                                 <constraint firstItem="uFs-rj-j97" firstAttribute="leading" secondItem="OkR-iM-5YB" secondAttribute="leading" constant="20" id="PlE-jw-fsU"/>
-                                <constraint firstItem="uFs-rj-j97" firstAttribute="centerY" secondItem="OkR-iM-5YB" secondAttribute="centerY" constant="30" id="VPU-CN-AgT"/>
+                                <constraint firstItem="uFs-rj-j97" firstAttribute="top" secondItem="nNO-bN-3nt" secondAttribute="bottom" constant="25" id="Qna-D1-s52"/>
                                 <constraint firstItem="nNO-bN-3nt" firstAttribute="centerX" secondItem="OkR-iM-5YB" secondAttribute="centerX" id="W7a-2h-Z54"/>
                                 <constraint firstAttribute="trailing" secondItem="0Ad-Op-P2Q" secondAttribute="trailing" constant="30" id="ZPF-Ky-bnR"/>
                                 <constraint firstAttribute="trailing" secondItem="uFs-rj-j97" secondAttribute="trailing" constant="20" id="Zzm-SS-Wha"/>
@@ -98,13 +96,13 @@
                                 <constraint firstItem="0Ad-Op-P2Q" firstAttribute="top" secondItem="uFs-rj-j97" secondAttribute="bottom" constant="5" id="nX1-G1-Lqa"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adn-1P-jAo" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adn-1P-jAo" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="15" y="267" width="345" height="43"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKO-2V-hal" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKO-2V-hal" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="43"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using Toolbar Video in System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-tm-sTp" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using Toolbar Video in System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-tm-sTp" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="286.5" height="43"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -158,13 +156,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-Y6-m7P" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ih-Y6-m7P" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="15" y="315" width="345" height="43"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-4E-bre" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-4E-bre" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="43"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKW-5B-WkK" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKW-5B-WkK" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="0.0" height="43"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -173,7 +171,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="txt_st_lg"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqV-50-Ae4" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqV-50-Ae4" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="257" y="0.0" width="45.5" height="43"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.85399721746575341" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,13 +225,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyQ-la-87I" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyQ-la-87I" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="15" y="363" width="345" height="43.5"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-YN-spA" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-YN-spA" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obB-52-k7X" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obB-52-k7X" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="0.0" height="43.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -277,13 +275,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-ur-tjC" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-ur-tjC" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="15" y="411.5" width="345" height="43"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6e-xF-eKE" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6e-xF-eKE" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="43"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxU-Qs-ZNk" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxU-Qs-ZNk" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="0.0" height="43"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -327,13 +325,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X58-ig-WIv" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X58-ig-WIv" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="15" y="459.5" width="345" height="43.5"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-uo-jbO" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-uo-jbO" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-OC-kbV" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-OC-kbV" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="0.0" height="43.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -377,13 +375,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zoc-wj-KpE" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zoc-wj-KpE" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                             <rect key="frame" x="15" y="508" width="345" height="43"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d60-WZ-km7" customClass="KHView" customModule="EasyEnglish" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d60-WZ-km7" customClass="KHView" customModule="EasyKorean" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="43"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg0-65-f87" customClass="KHLabel" customModule="EasyEnglish" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg0-65-f87" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="0.0" height="43"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -475,8 +473,8 @@
         </view>
     </objects>
     <resources>
+        <image name="appstore" width="1024" height="1024"/>
         <image name="gb" width="580" height="290"/>
-        <image name="ic_app2" width="90" height="90"/>
         <image name="ic_auto_play_off" width="33.5" height="20"/>
     </resources>
 </document>

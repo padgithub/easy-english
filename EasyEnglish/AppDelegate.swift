@@ -42,11 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AdmobManager.shared.fullRootViewController = (self.window?.rootViewController)!
         //
         youtubeShare.turnAudio()
-        configSQL()
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 12) as Any, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         UITabBar.appearance().unselectedItemTintColor = UIColor("9D271B", alpha: 1.0)
         UITabBar.appearance().tintColor = UIColor.white
-        
+//        configSQL()
         checkUpdateDB()
 //        initPlayVC()
         return true
@@ -169,11 +168,26 @@ extension AppDelegate {
         let dbShared = DBManager()
         dbShared.checkDB { (bool) in
             if bool {
-                dbShared.downloadDB(success: { (xong) in
+                if !(SaveHelper.get(.downloadSuccessDB) as? Bool ?? false ) {
+                    dbShared.downloadDB(success: { (xong) in
+                        if xong {
+                            SaveHelper.save(true, key: .downloadSuccessDB)
+                            self.initMenu()
+                        }else{
+                            SaveHelper.save(false, key: .downloadSuccessDB)
+                            _ = TAppDelegate.window?.rootViewController?.presentAlert(style: .alert, title: "txt_restart_app", message: "txt_restart_app_msg_error", actionTitles: ["txt_oke".localized], handler: { (action) in
+                                if action.title == "txt_oke".localized {
+                                    exit(0)
+                                }
+                            })
+                        }
+                    })
+                }else{
                     self.initMenu()
-                })
+                }
             }else{
                 self.initMenu()
+                SaveHelper.save(false, key: .downloadSuccessDB)
             }
         }
     }

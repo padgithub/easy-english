@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9O-W2-21g">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.96471887830000003" green="0.96468263860000003" blue="0.96470719579999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="SYx-an-tV1">
+                                <rect key="frame" x="117" y="313" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SYx-an-tV1" secondAttribute="height" multiplier="1:1" id="vDV-0O-w2i"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SYx-an-tV1" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="15l-qS-oo2"/>
+                            <constraint firstItem="p9O-W2-21g" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QEI-Fd-EWF"/>
+                            <constraint firstItem="SYx-an-tV1" firstAttribute="width" secondItem="SYx-an-tV1" secondAttribute="height" multiplier="1:1" id="Sf7-wc-9cb"/>
+                            <constraint firstItem="p9O-W2-21g" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="dXi-0u-9J6"/>
+                            <constraint firstAttribute="bottom" secondItem="p9O-W2-21g" secondAttribute="bottom" id="hQl-hF-vVF"/>
+                            <constraint firstItem="SYx-an-tV1" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" constant="-50" id="m1U-S9-KG6"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="p9O-W2-21g" secondAttribute="trailing" id="moL-3q-UdZ"/>
+                            <constraint firstItem="SYx-an-tV1" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="1/2.3" id="w9J-54-SAI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appstore" width="1024" height="1024"/>
+    </resources>
+</document>
