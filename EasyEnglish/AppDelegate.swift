@@ -45,9 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 12) as Any, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         UITabBar.appearance().unselectedItemTintColor = UIColor("9D271B", alpha: 1.0)
         UITabBar.appearance().tintColor = UIColor.white
-//        configSQL()
+        configSQL()
         checkUpdateDB()
-//        initPlayVC()
+//        initMenu()
         return true
     }
     

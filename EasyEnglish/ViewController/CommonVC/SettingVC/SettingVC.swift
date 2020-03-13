@@ -65,7 +65,12 @@ class SettingVC: BaseVC {
                 let objectsToShare = [mes,link] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 activityVC.excludedActivityTypes = [.postToFacebook,.postToTwitter,.copyToPasteboard,.message,.mail, .addToReadingList]
-                self.present(activityVC, animated: true, completion: nil)
+                activityVC.popoverPresentationController?.sourceView = self.view
+                activityVC.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+                activityVC.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+                self.present(activityVC, animated: true) {
+                    print("option menu presented")
+                }
             }
             break
         case 25:

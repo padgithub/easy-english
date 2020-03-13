@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvH-gz-Q5z" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
-                        <rect key="frame" x="84" y="11" width="247" height="50"/>
+                        <rect key="frame" x="84" y="26" width="249" height="20.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -50,15 +50,14 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="BvH-gz-Q5z" secondAttribute="bottom" id="3R7-eq-yht"/>
                     <constraint firstAttribute="bottom" secondItem="g01-hz-fZu" secondAttribute="bottom" id="48v-sM-RJC"/>
                     <constraint firstItem="tYE-pu-vvQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4I5-Mj-Vnw"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="BvH-gz-Q5z" secondAttribute="trailing" constant="12" id="DAL-La-nbY"/>
+                    <constraint firstItem="BvH-gz-Q5z" firstAttribute="leading" secondItem="tYE-pu-vvQ" secondAttribute="trailing" constant="12" id="8fI-jy-nmG"/>
                     <constraint firstAttribute="trailing" secondItem="g01-hz-fZu" secondAttribute="trailing" id="IQh-Y0-y3a"/>
+                    <constraint firstItem="BvH-gz-Q5z" firstAttribute="centerY" secondItem="tYE-pu-vvQ" secondAttribute="centerY" id="JJZ-nn-0xg"/>
                     <constraint firstItem="tYE-pu-vvQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LLp-Cr-pQd"/>
                     <constraint firstItem="tYE-pu-vvQ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="gu0-ZA-rOA"/>
-                    <constraint firstItem="BvH-gz-Q5z" firstAttribute="leading" secondItem="tYE-pu-vvQ" secondAttribute="trailing" constant="12" id="lTt-ug-Xm6"/>
-                    <constraint firstItem="BvH-gz-Q5z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="vlW-B6-5pY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="BvH-gz-Q5z" secondAttribute="trailing" constant="10" id="sF9-l9-Lkh"/>
                     <constraint firstItem="g01-hz-fZu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w9J-bZ-svq"/>
                 </constraints>
             </tableViewCellContentView>

@@ -61,9 +61,6 @@ class MenuVC: UIViewController {
 extension MenuVC {
     func initUI() {
         tbMain.register(MenuCell.self)
-        if isIPad {
-            lbTitleLogo.font = Common.getFontForDeviceWithFontDefault(fontDefault: UIFont.systemFont(ofSize: 32))
-        }
 //        indicator.frame = CGRect(x: 0, y: 0, width: 46, height: 46)
 //        indicator.center = imgAvatar.center
 //        imgAvatar.addSubview(indicator)
@@ -96,7 +93,7 @@ extension MenuVC: UITableViewDataSource {
 
 extension MenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 42*heightRatio
+        return isIPad ? 70 : 40
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -134,7 +131,12 @@ extension MenuVC: UITableViewDelegate {
                 let objectsToShare = [mes,link] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 activityVC.excludedActivityTypes = [.postToFacebook,.postToTwitter,.copyToPasteboard,.message,.mail, .addToReadingList]
-                self.present(activityVC, animated: true, completion: nil)
+                activityVC.popoverPresentationController?.sourceView = self.view
+                activityVC.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+                activityVC.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+                self.present(activityVC, animated: true) {
+                    print("option menu presented")
+                }
             }
             break
         default:

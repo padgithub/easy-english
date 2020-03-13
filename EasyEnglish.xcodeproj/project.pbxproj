@@ -225,8 +225,9 @@
 		324858F123CC0DFE0089D925 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */; };
 		324858F223CC0E030089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */; };
 		324858F323CC0E090089D925 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DF23CC0D740089D925 /* MFSideMenuShadow.m */; };
+		325D43A124168296000BEAAC /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; };
+		325D43A224168296000BEAAC /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		325E562F241621FD008EC38F /* LaunchScreenJapanese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */; };
-		32F0310F23F68F9B00F04E87 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
 		7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
@@ -258,6 +259,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		325D43A324168296000BEAAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				325D43A224168296000BEAAC /* YouTubePlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32F030EB23F59F0000F04E87 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,7 +446,7 @@
 			files = (
 				7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */,
 				98A17317749F1F6C77CFD26C /* Pods_EasyEnglish.framework in Frameworks */,
-				32F0310F23F68F9B00F04E87 /* YouTubePlayer.framework in Frameworks */,
+				325D43A124168296000BEAAC /* YouTubePlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,6 +1091,7 @@
 				01B3DB3621D62FE20051221E /* Frameworks */,
 				01B3DB3721D62FE20051221E /* Resources */,
 				F36A17DD0C46048A512EF9EA /* [CP] Embed Pods Frameworks */,
+				325D43A324168296000BEAAC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -142,7 +142,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="40.5" height="23.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-wd-BAh" customClass="KHLabel" customModule="EasyKorean" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="7" width="20.5" height="10"/>
+                                                        <rect key="frame" x="10" y="7" width="20.5" height="9.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -150,6 +150,8 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="fvg-wd-BAh" secondAttribute="bottom" constant="7" id="05h-kM-DZb"/>
+                                                    <constraint firstItem="fvg-wd-BAh" firstAttribute="top" secondItem="DCt-b1-tU7" secondAttribute="top" constant="7" id="46N-sQ-hqU"/>
                                                     <constraint firstAttribute="trailing" secondItem="fvg-wd-BAh" secondAttribute="trailing" constant="10" id="EPI-iP-PuG"/>
                                                     <constraint firstItem="fvg-wd-BAh" firstAttribute="centerX" secondItem="DCt-b1-tU7" secondAttribute="centerX" id="et1-QE-nhK"/>
                                                     <constraint firstItem="fvg-wd-BAh" firstAttribute="centerY" secondItem="DCt-b1-tU7" secondAttribute="centerY" id="f98-jC-6Eg"/>
@@ -171,11 +173,10 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="DCt-b1-tU7" secondAttribute="bottom" id="62q-TT-5CK"/>
                                             <constraint firstAttribute="bottom" secondItem="IeS-W6-mcB" secondAttribute="bottom" id="OYe-A4-WnJ"/>
+                                            <constraint firstItem="DCt-b1-tU7" firstAttribute="centerY" secondItem="GBA-tT-7pb" secondAttribute="centerY" id="TPm-Zi-y3o"/>
                                             <constraint firstItem="DCt-b1-tU7" firstAttribute="leading" secondItem="GBA-tT-7pb" secondAttribute="leading" id="cJ4-NG-0iX"/>
                                             <constraint firstAttribute="trailing" secondItem="IeS-W6-mcB" secondAttribute="trailing" id="syd-TL-LVv"/>
-                                            <constraint firstItem="DCt-b1-tU7" firstAttribute="top" secondItem="GBA-tT-7pb" secondAttribute="top" id="uqV-2k-fZ5"/>
                                             <constraint firstItem="IeS-W6-mcB" firstAttribute="top" secondItem="GBA-tT-7pb" secondAttribute="top" id="wYd-rL-Qfp"/>
                                         </constraints>
                                     </view>
