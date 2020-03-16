@@ -11,6 +11,7 @@ import Foundation
 enum GlobalConstants : String {
     case englishCode = "en"
     case vietnameeseLangCode = "vi"
+    case japanCode = "ja-JP"
 }
 
 class LanguageManager: NSObject {
@@ -24,7 +25,7 @@ class LanguageManager: NSObject {
         super.init()
         let english = CustomLocale(languageCode: GlobalConstants.englishCode.rawValue, countryCode: "gb", name: "United Kingdom")
         let vietnamese  = CustomLocale(languageCode: GlobalConstants.vietnameeseLangCode.rawValue, countryCode: "vn", name: "Việt Nam")
-        let jp  = CustomLocale(languageCode: GlobalConstants.vietnameeseLangCode.rawValue, countryCode: "jp", name: "日本")
+        let jp  = CustomLocale(languageCode: GlobalConstants.japanCode.rawValue, countryCode: "jp", name: "日本")
         self.availableLocales = [english,vietnamese,jp]
         self.lprojBasePath =  getSelectedLocale()
     }

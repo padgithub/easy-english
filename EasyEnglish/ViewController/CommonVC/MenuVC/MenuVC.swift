@@ -93,7 +93,7 @@ extension MenuVC: UITableViewDataSource {
 
 extension MenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return isIPad ? 70 : 40
+        return isIPad ? 70 : 45
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
