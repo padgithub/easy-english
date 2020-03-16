@@ -125,7 +125,7 @@ extension MenuVC: UITableViewDelegate {
             break
         case 5:
             TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
-            if let link = NSURL(string: "https://itunes.apple.com/app/id1479709335")
+            if let link = NSURL(string: "https://itunes.apple.com/app/id1499063038")
             {
                 let mes = "Learn Japanese by video - Good apps for everyone to download"
                 let objectsToShare = [mes,link] as [Any]

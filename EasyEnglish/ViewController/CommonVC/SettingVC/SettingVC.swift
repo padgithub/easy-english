@@ -59,7 +59,7 @@ class SettingVC: BaseVC {
             //Set the default sharing message.
 //            let message = "Message goes here."
             //Set the link to share.
-            if let link = NSURL(string: "https://itunes.apple.com/app/id1479709335")
+            if let link = NSURL(string: "https://itunes.apple.com/app/id1499063038")
             {
                 let mes = "Learn Japanese by video - Good apps for everyone to download"
                 let objectsToShare = [mes,link] as [Any]
@@ -109,7 +109,7 @@ extension SettingVC {
     }
     
     func changeLanguage() {
-        _ = presentAlert(style: .actionSheet, title: "txt_st_lg".localized, message: "txt_select_language".localized, actionTitles: [arrLag[0].name!,arrLag[1].name!,"txt_cancel".localized], handler: { (action) in
+        _ = presentAlert(style: .actionSheet, title: "txt_st_lg".localized, message: "txt_select_language".localized, actionTitles: [arrLag[0].name!,arrLag[1].name!,arrLag[2].name!,"txt_cancel".localized], handler: { (action) in
             if action.title == self.arrLag[0].name! {
                 LanguageManager.shared.setLocale(self.arrLag[0].languageCode!)
                 self.flags = self.arrLag[0]
@@ -118,6 +118,11 @@ extension SettingVC {
             if action.title == self.arrLag[1].name! {
                 LanguageManager.shared.setLocale(self.arrLag[1].languageCode!)
                 self.flags = self.arrLag[1]
+                self.restartApp()
+            }
+            if action.title == self.arrLag[2].name! {
+                LanguageManager.shared.setLocale(self.arrLag[2].languageCode!)
+                self.flags = self.arrLag[2]
                 self.restartApp()
             }
         })

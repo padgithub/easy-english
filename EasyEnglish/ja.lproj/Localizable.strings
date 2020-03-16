@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  EasyEnglish
+
+  Created by Anh Dũng on 1/10/19.
+  Copyright © 2019 Anh Dũng. All rights reserved.
+*/
+"app_name" = "Yume Japanese";
+//TabBar
+"no_data" = "空";
+"txt_home" = "ホーム";
+"txt_catalogue" = "カタログ";
+"txt_favorites" = "お気に入り";
+"txt_library" = "ライブラリ";
+"txt_inbox" = "受信ボックス";
+"txt_document" = "ドキュメント";
+//ツールバー
+"txt_fplaylist" = "お気に入りのプレイリスト";
+"txt_fvideo" = "お気に入りのビデオ";
+"txt_mynote" = "メモ";
+"txt_history" = "履歴";
+"txt_profile" = "プロファイル";
+//プレーヤー
+"txt_cancel" = "キャンセル";
+"txt_send" = "送信";
+"txt_done" = "完了";
+"txt_ok" = "OK";
+"txt_autoplay" = "自動再生";
+"txt_next_video" = "次のビデオ";
+"txt_share" = "共有";
+"txt_addto" = "追加先";
+"txt_setting" = "設定";
+//その他のアクション
+"txt_delete_all_hitory_video" = "すべての動画を削除";
+"txt_delete_history_video" = "ビデオの削除";
+"txt_cancel" = "キャンセル";
+"txt_oke" = "OK";
+"txt_add_fa_video" = "お気に入りにビデオを追加";
+"txt_remove_fa_video" = "お気に入りからビデオを削除";
+"txt_add_fa_playlist" = "プレイリストをお気に入りに追加";
+"txt_remove_fa_playlist" = "お気に入りからプレイリストを削除";
+"txt_select_action" = "アクションの選択";
+"txt_share_video" = "ビデオの共有";
+"txt_share_playlist" = "プレイリストの共有";
+"txt_show_all_history" = "すべて表示";
+"txt_last_10_video" = "最後の10ビデオ";
+"txt_show_10" = "最後に表示";
+"txt_all_history" = "すべての履歴";
+//設定
+"txt_st_toolbar" = "システムのツールバーでビデオを再生する";
+"txt_st_lg" = "言語";
+"txt_st_star_app" = "ランキング";
+"txt_st_contact" = "連絡先";
+"txt_st_share" = "アプリの共有";
+"txt_st_about" = "About";
+"txt_select_language" = "言語の選択";
+"txt_restart_app" = "アプリを再起動";
+"txt_restart_app_msg" = "成功しました。使用を続けるには再起動してください";
+"txt_restart_app_msg_error" = "データの更新中にエラーが発生しました。アプリケーションを再起動して使用を続けてください。";
+//
+"txt_report" = "レポート";
+"txt_title_report" = "レポート";
+"txt_msg_report" = "このビデオを報告してもよろしいですか。報告するメールまたは名前を入力してください。";
+"txt_planhoder_report" = "あなたの名前またはメール";
+"txt_planhoder_report_ontents" = "コンテンツ（オプション）";
+"txt_report_req" = "名前またはメールアドレスを入力してください。";
+"txt_report_success" = "レポートに成功しました。ありがとう。";
+"txt_report_err" = "エラーが発生しました。もう一度試してください。";
+//
+"txt_info_app" = "ビデオを通して日本語を学ぶ\nあなたのスキルを練習するために日本語を学ぶアプリを探しています：リスニング-スピーキング-読み書きJLPT試験の準備をするアプリケーションをお探しですか？ YUME JAPANESEを無料でダウンロードして学習しましょう！\nそれは、今日の日本語教育コミュニティのプロで有名な教師の10,000以上の日本語教育ビデオを集めています。レッスンは、入門レベルと上級レベルの両方、スキルに関する直接講義：コミュニケーション、語彙、文法、発音...リスニング練習、歌による日本語翻訳、映画日本。\n\n特にYUME JAPANESEでは、ベトナム人のための一般的な日本語教師向けのビデオ講義の全セットを学ぶことができます。これはよく整理された使いやすいカリキュラムで、現在ベトナムで最も一般的に使用されています。そして、無料で日本語能力試験I、II試験を解くための講義。\n\nレッスンに加えて、夢ジャパニーズは日本の文化と料理についての紹介ビデオも共有しています。日本での学生生活は、キムチの土地の文化についてもっと学ぶのに役立ちます。今すぐインストールして一緒に学びましょう！\n\n夢日本語のハイライト：\n\n-未知から高度まであなたのために\n-リスニング、スピーキング、リーディング、ライティングのスキルを練習します。\n-語彙を増やし、トピックとのコミュニケーションを練習します。\n-A-Zから完全な文法を学ぶ\n-JLPT試験の準備\n-歌を通して日本語を聞く練習\n-良い映画を通して日本語を聞く練習をする（すぐに日本の映画を見ることを組み合わせる）\n\nオンラインレッスンのリストは次のとおりです。\n\n1.日本語学習-スキルの練習\n-日本語の発音練習\n-日本語を聞く練習\n-日本語を話す練習\n-日本語の語彙\n-日本語の文法\n-日本語のコミュニケーション\n\n2. JLPT試験の練習：\n-模擬試験JLPT N5\n-模擬試験JLPT N4\n-模擬試験JLPT N3\n-模擬試験JLPT N2\n-模擬試験JLPT N1\n\n3.日本語チャンネル\n-みんなの日本語学習カリキュラム\n-歌を通して日本人\n-漫画を通して日本人\n-できる日本語\n\n4.日本を発見する：\n-日本への留学\n-ディスカバージャパン\n-日本文化\n-日本の観光\n-日本料理\n\n夢日本語アプリケーションは完全に無料です。\nインストールして、一緒に学習してください！\n-------------------------\nすべての動画はYouTubeにあり、アプリはYouTubeからのリンクと再生のみを提供します。すべての著作権は、YouTubeにアップロードした著作権に属します\n-------------------------";
+

@@ -230,8 +230,7 @@
 		325E562F241621FD008EC38F /* LaunchScreenJapanese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
-		7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
-		98A17317749F1F6C77CFD26C /* Pods_EasyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */; };
+		79637C7E6A357AA71989286E /* Pods_EasyJapanese.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A4AEEF0841B55091AF5C13 /* Pods_EasyJapanese.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,14 +418,18 @@
 		324858E723CC0DD00089D925 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		324858E823CC0DD00089D925 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenJapanese.storyboard; sourceTree = "<group>"; };
+		32761C44241B3F0600FEC61B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		32761C45241B3F0700FEC61B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32F0310923F68F9600F04E87 /* YouTubePlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouTubePlayer.xcodeproj; path = EasyEnglish/Framework/YouTubePlayer/YouTubePlayer.xcodeproj; sourceTree = "<group>"; };
 		499A9427697047D9BBD40088 /* Pods-EasyEnglishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.release.xcconfig"; sourceTree = "<group>"; };
 		70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
+		72D0A7105E3C606BF780D119 /* Pods-EasyJapanese.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyJapanese.debug.xcconfig"; path = "Target Support Files/Pods-EasyJapanese/Pods-EasyJapanese.debug.xcconfig"; sourceTree = "<group>"; };
 		77853C2C102491B6C41A4AC8 /* Pods-EasyEnglishUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglishUITests/Pods-EasyEnglishUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C168C54ECA149C8A1AFB297 /* Pods-EasyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.release.xcconfig"; sourceTree = "<group>"; };
+		A2A4AEEF0841B55091AF5C13 /* Pods_EasyJapanese.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyJapanese.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A769842B01898F344C4E78D4 /* Pods-EasyEnglishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5BC8DF8ABE6F406070B29E6 /* Pods-EasyJapanese.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyJapanese.release.xcconfig"; path = "Target Support Files/Pods-EasyJapanese/Pods-EasyJapanese.release.xcconfig"; sourceTree = "<group>"; };
 		B9CC735EEF3D9F597F0EB255 /* Pods_EasyKorean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKorean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1968497E2AB7461327817C0 /* Pods-EasyKorean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKorean.release.xcconfig"; path = "Target Support Files/Pods-EasyKorean/Pods-EasyKorean.release.xcconfig"; sourceTree = "<group>"; };
 		FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -444,9 +447,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C9F275E754D0CC07D486FB9 /* Pods_EasyEnglish.framework in Frameworks */,
-				98A17317749F1F6C77CFD26C /* Pods_EasyEnglish.framework in Frameworks */,
 				325D43A124168296000BEAAC /* YouTubePlayer.framework in Frameworks */,
+				79637C7E6A357AA71989286E /* Pods_EasyJapanese.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,10 +1038,10 @@
 			isa = PBXGroup;
 			children = (
 				32F0310923F68F9600F04E87 /* YouTubePlayer.xcodeproj */,
-				CF744B2A64EEDB14AF52154E /* Pods_EasyEnglish.framework */,
 				FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */,
 				2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */,
 				B9CC735EEF3D9F597F0EB255 /* Pods_EasyKorean.framework */,
+				A2A4AEEF0841B55091AF5C13 /* Pods_EasyJapanese.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1055,6 +1057,8 @@
 				9C168C54ECA149C8A1AFB297 /* Pods-EasyEnglish.release.xcconfig */,
 				2BAAC487FAF0D5DB388D5466 /* Pods-EasyKorean.debug.xcconfig */,
 				D1968497E2AB7461327817C0 /* Pods-EasyKorean.release.xcconfig */,
+				72D0A7105E3C606BF780D119 /* Pods-EasyJapanese.debug.xcconfig */,
+				B5BC8DF8ABE6F406070B29E6 /* Pods-EasyJapanese.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1179,6 +1183,7 @@
 				en,
 				Base,
 				vi,
+				ja,
 			);
 			mainGroup = 01B3DB3021D62FE20051221E;
 			productRefGroup = 01B3DB3A21D62FE20051221E /* Products */;
@@ -1316,7 +1321,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyEnglish-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EasyJapanese-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1412,15 +1417,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EasyJapanese/Pods-EasyJapanese-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EasyJapanese/Pods-EasyJapanese-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyJapanese/Pods-EasyJapanese-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1633,6 +1638,7 @@
 			children = (
 				01B3DB4121D62FE20051221E /* Base */,
 				011FCA4D21FD7CA900922968 /* vi */,
+				32761C44241B3F0600FEC61B /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1642,6 +1648,7 @@
 			children = (
 				01EE355021EFAAE200C3346F /* en */,
 				011FCA4F21FD7CB200922968 /* vi */,
+				32761C45241B3F0700FEC61B /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1923,7 +1930,7 @@
 		};
 		01B3DB6221D62FE70051221E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */;
+			baseConfigurationReference = 72D0A7105E3C606BF780D119 /* Pods-EasyJapanese.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1994,13 +2001,13 @@
 				PRODUCT_NAME = "Yume Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		01B3DB6321D62FE70051221E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C168C54ECA149C8A1AFB297 /* Pods-EasyEnglish.release.xcconfig */;
+			baseConfigurationReference = B5BC8DF8ABE6F406070B29E6 /* Pods-EasyJapanese.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -2071,7 +2078,7 @@
 				PRODUCT_NAME = "Yume Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
