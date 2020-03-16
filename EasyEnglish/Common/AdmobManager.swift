@@ -12,8 +12,8 @@ import GoogleMobileAds
 let adSize = UIDevice.current.userInterfaceIdiom == .pad ? kGADAdSizeLeaderboard: kGADAdSizeBanner
 let numberToShowAd = 5
 
-let keyBanner = "ca-app-pub-5652014623246123/3323595396"
-let keyInterstitial = "ca-app-pub-5652014623246123/4268231155"
+let keyBanner = "ca-app-pub-5652014623246123/1866645395"
+let keyInterstitial = "ca-app-pub-5652014623246123/5614318711"
 
 class AdmobManager: NSObject {
     
