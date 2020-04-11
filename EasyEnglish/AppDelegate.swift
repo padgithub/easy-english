@@ -120,6 +120,7 @@ extension AppDelegate {
             let destinationSqliteURL = GroupManager.database
             let destinationSqliteURLHistory = HistoryManger.database
             let destinationSqliteURLGiaoTiep = GiaoTiepManger.database
+            let destinationSqliteURLKanji = KanjiManager.database
             
             if fileManager.fileExists(atPath: destinationSqliteURL.path) {
                 do {
@@ -145,9 +146,18 @@ extension AppDelegate {
                 }
             }
             
+            if fileManager.fileExists(atPath: destinationSqliteURLGiaoTiep.path) {
+                do {
+                    try fileManager.removeItem(atPath: destinationSqliteURLKanji.path)
+                } catch {
+                    print("Could not clear temp folder: \(error)")
+                }
+            }
+            
             let sourceSqliteURL = Bundle.main.path(forResource: "database", ofType: "db")
             let sourceSqliteURLHistory = Bundle.main.path(forResource: "history", ofType: "db")
             let sourceSqliteURLGiaoTiep = Bundle.main.path(forResource: "giaotiep", ofType: "sqlite")
+            let sourceSqliteURLKanji = Bundle.main.path(forResource: "kanji", ofType: "db")
             
             if !fileManager.fileExists(atPath: destinationSqliteURL.path) {
                 // var error:NSError? = nil
@@ -177,6 +187,17 @@ extension AppDelegate {
                     try fileManager.copyItem(at: URL.init(fileURLWithPath:sourceSqliteURLGiaoTiep!), to: destinationSqliteURLGiaoTiep)
                     print("Copied")
                     print(destinationSqliteURLGiaoTiep.path)
+                } catch let error as NSError {
+                    print("Unable to create database \(error.debugDescription)")
+                }
+            }
+            
+            if !fileManager.fileExists(atPath: destinationSqliteURLKanji.path) {
+                // var error:NSError? = nil
+                do {
+                    try fileManager.copyItem(at: URL.init(fileURLWithPath:sourceSqliteURLKanji!), to: destinationSqliteURLKanji)
+                    print("Copied")
+                    print(destinationSqliteURLKanji.path)
                 } catch let error as NSError {
                     print("Unable to create database \(error.debugDescription)")
                 }

@@ -32,9 +32,10 @@ class MenuVC: UIViewController {
     
     var arrItem: [MenuObj] = {
         let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "txt_home".localized),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_catalogue".localized),
                                 MenuObj(#imageLiteral(resourceName: "child_abc"), title: "txt_bangchucai".localized),
                                 MenuObj(#imageLiteral(resourceName: "radio_menu"), title: "txt_giaotiep".localized),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_catalogue".localized),
+                                MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_thekanji".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_favorite"), title: "txt_favorites".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_libray"), title: "txt_library".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_like_bar"), title: "txt_st_star_app".localized),
@@ -63,16 +64,16 @@ class MenuVC: UIViewController {
 extension MenuVC {
     func initUI() {
         tbMain.register(MenuCell.self)
-//        indicator.frame = CGRect(x: 0, y: 0, width: 46, height: 46)
-//        indicator.center = imgAvatar.center
-//        imgAvatar.addSubview(indicator)
-//        indicator.startAnimating()
+        //        indicator.frame = CGRect(x: 0, y: 0, width: 46, height: 46)
+        //        indicator.center = imgAvatar.center
+        //        imgAvatar.addSubview(indicator)
+        //        indicator.startAnimating()
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
         lblVersion.text = "v\(appVersion ?? "1.0.0")"
     }
-
+    
     func initData() {
-
+        
         tbMain.reloadData()
         tbMain.selectRow(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .none)
     }
@@ -101,6 +102,11 @@ extension MenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch arrItem[indexPath.item].title {
+        case "txt_thekanji".localized:
+            let navi = UINavigationController(rootViewController: LearnKanjiVC.init())
+            navi.isNavigationBarHidden = true
+            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            break
         case "txt_home".localized:
             let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(0))
             navi.isNavigationBarHidden = true

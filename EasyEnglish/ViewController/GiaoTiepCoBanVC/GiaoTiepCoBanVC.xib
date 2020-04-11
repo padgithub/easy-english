@@ -22,8 +22,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GY5-9a-3Rb">
-                    <rect key="frame" x="0.0" y="52.5" width="414" height="759.5"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="0.0" y="52.5" width="414" height="749.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlP-AS-8fD" customClass="NavigationView" customModule="Yume_Japanese" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -40,14 +40,14 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzG-Tw-CXI">
-                    <rect key="frame" x="0.0" y="817" width="414" height="50"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="0.0" y="807" width="414" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="b2F-EU-S5h"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="GY5-9a-3Rb" secondAttribute="trailing" id="6tY-eh-Rcf"/>
                 <constraint firstItem="GY5-9a-3Rb" firstAttribute="leading" secondItem="efQ-YN-fBu" secondAttribute="leading" id="7aZ-ws-NGq"/>
@@ -56,7 +56,7 @@
                 <constraint firstItem="YlP-AS-8fD" firstAttribute="top" secondItem="efQ-YN-fBu" secondAttribute="top" id="gaC-DK-rl3"/>
                 <constraint firstItem="LzG-Tw-CXI" firstAttribute="leading" secondItem="efQ-YN-fBu" secondAttribute="leading" id="h16-P2-v5X"/>
                 <constraint firstItem="LzG-Tw-CXI" firstAttribute="top" secondItem="GY5-9a-3Rb" secondAttribute="bottom" constant="5" id="hdv-bA-ytH"/>
-                <constraint firstItem="LzG-Tw-CXI" firstAttribute="bottom" secondItem="H4A-SM-mij" secondAttribute="bottom" constant="5" id="uHK-Ue-chz"/>
+                <constraint firstItem="LzG-Tw-CXI" firstAttribute="bottom" secondItem="H4A-SM-mij" secondAttribute="bottom" constant="-5" id="uHK-Ue-chz"/>
                 <constraint firstAttribute="trailing" secondItem="YlP-AS-8fD" secondAttribute="trailing" id="ukm-pN-MnA"/>
                 <constraint firstItem="GY5-9a-3Rb" firstAttribute="top" secondItem="YlP-AS-8fD" secondAttribute="bottom" constant="2.5" id="wdg-E4-QV4"/>
             </constraints>

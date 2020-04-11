@@ -8,15 +8,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LearnKanjiVC" customModule="Yume_Japanese" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LearnKanjiVC" customModule="Yume_Japanese" customModuleProvider="target">
+            <connections>
+                <outlet property="adView" destination="vsc-hN-BbI" id="waY-je-cy2"/>
+                <outlet property="navi" destination="Wpk-7Q-GCg" id="Z4C-po-aqA"/>
+                <outlet property="tableView" destination="wVR-Sg-m9Y" id="Kps-57-Elq"/>
+                <outlet property="view" destination="XKg-lx-YdI" id="KGP-ma-8uo"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="XKg-lx-YdI">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Sg-m9Y">
-                    <rect key="frame" x="0.0" y="52.5" width="414" height="759.5"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Sg-m9Y">
+                    <rect key="frame" x="0.0" y="52.5" width="414" height="749.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="grS-vF-DEw"/>
+                        <outlet property="delegate" destination="-1" id="JmG-ma-xaB"/>
+                    </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpk-7Q-GCg" customClass="NavigationView" customModule="Yume_Japanese" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -33,14 +46,14 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-hN-BbI">
-                    <rect key="frame" x="0.0" y="817" width="414" height="50"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="0.0" y="807" width="414" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="i3r-0r-yIJ"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wVR-Sg-m9Y" secondAttribute="trailing" id="3Rn-ze-S7n"/>
                 <constraint firstItem="vsc-hN-BbI" firstAttribute="leading" secondItem="XKg-lx-YdI" secondAttribute="leading" id="7fw-lA-IF8"/>
@@ -48,7 +61,7 @@
                 <constraint firstItem="wVR-Sg-m9Y" firstAttribute="leading" secondItem="XKg-lx-YdI" secondAttribute="leading" id="JYV-72-aKi"/>
                 <constraint firstAttribute="trailing" secondItem="vsc-hN-BbI" secondAttribute="trailing" id="aRX-HJ-llK"/>
                 <constraint firstItem="wVR-Sg-m9Y" firstAttribute="top" secondItem="Wpk-7Q-GCg" secondAttribute="bottom" constant="2.5" id="jIv-QF-xPo"/>
-                <constraint firstItem="vsc-hN-BbI" firstAttribute="bottom" secondItem="Mjk-iZ-xa0" secondAttribute="bottom" constant="5" id="l9b-Cw-Nuq"/>
+                <constraint firstItem="vsc-hN-BbI" firstAttribute="bottom" secondItem="Mjk-iZ-xa0" secondAttribute="bottom" constant="-5" id="l9b-Cw-Nuq"/>
                 <constraint firstItem="Wpk-7Q-GCg" firstAttribute="top" secondItem="XKg-lx-YdI" secondAttribute="top" id="obK-pq-gnL"/>
                 <constraint firstItem="Wpk-7Q-GCg" firstAttribute="leading" secondItem="XKg-lx-YdI" secondAttribute="leading" id="oz2-cj-2eu"/>
                 <constraint firstItem="vsc-hN-BbI" firstAttribute="top" secondItem="wVR-Sg-m9Y" secondAttribute="bottom" constant="5" id="xfW-3h-0yO"/>

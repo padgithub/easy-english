@@ -335,6 +335,13 @@
 		324C43E02441BBE0003A00F4 /* kanji.db in Resources */ = {isa = PBXBuildFile; fileRef = 324C43DC2441BBE0003A00F4 /* kanji.db */; };
 		324C43E12441BBE0003A00F4 /* grammar.db in Resources */ = {isa = PBXBuildFile; fileRef = 324C43DD2441BBE0003A00F4 /* grammar.db */; };
 		324C43E22441BBE0003A00F4 /* jpn_vie.db in Resources */ = {isa = PBXBuildFile; fileRef = 324C43DE2441BBE0003A00F4 /* jpn_vie.db */; };
+		324C43E42441BD19003A00F4 /* KanjiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C43E32441BD19003A00F4 /* KanjiManager.swift */; };
+		324C43E92441C164003A00F4 /* CellFlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C43E72441C164003A00F4 /* CellFlashCard.swift */; };
+		324C43EA2441C164003A00F4 /* CellFlashCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324C43E82441C164003A00F4 /* CellFlashCard.xib */; };
+		324C43ED2441C25F003A00F4 /* FlashCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C43EB2441C25F003A00F4 /* FlashCardVC.swift */; };
+		324C43EE2441C25F003A00F4 /* FlashCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324C43EC2441C25F003A00F4 /* FlashCardVC.xib */; };
+		324C43F12441C2E4003A00F4 /* ItemFlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324C43EF2441C2E4003A00F4 /* ItemFlashCard.swift */; };
+		324C43F22441C2E4003A00F4 /* ItemFlashCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324C43F02441C2E4003A00F4 /* ItemFlashCard.xib */; };
 		325D43A124168296000BEAAC /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; };
 		325D43A224168296000BEAAC /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0310E23F68F9600F04E87 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		325E562F241621FD008EC38F /* LaunchScreenJapanese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */; };
@@ -1274,6 +1281,13 @@
 		324C43DC2441BBE0003A00F4 /* kanji.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = kanji.db; sourceTree = "<group>"; };
 		324C43DD2441BBE0003A00F4 /* grammar.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = grammar.db; sourceTree = "<group>"; };
 		324C43DE2441BBE0003A00F4 /* jpn_vie.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = jpn_vie.db; sourceTree = "<group>"; };
+		324C43E32441BD19003A00F4 /* KanjiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiManager.swift; sourceTree = "<group>"; };
+		324C43E72441C164003A00F4 /* CellFlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFlashCard.swift; sourceTree = "<group>"; };
+		324C43E82441C164003A00F4 /* CellFlashCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellFlashCard.xib; sourceTree = "<group>"; };
+		324C43EB2441C25F003A00F4 /* FlashCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardVC.swift; sourceTree = "<group>"; };
+		324C43EC2441C25F003A00F4 /* FlashCardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlashCardVC.xib; sourceTree = "<group>"; };
+		324C43EF2441C2E4003A00F4 /* ItemFlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFlashCard.swift; sourceTree = "<group>"; };
+		324C43F02441C2E4003A00F4 /* ItemFlashCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemFlashCard.xib; sourceTree = "<group>"; };
 		325E562E241621FD008EC38F /* LaunchScreenJapanese.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenJapanese.storyboard; sourceTree = "<group>"; };
 		32722117243C221D0046578D /* giaotiep.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = giaotiep.sqlite; sourceTree = "<group>"; };
 		327228ED243C22420046578D /* emergency_18.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = emergency_18.m4a; sourceTree = "<group>"; };
@@ -2124,6 +2138,7 @@
 				011FCA5021FD81AE00922968 /* LanguageManager.swift */,
 				327235A5243C236D0046578D /* SoundManager.swift */,
 				327358ED243E28E6003FBDD5 /* GiaoTiepManager.swift */,
+				324C43E32441BD19003A00F4 /* KanjiManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -2646,10 +2661,32 @@
 		324C43D62441B8B6003A00F4 /* LearnKanjiVC */ = {
 			isa = PBXGroup;
 			children = (
+				324C43E62441C13A003A00F4 /* views */,
+				324C43E52441C130003A00F4 /* FlashCashVC */,
 				324C43D72441B8D1003A00F4 /* LearnKanjiVC.swift */,
 				324C43D82441B8D1003A00F4 /* LearnKanjiVC.xib */,
 			);
 			path = LearnKanjiVC;
+			sourceTree = "<group>";
+		};
+		324C43E52441C130003A00F4 /* FlashCashVC */ = {
+			isa = PBXGroup;
+			children = (
+				324C43EB2441C25F003A00F4 /* FlashCardVC.swift */,
+				324C43EC2441C25F003A00F4 /* FlashCardVC.xib */,
+			);
+			path = FlashCashVC;
+			sourceTree = "<group>";
+		};
+		324C43E62441C13A003A00F4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				324C43E72441C164003A00F4 /* CellFlashCard.swift */,
+				324C43E82441C164003A00F4 /* CellFlashCard.xib */,
+				324C43EF2441C2E4003A00F4 /* ItemFlashCard.swift */,
+				324C43F02441C2E4003A00F4 /* ItemFlashCard.xib */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		327228EC243C22420046578D /* raw */ = {
@@ -3678,6 +3715,7 @@
 				327234F1243C224A0046578D /* country_31.m4a in Resources */,
 				324C43C32441B7AB003A00F4 /* i.mp3 in Resources */,
 				327234A6243C224A0046578D /* colour_6.m4a in Resources */,
+				324C43EE2441C25F003A00F4 /* FlashCardVC.xib in Resources */,
 				327234DB243C224A0046578D /* eating_119.m4a in Resources */,
 				327234B2243C224A0046578D /* accommodation_33.m4a in Resources */,
 				327233A3243C224A0046578D /* family_11.m4a in Resources */,
@@ -3932,6 +3970,7 @@
 				327234B1243C224A0046578D /* shopping_38.m4a in Resources */,
 				3272338E243C224A0046578D /* shopping_85.m4a in Resources */,
 				32723586243C224B0046578D /* general_62.m4a in Resources */,
+				324C43EA2441C164003A00F4 /* CellFlashCard.xib in Resources */,
 				324C43B22441B7AB003A00F4 /* ga.mp3 in Resources */,
 				3272356F243C224B0046578D /* directions_31.m4a in Resources */,
 				32723340243C224A0046578D /* numbers_12.m4a in Resources */,
@@ -4306,6 +4345,7 @@
 				3272350A243C224B0046578D /* feelingsick_3.m4a in Resources */,
 				324C43AC2441B7AB003A00F4 /* rya.mp3 in Resources */,
 				327233A1243C224A0046578D /* numbers_15.m4a in Resources */,
+				324C43F22441C2E4003A00F4 /* ItemFlashCard.xib in Resources */,
 				32723510243C224B0046578D /* feelingsick_2.m4a in Resources */,
 				327233CD243C224A0046578D /* time_24.m4a in Resources */,
 				01B3DD9121D917DE0051221E /* PlayVC.xib in Resources */,
@@ -4568,11 +4608,13 @@
 				0138FC9121E3008C001B6BAF /* TimerHelper.swift in Sources */,
 				324858EA23CC0DD00089D925 /* MenuCell.swift in Sources */,
 				0138FC8321E2FFA1001B6BAF /* API.swift in Sources */,
+				324C43E92441C164003A00F4 /* CellFlashCard.swift in Sources */,
 				012203C823688A3E004925BA /* Toast.swift in Sources */,
 				0138FBE721DF1B32001B6BAF /* FavoritesVC.swift in Sources */,
 				012203C623688A3E004925BA /* ToastWindow.swift in Sources */,
 				01B3DD3121D631150051221E /* KHTextView.swift in Sources */,
 				324858E123CC0D750089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				324C43F12441C2E4003A00F4 /* ItemFlashCard.swift in Sources */,
 				0138FC6321E10F75001B6BAF /* CategoryManager.swift in Sources */,
 				0124129B21DDC2210078B60F /* ZoomOutViewPlayVideo.swift in Sources */,
 				0138FC5C21E10F63001B6BAF /* Category.swift in Sources */,
@@ -4585,6 +4627,7 @@
 				0138FC9721E3008C001B6BAF /* Define.swift in Sources */,
 				0138FC5B21E10F63001B6BAF /* Playlist.swift in Sources */,
 				01B3DD2821D631150051221E /* DropBoxUITB.swift in Sources */,
+				324C43ED2441C25F003A00F4 /* FlashCardVC.swift in Sources */,
 				011F365A21E89D7E00B32E72 /* ListNoteModelView.swift in Sources */,
 				01B3DD2221D631150051221E /* ButtonView.swift in Sources */,
 				01B3DD2E21D631150051221E /* KHButton.swift in Sources */,
@@ -4632,6 +4675,7 @@
 				320C9F5E23CE2C4900742479 /* DemoVC.swift in Sources */,
 				0138FC6521E10F75001B6BAF /* VideoManager.swift in Sources */,
 				01DB9BAB2301484E00912320 /* AppStoreReviewManager.swift in Sources */,
+				324C43E42441BD19003A00F4 /* KanjiManager.swift in Sources */,
 				0138FC3721E10B5A001B6BAF /* CollapsibleTableViewCell.swift in Sources */,
 				0138FC9621E3008C001B6BAF /* Extension.swift in Sources */,
 				012203C923688A3E004925BA /* ToastCenter.swift in Sources */,

@@ -9,7 +9,7 @@
 //TabBar
 "no_data" = "Empty";
 "txt_home" = "Home";
-"txt_catalogue" = "Catalogues";
+"txt_catalogue" = "Video Catalogues";
 "txt_favorites" = "Favorites";
 "txt_library" = "Library";
 "txt_inbox" = "Inbox";

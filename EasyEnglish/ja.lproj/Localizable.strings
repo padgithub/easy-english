@@ -9,7 +9,7 @@
 //TabBar
 "no_data" = "空";
 "txt_home" = "ホーム";
-"txt_catalogue" = "カタログ";
+"txt_catalogue" = "ビデオカタログ";
 "txt_favorites" = "お気に入り";
 "txt_library" = "ライブラリ";
 "txt_inbox" = "受信ボックス";
