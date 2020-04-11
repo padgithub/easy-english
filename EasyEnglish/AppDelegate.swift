@@ -116,9 +116,10 @@ extension AppDelegate {
             UserDefaults.standard.synchronize()
         
             let fileManager = FileManager.default
+            
             let destinationSqliteURL = GroupManager.database
             let destinationSqliteURLHistory = HistoryManger.database
-            
+            let destinationSqliteURLGiaoTiep = GiaoTiepManger.database
             
             if fileManager.fileExists(atPath: destinationSqliteURL.path) {
                 do {
@@ -136,8 +137,17 @@ extension AppDelegate {
                 }
             }
             
+            if fileManager.fileExists(atPath: destinationSqliteURLGiaoTiep.path) {
+                do {
+                    try fileManager.removeItem(atPath: destinationSqliteURLGiaoTiep.path)
+                } catch {
+                    print("Could not clear temp folder: \(error)")
+                }
+            }
+            
             let sourceSqliteURL = Bundle.main.path(forResource: "database", ofType: "db")
             let sourceSqliteURLHistory = Bundle.main.path(forResource: "history", ofType: "db")
+            let sourceSqliteURLGiaoTiep = Bundle.main.path(forResource: "giaotiep", ofType: "sqlite")
             
             if !fileManager.fileExists(atPath: destinationSqliteURL.path) {
                 // var error:NSError? = nil
@@ -156,6 +166,17 @@ extension AppDelegate {
                     try fileManager.copyItem(at: URL.init(fileURLWithPath:sourceSqliteURLHistory!), to: destinationSqliteURLHistory)
                     print("Copied")
                     print(destinationSqliteURLHistory.path)
+                } catch let error as NSError {
+                    print("Unable to create database \(error.debugDescription)")
+                }
+            }
+            
+            if !fileManager.fileExists(atPath: destinationSqliteURLGiaoTiep.path) {
+                // var error:NSError? = nil
+                do {
+                    try fileManager.copyItem(at: URL.init(fileURLWithPath:sourceSqliteURLGiaoTiep!), to: destinationSqliteURLGiaoTiep)
+                    print("Copied")
+                    print(destinationSqliteURLGiaoTiep.path)
                 } catch let error as NSError {
                     print("Unable to create database \(error.debugDescription)")
                 }
@@ -233,8 +254,8 @@ extension AppDelegate {
         let navF = UINavigationController(rootViewController: tabF)
         navF.isNavigationBarHidden = true
         
-        let tabM = DocumentVC(nibName:"DocumentVC",bundle: nil)
-        tabM.tabBarItem = UITabBarItem(title: "txt_document".localized, image: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_mail")!.withRenderingMode(.alwaysOriginal))
+        let tabM = GiaoTiepCoBanVC(nibName:"GiaoTiepCoBanVC",bundle: nil)
+        tabM.tabBarItem = UITabBarItem(title: "txt_giaotiep".localized, image: UIImage(named: "tab_radio_menu")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "tab_radio_menu")!.withRenderingMode(.alwaysOriginal))
         let navM = UINavigationController(rootViewController: tabM)
         navM.isNavigationBarHidden = true
         
@@ -243,7 +264,7 @@ extension AppDelegate {
         let navL = UINavigationController(rootViewController: tabL)
         navL.isNavigationBarHidden = true
         
-        tabVC.viewControllers = [navP, navT, navF, navL]
+        tabVC.viewControllers = [navP, navT, navM, navF, navL]
         tabVC.selectedIndex = index
         return tabVC
     }

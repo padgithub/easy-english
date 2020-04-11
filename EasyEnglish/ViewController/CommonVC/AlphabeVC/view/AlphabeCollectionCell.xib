@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AlphabeCollectionCell" customModule="Yume_Japanese" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="126" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="126" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KI7-GP-feP" customClass="KHView" customModule="Yume_Japanese" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="126" height="130"/>
+                        <color key="backgroundColor" red="0.95928817734018779" green="0.89918209458819343" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdO-4H-elc" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="126" height="86.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qp-FP-EUr" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="86.5" width="126" height="15.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3Qp-FP-EUr" secondAttribute="bottom" id="B8s-1c-VJ2"/>
+                <constraint firstAttribute="trailing" secondItem="RdO-4H-elc" secondAttribute="trailing" id="IgX-34-Wy6"/>
+                <constraint firstItem="3Qp-FP-EUr" firstAttribute="top" secondItem="RdO-4H-elc" secondAttribute="bottom" id="L01-uW-ods"/>
+                <constraint firstItem="RdO-4H-elc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SCf-FR-ExY"/>
+                <constraint firstItem="3Qp-FP-EUr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SEr-0n-z6m"/>
+                <constraint firstItem="KI7-GP-feP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TER-wU-TXZ"/>
+                <constraint firstItem="RdO-4H-elc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tbw-hk-6l4"/>
+                <constraint firstAttribute="trailing" secondItem="3Qp-FP-EUr" secondAttribute="trailing" id="VPw-GB-r1e"/>
+                <constraint firstItem="KI7-GP-feP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cbu-45-Bs4"/>
+                <constraint firstAttribute="trailing" secondItem="KI7-GP-feP" secondAttribute="trailing" id="e3T-ed-6Rh"/>
+                <constraint firstItem="RdO-4H-elc" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="2/3" id="nBl-8s-k4o"/>
+                <constraint firstAttribute="bottom" secondItem="KI7-GP-feP" secondAttribute="bottom" id="p0L-yp-OcN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="126" height="130"/>
+            <connections>
+                <outlet property="lblEn" destination="3Qp-FP-EUr" id="Qng-DM-Hr0"/>
+                <outlet property="lblJP" destination="RdO-4H-elc" id="pf1-NM-lg4"/>
+                <outlet property="viewShadown" destination="KI7-GP-feP" id="LcM-4S-QKC"/>
+            </connections>
+            <point key="canvasLocation" x="13.043478260869566" y="48.883928571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

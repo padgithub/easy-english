@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LearnKanjiVC" customModule="Yume_Japanese" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="XKg-lx-YdI">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Sg-m9Y">
+                    <rect key="frame" x="0.0" y="52.5" width="414" height="759.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpk-7Q-GCg" customClass="NavigationView" customModule="Yume_Japanese" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="AIA-Qw-JCX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="txt_thekanji"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasViewLeft" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasBack" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasProfile" value="YES"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="imageRight" value="ic_play_all"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-hN-BbI">
+                    <rect key="frame" x="0.0" y="817" width="414" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="i3r-0r-yIJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wVR-Sg-m9Y" secondAttribute="trailing" id="3Rn-ze-S7n"/>
+                <constraint firstItem="vsc-hN-BbI" firstAttribute="leading" secondItem="XKg-lx-YdI" secondAttribute="leading" id="7fw-lA-IF8"/>
+                <constraint firstAttribute="trailing" secondItem="Wpk-7Q-GCg" secondAttribute="trailing" id="DTS-El-RW5"/>
+                <constraint firstItem="wVR-Sg-m9Y" firstAttribute="leading" secondItem="XKg-lx-YdI" secondAttribute="leading" id="JYV-72-aKi"/>
+                <constraint firstAttribute="trailing" secondItem="vsc-hN-BbI" secondAttribute="trailing" id="aRX-HJ-llK"/>
+                <constraint firstItem="wVR-Sg-m9Y" firstAttribute="top" secondItem="Wpk-7Q-GCg" secondAttribute="bottom" constant="2.5" id="jIv-QF-xPo"/>
+                <constraint firstItem="vsc-hN-BbI" firstAttribute="bottom" secondItem="Mjk-iZ-xa0" secondAttribute="bottom" constant="5" id="l9b-Cw-Nuq"/>
+                <constraint firstItem="Wpk-7Q-GCg" firstAttribute="top" secondItem="XKg-lx-YdI" secondAttribute="top" id="obK-pq-gnL"/>
+                <constraint firstItem="Wpk-7Q-GCg" firstAttribute="leading" secondItem="XKg-lx-YdI" secondAttribute="leading" id="oz2-cj-2eu"/>
+                <constraint firstItem="vsc-hN-BbI" firstAttribute="top" secondItem="wVR-Sg-m9Y" secondAttribute="bottom" constant="5" id="xfW-3h-0yO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Mjk-iZ-xa0"/>
+            <point key="canvasLocation" x="131.8840579710145" y="154.01785714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_play_all" width="64" height="64"/>
+    </resources>
+</document>

@@ -32,6 +32,8 @@ class MenuVC: UIViewController {
     
     var arrItem: [MenuObj] = {
         let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "txt_home".localized),
+                                MenuObj(#imageLiteral(resourceName: "child_abc"), title: "txt_bangchucai".localized),
+                                MenuObj(#imageLiteral(resourceName: "radio_menu"), title: "txt_giaotiep".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_catalogue".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_favorite"), title: "txt_favorites".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_libray"), title: "txt_library".localized),
@@ -98,36 +100,46 @@ extension MenuVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        switch indexPath.item {
-        case 0:
+        switch arrItem[indexPath.item].title {
+        case "txt_home".localized:
             let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(0))
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
-        case 1:
-            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(1))
+        case "txt_bangchucai".localized:
+            let navi = UINavigationController(rootViewController: AlphabeVC.init())
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
-        case 2:
+        case "txt_giaotiep".localized:
             let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(2))
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
-        case 3:
+        case "txt_catalogue".localized:
+            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(1))
+            navi.isNavigationBarHidden = true
+            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            break
+        case "txt_favorites".localized:
             let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(3))
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
-        case 4:
+        case "txt_library".localized:
+            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(4))
+            navi.isNavigationBarHidden = true
+            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            break
+        case "txt_st_star_app".localized:
             TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
             AppStoreReviewManager.requestReviewNow()
             break
-        case 5:
+        case "txt_st_share".localized:
             TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
             if let link = NSURL(string: "https://itunes.apple.com/app/id1499063038")
             {
-                let mes = "Learn Japanese by video - Good apps for everyone to download"
+                let mes = "Learn Japanese by video - Good apps for everyone to download\n#yume_japanese"
                 let objectsToShare = [mes,link] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 activityVC.excludedActivityTypes = [.postToFacebook,.postToTwitter,.copyToPasteboard,.message,.mail, .addToReadingList]
