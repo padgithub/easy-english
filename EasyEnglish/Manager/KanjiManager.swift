@@ -49,16 +49,16 @@ class KanjiManager: NSObject {
 }
 
 class KanjiBaseObj: NSObject {
-    var _id = 0
-    var kanji = ""
-    var hanviet = ""
-    var radical = ""
-    var stroke = 0
-    var onyomi = ""
-    var level = 0
-    var kunyomi = ""
-    var meaning = ""
-    var freq = 0
+    var _id: Int?
+    var kanji: String?
+    var hanviet: String?
+    var radical: String?
+    var stroke: String?
+    var onyomi: String?
+    var level: Int?
+    var kunyomi: String?
+    var meaning: String?
+    var freq: Int?
     
     override init() {
         super.init()
