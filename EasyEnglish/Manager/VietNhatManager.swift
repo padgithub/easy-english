@@ -1,20 +1,20 @@
 //
-//  KanjiManager.swift
+//  VietNhatManager.swift
 //  EasyJapanese
 //
-//  Created by Phung Anh Dung on 4/11/20.
+//  Created by Phung Anh Dung on 4/27/20.
 //  Copyright © 2020 Anh Dũng. All rights reserved.
 //
 
 import GRDBCipher
 
-class KanjiManager: NSObject {
-    static let shared = KanjiManager()
+class VietNhatManager: NSObject {
+    static let shared = VietNhatManager()
     var dbQueues: DatabaseQueue!
     
     override init() {
         do {
-            dbQueues = try DatabaseQueue(path: KanjiManager.database.path, configuration: self.config)
+            dbQueues = try DatabaseQueue(path: VietNhatManager.database.path, configuration: self.config)
         } catch _ {
         }
     }
@@ -27,18 +27,18 @@ class KanjiManager: NSObject {
     
     static var database: URL{
         let documentsPath = URL.init(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-        return documentsPath.appendingPathComponent("kanji.db")
+        return documentsPath.appendingPathComponent("vie_jpn.db")
     }
     
 
-    func fetchAllDataWithKeyword(_ key: String = "") -> [KanjiBaseObj] {
-        var listVideo:[KanjiBaseObj] = []
+    func fetchAllDataWithKeyword(_ key: String = "") -> [TuDienBaseObj] {
+        var listVideo:[TuDienBaseObj] = []
         do {
             try dbQueues.inDatabase { db in
                 let query = String.init(format: "SELECT * FROM kanji_base WHERE kanji = %@", key)
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
-                    let obj = KanjiBaseObj(row)
+                    let obj = TuDienBaseObj(row)
                     listVideo.append(obj)
                 }
             }
@@ -48,14 +48,14 @@ class KanjiManager: NSObject {
     }
 
     
-    func fetchAllDataWithLevel(_ level: Int) -> [KanjiBaseObj] {
-        var listVideo:[KanjiBaseObj] = []
+    func fetchAllData() -> [TuDienBaseObj] {
+        var listVideo:[TuDienBaseObj] = []
         do {
             try dbQueues.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM kanji_base WHERE level = %d", level)
+                let query = String.init(format: "SELECT * FROM main")
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
-                    let obj = KanjiBaseObj(row)
+                    let obj = TuDienBaseObj(row)
                     listVideo.append(obj)
                 }
             }
@@ -65,17 +65,12 @@ class KanjiManager: NSObject {
     }
 }
 
-class KanjiBaseObj: NSObject {
+class TuDienBaseObj: NSObject {
     var _id: Int?
-    var kanji: String?
-    var hanviet: String?
-    var radical: String?
-    var stroke: String?
-    var onyomi: String?
-    var level: Int?
-    var kunyomi: String?
-    var meaning: String?
-    var freq: Int?
+    var origin: String?
+    var kana: String?
+    var definition: String?
+    var priority: String?
     
     override init() {
         super.init()
@@ -83,15 +78,9 @@ class KanjiBaseObj: NSObject {
     
     init(_ data: Row) {
         _id = data["_id"]
-        kanji = data["kanji"]
-        hanviet = data["hanviet"]
-        radical = data["radical"]
-        stroke = data["stroke"]
-        onyomi = data["onyomi"]
-        level = data["level"]
-        kunyomi = data["kunyomi"]
-        meaning = data["meaning"]
-        freq = data["freq"]
+        origin = data["origin"]
+        kana = data["kana"]
+        definition = data["definition"]
+        priority = data["priority"]
     }
 }
-

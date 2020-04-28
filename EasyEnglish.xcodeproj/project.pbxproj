@@ -211,6 +211,29 @@
 		320C9F6123CE2CFC00742479 /* DemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320C9F5D23CE2C4900742479 /* DemoVC.xib */; };
 		32138CFF2403B737004DDA07 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 32138CFE2403B737004DDA07 /* database.db */; };
 		32138D012403B745004DDA07 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 32138D002403B745004DDA07 /* database.db */; };
+		323C306F2456903000FCD1A6 /* CarbonSwipeRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C30662456902F00FCD1A6 /* CarbonSwipeRefresh.m */; };
+		323C30702456903000FCD1A6 /* CarbonSwipeRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C30662456902F00FCD1A6 /* CarbonSwipeRefresh.m */; };
+		323C30712456903000FCD1A6 /* CarbonTabSwipeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C306C2456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.m */; };
+		323C30722456903000FCD1A6 /* CarbonTabSwipeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C306C2456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.m */; };
+		323C30732456903000FCD1A6 /* CarbonTabSwipeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C306D2456902F00FCD1A6 /* CarbonTabSwipeNavigation.m */; };
+		323C30742456903000FCD1A6 /* CarbonTabSwipeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C306D2456902F00FCD1A6 /* CarbonTabSwipeNavigation.m */; };
+		323C30752456903000FCD1A6 /* CarbonTabSwipeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C306E2456902F00FCD1A6 /* CarbonTabSwipeScrollView.m */; };
+		323C30762456903000FCD1A6 /* CarbonTabSwipeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C306E2456902F00FCD1A6 /* CarbonTabSwipeScrollView.m */; };
+		323C307A2456922100FCD1A6 /* ListTuDienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C30782456922100FCD1A6 /* ListTuDienVC.swift */; };
+		323C307B2456922100FCD1A6 /* ListTuDienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C30782456922100FCD1A6 /* ListTuDienVC.swift */; };
+		323C307C2456922100FCD1A6 /* ListTuDienVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30792456922100FCD1A6 /* ListTuDienVC.xib */; };
+		323C307D2456922100FCD1A6 /* ListTuDienVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30792456922100FCD1A6 /* ListTuDienVC.xib */; };
+		323C30812456930500FCD1A6 /* CellListTuDien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C307F2456930500FCD1A6 /* CellListTuDien.swift */; };
+		323C30822456930500FCD1A6 /* CellListTuDien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C307F2456930500FCD1A6 /* CellListTuDien.swift */; };
+		323C30832456930500FCD1A6 /* CellListTuDien.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30802456930500FCD1A6 /* CellListTuDien.xib */; };
+		323C30842456930500FCD1A6 /* CellListTuDien.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30802456930500FCD1A6 /* CellListTuDien.xib */; };
+		323C30882456A3F900FCD1A6 /* CellListKanji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C30862456A3F900FCD1A6 /* CellListKanji.swift */; };
+		323C30892456A3F900FCD1A6 /* CellListKanji.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30872456A3F900FCD1A6 /* CellListKanji.xib */; };
+		323C308C2456A97A00FCD1A6 /* NhatVietManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C308B2456A97A00FCD1A6 /* NhatVietManager.swift */; };
+		323C308E2456AAB800FCD1A6 /* VietNhatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C308D2456AAB800FCD1A6 /* VietNhatManager.swift */; };
+		323C30902456AAC600FCD1A6 /* NguPhapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C308F2456AAC600FCD1A6 /* NguPhapManager.swift */; };
+		323C30942456B4E200FCD1A6 /* DetailTuDienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C30922456B4E200FCD1A6 /* DetailTuDienVC.swift */; };
+		323C30952456B4E200FCD1A6 /* DetailTuDienVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30932456B4E200FCD1A6 /* DetailTuDienVC.xib */; };
 		324858E023CC0D750089D925 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */; };
 		324858E123CC0D750089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */; };
 		324858E223CC0D750089D925 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DF23CC0D740089D925 /* MFSideMenuShadow.m */; };
@@ -982,6 +1005,8 @@
 		327235B4243C361C0046578D /* CellCategateGiaoTiep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327235B2243C361C0046578D /* CellCategateGiaoTiep.swift */; };
 		327235B5243C361C0046578D /* CellCategateGiaoTiep.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327235B3243C361C0046578D /* CellCategateGiaoTiep.xib */; };
 		327358EE243E28E6003FBDD5 /* GiaoTiepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327358ED243E28E6003FBDD5 /* GiaoTiepManager.swift */; };
+		32D081CE2452E17B006EF77A /* TuDienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D081CC2452E17B006EF77A /* TuDienVC.swift */; };
+		32D081CF2452E17B006EF77A /* TuDienVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D081CD2452E17B006EF77A /* TuDienVC.xib */; };
 		67809E504230088F97D257D9 /* Pods_EasyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */; };
 		682438906EDDABA6F4C6AAF2 /* Pods_EasyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF9D72ACC0345B9015A72BB /* Pods_EasyEnglishTests.framework */; };
 		79637C7E6A357AA71989286E /* Pods_EasyJapanese.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A4AEEF0841B55091AF5C13 /* Pods_EasyJapanese.framework */; };
@@ -1160,6 +1185,26 @@
 		320C9F5D23CE2C4900742479 /* DemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoVC.xib; sourceTree = "<group>"; };
 		32138CFE2403B737004DDA07 /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.db; path = tiengnhat/database.db; sourceTree = "<group>"; };
 		32138D002403B745004DDA07 /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.db; path = tienghan/database.db; sourceTree = "<group>"; };
+		323C30662456902F00FCD1A6 /* CarbonSwipeRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonSwipeRefresh.m; sourceTree = "<group>"; };
+		323C30672456902F00FCD1A6 /* CarbonKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonKit.h; sourceTree = "<group>"; };
+		323C30682456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeSegmentedControl.h; sourceTree = "<group>"; };
+		323C30692456902F00FCD1A6 /* CarbonTabSwipeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeScrollView.h; sourceTree = "<group>"; };
+		323C306A2456902F00FCD1A6 /* CarbonTabSwipeNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeNavigation.h; sourceTree = "<group>"; };
+		323C306B2456902F00FCD1A6 /* CarbonSwipeRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonSwipeRefresh.h; sourceTree = "<group>"; };
+		323C306C2456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeSegmentedControl.m; sourceTree = "<group>"; };
+		323C306D2456902F00FCD1A6 /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
+		323C306E2456902F00FCD1A6 /* CarbonTabSwipeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeScrollView.m; sourceTree = "<group>"; };
+		323C30782456922100FCD1A6 /* ListTuDienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTuDienVC.swift; sourceTree = "<group>"; };
+		323C30792456922100FCD1A6 /* ListTuDienVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTuDienVC.xib; sourceTree = "<group>"; };
+		323C307F2456930500FCD1A6 /* CellListTuDien.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellListTuDien.swift; sourceTree = "<group>"; };
+		323C30802456930500FCD1A6 /* CellListTuDien.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellListTuDien.xib; sourceTree = "<group>"; };
+		323C30862456A3F900FCD1A6 /* CellListKanji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellListKanji.swift; sourceTree = "<group>"; };
+		323C30872456A3F900FCD1A6 /* CellListKanji.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellListKanji.xib; sourceTree = "<group>"; };
+		323C308B2456A97A00FCD1A6 /* NhatVietManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhatVietManager.swift; sourceTree = "<group>"; };
+		323C308D2456AAB800FCD1A6 /* VietNhatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VietNhatManager.swift; sourceTree = "<group>"; };
+		323C308F2456AAC600FCD1A6 /* NguPhapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NguPhapManager.swift; sourceTree = "<group>"; };
+		323C30922456B4E200FCD1A6 /* DetailTuDienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTuDienVC.swift; sourceTree = "<group>"; };
+		323C30932456B4E200FCD1A6 /* DetailTuDienVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTuDienVC.xib; sourceTree = "<group>"; };
 		324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
 		324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
 		324858DB23CC0D740089D925 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
@@ -1928,6 +1973,8 @@
 		327358ED243E28E6003FBDD5 /* GiaoTiepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiaoTiepManager.swift; sourceTree = "<group>"; };
 		32761C44241B3F0600FEC61B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		32761C45241B3F0700FEC61B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32D081CC2452E17B006EF77A /* TuDienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuDienVC.swift; sourceTree = "<group>"; };
+		32D081CD2452E17B006EF77A /* TuDienVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TuDienVC.xib; sourceTree = "<group>"; };
 		32F0310923F68F9600F04E87 /* YouTubePlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouTubePlayer.xcodeproj; path = EasyEnglish/Framework/YouTubePlayer/YouTubePlayer.xcodeproj; sourceTree = "<group>"; };
 		499A9427697047D9BBD40088 /* Pods-EasyEnglishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglishTests.release.xcconfig"; path = "Target Support Files/Pods-EasyEnglishTests/Pods-EasyEnglishTests.release.xcconfig"; sourceTree = "<group>"; };
 		70C331017C961654434CB3BE /* Pods-EasyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-EasyEnglish/Pods-EasyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
@@ -2139,6 +2186,9 @@
 				327235A5243C236D0046578D /* SoundManager.swift */,
 				327358ED243E28E6003FBDD5 /* GiaoTiepManager.swift */,
 				324C43E32441BD19003A00F4 /* KanjiManager.swift */,
+				323C308B2456A97A00FCD1A6 /* NhatVietManager.swift */,
+				323C308D2456AAB800FCD1A6 /* VietNhatManager.swift */,
+				323C308F2456AAC600FCD1A6 /* NguPhapManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -2373,6 +2423,7 @@
 				327235AC243C352C0046578D /* GiaoTiepCoBanVC */,
 				320C9F5B23CE2C3400742479 /* Demo */,
 				01B3DC9B21D631140051221E /* BaseVC.swift */,
+				32D081CA2452E15D006EF77A /* TuDienVC */,
 				0138FBFC21DF4241001B6BAF /* CommonVC */,
 				0138FBE321DF1AC3001B6BAF /* HomeVC */,
 				0138FC2A21E10A31001B6BAF /* CatagoryVC */,
@@ -2387,6 +2438,7 @@
 		01B3DC9D21D631140051221E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				323C30652456902F00FCD1A6 /* CarbonKit */,
 				324858D823CC0D740089D925 /* SideMenu */,
 				012203C023688A3E004925BA /* Toast */,
 				01F7571F2258B218007BA54E /* MBCircularProgressBar */,
@@ -2512,6 +2564,52 @@
 				320C9F5D23CE2C4900742479 /* DemoVC.xib */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		323C30652456902F00FCD1A6 /* CarbonKit */ = {
+			isa = PBXGroup;
+			children = (
+				323C30662456902F00FCD1A6 /* CarbonSwipeRefresh.m */,
+				323C30672456902F00FCD1A6 /* CarbonKit.h */,
+				323C30682456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.h */,
+				323C30692456902F00FCD1A6 /* CarbonTabSwipeScrollView.h */,
+				323C306A2456902F00FCD1A6 /* CarbonTabSwipeNavigation.h */,
+				323C306B2456902F00FCD1A6 /* CarbonSwipeRefresh.h */,
+				323C306C2456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.m */,
+				323C306D2456902F00FCD1A6 /* CarbonTabSwipeNavigation.m */,
+				323C306E2456902F00FCD1A6 /* CarbonTabSwipeScrollView.m */,
+			);
+			path = CarbonKit;
+			sourceTree = "<group>";
+		};
+		323C30772456920500FCD1A6 /* ListTuDienVC */ = {
+			isa = PBXGroup;
+			children = (
+				323C307E245692EA00FCD1A6 /* views */,
+				323C30782456922100FCD1A6 /* ListTuDienVC.swift */,
+				323C30792456922100FCD1A6 /* ListTuDienVC.xib */,
+			);
+			path = ListTuDienVC;
+			sourceTree = "<group>";
+		};
+		323C307E245692EA00FCD1A6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				323C307F2456930500FCD1A6 /* CellListTuDien.swift */,
+				323C30802456930500FCD1A6 /* CellListTuDien.xib */,
+				323C30862456A3F900FCD1A6 /* CellListKanji.swift */,
+				323C30872456A3F900FCD1A6 /* CellListKanji.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		323C30912456B4C200FCD1A6 /* DetailTuDienVC */ = {
+			isa = PBXGroup;
+			children = (
+				323C30922456B4E200FCD1A6 /* DetailTuDienVC.swift */,
+				323C30932456B4E200FCD1A6 /* DetailTuDienVC.xib */,
+			);
+			path = DetailTuDienVC;
 			sourceTree = "<group>";
 		};
 		324858D823CC0D740089D925 /* SideMenu */ = {
@@ -3360,6 +3458,17 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		32D081CA2452E15D006EF77A /* TuDienVC */ = {
+			isa = PBXGroup;
+			children = (
+				323C30912456B4C200FCD1A6 /* DetailTuDienVC */,
+				323C30772456920500FCD1A6 /* ListTuDienVC */,
+				32D081CC2452E17B006EF77A /* TuDienVC.swift */,
+				32D081CD2452E17B006EF77A /* TuDienVC.xib */,
+			);
+			path = TuDienVC;
+			sourceTree = "<group>";
+		};
 		32F0310A23F68F9600F04E87 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -3561,6 +3670,7 @@
 				018D5A65232949F400ADA3C0 /* Localizable.strings in Resources */,
 				018D5A66232949F400ADA3C0 /* ListVideoVC.xib in Resources */,
 				018D5A67232949F400ADA3C0 /* MagicView.xib in Resources */,
+				323C30842456930500FCD1A6 /* CellListTuDien.xib in Resources */,
 				018D5A68232949F400ADA3C0 /* LoginVC.xib in Resources */,
 				32138D012403B745004DDA07 /* database.db in Resources */,
 				018D5A69232949F400ADA3C0 /* ButtonView.xib in Resources */,
@@ -3573,6 +3683,7 @@
 				018D5A6F232949F400ADA3C0 /* NotesCell.xib in Resources */,
 				018D5A70232949F400ADA3C0 /* ListPlaylistVC.xib in Resources */,
 				320C9F6123CE2CFC00742479 /* DemoVC.xib in Resources */,
+				323C307D2456922100FCD1A6 /* ListTuDienVC.xib in Resources */,
 				018D5A71232949F400ADA3C0 /* Main.storyboard in Resources */,
 				018D5A72232949F400ADA3C0 /* VideoPlayCell.xib in Resources */,
 				324858EE23CC0DEB0089D925 /* MenuVC.xib in Resources */,
@@ -3982,6 +4093,7 @@
 				324C43AA2441B7AB003A00F4 /* re.mp3 in Resources */,
 				32723592243C224B0046578D /* shopping_2.m4a in Resources */,
 				32723504243C224B0046578D /* transportation_18.m4a in Resources */,
+				323C307C2456922100FCD1A6 /* ListTuDienVC.xib in Resources */,
 				327234F7243C224A0046578D /* directions_45.m4a in Resources */,
 				327233AE243C224A0046578D /* directions_38.m4a in Resources */,
 				32723476243C224A0046578D /* feelingsick_40.m4a in Resources */,
@@ -4039,6 +4151,7 @@
 				32723358243C224A0046578D /* directions_28.m4a in Resources */,
 				324C438D2441B7AB003A00F4 /* kyo.mp3 in Resources */,
 				324C438A2441B7AB003A00F4 /* ji.mp3 in Resources */,
+				32D081CF2452E17B006EF77A /* TuDienVC.xib in Resources */,
 				324C438B2441B7AB003A00F4 /* ro.mp3 in Resources */,
 				32723552243C224B0046578D /* shopping_67.m4a in Resources */,
 				3272348A243C224A0046578D /* eating_123.m4a in Resources */,
@@ -4172,6 +4285,7 @@
 				3272351F243C224B0046578D /* directions_37.m4a in Resources */,
 				32723336243C224A0046578D /* shopping_83.m4a in Resources */,
 				32723595243C224B0046578D /* feelingsick_26.m4a in Resources */,
+				323C30832456930500FCD1A6 /* CellListTuDien.xib in Resources */,
 				32723588243C224B0046578D /* general_63.m4a in Resources */,
 				324C437E2441B7AB003A00F4 /* bya.mp3 in Resources */,
 				327233CE243C224A0046578D /* eating_11.m4a in Resources */,
@@ -4288,6 +4402,7 @@
 				327233E0243C224A0046578D /* dating_24.m4a in Resources */,
 				32723426243C224A0046578D /* greeting_19.m4a in Resources */,
 				3272348D243C224A0046578D /* dating_12.m4a in Resources */,
+				323C30892456A3F900FCD1A6 /* CellListKanji.xib in Resources */,
 				3272358B243C224B0046578D /* numbers_23.m4a in Resources */,
 				32723540243C224B0046578D /* time_17.m4a in Resources */,
 				3272332E243C224A0046578D /* emergency_30.m4a in Resources */,
@@ -4322,6 +4437,7 @@
 				327234AD243C224A0046578D /* feelingsick_47.m4a in Resources */,
 				3272335D243C224A0046578D /* time_23.m4a in Resources */,
 				32723394243C224A0046578D /* transportation_17.m4a in Resources */,
+				323C30952456B4E200FCD1A6 /* DetailTuDienVC.xib in Resources */,
 				3272337B243C224A0046578D /* family_14.m4a in Resources */,
 				327234DF243C224A0046578D /* general_15.m4a in Resources */,
 				32723353243C224A0046578D /* directions_16.m4a in Resources */,
@@ -4513,6 +4629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				018D5A17232949F400ADA3C0 /* Device.swift in Sources */,
+				323C307B2456922100FCD1A6 /* ListTuDienVC.swift in Sources */,
 				018D5A18232949F400ADA3C0 /* Group.swift in Sources */,
 				018D5A19232949F400ADA3C0 /* MarqueeLabel.swift in Sources */,
 				018D5A1A232949F400ADA3C0 /* ListModelView.swift in Sources */,
@@ -4527,6 +4644,7 @@
 				018D5A21232949F400ADA3C0 /* ZoomOutViewPlayVideo.swift in Sources */,
 				018D5A22232949F400ADA3C0 /* Category.swift in Sources */,
 				018D5A23232949F400ADA3C0 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				323C30762456903000FCD1A6 /* CarbonTabSwipeScrollView.m in Sources */,
 				018D5A24232949F400ADA3C0 /* KHView.swift in Sources */,
 				018D5A25232949F400ADA3C0 /* KHImageView.swift in Sources */,
 				018D5A26232949F400ADA3C0 /* LanguageManager.swift in Sources */,
@@ -4536,6 +4654,7 @@
 				018D5A2A232949F400ADA3C0 /* ListNoteModelView.swift in Sources */,
 				018D5A2B232949F400ADA3C0 /* ButtonView.swift in Sources */,
 				018D5A2C232949F400ADA3C0 /* KHButton.swift in Sources */,
+				323C30722456903000FCD1A6 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				018D5A2D232949F400ADA3C0 /* LocalDataHelper.swift in Sources */,
 				018D5A2E232949F400ADA3C0 /* AdmobManager.swift in Sources */,
 				018D5A2F232949F400ADA3C0 /* APIRequest.swift in Sources */,
@@ -4565,6 +4684,7 @@
 				324858F123CC0DFE0089D925 /* MFSideMenuContainerViewController.m in Sources */,
 				018D5A46232949F400ADA3C0 /* ToolBarView.swift in Sources */,
 				018D5A47232949F400ADA3C0 /* VideoPlayCell.swift in Sources */,
+				323C30822456930500FCD1A6 /* CellListTuDien.swift in Sources */,
 				018D5A48232949F400ADA3C0 /* BaseVC.swift in Sources */,
 				018D5A49232949F400ADA3C0 /* CollapsibleTableViewHeader.swift in Sources */,
 				018D5A4A232949F400ADA3C0 /* NavigationView.swift in Sources */,
@@ -4574,6 +4694,7 @@
 				324858EF23CC0DF20089D925 /* MenuCell.swift in Sources */,
 				324858ED23CC0DE60089D925 /* MenuVC.swift in Sources */,
 				018D5A4D232949F400ADA3C0 /* GCDHelpers.swift in Sources */,
+				323C30702456903000FCD1A6 /* CarbonSwipeRefresh.m in Sources */,
 				018D5A4E232949F400ADA3C0 /* DocumentVC.swift in Sources */,
 				018D5A4F232949F400ADA3C0 /* PlaylistManager.swift in Sources */,
 				018D5A50232949F400ADA3C0 /* Common.swift in Sources */,
@@ -4587,6 +4708,7 @@
 				012203CB23688A48004925BA /* ToastView.swift in Sources */,
 				018D5A56232949F400ADA3C0 /* AppUpdate.swift in Sources */,
 				018D5A57232949F400ADA3C0 /* SettingVC.swift in Sources */,
+				323C30742456903000FCD1A6 /* CarbonTabSwipeNavigation.m in Sources */,
 				018D5A58232949F400ADA3C0 /* ItemsVideo.swift in Sources */,
 				018D5A59232949F400ADA3C0 /* ListPlaylistVC.swift in Sources */,
 				018D5A5A232949F400ADA3C0 /* MBCircularProgressBarView.m in Sources */,
@@ -4611,12 +4733,14 @@
 				324C43E92441C164003A00F4 /* CellFlashCard.swift in Sources */,
 				012203C823688A3E004925BA /* Toast.swift in Sources */,
 				0138FBE721DF1B32001B6BAF /* FavoritesVC.swift in Sources */,
+				323C308C2456A97A00FCD1A6 /* NhatVietManager.swift in Sources */,
 				012203C623688A3E004925BA /* ToastWindow.swift in Sources */,
 				01B3DD3121D631150051221E /* KHTextView.swift in Sources */,
 				324858E123CC0D750089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				324C43F12441C2E4003A00F4 /* ItemFlashCard.swift in Sources */,
 				0138FC6321E10F75001B6BAF /* CategoryManager.swift in Sources */,
 				0124129B21DDC2210078B60F /* ZoomOutViewPlayVideo.swift in Sources */,
+				323C30812456930500FCD1A6 /* CellListTuDien.swift in Sources */,
 				0138FC5C21E10F63001B6BAF /* Category.swift in Sources */,
 				0138FC1A21DF7679001B6BAF /* UIScrollView+SVPullToRefresh.m in Sources */,
 				324858EC23CC0DD00089D925 /* MenuVC.swift in Sources */,
@@ -4625,12 +4749,14 @@
 				327235AF243C35570046578D /* GiaoTiepCoBanVC.swift in Sources */,
 				011FCA5121FD81AE00922968 /* LanguageManager.swift in Sources */,
 				0138FC9721E3008C001B6BAF /* Define.swift in Sources */,
+				323C30712456903000FCD1A6 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				0138FC5B21E10F63001B6BAF /* Playlist.swift in Sources */,
 				01B3DD2821D631150051221E /* DropBoxUITB.swift in Sources */,
 				324C43ED2441C25F003A00F4 /* FlashCardVC.swift in Sources */,
 				011F365A21E89D7E00B32E72 /* ListNoteModelView.swift in Sources */,
 				01B3DD2221D631150051221E /* ButtonView.swift in Sources */,
 				01B3DD2E21D631150051221E /* KHButton.swift in Sources */,
+				323C30882456A3F900FCD1A6 /* CellListKanji.swift in Sources */,
 				0138FC9421E3008C001B6BAF /* LocalDataHelper.swift in Sources */,
 				01DB9BA92301483B00912320 /* AdmobManager.swift in Sources */,
 				0138FC8421E2FFA1001B6BAF /* APIRequest.swift in Sources */,
@@ -4650,6 +4776,8 @@
 				01DB9BA62301459300912320 /* AboutAppVC.swift in Sources */,
 				01B3DD2921D631150051221E /* TextFieldView.swift in Sources */,
 				0138FC6721E10F75001B6BAF /* GroupManager.swift in Sources */,
+				323C306F2456903000FCD1A6 /* CarbonSwipeRefresh.m in Sources */,
+				323C308E2456AAB800FCD1A6 /* VietNhatManager.swift in Sources */,
 				327235B4243C361C0046578D /* CellCategateGiaoTiep.swift in Sources */,
 				01EE354C21EF98AC00C3346F /* VideoHomeCell.swift in Sources */,
 				0138FC3621E10B5A001B6BAF /* ContentListVC.swift in Sources */,
@@ -4660,6 +4788,7 @@
 				013FD86A22F83D440010878A /* DBManager.swift in Sources */,
 				327358EE243E28E6003FBDD5 /* GiaoTiepManager.swift in Sources */,
 				324858E023CC0D750089D925 /* MFSideMenuContainerViewController.m in Sources */,
+				323C307A2456922100FCD1A6 /* ListTuDienVC.swift in Sources */,
 				0138FC5821E10F63001B6BAF /* Video.swift in Sources */,
 				01AD43CE21E72F96000156D2 /* ToolBarView.swift in Sources */,
 				01B3DD8721D8D50A0051221E /* VideoPlayCell.swift in Sources */,
@@ -4669,6 +4798,8 @@
 				0138FBFF21DF4267001B6BAF /* LoginVC.swift in Sources */,
 				01B3DD3221D631150051221E /* KHLabel.swift in Sources */,
 				0138FC9821E3008C001B6BAF /* GCDHelpers.swift in Sources */,
+				323C30732456903000FCD1A6 /* CarbonTabSwipeNavigation.m in Sources */,
+				323C30942456B4E200FCD1A6 /* DetailTuDienVC.swift in Sources */,
 				014B45712202D6FE00478735 /* DocumentVC.swift in Sources */,
 				0138FC6421E10F75001B6BAF /* PlaylistManager.swift in Sources */,
 				0138FC9521E3008C001B6BAF /* Common.swift in Sources */,
@@ -4678,12 +4809,15 @@
 				324C43E42441BD19003A00F4 /* KanjiManager.swift in Sources */,
 				0138FC3721E10B5A001B6BAF /* CollapsibleTableViewCell.swift in Sources */,
 				0138FC9621E3008C001B6BAF /* Extension.swift in Sources */,
+				32D081CE2452E17B006EF77A /* TuDienVC.swift in Sources */,
 				012203C923688A3E004925BA /* ToastCenter.swift in Sources */,
 				0138FBFA21DF1BC0001B6BAF /* LibraryVC.swift in Sources */,
 				012203C723688A3E004925BA /* ToastView.swift in Sources */,
 				013FD86822F837A40010878A /* AppUpdate.swift in Sources */,
+				323C30752456903000FCD1A6 /* CarbonTabSwipeScrollView.m in Sources */,
 				011FCA4B21FCAE4600922968 /* SettingVC.swift in Sources */,
 				0138FC5921E10F63001B6BAF /* ItemsVideo.swift in Sources */,
+				323C30902456AAC600FCD1A6 /* NguPhapManager.swift in Sources */,
 				0138FC7921E11833001B6BAF /* ListPlaylistVC.swift in Sources */,
 				01F757242258B218007BA54E /* MBCircularProgressBarView.m in Sources */,
 			);

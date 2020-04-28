@@ -10,10 +10,13 @@ import UIKit
 import GoogleMobileAds
 
 let adSize = UIDevice.current.userInterfaceIdiom == .pad ? kGADAdSizeLeaderboard: kGADAdSizeBanner
-let numberToShowAd = 5
+let numberToShowAd = 7
 
-let keyBanner = "ca-app-pub-5652014623246123/1866645395"
-let keyInterstitial = "ca-app-pub-5652014623246123/5614318711"
+let keyBanner = ""
+let keyInterstitial = ""
+
+//let keyBanner = "ca-app-pub-5652014623246123/1866645395"
+//let keyInterstitial = "ca-app-pub-5652014623246123/5614318711"
 
 class AdmobManager: NSObject {
     
@@ -115,7 +118,7 @@ class AdmobManager: NSObject {
         interstitial.load(request)
     }
     
-    func logEvent(_ issShow: Bool){
+    func logEvent(){
         
         if self.loadFullAdError {
             self.createAndLoadInterstitial()
@@ -123,7 +126,7 @@ class AdmobManager: NSObject {
         }
         counter = counter + 1
         if  counter >= numberToShowAd {
-            if interstitial.isReady && issShow {
+            if interstitial.isReady {
                 if let vc = TAppDelegate.window?.rootViewController {
                     interstitial.present(fromRootViewController: vc)
                     counter = 1
@@ -143,7 +146,7 @@ class AdmobManager: NSObject {
     
     func forceShowAdd(){
         counter = numberToShowAd
-        self.logEvent(true)
+        self.logEvent()
     }
 
 }

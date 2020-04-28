@@ -35,7 +35,7 @@ extension HomeVC {
         }
         navi.handleSetting = {
 //            self.openSetting()
-            AdmobManager.shared.logEvent(true)
+            AdmobManager.shared.logEvent()
             self.viewModel.isPlaylist = !self.viewModel.isPlaylist
             self.navi.imageRight = self.viewModel.isPlaylist ? UIImage.init(named: "ic_layout2")! : UIImage.init(named: "ic_layout")!
             self.tableView.reloadData()

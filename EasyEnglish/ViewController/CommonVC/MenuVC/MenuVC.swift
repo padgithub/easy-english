@@ -33,6 +33,7 @@ class MenuVC: UIViewController {
     var arrItem: [MenuObj] = {
         let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "txt_home".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_catalogue".localized),
+                                MenuObj(#imageLiteral(resourceName: "child_abc"), title: "txt_tudien".localized),
                                 MenuObj(#imageLiteral(resourceName: "child_abc"), title: "txt_bangchucai".localized),
                                 MenuObj(#imageLiteral(resourceName: "radio_menu"), title: "txt_giaotiep".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_thekanji".localized),
@@ -117,7 +118,7 @@ extension MenuVC: UITableViewDelegate {
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
-        case "txt_giaotiep".localized:
+        case "txt_tudien".localized:
             let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(2))
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
@@ -128,6 +129,11 @@ extension MenuVC: UITableViewDelegate {
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case "txt_favorites".localized:
+            let navi = UINavigationController(rootViewController: FavoritesVC.init())
+            navi.isNavigationBarHidden = true
+            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            break
+        case "txt_giaotiep".localized:
             let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(3))
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
