@@ -31,20 +31,20 @@ class VietNhatManager: NSObject {
     }
     
 
-    func fetchAllDataWithKeyword(_ key: String = "") -> [TuDienBaseObj] {
-        var listVideo:[TuDienBaseObj] = []
+    func fetchAllDataWithKeyword(_ key: String = "",_ page: Int = 0) -> [TuDienBaseObj] {
+        var listData:[TuDienBaseObj] = []
         do {
             try dbQueues.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM kanji_base WHERE kanji = %@", key)
+                let query = key == "" ? String.init(format: "SELECT * FROM fts_main_content limit 10 OFFSET %d", key, key, page*10) : String.init(format: "SELECT * FROM fts_main_content WHERE kana like %@ or origin like %@ limit 10 OFFSET %d", key, key, page*10)
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let obj = TuDienBaseObj(row)
-                    listVideo.append(obj)
+                    listData.append(obj)
                 }
             }
         } catch _ {
         }
-        return listVideo
+        return listData
     }
 
     

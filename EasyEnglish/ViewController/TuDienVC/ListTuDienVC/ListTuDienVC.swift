@@ -26,6 +26,7 @@ class ListTuDienVC: UIViewController {
     var arrKanji = [KanjiBaseObj]()
     var arrTuDien = [TuDienBaseObj]()
     var page = 0
+    var keyword = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,11 +68,11 @@ class ListTuDienVC: UIViewController {
         case .Kanji:
             arrKanji = KanjiManager.shared.fetchAllDataWithLevel(1)
         case .NhatViet:
-            arrTuDien.append(contentsOf: NhatVietManager.shared.fetchAllData(page))
+            arrTuDien.append(contentsOf: NhatVietManager.shared.fetchAllDataWithKeyword(keyword,page))
         case .VietNhat:
-            arrTuDien = VietNhatManager.shared.fetchAllData()
+            arrTuDien.append(contentsOf: VietNhatManager.shared.fetchAllDataWithKeyword(keyword,page))
         case .NguPhap:
-            arrTuDien = NguPhapManager.shared.fetchAllData()
+            arrTuDien.append(contentsOf: NguPhapManager.shared.fetchAllDataWithKeyword(keyword,page))
         default:
             break
         }

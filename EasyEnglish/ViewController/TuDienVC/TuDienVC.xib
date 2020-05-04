@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TuDienVC" customModule="Yume_Japanese" customModuleProvider="target">
             <connections>
                 <outlet property="navi" destination="hQn-p3-SsD" id="GWq-8g-ZO2"/>
+                <outlet property="tfSearch" destination="5eO-QF-FYL" id="XkI-2t-tkt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewTab" destination="nRI-28-2Sb" id="p8t-CD-Bcm"/>
             </connections>

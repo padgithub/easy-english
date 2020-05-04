@@ -11,16 +11,20 @@ import UIKit
 
 class TuDienVC: BaseVC {
     
+    @IBOutlet weak var tfSearch: UITextField!
     @IBOutlet weak var navi: NavigationView!
     @IBOutlet weak var viewTab: UIView!
     
     var arrTabSwipe = ["NHẬT VIỆT", "VIỆT NHẬT", "KANJI", "NGỮ PHÁP"]
     var indexPage = 0
     var arrController = [ListTuDienVC(),ListTuDienVC(),ListTuDienVC(),ListTuDienVC()]
+    var keyword = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTabSwipe()
+        
+        tfSearch.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
     
     deinit {
@@ -28,6 +32,10 @@ class TuDienVC: BaseVC {
     
     @IBAction func actionMenu(_ sender: Any) {
         self.openMenu()
+    }
+    
+    @objc func textDidChange() {
+        keyword = tfSearch.text ?? ""
     }
     
     func configTabSwipe() {
@@ -51,6 +59,7 @@ extension TuDienVC: CarbonTabSwipeNavigationDelegate {
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
         let vc = arrController[Int(index)]
         vc.type = TypeListTuDien.init(rawValue: Int(index)) ?? .NhatViet
+        vc.keyword = keyword
         return vc
     }
 }
