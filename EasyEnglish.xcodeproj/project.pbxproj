@@ -234,6 +234,10 @@
 		323C30902456AAC600FCD1A6 /* NguPhapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C308F2456AAC600FCD1A6 /* NguPhapManager.swift */; };
 		323C30942456B4E200FCD1A6 /* DetailTuDienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C30922456B4E200FCD1A6 /* DetailTuDienVC.swift */; };
 		323C30952456B4E200FCD1A6 /* DetailTuDienVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30932456B4E200FCD1A6 /* DetailTuDienVC.xib */; };
+		323C309E24593DE100FCD1A6 /* CellKanjiInDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C309C24593DE100FCD1A6 /* CellKanjiInDetail.swift */; };
+		323C309F24593DE100FCD1A6 /* CellKanjiInDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C309D24593DE100FCD1A6 /* CellKanjiInDetail.xib */; };
+		323C30A324593E0100FCD1A6 /* CellViduInDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C30A124593E0100FCD1A6 /* CellViduInDetail.swift */; };
+		323C30A424593E0100FCD1A6 /* CellViduInDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C30A224593E0100FCD1A6 /* CellViduInDetail.xib */; };
 		324858E023CC0D750089D925 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */; };
 		324858E123CC0D750089D925 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */; };
 		324858E223CC0D750089D925 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 324858DF23CC0D740089D925 /* MFSideMenuShadow.m */; };
@@ -1205,6 +1209,10 @@
 		323C308F2456AAC600FCD1A6 /* NguPhapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NguPhapManager.swift; sourceTree = "<group>"; };
 		323C30922456B4E200FCD1A6 /* DetailTuDienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTuDienVC.swift; sourceTree = "<group>"; };
 		323C30932456B4E200FCD1A6 /* DetailTuDienVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTuDienVC.xib; sourceTree = "<group>"; };
+		323C309C24593DE100FCD1A6 /* CellKanjiInDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellKanjiInDetail.swift; sourceTree = "<group>"; };
+		323C309D24593DE100FCD1A6 /* CellKanjiInDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellKanjiInDetail.xib; sourceTree = "<group>"; };
+		323C30A124593E0100FCD1A6 /* CellViduInDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViduInDetail.swift; sourceTree = "<group>"; };
+		323C30A224593E0100FCD1A6 /* CellViduInDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellViduInDetail.xib; sourceTree = "<group>"; };
 		324858D923CC0D740089D925 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
 		324858DA23CC0D740089D925 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
 		324858DB23CC0D740089D925 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
@@ -2606,10 +2614,38 @@
 		323C30912456B4C200FCD1A6 /* DetailTuDienVC */ = {
 			isa = PBXGroup;
 			children = (
+				323C309924593DA900FCD1A6 /* views */,
 				323C30922456B4E200FCD1A6 /* DetailTuDienVC.swift */,
 				323C30932456B4E200FCD1A6 /* DetailTuDienVC.xib */,
 			);
 			path = DetailTuDienVC;
+			sourceTree = "<group>";
+		};
+		323C309924593DA900FCD1A6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				323C30A024593DE700FCD1A6 /* CellViduInDetail */,
+				323C309B24593DB300FCD1A6 /* CellKanjiInDetail */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		323C309B24593DB300FCD1A6 /* CellKanjiInDetail */ = {
+			isa = PBXGroup;
+			children = (
+				323C309C24593DE100FCD1A6 /* CellKanjiInDetail.swift */,
+				323C309D24593DE100FCD1A6 /* CellKanjiInDetail.xib */,
+			);
+			path = CellKanjiInDetail;
+			sourceTree = "<group>";
+		};
+		323C30A024593DE700FCD1A6 /* CellViduInDetail */ = {
+			isa = PBXGroup;
+			children = (
+				323C30A124593E0100FCD1A6 /* CellViduInDetail.swift */,
+				323C30A224593E0100FCD1A6 /* CellViduInDetail.xib */,
+			);
+			path = CellViduInDetail;
 			sourceTree = "<group>";
 		};
 		324858D823CC0D740089D925 /* SideMenu */ = {
@@ -3772,6 +3808,7 @@
 				32723593243C224B0046578D /* time_11.m4a in Resources */,
 				327233C6243C224A0046578D /* numbers_16.m4a in Resources */,
 				327233E2243C224A0046578D /* general_31.m4a in Resources */,
+				323C30A424593E0100FCD1A6 /* CellViduInDetail.xib in Resources */,
 				32723494243C224A0046578D /* accommodation_23.m4a in Resources */,
 				327233F1243C224A0046578D /* eating_77.m4a in Resources */,
 				3272349D243C224A0046578D /* eating_96.m4a in Resources */,
@@ -4461,6 +4498,7 @@
 				3272350A243C224B0046578D /* feelingsick_3.m4a in Resources */,
 				324C43AC2441B7AB003A00F4 /* rya.mp3 in Resources */,
 				327233A1243C224A0046578D /* numbers_15.m4a in Resources */,
+				323C309F24593DE100FCD1A6 /* CellKanjiInDetail.xib in Resources */,
 				324C43F22441C2E4003A00F4 /* ItemFlashCard.xib in Resources */,
 				32723510243C224B0046578D /* feelingsick_2.m4a in Resources */,
 				327233CD243C224A0046578D /* time_24.m4a in Resources */,
@@ -4751,6 +4789,7 @@
 				0138FC9721E3008C001B6BAF /* Define.swift in Sources */,
 				323C30712456903000FCD1A6 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				0138FC5B21E10F63001B6BAF /* Playlist.swift in Sources */,
+				323C30A324593E0100FCD1A6 /* CellViduInDetail.swift in Sources */,
 				01B3DD2821D631150051221E /* DropBoxUITB.swift in Sources */,
 				324C43ED2441C25F003A00F4 /* FlashCardVC.swift in Sources */,
 				011F365A21E89D7E00B32E72 /* ListNoteModelView.swift in Sources */,
@@ -4758,6 +4797,7 @@
 				01B3DD2E21D631150051221E /* KHButton.swift in Sources */,
 				323C30882456A3F900FCD1A6 /* CellListKanji.swift in Sources */,
 				0138FC9421E3008C001B6BAF /* LocalDataHelper.swift in Sources */,
+				323C309E24593DE100FCD1A6 /* CellKanjiInDetail.swift in Sources */,
 				01DB9BA92301483B00912320 /* AdmobManager.swift in Sources */,
 				0138FC8421E2FFA1001B6BAF /* APIRequest.swift in Sources */,
 				01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */,

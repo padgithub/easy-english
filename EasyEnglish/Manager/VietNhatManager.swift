@@ -67,6 +67,7 @@ class VietNhatManager: NSObject {
 
 class TuDienBaseObj: NSObject {
     var _id: Int?
+    var docid: Int?
     var origin: String?
     var kana: String?
     var definition: String?
@@ -78,6 +79,7 @@ class TuDienBaseObj: NSObject {
     
     init(_ data: Row) {
         _id = data["_id"]
+        docid = data["docid"]
         origin = data["origin"]
         kana = data["kana"]
         definition = data["definition"]

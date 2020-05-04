@@ -46,6 +46,24 @@ class KanjiManager: NSObject {
         }
         return listVideo
     }
+    
+    func fetchAllDataWithBaseText(baseText: String) -> [KanjiBaseObj] {
+        let arrStr = baseText.map { String($0) }
+        let stringQuery = arrStr.joined(separator: "','")
+        var listVideo:[KanjiBaseObj] = []
+        do {
+            try dbQueues.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM kanji_base WHERE kanji in ('%@')", stringQuery)
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let obj = KanjiBaseObj(row)
+                    listVideo.append(obj)
+                }
+            }
+        } catch _ {
+        }
+        return listVideo
+    }
 
     
     func fetchAllDataWithLevel(_ level: Int) -> [KanjiBaseObj] {

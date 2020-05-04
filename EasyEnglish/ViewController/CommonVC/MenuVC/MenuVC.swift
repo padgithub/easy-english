@@ -109,9 +109,7 @@ extension MenuVC: UITableViewDelegate {
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case "txt_home".localized:
-            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(0))
-            navi.isNavigationBarHidden = true
-            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            TAppDelegate.menuContainerViewController?.centerViewController = TAppDelegate.initTabVC(0)
             break
         case "txt_bangchucai".localized:
             let navi = UINavigationController(rootViewController: AlphabeVC.init())
@@ -119,14 +117,10 @@ extension MenuVC: UITableViewDelegate {
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case "txt_tudien".localized:
-            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(2))
-            navi.isNavigationBarHidden = true
-            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            TAppDelegate.menuContainerViewController?.centerViewController = TAppDelegate.initTabVC(2)
             break
         case "txt_catalogue".localized:
-            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(1))
-            navi.isNavigationBarHidden = true
-            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            TAppDelegate.menuContainerViewController?.centerViewController = TAppDelegate.initTabVC(1)
             break
         case "txt_favorites".localized:
             let navi = UINavigationController(rootViewController: FavoritesVC.init())
@@ -134,14 +128,10 @@ extension MenuVC: UITableViewDelegate {
             TAppDelegate.menuContainerViewController?.centerViewController = navi
             break
         case "txt_giaotiep".localized:
-            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(3))
-            navi.isNavigationBarHidden = true
-            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            TAppDelegate.menuContainerViewController?.centerViewController = TAppDelegate.initTabVC(3)
             break
         case "txt_library".localized:
-            let navi = UINavigationController(rootViewController: TAppDelegate.initTabVC(4))
-            navi.isNavigationBarHidden = true
-            TAppDelegate.menuContainerViewController?.centerViewController = navi
+            TAppDelegate.menuContainerViewController?.centerViewController = TAppDelegate.initTabVC(4)
             break
         case "txt_st_star_app".localized:
             TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
 
 enum TypeListTuDien: Int {
     case NhatViet = 0
@@ -24,6 +25,7 @@ class ListTuDienVC: UIViewController {
     
     var arrKanji = [KanjiBaseObj]()
     var arrTuDien = [TuDienBaseObj]()
+    var page = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,29 @@ class ListTuDienVC: UIViewController {
         tableView.register(CellListTuDien.self)
         tableView.register(CellListKanji.self)
         initData()
+        Timer.after(0.5) {
+            self.initRefesh()
+        }
+    }
+    
+    func initRefesh() {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+
+        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
+                self!.refesh()
+            })
+            }, loadingView: loadingView)
+
+        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+
+        tableView.addInfiniteScrolling {
+            self.loadData()
+            self.tableView.infiniteScrollingView.stopAnimating()
+        }
     }
     
     deinit {
@@ -42,7 +67,7 @@ class ListTuDienVC: UIViewController {
         case .Kanji:
             arrKanji = KanjiManager.shared.fetchAllDataWithLevel(1)
         case .NhatViet:
-            arrTuDien = NhatVietManager.shared.fetchAllData()
+            arrTuDien.append(contentsOf: NhatVietManager.shared.fetchAllData(page))
         case .VietNhat:
             arrTuDien = VietNhatManager.shared.fetchAllData()
         case .NguPhap:
@@ -51,6 +76,18 @@ class ListTuDienVC: UIViewController {
             break
         }
         tableView.reloadData()
+    }
+    
+    func refesh() {
+        page = 0
+        arrTuDien.removeAll()
+        initData()
+        tableView.dg_stopLoading()
+    }
+    
+    func loadData() {
+        page = page + 1
+        initData()
     }
 }
 
@@ -90,7 +127,15 @@ extension ListTuDienVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailTuDienVC()
-        self.navigationController?.pushViewController(vc, animated: true)
+        switch type {
+        case .Kanji:
+            break
+        default:
+            let vc = DetailTuDienVC()
+            vc.typeList = type
+            vc.tudienObj = arrTuDien[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
 }

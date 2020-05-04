@@ -29,7 +29,7 @@ class Common {
 //        alertWindow.windowLevel = UIWindow.Level.alert + 1;
 //        alertWindow.makeKeyAndVisible()
 //        alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
-        Toast.init(text: strMessage ?? "").show()
+        Toast.init(text: strMessage).show()
     }
     
     static func dismissAllAlert() {

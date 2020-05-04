@@ -33,10 +33,12 @@ class CellListTuDien: UITableViewCell {
     func configVietNhat(obj: TuDienBaseObj) {
         lblContent.text = obj.definition
         lblText.text = obj.origin
+        lblKana.text = ""
     }
     
     func configGammar(obj: TuDienBaseObj) {
         lblContent.text = obj.definition
         lblText.text = obj.origin
+        lblKana.text = ""
     }
 }
