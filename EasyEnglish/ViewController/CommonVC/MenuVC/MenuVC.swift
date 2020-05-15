@@ -126,12 +126,14 @@ extension MenuVC: UITableViewDelegate {
             let navi = UINavigationController(rootViewController: FavoritesVC.init())
             navi.isNavigationBarHidden = true
             TAppDelegate.menuContainerViewController?.centerViewController = navi
+            TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
             break
         case "txt_giaotiep".localized:
             TAppDelegate.menuContainerViewController?.centerViewController = TAppDelegate.initTabVC(3)
             break
         case "txt_library".localized:
             TAppDelegate.menuContainerViewController?.centerViewController = TAppDelegate.initTabVC(4)
+            TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
             break
         case "txt_st_star_app".localized:
             TAppDelegate.menuContainerViewController?.setMenuState(MFSideMenuStateClosed, completion: nil)
