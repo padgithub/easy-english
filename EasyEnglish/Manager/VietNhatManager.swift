@@ -35,7 +35,7 @@ class VietNhatManager: NSObject {
         var listData:[TuDienBaseObj] = []
         do {
             try dbQueues.inDatabase { db in
-                let query = key == "" ? String.init(format: "SELECT * FROM fts_main_content limit 10 OFFSET %d", key, key, page*10) : String.init(format: "SELECT * FROM fts_main_content WHERE kana like %@ or origin like %@ limit 10 OFFSET %d", key, key, page*10)
+                let query = key == "" ? String.init(format: "SELECT * FROM main limit 20 OFFSET %d", key, key, page*20) : String.init(format: "SELECT * FROM main WHERE kana like %@ or origin like %@ limit 20 OFFSET %d", key, key, page*20)
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let obj = TuDienBaseObj(row)
@@ -63,6 +63,18 @@ class VietNhatManager: NSObject {
         }
         return listVideo
     }
+    
+    func updateNote(_ obj: TuDienBaseObj) {
+        do {
+            try dbQueues.write { db in
+                try db.execute(
+                    "UPDATE main set note = :i2 where _id = :i1",
+                    arguments: ["i1":obj._id,"i2":obj.note])
+                print("updated")
+            }
+        } catch _ {
+        }
+    }
 }
 
 class TuDienBaseObj: NSObject {
@@ -72,6 +84,7 @@ class TuDienBaseObj: NSObject {
     var kana: String?
     var definition: String?
     var priority: String?
+    var note: String?
     
     override init() {
         super.init()
@@ -84,5 +97,6 @@ class TuDienBaseObj: NSObject {
         kana = data["kana"]
         definition = data["definition"]
         priority = data["priority"]
+        note = data["note"]
     }
 }

@@ -130,6 +130,9 @@ extension ListTuDienVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch type {
         case .Kanji:
+            let vc = DetailKanjiVC()
+            vc.kanjiModel = arrKanji[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         default:
             let vc = DetailTuDienVC()

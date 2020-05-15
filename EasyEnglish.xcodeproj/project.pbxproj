@@ -209,8 +209,15 @@
 		320C9F5F23CE2C4900742479 /* DemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320C9F5D23CE2C4900742479 /* DemoVC.xib */; };
 		320C9F6023CE2CF600742479 /* DemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320C9F5C23CE2C4900742479 /* DemoVC.swift */; };
 		320C9F6123CE2CFC00742479 /* DemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320C9F5D23CE2C4900742479 /* DemoVC.xib */; };
+		321199B1246EFD850042D70F /* CellTuLienQuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321199AF246EFD850042D70F /* CellTuLienQuan.swift */; };
+		321199B2246EFD850042D70F /* CellTuLienQuan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321199B0246EFD850042D70F /* CellTuLienQuan.xib */; };
 		32138CFF2403B737004DDA07 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 32138CFE2403B737004DDA07 /* database.db */; };
 		32138D012403B745004DDA07 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = 32138D002403B745004DDA07 /* database.db */; };
+		322366152469AEBE0063A643 /* BrowserAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322366112469AEBD0063A643 /* BrowserAssets.xcassets */; };
+		322366162469AEBE0063A643 /* BrowserViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322366122469AEBD0063A643 /* BrowserViews.swift */; };
+		322366172469AEBE0063A643 /* BrowserViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322366132469AEBD0063A643 /* BrowserViews.xib */; };
+		3223661B2469B30E0063A643 /* DetailKanjiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322366192469B30E0063A643 /* DetailKanjiVC.swift */; };
+		3223661C2469B30E0063A643 /* DetailKanjiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3223661A2469B30E0063A643 /* DetailKanjiVC.xib */; };
 		323C306F2456903000FCD1A6 /* CarbonSwipeRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C30662456902F00FCD1A6 /* CarbonSwipeRefresh.m */; };
 		323C30702456903000FCD1A6 /* CarbonSwipeRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C30662456902F00FCD1A6 /* CarbonSwipeRefresh.m */; };
 		323C30712456903000FCD1A6 /* CarbonTabSwipeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C306C2456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.m */; };
@@ -1187,8 +1194,15 @@
 		2E50636135ADEB3829A342DD /* Pods_EasyEnglishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEnglishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		320C9F5C23CE2C4900742479 /* DemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
 		320C9F5D23CE2C4900742479 /* DemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoVC.xib; sourceTree = "<group>"; };
+		321199AF246EFD850042D70F /* CellTuLienQuan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTuLienQuan.swift; sourceTree = "<group>"; };
+		321199B0246EFD850042D70F /* CellTuLienQuan.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTuLienQuan.xib; sourceTree = "<group>"; };
 		32138CFE2403B737004DDA07 /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.db; path = tiengnhat/database.db; sourceTree = "<group>"; };
 		32138D002403B745004DDA07 /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.db; path = tienghan/database.db; sourceTree = "<group>"; };
+		322366112469AEBD0063A643 /* BrowserAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BrowserAssets.xcassets; sourceTree = "<group>"; };
+		322366122469AEBD0063A643 /* BrowserViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserViews.swift; sourceTree = "<group>"; };
+		322366132469AEBD0063A643 /* BrowserViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowserViews.xib; sourceTree = "<group>"; };
+		322366192469B30E0063A643 /* DetailKanjiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKanjiVC.swift; sourceTree = "<group>"; };
+		3223661A2469B30E0063A643 /* DetailKanjiVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailKanjiVC.xib; sourceTree = "<group>"; };
 		323C30662456902F00FCD1A6 /* CarbonSwipeRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonSwipeRefresh.m; sourceTree = "<group>"; };
 		323C30672456902F00FCD1A6 /* CarbonKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonKit.h; sourceTree = "<group>"; };
 		323C30682456902F00FCD1A6 /* CarbonTabSwipeSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeSegmentedControl.h; sourceTree = "<group>"; };
@@ -2446,6 +2460,7 @@
 		01B3DC9D21D631140051221E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				322366102469AEBD0063A643 /* BrowserView */,
 				323C30652456902F00FCD1A6 /* CarbonKit */,
 				324858D823CC0D740089D925 /* SideMenu */,
 				012203C023688A3E004925BA /* Toast */,
@@ -2572,6 +2587,35 @@
 				320C9F5D23CE2C4900742479 /* DemoVC.xib */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		321199AD246EFD480042D70F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				321199AF246EFD850042D70F /* CellTuLienQuan.swift */,
+				321199B0246EFD850042D70F /* CellTuLienQuan.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		322366102469AEBD0063A643 /* BrowserView */ = {
+			isa = PBXGroup;
+			children = (
+				322366112469AEBD0063A643 /* BrowserAssets.xcassets */,
+				322366122469AEBD0063A643 /* BrowserViews.swift */,
+				322366132469AEBD0063A643 /* BrowserViews.xib */,
+			);
+			path = BrowserView;
+			sourceTree = "<group>";
+		};
+		322366182469B2EA0063A643 /* DetailKanjiVC */ = {
+			isa = PBXGroup;
+			children = (
+				321199AD246EFD480042D70F /* views */,
+				322366192469B30E0063A643 /* DetailKanjiVC.swift */,
+				3223661A2469B30E0063A643 /* DetailKanjiVC.xib */,
+			);
+			path = DetailKanjiVC;
 			sourceTree = "<group>";
 		};
 		323C30652456902F00FCD1A6 /* CarbonKit */ = {
@@ -3497,6 +3541,7 @@
 		32D081CA2452E15D006EF77A /* TuDienVC */ = {
 			isa = PBXGroup;
 			children = (
+				322366182469B2EA0063A643 /* DetailKanjiVC */,
 				323C30912456B4C200FCD1A6 /* DetailTuDienVC */,
 				323C30772456920500FCD1A6 /* ListTuDienVC */,
 				32D081CC2452E17B006EF77A /* TuDienVC.swift */,
@@ -3758,6 +3803,7 @@
 				32723448243C224A0046578D /* dating_20.m4a in Resources */,
 				327234C7243C224A0046578D /* eating_78.m4a in Resources */,
 				32723527243C224B0046578D /* shopping_89.m4a in Resources */,
+				322366172469AEBE0063A643 /* BrowserViews.xib in Resources */,
 				32723488243C224A0046578D /* time_3.m4a in Resources */,
 				32723465243C224A0046578D /* dating_3.m4a in Resources */,
 				32723392243C224A0046578D /* eating_3.m4a in Resources */,
@@ -3789,6 +3835,7 @@
 				327234DD243C224A0046578D /* dating_28.m4a in Resources */,
 				324C43B62441B7AB003A00F4 /* gyo.mp3 in Resources */,
 				327234D8243C224A0046578D /* accommodation_24.m4a in Resources */,
+				322366152469AEBE0063A643 /* BrowserAssets.xcassets in Resources */,
 				32723542243C224B0046578D /* feelingsick_34.m4a in Resources */,
 				327234C1243C224A0046578D /* transportation_54.m4a in Resources */,
 				0138FC3921E10B5A001B6BAF /* ContentListVC.xib in Resources */,
@@ -3856,6 +3903,7 @@
 				327233AC243C224A0046578D /* shopping_90.m4a in Resources */,
 				32723432243C224A0046578D /* eating_65.m4a in Resources */,
 				3272356B243C224B0046578D /* eating_27.m4a in Resources */,
+				321199B2246EFD850042D70F /* CellTuLienQuan.xib in Resources */,
 				32723574243C224B0046578D /* directions_33.m4a in Resources */,
 				32723519243C224B0046578D /* eating_21.m4a in Resources */,
 				3272358A243C224B0046578D /* feelingsick_7.m4a in Resources */,
@@ -4080,6 +4128,7 @@
 				327234B5243C224A0046578D /* greeting_11.m4a in Resources */,
 				327234FF243C224A0046578D /* time_15.m4a in Resources */,
 				32723500243C224B0046578D /* eating_20.m4a in Resources */,
+				3223661C2469B30E0063A643 /* DetailKanjiVC.xib in Resources */,
 				324C43E22441BBE0003A00F4 /* jpn_vie.db in Resources */,
 				3272341B243C224A0046578D /* shopping_31.m4a in Resources */,
 				32723464243C224A0046578D /* general_38.m4a in Resources */,
@@ -4758,11 +4807,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0138FC9A21E3008C001B6BAF /* Device.swift in Sources */,
+				3223661B2469B30E0063A643 /* DetailKanjiVC.swift in Sources */,
 				324C43D92441B8D1003A00F4 /* LearnKanjiVC.swift in Sources */,
 				0138FC5A21E10F63001B6BAF /* Group.swift in Sources */,
 				01B3DD7021D631150051221E /* MarqueeLabel.swift in Sources */,
 				01B3DD8C21D8DCA60051221E /* ListModelView.swift in Sources */,
 				327235A2243C22DD0046578D /* AlphabeVC.swift in Sources */,
+				321199B1246EFD850042D70F /* CellTuLienQuan.swift in Sources */,
 				327235AA243C27D80046578D /* AlphabeCollectionCell.swift in Sources */,
 				0138FBEB21DF1B61001B6BAF /* HomeVC.swift in Sources */,
 				0138FC9121E3008C001B6BAF /* TimerHelper.swift in Sources */,
@@ -4804,6 +4855,7 @@
 				012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */,
 				0138FC1C21E100EF001B6BAF /* GradientView.swift in Sources */,
 				0138FC1921DF7679001B6BAF /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				322366162469AEBE0063A643 /* BrowserViews.swift in Sources */,
 				01B3DB3D21D62FE20051221E /* AppDelegate.swift in Sources */,
 				0138FCA121E30863001B6BAF /* ListModelPlaylistView.swift in Sources */,
 				0138FC9921E3008C001B6BAF /* SaveHelper.swift in Sources */,
@@ -5199,7 +5251,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = EasyEnglish/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5276,7 +5328,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = EasyEnglish/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

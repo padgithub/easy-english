@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailTuDienVC" customModule="Yume_Japanese" customModuleProvider="target">
             <connections>
@@ -78,22 +83,22 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOa-4P-FgA">
-                                                            <rect key="frame" x="0.0" y="58" width="414" height="30"/>
+                                                            <rect key="frame" x="0.0" y="58" width="414" height="649.5"/>
                                                             <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            <state key="normal" title="Xem thêm gợi ý hình ảnh"/>
+                                                            <state key="normal" title="Xem thêm gợi ý"/>
                                                             <connections>
                                                                 <action selector="btnXemThemGoiY:" destination="-1" eventType="touchUpInside" id="SDW-5g-5Nh"/>
                                                             </connections>
                                                         </button>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gi-XO-556">
-                                                            <rect key="frame" x="15" y="88" width="384" height="744.5"/>
+                                                            <rect key="frame" x="15" y="707.5" width="384" height="125"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjN-7D-EFQ">
-                                                                    <rect key="frame" x="0.0" y="10" width="53" height="649.5"/>
+                                                                    <rect key="frame" x="0.0" y="10" width="53" height="30"/>
                                                                     <state key="normal" title="Ghi chú"/>
                                                                 </button>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KxK-LM-hgw" customClass="KHTextView" customModule="Yume_Japanese" customModuleProvider="target">
-                                                                    <rect key="frame" x="10" y="664.5" width="364" height="80"/>
+                                                                    <rect key="frame" x="10" y="45" width="364" height="80"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="80" id="XUN-tX-60B"/>
@@ -162,7 +167,7 @@
                                                             <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-32-meA">
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-32-meA">
                                                             <rect key="frame" x="10" y="531.5" width="394" height="300"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
@@ -195,38 +200,28 @@
                                                     <rect key="frame" x="0.0" y="1685" width="414" height="842.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ví dụ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8na-3q-1iN" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
-                                                            <rect key="frame" x="15" y="10" width="384" height="516.5"/>
+                                                            <rect key="frame" x="15" y="10" width="384" height="517.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                             <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-3a-LB2">
-                                                            <rect key="frame" x="10" y="531.5" width="394" height="300"/>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-3a-LB2">
+                                                            <rect key="frame" x="10" y="532.5" width="394" height="300"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="300" id="SM8-4t-2fd"/>
                                                             </constraints>
                                                         </tableView>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJb-SL-RKa">
-                                                            <rect key="frame" x="0.0" y="841.5" width="414" height="1"/>
-                                                            <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="1" id="eeE-r6-uLx"/>
-                                                            </constraints>
-                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="SJb-SL-RKa" firstAttribute="leading" secondItem="wNb-mo-9dw" secondAttribute="leading" id="3p4-5r-99q"/>
+                                                        <constraint firstAttribute="bottom" secondItem="m8Y-3a-LB2" secondAttribute="bottom" constant="10" id="11p-ef-993"/>
                                                         <constraint firstItem="m8Y-3a-LB2" firstAttribute="top" secondItem="8na-3q-1iN" secondAttribute="bottom" constant="5" id="5Ht-wX-eYS"/>
                                                         <constraint firstItem="8na-3q-1iN" firstAttribute="top" secondItem="wNb-mo-9dw" secondAttribute="top" constant="10" id="9uP-pz-d8B"/>
                                                         <constraint firstAttribute="trailing" secondItem="m8Y-3a-LB2" secondAttribute="trailing" constant="10" id="CNl-Md-UAD"/>
-                                                        <constraint firstItem="SJb-SL-RKa" firstAttribute="top" secondItem="m8Y-3a-LB2" secondAttribute="bottom" constant="10" id="FmU-f0-e0C"/>
                                                         <constraint firstItem="8na-3q-1iN" firstAttribute="leading" secondItem="wNb-mo-9dw" secondAttribute="leading" constant="15" id="NW7-pb-aC7"/>
                                                         <constraint firstAttribute="trailing" secondItem="8na-3q-1iN" secondAttribute="trailing" constant="15" id="Xbj-pH-Vv9"/>
                                                         <constraint firstItem="m8Y-3a-LB2" firstAttribute="leading" secondItem="wNb-mo-9dw" secondAttribute="leading" constant="10" id="pUX-Mv-Cbz"/>
-                                                        <constraint firstAttribute="bottom" secondItem="SJb-SL-RKa" secondAttribute="bottom" id="pjU-nP-Qeq"/>
-                                                        <constraint firstAttribute="trailing" secondItem="SJb-SL-RKa" secondAttribute="trailing" id="xmx-t3-WwW"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

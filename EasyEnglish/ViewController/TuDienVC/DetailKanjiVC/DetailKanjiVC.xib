@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailKanjiVC" customModule="Yume_Japanese" customModuleProvider="target">
+            <connections>
+                <outlet property="ctrHeightBTP" destination="7mY-rz-cDs" id="LUa-of-1CU"/>
+                <outlet property="ctrHieghTuLienQuan" destination="kbq-E3-WqB" id="R6C-E7-Lhe"/>
+                <outlet property="lblCapDo" destination="v1J-SI-MpZ" id="Szm-hs-U90"/>
+                <outlet property="lblDoThongDung" destination="wIp-ok-kKE" id="4cR-nB-ba7"/>
+                <outlet property="lblHanTu" destination="pLW-VV-29d" id="dFM-rQ-JtY"/>
+                <outlet property="lblKunyomi" destination="JYa-V0-8Fw" id="RZK-FJ-Pfi"/>
+                <outlet property="lblNghia" destination="Uz8-ky-GVm" id="jTE-IN-pIB"/>
+                <outlet property="lblOnyomi" destination="w1g-Ow-xAb" id="EgC-AK-s0f"/>
+                <outlet property="lblSoNet" destination="Kh2-8Z-Fev" id="UM3-TD-qwf"/>
+                <outlet property="lblTu" destination="v8E-at-H8Q" id="o1A-w5-xIV"/>
+                <outlet property="navi" destination="QHA-uV-8h1" id="lb2-Re-uYC"/>
+                <outlet property="tableViewBTP" destination="EUv-L8-g5A" id="k2d-ez-QeT"/>
+                <outlet property="tableViewTLQ" destination="c8p-7Q-w8a" id="agz-0K-xhk"/>
+                <outlet property="tvNote" destination="OSS-sl-Xks" id="RYs-v7-pWI"/>
+                <outlet property="view" destination="hXe-hx-Cpb" id="FlG-bH-3Ct"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hXe-hx-Cpb">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHA-uV-8h1" customClass="NavigationView" customModule="Yume_Japanese" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="S5e-Et-azH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3H-Sh-OkT">
+                    <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8E-at-H8Q" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                            <rect key="frame" x="15" y="10" width="89" height="45.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                            <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMv-L0-G1z">
+                            <rect key="frame" x="0.0" y="55.5" width="414" height="740.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGa-mz-XCv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="2527.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p2q-9w-QQN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="2527.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAN-zr-SOr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="842.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-hb-eUJ">
+                                                            <rect key="frame" x="15" y="10" width="384" height="258"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nghĩa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytz-QU-Mwn" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nghĩa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz8-ky-GVm" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="24" width="384" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kun-yomi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-vo-lZW" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="43" width="384" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nghĩa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYa-V0-8Fw" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="67" width="384" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On-yomi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij0-5H-23o" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="86" width="384" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nghĩa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-Ow-xAb" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="110" width="384" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số nét" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVj-vZ-2me" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="129" width="384" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nghĩa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kh2-8Z-Fev" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="153" width="384" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cấp độ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL2-4x-TH5" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="172" width="384" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nghĩa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1J-SI-MpZ" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="196" width="384" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Độ thông dụng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf9-P9-Bwe" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="215" width="384" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nghĩa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIp-ok-kKE" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="239" width="384" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfj-v2-166">
+                                                            <rect key="frame" x="0.0" y="278" width="414" height="429.5"/>
+                                                            <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            <state key="normal" title="Xem thêm gợi ý"/>
+                                                        </button>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhN-AS-4IO">
+                                                            <rect key="frame" x="15" y="707.5" width="384" height="125"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhT-q1-m1C">
+                                                                    <rect key="frame" x="0.0" y="10" width="53" height="30"/>
+                                                                    <state key="normal" title="Ghi chú"/>
+                                                                </button>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OSS-sl-Xks" customClass="KHTextView" customModule="Yume_Japanese" customModuleProvider="target">
+                                                                    <rect key="frame" x="10" y="45" width="364" height="80"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="80" id="bqe-gn-LR3"/>
+                                                                    </constraints>
+                                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nhập ghi chú"/>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="nhT-q1-m1C" firstAttribute="leading" secondItem="ZhN-AS-4IO" secondAttribute="leading" id="EXR-K1-pyO"/>
+                                                                <constraint firstItem="nhT-q1-m1C" firstAttribute="top" secondItem="ZhN-AS-4IO" secondAttribute="top" constant="10" id="GsN-Ga-vZI"/>
+                                                                <constraint firstItem="OSS-sl-Xks" firstAttribute="leading" secondItem="ZhN-AS-4IO" secondAttribute="leading" constant="10" id="IAS-t1-Nrr"/>
+                                                                <constraint firstAttribute="trailing" secondItem="OSS-sl-Xks" secondAttribute="trailing" constant="10" id="gFz-d8-9yj"/>
+                                                                <constraint firstAttribute="bottom" secondItem="OSS-sl-Xks" secondAttribute="bottom" id="jh0-cf-hrE"/>
+                                                                <constraint firstItem="OSS-sl-Xks" firstAttribute="top" secondItem="nhT-q1-m1C" secondAttribute="bottom" constant="5" id="xuV-8e-Wwg"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-nq-KgE">
+                                                            <rect key="frame" x="0.0" y="841.5" width="414" height="1"/>
+                                                            <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="WXf-kh-hid"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="rfj-v2-166" firstAttribute="leading" secondItem="CAN-zr-SOr" secondAttribute="leading" id="6aE-oC-QdR"/>
+                                                        <constraint firstItem="ZhN-AS-4IO" firstAttribute="top" secondItem="rfj-v2-166" secondAttribute="bottom" id="Bg0-Ip-aCj"/>
+                                                        <constraint firstItem="HWd-nq-KgE" firstAttribute="leading" secondItem="CAN-zr-SOr" secondAttribute="leading" id="GlM-02-RIT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rfj-v2-166" secondAttribute="trailing" id="KNh-IY-jWX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HWd-nq-KgE" secondAttribute="trailing" id="SbY-5a-BzR"/>
+                                                        <constraint firstItem="gnR-hb-eUJ" firstAttribute="top" secondItem="CAN-zr-SOr" secondAttribute="top" constant="10" id="b3o-nO-nd0"/>
+                                                        <constraint firstItem="ZhN-AS-4IO" firstAttribute="trailing" secondItem="gnR-hb-eUJ" secondAttribute="trailing" id="nBR-XJ-2Nc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gnR-hb-eUJ" secondAttribute="trailing" constant="15" id="pMp-WX-bfT"/>
+                                                        <constraint firstItem="rfj-v2-166" firstAttribute="top" secondItem="gnR-hb-eUJ" secondAttribute="bottom" constant="10" id="sJE-0e-cUr"/>
+                                                        <constraint firstItem="gnR-hb-eUJ" firstAttribute="leading" secondItem="CAN-zr-SOr" secondAttribute="leading" constant="15" id="tRI-su-RVK"/>
+                                                        <constraint firstItem="ZhN-AS-4IO" firstAttribute="leading" secondItem="gnR-hb-eUJ" secondAttribute="leading" id="uGn-Rj-HsU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ZhN-AS-4IO" secondAttribute="bottom" constant="10" id="uHF-R8-RNB"/>
+                                                        <constraint firstAttribute="bottom" secondItem="HWd-nq-KgE" secondAttribute="bottom" id="w6F-ih-Pce"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwx-da-Ms2">
+                                                    <rect key="frame" x="0.0" y="842.5" width="414" height="842.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bộ thành phần" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-HU-E1a" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="10" width="384" height="516.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-L8-g5A">
+                                                            <rect key="frame" x="10" y="531.5" width="394" height="300"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="300" id="7mY-rz-cDs"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="-1" id="JF7-Pp-eAQ"/>
+                                                                <outlet property="delegate" destination="-1" id="0Fr-mn-in4"/>
+                                                            </connections>
+                                                        </tableView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rl8-ch-U08">
+                                                            <rect key="frame" x="0.0" y="841.5" width="414" height="1"/>
+                                                            <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="tnY-P8-6Og"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="iaa-HU-E1a" firstAttribute="leading" secondItem="iwx-da-Ms2" secondAttribute="leading" constant="15" id="7r0-rH-2fE"/>
+                                                        <constraint firstItem="iaa-HU-E1a" firstAttribute="top" secondItem="iwx-da-Ms2" secondAttribute="top" constant="10" id="B6y-1w-8JF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EUv-L8-g5A" secondAttribute="trailing" constant="10" id="RQ6-x3-RxW"/>
+                                                        <constraint firstItem="Rl8-ch-U08" firstAttribute="top" secondItem="EUv-L8-g5A" secondAttribute="bottom" constant="10" id="dYi-ud-pHR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Rl8-ch-U08" secondAttribute="bottom" id="epe-8a-Fau"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Rl8-ch-U08" secondAttribute="trailing" id="hDU-WE-BqB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iaa-HU-E1a" secondAttribute="trailing" constant="15" id="luB-tg-hMk"/>
+                                                        <constraint firstItem="Rl8-ch-U08" firstAttribute="leading" secondItem="iwx-da-Ms2" secondAttribute="leading" id="ntg-68-VPZ"/>
+                                                        <constraint firstItem="EUv-L8-g5A" firstAttribute="top" secondItem="iaa-HU-E1a" secondAttribute="bottom" constant="5" id="qHb-RA-jbr"/>
+                                                        <constraint firstItem="EUv-L8-g5A" firstAttribute="leading" secondItem="iwx-da-Ms2" secondAttribute="leading" constant="10" id="qmy-9M-Z32"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mm3-jC-Ftt">
+                                                    <rect key="frame" x="0.0" y="1685" width="414" height="842.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ liên quan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFu-jN-c1Q" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="10" width="384" height="517.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="0.71012791450000001" green="0.31460472519999999" blue="0.38110761949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c8p-7Q-w8a">
+                                                            <rect key="frame" x="10" y="532.5" width="394" height="300"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="300" id="kbq-E3-WqB"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="-1" id="uhj-gZ-uVA"/>
+                                                                <outlet property="delegate" destination="-1" id="MPb-rn-N4Q"/>
+                                                            </connections>
+                                                        </tableView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="c8p-7Q-w8a" firstAttribute="top" secondItem="cFu-jN-c1Q" secondAttribute="bottom" constant="5" id="Flu-By-u0I"/>
+                                                        <constraint firstItem="c8p-7Q-w8a" firstAttribute="leading" secondItem="mm3-jC-Ftt" secondAttribute="leading" constant="10" id="LaN-W5-pfl"/>
+                                                        <constraint firstItem="cFu-jN-c1Q" firstAttribute="top" secondItem="mm3-jC-Ftt" secondAttribute="top" constant="10" id="Vzf-lP-PaG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="c8p-7Q-w8a" secondAttribute="trailing" constant="10" id="g57-FR-QVY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="c8p-7Q-w8a" secondAttribute="bottom" constant="10" id="llg-ej-Ghk"/>
+                                                        <constraint firstItem="cFu-jN-c1Q" firstAttribute="leading" secondItem="mm3-jC-Ftt" secondAttribute="leading" constant="15" id="trT-Qo-YFf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cFu-jN-c1Q" secondAttribute="trailing" constant="15" id="zOk-EG-wCg"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="p2q-9w-QQN" secondAttribute="trailing" id="1Ct-m5-ZUt"/>
+                                        <constraint firstItem="p2q-9w-QQN" firstAttribute="leading" secondItem="vGa-mz-XCv" secondAttribute="leading" id="Kw8-yw-whr"/>
+                                        <constraint firstAttribute="bottom" secondItem="p2q-9w-QQN" secondAttribute="bottom" id="a3g-I8-F0F"/>
+                                        <constraint firstItem="p2q-9w-QQN" firstAttribute="top" secondItem="vGa-mz-XCv" secondAttribute="top" id="r7l-CG-ytf"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="vGa-mz-XCv" firstAttribute="trailing" secondItem="pMv-L0-G1z" secondAttribute="trailing" id="Ofc-gD-cLb"/>
+                                <constraint firstAttribute="top" secondItem="vGa-mz-XCv" secondAttribute="top" id="Sef-sP-AoW"/>
+                                <constraint firstItem="vGa-mz-XCv" firstAttribute="leading" secondItem="pMv-L0-G1z" secondAttribute="leading" id="ueF-x9-Iqf"/>
+                                <constraint firstItem="vGa-mz-XCv" firstAttribute="bottom" secondItem="pMv-L0-G1z" secondAttribute="bottom" id="vGq-wc-phV"/>
+                            </constraints>
+                        </scrollView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLW-VV-29d" customClass="KHLabel" customModule="Yume_Japanese" customModuleProvider="target">
+                            <rect key="frame" x="161" y="21.5" width="225" height="22.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="vGa-mz-XCv" firstAttribute="width" secondItem="e3H-Sh-OkT" secondAttribute="width" id="9MP-p1-l6G"/>
+                        <constraint firstAttribute="trailing" secondItem="pMv-L0-G1z" secondAttribute="trailing" id="AMj-rU-Q0D"/>
+                        <constraint firstItem="pMv-L0-G1z" firstAttribute="top" secondItem="v8E-at-H8Q" secondAttribute="bottom" id="RbI-7B-yqK"/>
+                        <constraint firstItem="v8E-at-H8Q" firstAttribute="leading" secondItem="e3H-Sh-OkT" secondAttribute="leading" constant="15" id="Rem-P3-Kbu"/>
+                        <constraint firstItem="v8E-at-H8Q" firstAttribute="top" secondItem="e3H-Sh-OkT" secondAttribute="top" constant="10" id="UAm-JX-DdV"/>
+                        <constraint firstItem="pLW-VV-29d" firstAttribute="leading" secondItem="v8E-at-H8Q" secondAttribute="trailing" constant="10" id="bse-qr-3GV"/>
+                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pLW-VV-29d" secondAttribute="trailing" constant="15" id="jhE-oj-vHn"/>
+                        <constraint firstItem="pMv-L0-G1z" firstAttribute="leading" secondItem="e3H-Sh-OkT" secondAttribute="leading" id="jy1-El-mr2"/>
+                        <constraint firstAttribute="bottom" secondItem="pMv-L0-G1z" secondAttribute="bottom" id="mdm-hI-4CP"/>
+                        <constraint firstItem="pLW-VV-29d" firstAttribute="centerY" secondItem="v8E-at-H8Q" secondAttribute="centerY" id="rvj-Z1-iKl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="e3H-Sh-OkT" secondAttribute="trailing" id="Ql7-dK-1bp"/>
+                <constraint firstItem="e3H-Sh-OkT" firstAttribute="leading" secondItem="hXe-hx-Cpb" secondAttribute="leading" id="VG6-lw-vcq"/>
+                <constraint firstAttribute="bottom" secondItem="e3H-Sh-OkT" secondAttribute="bottom" id="XSg-vb-FHn"/>
+                <constraint firstAttribute="trailing" secondItem="QHA-uV-8h1" secondAttribute="trailing" id="YBS-al-KWr"/>
+                <constraint firstItem="QHA-uV-8h1" firstAttribute="leading" secondItem="hXe-hx-Cpb" secondAttribute="leading" id="fS8-Fs-e8D"/>
+                <constraint firstItem="e3H-Sh-OkT" firstAttribute="top" secondItem="QHA-uV-8h1" secondAttribute="bottom" id="lCD-Q3-TQ4"/>
+                <constraint firstItem="QHA-uV-8h1" firstAttribute="top" secondItem="hXe-hx-Cpb" secondAttribute="top" id="lUg-dJ-EWP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="w1G-Z8-Qyg"/>
+            <point key="canvasLocation" x="31.884057971014496" y="138.61607142857142"/>
+        </view>
+    </objects>
+</document>

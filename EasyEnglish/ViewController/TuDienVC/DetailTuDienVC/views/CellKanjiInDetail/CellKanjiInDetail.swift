@@ -31,4 +31,10 @@ class CellKanjiInDetail: UITableViewCell {
         lblHanTu.text = obj.hanviet
     }
     
+    func config(obj: BoThanhPhanObj) {
+        lblKanji.text = obj.radical
+        lblHanTu.text = obj.hanviet
+        lblNghia.text = obj.reading
+    }
+    
 }

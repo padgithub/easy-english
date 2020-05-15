@@ -33,10 +33,10 @@ class MenuVC: UIViewController {
     var arrItem: [MenuObj] = {
         let items: [MenuObj] = [MenuObj(#imageLiteral(resourceName: "ic_bb_home"), title: "txt_home".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_catalogue".localized),
-                                MenuObj(#imageLiteral(resourceName: "child_abc"), title: "txt_tudien".localized),
+                                MenuObj(#imageLiteral(resourceName: "education"), title: "txt_tudien".localized),
                                 MenuObj(#imageLiteral(resourceName: "child_abc"), title: "txt_bangchucai".localized),
                                 MenuObj(#imageLiteral(resourceName: "radio_menu"), title: "txt_giaotiep".localized),
-                                MenuObj(#imageLiteral(resourceName: "ic_bb_trengding"), title: "txt_thekanji".localized),
+                                MenuObj(#imageLiteral(resourceName: "football-referee"), title: "txt_thekanji".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_favorite"), title: "txt_favorites".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_bb_libray"), title: "txt_library".localized),
                                 MenuObj(#imageLiteral(resourceName: "ic_like_bar"), title: "txt_st_star_app".localized),

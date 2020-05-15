@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 import GoogleMobileAds
 
 @UIApplicationMain
@@ -34,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print(FilePaths.VidToLive.livePath)
+        IQKeyboardManager.shared.enable = true
         //        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         //Config Admob
         GADMobileAds.sharedInstance().start { (status) in
@@ -336,7 +338,7 @@ extension AppDelegate {
             navT.isNavigationBarHidden = true
             
             let tabF = TuDienVC(nibName:"TuDienVC",bundle: nil)
-            tabF.tabBarItem = UITabBarItem(title: "txt_tudien".localized, image: UIImage(named: "ic_bb_favorite")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_bb_favorite")!.withRenderingMode(.alwaysOriginal))
+            tabF.tabBarItem = UITabBarItem(title: "txt_tudien".localized, image: UIImage(named: "ic_tudien")!.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "ic_tudien")!.withRenderingMode(.alwaysOriginal))
             let navF = UINavigationController(rootViewController: tabF)
             navF.isNavigationBarHidden = true
             

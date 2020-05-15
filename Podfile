@@ -8,6 +8,7 @@ target 'EasyJapanese' do
   # Pods for EasyEnglish
 #  pod 'YouTubePlayer'
   pod 'ViewAnimator'
+  pod 'IQKeyboardManagerSwift'
 #  pod 'Instructions'
   pod 'DGElasticPullToRefresh'
   pod 'Kingfisher'
@@ -40,6 +41,7 @@ target 'EasyKorean' do
   # Pods for EasyEnglish
 #  pod 'YouTubePlayer'
   pod 'ViewAnimator'
+  pod 'IQKeyboardManagerSwift'
 #  pod 'Instructions'
   pod 'DGElasticPullToRefresh'
   pod 'Kingfisher'

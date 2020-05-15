@@ -21,6 +21,10 @@ class CellViduInDetail: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func config() {
+        
+    }
+    
     
     func setUpLabel(obj: ExampleObj) {
         let conv = converToTeex(str: obj.example?.trim() ?? "")

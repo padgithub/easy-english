@@ -27,6 +27,7 @@ PODS:
     - GoogleUtilities/Logger
   - GRDBCipher (3.5.0):
     - SQLCipher (~> 3.4.1)
+  - IQKeyboardManagerSwift (6.5.5)
   - Kingfisher (4.10.1)
   - KRActivityIndicatorView (3.0.0)
   - KRProgressHUD (3.4.0):
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - DGElasticPullToRefresh
   - Google-Mobile-Ads-SDK
   - GRDBCipher
+  - IQKeyboardManagerSwift
   - Kingfisher
   - KRProgressHUD
   - SwiftEntryKit
@@ -66,6 +68,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GRDBCipher
+    - IQKeyboardManagerSwift
     - Kingfisher
     - KRActivityIndicatorView
     - KRProgressHUD
@@ -83,6 +86,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
   GoogleUtilities: 547a86735c6f0ee30ad17e94df4fc21f616b71cb
   GRDBCipher: 7793bde2d6845a8ca7d73176467638e0abf2135b
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   KRActivityIndicatorView: c414000730a6f4969eeb354bee4f2aebc89c2c2e
   KRProgressHUD: 79c8703f82179fe34b3602f10b30726f887983fa
@@ -93,6 +97,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
 
-PODFILE CHECKSUM: f589fd21f279263501cf3724fea78bfdd8365fa1
+PODFILE CHECKSUM: 71fc55f844c068765e7e6b7d1a512b9fc1927b04
 
 COCOAPODS: 1.8.4

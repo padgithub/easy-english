@@ -39,13 +39,18 @@ class DetailTuDienVC: BaseVC {
     }
     
     @IBAction func btnXemThemGoiY(_ sender: Any) {
+        let browserView = BrowserViews()
+        var keyword = ""
+        keyword = tudienObj.origin?.encode() ?? ""
+        browserView.urls = "https://www.tudienabc.com/tra-nghia/nhat-anh-viet-han/\(keyword)"
+        self.present(browserView, animated: true, completion: nil)
     }
     
     func initUI() {
         lblOrgin.text = tudienObj.origin
         lblNghia.text = tudienObj.definition
         lblKana.text = tudienObj.kana
-        
+        tvNote.text = tudienObj.note
         tableKanji.delegate = self
         tableKanji.dataSource = self
         tableKanji.register(CellKanjiInDetail.self)
@@ -53,11 +58,21 @@ class DetailTuDienVC: BaseVC {
         tableVidu.delegate = self
         tableVidu.dataSource = self
         tableVidu.register(CellViduInDetail.self)
+        
+        navi.title = tudienObj.origin ?? ""
+        tvNote.delegate = self
     }
     
     func initData() {
         arrKanji = KanjiManager.shared.fetchAllDataWithBaseText(baseText: tudienObj.origin ?? "")
-        arrVidu = NhatVietManager.shared.fetchExampleWithID(tudienObj.docid ?? 0)
+        if typeList == .NhatViet {
+            arrVidu = NhatVietManager.shared.fetchExampleWithID(tudienObj.docid ?? 0)
+        }
+        
+        if typeList == .NguPhap {
+            arrVidu = NguPhapManager.shared.fetchExampleWithID(tudienObj.docid ?? 0)
+        }
+        
         tableKanji.reloadData()
         tableVidu.reloadData()
         viewKanji.isHidden = arrKanji.count == 0
@@ -97,7 +112,34 @@ extension DetailTuDienVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == tableKanji {
+            let vc = DetailKanjiVC()
+            vc.kanjiModel = arrKanji[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+extension DetailTuDienVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        tudienObj.note = textView.text
+        switch typeList {
+        case .NhatViet:
+            NhatVietManager.shared.updateNote(tudienObj)
+            break
+        case .VietNhat:
+            VietNhatManager.shared.updateNote(tudienObj)
+            break
+        case .NguPhap:
+            NguPhapManager.shared.updateNote(tudienObj)
+            break
+        default:
+            break
+        }
     }
 }

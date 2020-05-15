@@ -35,7 +35,7 @@ class NguPhapManager: NSObject {
         var listData:[TuDienBaseObj] = []
         do {
             try dbQueues.inDatabase { db in
-                let query = key == "" ? String.init(format: "SELECT * FROM fts_main_content limit 10 OFFSET %d", key, key, page*10) : String.init(format: "SELECT * FROM fts_main_content WHERE kana like %@ or origin like %@ limit 10 OFFSET %d", key, key, page*10)
+                let query = key == "" ? String.init(format: "SELECT * FROM grammar limit 20 OFFSET %d", key, key, page*20) : String.init(format: "SELECT * FROM grammar WHERE kana like %@ or origin like %@ limit 20 OFFSET %d", key, key, page*20)
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let obj = TuDienBaseObj(row)
@@ -62,5 +62,33 @@ class NguPhapManager: NSObject {
         } catch _ {
         }
         return listVideo
+    }
+    
+    func fetchExampleWithID(_ id: Int)-> [ExampleObj] {
+        var listData:[ExampleObj] = []
+        do {
+            try dbQueues.inDatabase { db in
+                let query = String.init(format: "SELECT * FROM grammar INNER JOIN grammar_example ON grammar._id = grammar_example.ex_id WHERE grammar_example.word_id = %d",id)
+                let rows = try Row.fetchCursor(db, query)
+                while let row = try rows.next() {
+                    let obj = ExampleObj(row)
+                    listData.append(obj)
+                }
+            }
+        } catch _ {
+        }
+        return listData
+    }
+    
+    func updateNote(_ obj: TuDienBaseObj) {
+        do {
+            try dbQueues.write { db in
+                try db.execute(
+                    "UPDATE grammar set note = :i2 where _id = :i1",
+                    arguments: ["i1":obj._id,"i2":obj.note])
+                print("updated")
+            }
+        } catch _ {
+        }
     }
 }
