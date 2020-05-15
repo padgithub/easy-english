@@ -1,30 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
   - DGElasticPullToRefresh (1.1)
-  - Google-Mobile-Ads-SDK (7.52.0):
-    - GoogleAppMeasurement (~> 6.0)
-  - GoogleAppMeasurement (6.1.6):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
-    - GoogleUtilities/MethodSwizzler (~> 6.0)
-    - GoogleUtilities/Network (~> 6.0)
-    - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (= 0.3.9011)
-  - GoogleUtilities/AppDelegateSwizzler (6.3.2):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.3.2)
-  - GoogleUtilities/Logger (6.3.2):
-    - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.3.2):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.3.2):
-    - GoogleUtilities/Logger
-    - "GoogleUtilities/NSData+zlib"
-    - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.3.2)"
-  - GoogleUtilities/Reachability (6.3.2):
-    - GoogleUtilities/Logger
   - GRDBCipher (3.5.0):
     - SQLCipher (~> 3.4.1)
   - IQKeyboardManagerSwift (6.5.5)
@@ -32,11 +8,6 @@ PODS:
   - KRActivityIndicatorView (3.0.0)
   - KRProgressHUD (3.4.0):
     - KRActivityIndicatorView (= 3.0.0)
-  - nanopb (0.3.9011):
-    - nanopb/decode (= 0.3.9011)
-    - nanopb/encode (= 0.3.9011)
-  - nanopb/decode (0.3.9011)
-  - nanopb/encode (0.3.9011)
   - QuickLayout (2.1.1)
   - SQLCipher (3.4.2):
     - SQLCipher/standard (= 3.4.2)
@@ -51,7 +22,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DGElasticPullToRefresh
-  - Google-Mobile-Ads-SDK
   - GRDBCipher
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -64,15 +34,11 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - DGElasticPullToRefresh
-    - Google-Mobile-Ads-SDK
-    - GoogleAppMeasurement
-    - GoogleUtilities
     - GRDBCipher
     - IQKeyboardManagerSwift
     - Kingfisher
     - KRActivityIndicatorView
     - KRProgressHUD
-    - nanopb
     - QuickLayout
     - SQLCipher
     - SwiftEntryKit
@@ -82,21 +48,17 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
-  Google-Mobile-Ads-SDK: 62f6244637306cb60a1b4adda067f53224c7a860
-  GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
-  GoogleUtilities: 547a86735c6f0ee30ad17e94df4fc21f616b71cb
   GRDBCipher: 7793bde2d6845a8ca7d73176467638e0abf2135b
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   KRActivityIndicatorView: c414000730a6f4969eeb354bee4f2aebc89c2c2e
   KRProgressHUD: 79c8703f82179fe34b3602f10b30726f887983fa
-  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   QuickLayout: 9af2b7fd89a6552828f51a5aba28d1bcdb8b340c
   SQLCipher: f9fcf29b2e59ced7defc2a2bdd0ebe79b40d4990
   SwiftEntryKit: f0dd54bb0fb9f234738cd15a32365265cb975be8
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
 
-PODFILE CHECKSUM: 71fc55f844c068765e7e6b7d1a512b9fc1927b04
+PODFILE CHECKSUM: d2cd9af598980026a40f76efb3d6b31b5515698c
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

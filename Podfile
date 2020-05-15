@@ -18,7 +18,7 @@ target 'EasyJapanese' do
   pod 'KRProgressHUD'
   pod 'Alamofire'
 #  pod 'Sheeeeeeeeet'
-  pod 'Google-Mobile-Ads-SDK'
+#  pod 'Google-Mobile-Ads-SDK'
 #  pod 'FBSDKLoginKit'
 
 
@@ -51,6 +51,6 @@ target 'EasyKorean' do
   pod 'KRProgressHUD'
   pod 'Alamofire'
 #  pod 'Sheeeeeeeeet'
-  pod 'Google-Mobile-Ads-SDK'
+#  pod 'Google-Mobile-Ads-SDK'
 #  pod 'FBSDKLoginKit'
 end

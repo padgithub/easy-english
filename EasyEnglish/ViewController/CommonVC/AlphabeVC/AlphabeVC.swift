@@ -33,7 +33,7 @@ class AlphabeVC: BaseVC {
         }
         
         GCDCommon.mainQueue {
-            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
+//            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
         }
         
         collectionView.delegate = self
@@ -76,7 +76,7 @@ extension AlphabeVC: UICollectionViewDelegate,UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Playing")
         SoundManager.shared.playSound(arrDataE[indexPath.item])
-        AdmobManager.shared.logEvent()
+//        AdmobManager.shared.logEvent()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

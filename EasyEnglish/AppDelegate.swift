@@ -8,7 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
-import GoogleMobileAds
+//import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,10 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         //        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         //Config Admob
-        GADMobileAds.sharedInstance().start { (status) in
-            
-        }
-        AdmobManager.shared.fullRootViewController = (self.window?.rootViewController)!
+//        GADMobileAds.sharedInstance().start { (status) in
+//            
+//        }
+//        AdmobManager.shared.fullRootViewController = (self.window?.rootViewController)!
         //
         youtubeShare.turnAudio()
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 12) as Any, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)

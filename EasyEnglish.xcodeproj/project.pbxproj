@@ -93,7 +93,6 @@
 		018D5A2B232949F400ADA3C0 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC8021D631140051221E /* ButtonView.swift */; };
 		018D5A2C232949F400ADA3C0 /* KHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3DC9221D631140051221E /* KHButton.swift */; };
 		018D5A2D232949F400ADA3C0 /* LocalDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8A21E3008C001B6BAF /* LocalDataHelper.swift */; };
-		018D5A2E232949F400ADA3C0 /* AdmobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB9BA82301483A00912320 /* AdmobManager.swift */; };
 		018D5A2F232949F400ADA3C0 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138FC8021E2FFA1001B6BAF /* APIRequest.swift */; };
 		018D5A30232949F400ADA3C0 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD43D221E73A75000156D2 /* HistoryManager.swift */; };
 		018D5A31232949F400ADA3C0 /* VideoServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012412A121DDFAFE0078B60F /* VideoServiceView.swift */; };
@@ -197,7 +196,6 @@
 		01B3DD9121D917DE0051221E /* PlayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B3DD8F21D917DE0051221E /* PlayVC.xib */; };
 		01DB9BA62301459300912320 /* AboutAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB9BA42301459300912320 /* AboutAppVC.swift */; };
 		01DB9BA72301459300912320 /* AboutAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DB9BA52301459300912320 /* AboutAppVC.xib */; };
-		01DB9BA92301483B00912320 /* AdmobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB9BA82301483A00912320 /* AdmobManager.swift */; };
 		01DB9BAB2301484E00912320 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB9BAA2301484E00912320 /* AppStoreReviewManager.swift */; };
 		01EE354C21EF98AC00C3346F /* VideoHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE354A21EF98AC00C3346F /* VideoHomeCell.swift */; };
 		01EE354E21EF99D400C3346F /* VideoHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE354D21EF99D400C3346F /* VideoHomeCell.xib */; };
@@ -1180,7 +1178,6 @@
 		01B3DD8F21D917DE0051221E /* PlayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayVC.xib; sourceTree = "<group>"; };
 		01DB9BA42301459300912320 /* AboutAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppVC.swift; sourceTree = "<group>"; };
 		01DB9BA52301459300912320 /* AboutAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutAppVC.xib; sourceTree = "<group>"; };
-		01DB9BA82301483A00912320 /* AdmobManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdmobManager.swift; sourceTree = "<group>"; };
 		01DB9BAA2301484E00912320 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		01EE354A21EF98AC00C3346F /* VideoHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHomeCell.swift; sourceTree = "<group>"; };
 		01EE354D21EF99D400C3346F /* VideoHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoHomeCell.xib; sourceTree = "<group>"; };
@@ -2264,7 +2261,6 @@
 		0138FC8621E3008C001B6BAF /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				01DB9BA82301483A00912320 /* AdmobManager.swift */,
 				0138FC8721E3008C001B6BAF /* TimerHelper.swift */,
 				0138FC8821E3008C001B6BAF /* AlertHelper.swift */,
 				0138FC8A21E3008C001B6BAF /* LocalDataHelper.swift */,
@@ -4743,7 +4739,6 @@
 				018D5A2C232949F400ADA3C0 /* KHButton.swift in Sources */,
 				323C30722456903000FCD1A6 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				018D5A2D232949F400ADA3C0 /* LocalDataHelper.swift in Sources */,
-				018D5A2E232949F400ADA3C0 /* AdmobManager.swift in Sources */,
 				018D5A2F232949F400ADA3C0 /* APIRequest.swift in Sources */,
 				018D5A30232949F400ADA3C0 /* HistoryManager.swift in Sources */,
 				018D5A31232949F400ADA3C0 /* VideoServiceView.swift in Sources */,
@@ -4849,7 +4844,6 @@
 				323C30882456A3F900FCD1A6 /* CellListKanji.swift in Sources */,
 				0138FC9421E3008C001B6BAF /* LocalDataHelper.swift in Sources */,
 				323C309E24593DE100FCD1A6 /* CellKanjiInDetail.swift in Sources */,
-				01DB9BA92301483B00912320 /* AdmobManager.swift in Sources */,
 				0138FC8421E2FFA1001B6BAF /* APIRequest.swift in Sources */,
 				01AD43D321E73A75000156D2 /* HistoryManager.swift in Sources */,
 				012412A221DDFAFE0078B60F /* VideoServiceView.swift in Sources */,
@@ -5248,7 +5242,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = EasyEnglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -5325,7 +5319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = NTMW9R35A8;
 				INFOPLIST_FILE = EasyEnglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

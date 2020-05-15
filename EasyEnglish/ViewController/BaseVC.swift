@@ -42,7 +42,7 @@ class BaseVC: UIViewController {
             self.removeZoomOutView()
         }
         
-        AdmobManager.shared.logEvent()
+//        AdmobManager.shared.logEvent()
     }
     
     override func viewDidAppear(_ animated: Bool) {

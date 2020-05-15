@@ -109,10 +109,10 @@ extension LibraryVC {
         }
         
         //Admob
-        ctrHeightViewAd.constant = adSize.size.height
-        GCDCommon.mainQueue {
-            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
-        }
+        ctrHeightViewAd.constant = 0
+//        GCDCommon.mainQueue {
+//            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
+//        }
     }
     
     func loadData(){

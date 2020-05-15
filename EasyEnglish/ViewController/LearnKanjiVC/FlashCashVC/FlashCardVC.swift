@@ -62,7 +62,7 @@ class FlashCardVC: BaseVC {
         isAutoScroll = false
         isShuffled = false
         GCDCommon.mainQueue {
-            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
+//            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
         }
         resetCount()
     }

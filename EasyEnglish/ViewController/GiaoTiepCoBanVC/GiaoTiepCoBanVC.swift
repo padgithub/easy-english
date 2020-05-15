@@ -47,7 +47,7 @@ class GiaoTiepCoBanVC: BaseVC {
         
         
         GCDCommon.mainQueue {
-            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
+//            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
         }
     }
 }

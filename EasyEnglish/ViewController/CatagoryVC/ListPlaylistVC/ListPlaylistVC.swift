@@ -27,10 +27,10 @@ class ListPlaylistVC: BaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ctrHeightViewAd.constant = adSize.size.height
-        GCDCommon.mainQueue {
-            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
-        }
+//        ctrHeightViewAd.constant = adSize.size.height
+//        GCDCommon.mainQueue {
+//            AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
+//        }
     }
 }
 
