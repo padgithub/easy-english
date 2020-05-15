@@ -37,6 +37,10 @@ class ListTuDienVC: UIViewController {
         initData()
         Timer.after(0.5) {
             self.initRefesh()
+            localDataShared.handleSearchTuDien = { (keyword, type) in
+                self.keyword = keyword
+                self.refesh()
+            }
         }
     }
     

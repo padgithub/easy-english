@@ -16,6 +16,7 @@ class LocalDataHelper: NSObject {
     var time: Double = 0
     var isLogin: Bool = false
     var playVC = PlayVC(nibName: "PlayVC", bundle: nil)
+    var handleSearchTuDien:((String,TypeListTuDien) -> Void)?
     
     override init() {
         super.init()

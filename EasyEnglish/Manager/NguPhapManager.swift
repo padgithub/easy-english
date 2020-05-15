@@ -68,7 +68,7 @@ class NguPhapManager: NSObject {
         var listData:[ExampleObj] = []
         do {
             try dbQueues.inDatabase { db in
-                let query = String.init(format: "SELECT * FROM grammar INNER JOIN grammar_example ON grammar._id = grammar_example.ex_id WHERE grammar_example.word_id = %d",id)
+                let query = String.init(format: "SELECT * FROM examples INNER JOIN grammar_example ON examples._id = grammar_example._id WHERE grammar_example.word_id = %d",id)
                 let rows = try Row.fetchCursor(db, query)
                 while let row = try rows.next() {
                     let obj = ExampleObj(row)

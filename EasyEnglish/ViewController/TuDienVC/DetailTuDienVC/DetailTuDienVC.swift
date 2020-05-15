@@ -70,7 +70,7 @@ class DetailTuDienVC: BaseVC {
         }
         
         if typeList == .NguPhap {
-            arrVidu = NguPhapManager.shared.fetchExampleWithID(tudienObj.docid ?? 0)
+            arrVidu = NguPhapManager.shared.fetchExampleWithID(tudienObj._id ?? 0)
         }
         
         tableKanji.reloadData()

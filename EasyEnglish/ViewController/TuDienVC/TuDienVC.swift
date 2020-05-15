@@ -19,6 +19,7 @@ class TuDienVC: BaseVC {
     var indexPage = 0
     var arrController = [ListTuDienVC(),ListTuDienVC(),ListTuDienVC(),ListTuDienVC()]
     var keyword = ""
+    var currentStyleList = TypeListTuDien.NhatViet
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class TuDienVC: BaseVC {
     
     @objc func textDidChange() {
         keyword = tfSearch.text ?? ""
+        localDataShared.handleSearchTuDien?(keyword,currentStyleList)
     }
     
     func configTabSwipe() {
@@ -61,5 +63,9 @@ extension TuDienVC: CarbonTabSwipeNavigationDelegate {
         vc.type = TypeListTuDien.init(rawValue: Int(index)) ?? .NhatViet
         vc.keyword = keyword
         return vc
+    }
+    
+    func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, didMoveAt index: UInt) {
+        currentStyleList = TypeListTuDien.init(rawValue: Int(index)) ?? .NhatViet
     }
 }
