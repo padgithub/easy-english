@@ -15,7 +15,7 @@ enum APIType {
 class APIFinal {
     var mainAPI: String
     
-    var keyYoutube = "AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY"
+    var keyYoutube = localDataShared.keyYoutube == "" ? "AIzaSyCxwMR6kZROVo7_0wtw0Ax_wZ7irmKcqTY" : localDataShared.keyYoutube
     
     static let shared = APIFinal()
     

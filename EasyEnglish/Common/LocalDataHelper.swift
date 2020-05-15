@@ -17,6 +17,7 @@ class LocalDataHelper: NSObject {
     var isLogin: Bool = false
     var playVC = PlayVC(nibName: "PlayVC", bundle: nil)
     var handleSearchTuDien:((String,TypeListTuDien) -> Void)?
+    var keyYoutube = ""
     
     override init() {
         super.init()
