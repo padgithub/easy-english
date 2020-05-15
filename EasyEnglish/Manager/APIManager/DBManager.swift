@@ -16,6 +16,7 @@ class DBManager: NSObject {
     
     func checkDB(success: @escaping (Bool) -> Void ) {
         apiRequestShared.webServiceCall("https://easyapp-api.herokuapp.com/checkdbJP", params: nil, isShowLoader: true, method: .get, isHasHeader: true) { (response) in
+            localDataShared.keyYoutube = response.responeJson["key"].stringValue
             success(response.responeJson["status"].boolValue)
         }
     }
