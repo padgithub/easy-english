@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,7 +36,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-xs-Ipf">
-                    <rect key="frame" x="0.0" y="80" width="414" height="727"/>
+                    <rect key="frame" x="0.0" y="80" width="414" height="777"/>
                     <subviews>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kRN-xo-Qgw">
                             <rect key="frame" x="15" y="10" width="384" height="41"/>
@@ -52,7 +52,7 @@
                             </connections>
                         </segmentedControl>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a8A-vO-Ify">
-                            <rect key="frame" x="10" y="60" width="394" height="657"/>
+                            <rect key="frame" x="10" y="60" width="394" height="707"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vxo-9G-pAs">
                                 <size key="itemSize" width="128" height="128"/>
@@ -73,10 +73,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQO-Ih-Raz">
-                    <rect key="frame" x="0.0" y="807" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="857" width="414" height="0.0"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="uH0-JQ-lf8"/>
+                        <constraint firstAttribute="height" id="uH0-JQ-lf8"/>
                     </constraints>
                 </view>
             </subviews>
