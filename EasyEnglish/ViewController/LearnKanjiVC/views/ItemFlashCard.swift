@@ -15,11 +15,17 @@ class ItemFlashCard: UICollectionViewCell {
     @IBOutlet weak var viewDetail: UIView!
     @IBOutlet weak var lblDetail: UILabel!
     @IBOutlet weak var lblKanji: UILabel!
+    
+    var handleActionDetail: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBAction func actionDetail(_ sender: Any) {
+        handleActionDetail?()
+    }
+    
     @IBAction func actionShowDetail(_ sender: Any) {
         viewDetail.isHidden = !viewDetail.isHidden
         viewKanji.isHidden = !viewKanji.isHidden
