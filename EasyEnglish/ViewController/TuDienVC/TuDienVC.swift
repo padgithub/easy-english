@@ -45,8 +45,15 @@ class TuDienVC: BaseVC {
 
         tabSwipe.toolbar.barTintColor = UIColor.white
         tabSwipe.toolbar.isTranslucent = false
-        tabSwipe.setTabExtraWidth(30)
-        tabSwipe.setTabBarHeight(40)
+        if isIPad {
+            tabSwipe.carbonSegmentedControl?.setWidth(UIScreen.main.bounds.size.width/4, forSegmentAt: 0)
+            tabSwipe.carbonSegmentedControl?.setWidth(UIScreen.main.bounds.size.width/4, forSegmentAt: 1)
+            tabSwipe.carbonSegmentedControl?.setWidth(UIScreen.main.bounds.size.width/4, forSegmentAt: 2)
+            tabSwipe.carbonSegmentedControl?.setWidth(UIScreen.main.bounds.size.width/4, forSegmentAt: 3)
+        }else{
+            tabSwipe.setTabExtraWidth(30)
+        }
+        tabSwipe.setTabBarHeight(isIPad ? 50 : 40)
         tabSwipe.setIndicatorColor(UIColor("F5B133", alpha: 1.0))
 
         let someIntToUInt: UInt = UInt(indexPage)

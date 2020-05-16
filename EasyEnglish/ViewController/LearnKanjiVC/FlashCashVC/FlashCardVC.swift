@@ -17,6 +17,7 @@ class FlashCardVC: BaseVC {
     @IBOutlet weak var adView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var navi: NavigationView!
+    @IBOutlet weak var ctrHeightToolBar: NSLayoutConstraint!
     
     var timeInval = Timer()
     var level = 0
@@ -64,6 +65,7 @@ class FlashCardVC: BaseVC {
         GCDCommon.mainQueue {
             AdmobManager.shared.addBannerInView(view: self.adView, inVC: self)
         }
+        ctrHeightToolBar.constant = isIPad ? 90 : 60
         resetCount()
     }
     
@@ -111,6 +113,11 @@ extension FlashCardVC: UICollectionViewDataSource, UICollectionViewDelegate,UICo
         item.viewDetail.isHidden = true
         item.viewKanji.isHidden = false
         item.viewContents.backgroundColor = .random()
+        item.handleActionDetail = {
+            let vc = DetailKanjiVC()
+            vc.kanjiModel = self.arrKanji[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         return item
     }
     

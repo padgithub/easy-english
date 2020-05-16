@@ -5315,7 +5315,7 @@
 				PRODUCT_NAME = "Yume Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -5392,7 +5392,7 @@
 				PRODUCT_NAME = "Yume Japanese";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyEnglish/EasyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
